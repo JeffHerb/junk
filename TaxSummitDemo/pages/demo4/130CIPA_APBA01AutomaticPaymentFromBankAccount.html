@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Installment Payment Agreement</title>
+<link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script type="text/javascript" src="../../assets/iflow/js/script.js"></script>
+    <script type="text/javascript" src="../../assets/iflow/js/poaw/poaw.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script type="text/javascript" src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  
+  <!-- Banners --> 
+  <script>uiResponsive.setup(); uiIncludes.banners.display();</script> 
+  
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a></li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li><a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Installment Payment Agreement</h1>
+    <div id="taxpayer-info">
+      <div class="leftFluid"> </div>
+      <div class="sectionBorder">
+        <div class="c33">
+          <div class="label"> Taxpayer ID: </div>
+          <div class="data"> XXX-XX-0123 </div>
+        </div>
+        <div class="c67">
+          <div class="label"> Taxpayer name: </div>
+          <div class="data"> JANE DOE </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Automatic Payment from Bank Account</h2>
+  <div id="pageInstructions">
+    <p class="text">Your payment will be processed as a recurring monthly direct debit (ACH debit) from your bank account. Provide your bank information below. You will have an opportunity to review and verify your transaction information. The funds must be available on your payment day. However, it may take several days for the payment to post to your bank account. Carefully enter your bank account and routing number information. You risk defaulting on your installment payment agreement if you enter incorrect information that prevents your payments from processing. </p>
+    <p class="text"><strong>Accounts outside the United States</strong>.</p>
+    <p class="text">Banking rules prohibit us from accepting electronic payments from accounts outside the United States (even if the bank has branches or offices within the U.S.).</p>
+    <p class="text">If the account holder does not have a source of funds from within the United States, payment must be made by check or money order.</p>
+    <p class="text"><strong>Debit block information</strong>.</p>
+    <p class="text">For important information about debit blocks, see <a href="https://www.tax.ny.gov/pay/all/debit.htm" target="_blank" title="This will open a new window to the Debit block information">ACH debit block information</a>.</p>
+  </div>
+  <div id="legend">
+    <ul>
+      <li> <span class="required">*</span> Required fields </li>
+      <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+    </ul>
+  </div>
+  <div class="formWrapper">
+    <div class="leftFluid"> </div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post">
+        <!-- Group 1 -->
+        <div class="group">
+          <h4>Bank account information</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="bankRoutingNumber">Bank routing number: <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required"> * </div>
+            </div>
+            <div class="dataPn">
+				<input type="text" id="bankRoutingNumber2" value="" size="11" maxlength="9" tabindex="1" class="changeSampleCheck" data-samplechecktype="routing" onblur="setBankName(this.value)">
+				<a href="#instructions1" class="help icon-button icon-help changeSampleCheck" role="button" tabindex="1" data-samplechecktype="routing">More information</a>
+			</div>
+		</div>
+		 <script>
+			// Demo script to mimic bank name ajax call
+			function setBankName(bankNumberValue){                                                    
+				var bankNameElement = document.getElementById("bank_name");
+
+				if(bankNumberValue != ""){
+					bankNameElement.innerHTML = "STATE EMPLOYEES FEDERAL CR";
+				}
+				else{
+					bankNameElement.innerHTML = "";
+				}
+			}
+		</script>
+		<div class="linePn labelM">
+			<div class="labelPn">
+				<div class="labelWrap">
+					Bank name:
+				</div>
+			</div>
+			<div class="dataPn">
+				<span id="bank_name"></span>
+			</div>
+		</div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="bankAcctNumber">Bank account number: <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required"> * </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="bankAcctNumber" value="" size="17" maxlength="17" tabindex="1" class="changeSampleCheck" data-samplechecktype="account">
+              <a href="#instructions2" class="help icon-button icon-help changeSampleCheck" data-samplechecktype="account" role="button" tabindex="1">More information</a> </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="ConBankAcctNumber">Confirm bank account number: <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required"> * </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="ConBankAcctNumber" value="" size="17" maxlength="17" tabindex="1" class="changeSampleCheck" data-samplechecktype="account">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="accountType">Account type: <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required"> * </div>
+            </div>
+            <div class="dataPn">
+              <select id="accountType" tabindex="1">
+                <option value="">Select account type</option>
+                <option value="1">Business checking</option>
+                <option value="2">Business savings</option>
+                <option value="3">Personal checking</option>
+                <option value="4">Personal savings</option>
+              </select>
+              <a href="#instructions3" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="accountHolder">Account holder: <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required"> * </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="accountHolder" value="" size="30" maxlength="132" tabindex="1">
+              <span class="dataMask">(John Doe or XYZ Corp)</span> <a href="#instructions4" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+        </div>
+        <div class="linePn labelM">
+  <div class="labelPn">
+    <div class="labelWrap">
+      <label for="monPayDay">Monthly payment day: <span class="hidden">Required field</span></label>
+    </div>
+    <div class="required"> * </div>
+  </div>
+  <div class="dataPn">
+    <select name="monPayDay" id="monPayDay" tabindex="1">
+      <option value="">Select monthly payment day</option>
+      <option value="1">5th of the month</option>
+      <option value="2">15th of the month</option>
+    </select>
+    <a href="#i5" class="help icon-button icon-help" role="button" tabindex="1">More information</a></div>
+</div></div>
+		<div class="buttonGroup">
+		  <input type="button" class="button" value="Back" title="Back" onclick="javascript:window.location.href='125CIPA_DPAM01DeterminePaymentAmount.html';" tabindex="1">
+		  <input type="button" class="button primary" value="Continue" title="Continue" onclick="javascript:window.location.href='135FWVERF01ESVerificationIPA.html';" tabindex="1">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="instructionsFooter">
+    <h3>Instructions</h3>
+    <div>
+      <h4 id="instructions1">Bank routing number</h4>
+      <div class="center"> <img src="../../assets/iflow/images/sample-check-routing.png" alt="Sample check with the routing number highlighted" /> </div>
+      <p class="text"> Enter your bank's routing number as it appears on your check. The routing number is the nine-digit number that identifies your bank and always starts with 0, 1, 2, or 3.  Don't enter the account number or check number as part of the routing number.  If you have any questions about this number, please contact your bank or financial institution. </p>
+    </div>
+    <div>
+      <h4 id="instructions2">Bank account number</h4>
+      <div class="center"> <img src="../../assets/iflow/images/sample-check-account.png" alt="Sample check with the account number highlighted" /> </div>
+      <p class="text"> Enter your account number as it appears on your check. The account number is generally to the right of the routing number. Don't enter the routing number or check number as part of the account number. If you have any questions about this number, please contact your bank or financial institution. </p>
+    </div>
+    <div>
+      <h4 id="instructions3">Account type</h4>
+      <p class="text"> Select the account type from which you want the funds withdrawn. </p>
+    </div>
+    <div>
+      <h4 id="instructions4">Account holder (John Doe or XYZ Corp.)</h4>
+      <p class="text"> Enter the name(s) of the account holder(s) from which the amount will
+        be withdrawn. For example, enter John and Mary Doe if that is the name
+        on the account. </p>
+    </div>
+    <div>
+      <h4 id="i5">Monthly Payment day</h4>
+      <p class="text">Any changes you make to your monthly payment day after the 2nd of the month will not be effective until the following month.</p>
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- end of page-container --> 
+
+<script type="text/javascript">uiIncludes.footer.renderXHTML();</script>
+
+</body>
+</html>
+

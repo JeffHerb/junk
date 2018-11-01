@@ -1,0 +1,196 @@
+/*
+|==================================================================================|
+| State of New York Department of Taxation & Finance                               |
+| e-MPIRE Application: generalIE6.css - Release 3                                  |
+| Created by: Web UI Team                                                          |
+| Date Created: 06/14/2007                                                         |
+| Description: Screen styles needed to properly render e-MPIRE pages on Internet   |
+|              Explorer 6.0. Only contains style definitions which do not work for |
+|              both 6.0 and 7.0. All other styles are contained in general*.css    |
+|              and resultset.css                                                   |
+|                                                                                  |
+| Change History (Include major changes/additions only)                            |
+| Date        Author            Description [fmk: framework changes also involved] |
+| -------------------------------------------------------------------------------- |
+| 09/12/2007  Craig Patik       Initial Baseline                                   |
+| 12/19/2007  Craig Patik       Fixed alignment issue with '#page_body div.mast'   |
+| 01/07/2008  Craig Patik       Removed div.group_closed h4 definition             |
+| 01/14/2008  Craig Patik       Added div.c50 div.group_closed definition          |
+| 01/15/2008  Craig Patik       Added div.group div.group_closed definition        |
+| 01/17/2008  Craig Patik       Added div.headOut definition for tabbed result sets|
+| 01/23/2008  Craig Patik       Removed #search_area height definition             |
+| 02/11/2008  Craig Patik       Added new widths for div.rset_body table           |
+|==================================================================================|
+*/
+
+
+/* Solve issue of page_body being pushed to the right too far */
+#page_body div.mast {
+	margin-left: -1px;
+}
+
+/* Removed 1/3/08
+Plus sign on collapsed groups 
+div.group_closed h4 {
+	background: transparent url(../images/icon-plus.gif) no-repeat left center !important;
+}*/
+
+/* Gives additional spacing to indicators within a div.group */
+div.group ul.list-indicators {
+	margin: 0px 4px 4px 0px;
+}
+
+
+div.* div.group_closed div {
+	display: none;
+}
+
+/* Fixes problem on a few pages with cramped result sets where IE6 doesn't respect the rsetNotify padding */
+.rsetNotify {
+	float: none;
+	width: 1%;
+}
+
+
+/* This ensures that read-only data lines up with the labels */
+div.c33 label,
+div.c50 label,
+div.c67 label,
+div.c100 label,
+div.c33 span,
+div.c50 span,
+div.c67 span,
+div.c100 span {
+  line-height: 2.0em;
+	height: 100%;
+	vertical-align:baseline;
+}
+
+
+/* Lining up the header labels and data */
+div.split-area div.c50 div.c100 span,
+div.whole-area div.c100 span,
+div.whole-area div.c100 span.headerLabelLeft {
+	height: 100%;
+	line-height: 1.6em !important;
+	vertical-align:baseline;
+}
+
+
+/* Keeps div.groups inside c50s from appearing too far to the left */
+* div.c50 div.group,
+* div.c100 div.group {
+  margin: 3px 7px 6px 7px !important;
+  padding-bottom: 6px;
+}
+
+
+div.group div.group {
+	margin-left: 3px;
+}
+
+/* closed groups are shifted to the right too far in IE6 */
+div.group div.group_closed {
+  margin-left: 4px;
+	width: 98.5%;
+}
+
+
+/* Closed group's title */
+div.group_closed h4,
+div.group div.group_closed h4 {
+/*div div.group_closed h4 {*/
+	padding: 1px 2px 2px 15px !important;
+	/*background: transparent !important;*/
+	border-bottom: 1px solid #AAA !important;
+}
+
+
+div.mast div.group_closed h4 {
+	padding: 1px 0px 2px 15px;
+}
+
+
+div.group div.group_closed h4 {
+	padding: 10px;
+}
+
+/* Keeps groups from taking up too much width and forcing themselves or other groups in a c50 down */
+div.c50 div.group_closed {
+	margin-left: 6px;
+}
+
+
+/* *********** Uncomment after making change to result set style sheet ******** */
+/* Dynamic Pages - Tab (Used for RP pages, NRP221S, NRP651S, etc)
+	 ****************************************************************************** */
+/* <!-- 26 is the margin-left for the Tabs ; 6 is the padding-left for the Tabs ; 18 is the width for the Scrollbar. --> */
+/**/
+div.rsetTab img.rScroll {
+	float: left;
+	position: relative;
+	border: 0px;
+	vertical-align: bottom;
+	cursor: pointer;
+	top: expression(parseInt(document.getElementById(this.id.substr(this.id.indexOf("_")+1)).clientHeight) - this.clientHeight);
+	left: expression((parseInt(document.getElementById(document.getElementById("CurrentTableID_" + this.id.substr(this.id.indexOf("_")+1)).value).clientWidth) - parseInt(this.clientWidth) + ((-1)*(isNaN(parseInt(document.getElementById(this.id.substr(this.id.indexOf("_")+1)).style.marginLeft))?-26:parseInt(document.getElementById(this.id.substr(this.id.indexOf("_")+1)).style.marginLeft))) + 6 + 18) + "px");
+}
+
+/* Tabbed Result Sets: Forces the header table to line up with the results table */
+div.rset div.headOut {
+	width: 98.5%;
+}
+
+
+/* *** 9/24: This seems to cause an extra space to the right of some result sets in IE6 */
+/* In IE6, the scrollbar appears outside (to the left of) the result set, so using 100% width isn't an issue. If 100% is used with IE7, the scrollbar will overlap the last column. 
+div.rset_body,
+div.rset_body table {
+	width: 98.5%;
+}*/
+
+/* These two fix the horizontal position and margin of first-level groups or standalone result sets */
+div.rset {
+  width: 99.3%;
+}
+
+div.rset_body {
+	width: 98.4%;
+}
+
+div.group div.group div.rset_body table {
+  width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '98.25%');
+}
+/* Example: NDC200 */
+div.group div.group div.group div.rset_body table {
+  width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '98.22%');
+}
+
+div.c50 div.rset_body table {
+  width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '96.312%');
+}
+
+div.group div.group div.c50 div.rset {
+	margin-left: 0px !important;
+}
+
+div.mast > div.group, div.mast > div.group_closed {   /* Must include greater-than, or else groups that take up 50% are shifted left too much */
+	margin-left: 1px !important;
+  width: 98.5%;
+}
+
+div.group div.group div.group,
+div.group div.group div.group_closed {
+  width: 98.5%;
+}
+
+/* Example of where this is used: Release3/RP/NRP865 */
+div.group div.c50 div.group div.group,
+div.group div.c50 div.group div.group_closed {
+  width: 96.5%;
+}
+
+div.group div.c50 div.group div.group,
+div.group div.c50 div.group div.group_closed {
+	margin-left: 7px !important;
+}

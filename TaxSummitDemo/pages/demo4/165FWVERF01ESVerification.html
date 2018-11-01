@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Quick Pay</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  <!-- Banners --> 
+  <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script> 
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Quick Pay</h1>
+  </div>
+  <div class="hr"></div>
+  <!-- Page Title -->
+  <h2>Review and Verify</h2>
+  <div id="pageInstructions">
+    <p class="text">This transaction is not complete until you select <strong>Submit</strong>. Carefully review all the information below and read the eSignature statement before submitting your payment.</p> 
+   <p class="text">If you are not paying the amount due in full, or if the bank is unable to process this payment, you may incur additional penalty and interest.</p>  
+  <p class="text"> If you would like to make changes, select <strong>Edit</strong> in the appropriate box.
+</p>
+  </div>
+  <div id="legend">
+    <ul>
+      <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+    </ul>
+  </div>
+  <div id="errorMessages"></div>
+  <!-- Page Form -->
+  <div class="formWrapper">
+    <div class="leftFluid"></div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post" onsubmit="javascript:window.location.href='50FWCFMN01ESConfirmation.html';return false;">
+        <!-- Group 1 -->
+        <div class="group">
+          <h4>Payment information</h4>
+      
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Social Security number (SSN):</div>
+            </div>
+            <div class="dataPn">XXX-XX-0123</div>
+          </div>
+           <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">First name:</div>
+            </div>
+            <div class="dataPn">Jane</div>
+          </div>
+           <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Last name:</div>
+            </div>
+            <div class="dataPn">Doe</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Assessment ID:</div>
+            </div>
+            <div class="dataPn">L-000101248-6</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Amount I want to pay ($):</div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">100.00</div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">E-mail address:</div>
+            </div>
+            <div class="dataPn"></div>
+          </div>
+          <div class="buttonGroup">
+            <input type="button" class="button" value="Edit" title="Edit" tabindex="1" onclick="window.location.href='155_QPAY_PINF01TaxpayerVerification.html';">
+          </div>
+        </div>
+        <!-- Group 2 -->
+        <div class="group">
+          <h4>Payment details</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Payment method:</div>
+            </div>
+            <div class="dataPn">Pay from Bank Account</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Bank name:</div>
+            </div>
+            <div class="dataPn">STATE EMPLOYEES FEDERAL CR</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Bank routing number:</div>
+            </div>
+            <div class="dataPn">221373383</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Bank account number:</div>
+            </div>
+            <div class="dataPn">12345</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Account type:</div>
+            </div>
+            <div class="dataPn">Personal Checking</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Account holder:</div>
+            </div>
+            <div class="dataPn">Jane Doe</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Payment for:</div>
+            </div>
+            <div class="dataPn">Quick Pay</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Payment date:</div>
+            </div>
+            <div class="dataPn">09/24/2018</div>
+          </div>
+		    <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Amount due ($):</div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">100.00</div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Payment amount ($):</div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">100.00</div>
+            </div>
+          </div>
+          <div class="buttonGroup">
+            <input type="button" class="button" value="Edit" title="Edit" tabindex="1" onclick="window.location.href='160_GENE_BANK03PayFromBankAccount.html';">
+          </div>
+        </div>
+        <!-- Group 3 -->
+        <div class="group">
+          <h4>Payment authorization</h4>
+          <div class="groupInstructions">
+            <p class="text">By selecting <strong>Submit</strong>, I certify that I am the taxpayer named above, that the account holder has agreed to payment of the amount(s) indicated by electronic funds withdrawal and has authorized the New York State Tax Department and its designated financial agents to initiate an electronic funds withdrawal(s) from the indicated financial institution account, that the designated financial institution is authorized to debit the entry to the account, and that the account holder understands and agrees that payment will be processed immediately and this authorization for payment may not be revoked.</p>
+          </div>
+        </div>
+        <div class="buttonGroup">
+          <input type="button" class="button primary" value="Submit" onclick="javascript:window.location.href='170FWCFMN01ESConfirmation.html';" title="Submit" tabindex="1">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- end of page-container --> 
+<script type="text/javascript">
+    uiIncludes.footer.renderXHTML();
+    </script> 
+</body>
+</html>

@@ -1,0 +1,1218 @@
+/*
+|==================================================================================|
+| State of New York Department of Taxation & Finance                               |
+| e-MPIRE Application: style.css                                                   |
+| Created by: ITS UI/UX Team                                                       |
+| Date Created: 04/01/2008                                                         |
+| Description: Print styles needed to properly print external web pages.           |
+|                                                                                  |
+| Change History (Include major changes/additions only)                            |
+| Date    Author      Description                                                  |
+| -------------------------------------------------------------------------------- |
+| 04/01/2008  Craig Patik     Initial Baseline                                     |
+| 09/10/2008  Manolo Farfan   Made changes to initial baseline                     |
+|==================================================================================|
+*/
+
+/*
+====================================================================================
+ Style Initialization - Resets all page elements to use styles below
+====================================================================================
+*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+====================================================================================
+ Basic XHTML Elements
+====================================================================================
+*/
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	margin-bottom: 20px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	background-color: #FFFFFF;
+	color: #000;
+}
+
+/* needed to prevent footer text from displaying near the top in W3-compliant browers */
+form {
+  clear: both;
+	height: 1%;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+img, a img {
+	border: 0px;
+}
+
+a {
+	text-decoration: underline;
+	color: blue;
+}
+
+input, select, textarea {
+	font: 100% Tahoma, Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	padding: 1px;
+	margin-top: 1px;
+}
+
+select {
+	margin: 1px 0;
+}
+
+div.group div select {
+	padding-top: 2px;
+	margin-top: 2px;
+}
+
+button {
+	cursor: pointer;
+}
+
+li {
+	margin: 0.5em 0 0 1em;
+}
+
+p {
+ vertical-align: bottom;
+}
+
+/* Headings H1-H6 */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+h1 {
+	float: left;
+	clear: both;
+	width: 100%;
+	text-indent: 0.3em;
+	margin: 0.5em 0 0.1em 0;
+	font-size: 160%;
+}
+
+h2 {
+	float: none;
+	clear: both;
+	padding: 4px;
+	font-size: 140%;
+}
+
+h3 {
+	font-size: 140%;
+}
+
+h4, h5 {
+	font-size: 140%;
+}
+
+h6 {
+	font-size: 100%;
+}
+
+/*
+====================================================================================
+ Generic Classes
+====================================================================================
+*/
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.rt {
+	text-align: right;
+}
+
+.lt {
+	text-align: left;
+}
+
+.bold {
+	font-weight: bold !important;
+}
+
+.notBold {
+	font-weight: normal !important;
+}
+
+.hidden {
+	display: none;
+}
+
+.visibilityHidden {
+	visibility: hidden;
+}
+
+.visibilityVisible {
+	visibility: visible;
+}
+
+.center {
+	text-align: center;
+}
+
+.noWrap {
+	white-space: nowrap;
+}
+
+.smallestTextSize {
+	font-size: 80%;
+	font-weight: normal;
+}
+
+.clearPadding {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.vAlignM {
+	vertical-align: middle;
+}
+
+.clearNone {
+	clear: none !important;
+}
+
+/* For read-only <input> elements */
+.readOnly {
+	border: 2px solid transparent;
+	background-color: white;
+	color: black;
+}
+
+.readOnlySelect {
+	border-left: 4px solid transparent;
+	border-top: 4px solid transparent;
+	border-bottom: 1px solid transparent;
+	margin-right: 33px;
+}
+
+/*
+====================================================================================
+ Horizontal Partitions
+====================================================================================
+Notes on c50 and c67:
+--------------------
+A div with a width of 399px divided into 2 c50 DIVs will by default be 200px each and adding up to a total of 400px.
+This happens because the divs 50% width rounds up to the nearest integer and therefore we have to use smaller values.
+*/
+.c33 {
+	width: 33%;
+}
+
+.c50 {
+  width: 49%;
+}
+
+.c100 {
+	width: 100%;
+}
+
+.c67 {
+	width: 66%;
+}
+
+.c33 label,
+.c50 label,
+.c100 label,
+.c67 label {
+	float: left;
+	text-align: right;
+}
+
+
+div.c33 div,
+div.c50 div,
+div.c67 div,
+div.c100 div,
+.c33,
+.c50,
+.c100,
+.c67 {
+	font-weight: bold;
+	float: left;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+.c33 a,
+.c50 a,
+.c67 a,
+.c100 a {
+	text-decoration: underline;
+	color: black;
+}
+
+/*
+=================================================================================
+ Banner
+=================================================================================
+*/
+/* The whole page is inside this wrapper div */
+div#pageContainer {
+	width: auto;
+	height: 1%;
+}
+
+div#primaryBanner {
+	float: none;
+	width: 100%;
+	height: 60px;
+	background: url(../images/headerbg.jpg) top left repeat-x;
+	white-space: nowrap;
+}
+
+div#primaryBanner a, div#primaryBanner img {
+	float: left;
+	border: none;
+}
+
+/* Using 3-col fluid layout (float: [left],[none],[left]) */
+div#logoLeft {
+	float: left;
+	width: 374px;
+	height: 60px;
+	white-space: nowrap;
+}
+
+div#logoCenter {
+	float: none;
+	height: 60px;
+}
+
+div#logoRight {
+	float: right;
+	width: 293px;
+	height: 60px;
+	white-space: nowrap;
+}
+
+/*
+====================================================================================
+ Taxpayer Info Box
+====================================================================================
+*/
+/* Using 2-col fluid layout (float: [left, none]) */
+div#taxpayer-info, div.formWrapper {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+div#taxpayer-info {
+	padding-top: 0.8em;
+}
+
+div.leftFluid, div.rightFluid {
+	float: left;
+	width: 5px;
+}
+
+div.sectionBorder, div.mainGroups {
+  float: none;
+  margin: 0 5px 0 5px;	
+  overflow: hidden;
+}
+
+div.sectionBorder {
+	height: 1%;
+  border: 1px solid #AAA;
+}
+
+/* See "Labels & Data" CSS for taxpayer-info additional horizontal partitions */
+div#taxpayer-info div.c33,
+div#taxpayer-info div.c50,
+div#taxpayer-info div.c67,
+div#taxpayer-info div.c100 {
+	line-height: 2.0em;
+}
+
+.hr {
+	clear: both;
+	width: 99%;
+	height: 2px;
+	line-height: 2px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-top: 2px solid #CCC;
+	font-size: 1em;
+}
+
+/*
+=================================================================================
+ Top-of-the-Page Navigation, Titles, and Instructions
+=================================================================================
+*/
+div#pageHeader {
+	float: none;
+  display: block;
+	width: 100%;
+	margin-bottom: 0.3em;
+}
+
+/* Main navigation links */
+#skipnav {
+	position: absolute;
+	left: -999px;
+	width: 990px;
+}
+
+#mainContentLink {
+  text-decoration: none;
+  color: black;
+  cursor: text;
+}
+
+div#navHeader {
+	float: none;
+	width: 100%;
+	height: 2em;
+  line-height: 2em;
+  border-bottom: 1px solid #999;
+  background-color: #D6D6D6;
+  white-space: nowrap;
+}
+
+div#navLeft {
+	float: left;
+}
+
+div#navRight {
+	float: right;
+}
+
+div#navHeader a,
+div#navHeader a:visited,
+div#navHeader a:link,
+div#navHeader a:active {
+  float: left;
+  border-right: 1px dotted #999;
+  font-size: 95%;
+  color: #000080;
+  padding: 0 0.8em;
+}
+
+div#navHeader a:hover {
+  color: #FFF;
+  background-color: #888;
+  text-decoration: none;
+}
+
+div#navHeader ul {
+  float: left;
+  list-style-type: none;
+}
+
+div#navHeader ul li {
+  float: left;
+  margin: 0;
+}
+
+a.navHeaderFirstLink {
+  border-left: 1px dotted #AAA;
+}
+
+div#verification {
+  float: none;
+	clear: both;
+	width: 100%;
+	text-align: right;
+}
+
+div#verification img {
+	margin-right: 5px;
+  border: none;
+}
+
+div#pageInstructions {
+	height: 1%;
+  padding: 5px;
+	margin-bottom: 0px;
+}
+
+div#pageInstructions ul {
+	margin: 0 0 0.5em 0.5em;
+}
+
+div#legend {
+	height: 1%;
+  font-weight: bold;
+	margin-bottom: 1.0em;
+}
+
+div#legend ul {
+  float: left;
+  list-style-type: none;
+	padding-left: 5px;
+}
+
+div#legend ul li {
+  float: left;
+  margin: 0;
+	margin-right: 6em;
+}
+
+div#legend img.required {
+	margin-left: -5px;
+}
+
+div#legend:after {
+	content: ".";
+	clear: both;
+	height: 0;
+	display: block;
+	visibility: hidden;
+}
+
+p.text {
+  margin-bottom: 0.5em;
+}
+
+/*
+=================================================================================
+ Error Messages
+=================================================================================
+*/
+div#errorMessages {
+	float: none;
+	clear: both;
+  color: #FF0000;
+  font-weight: bold;
+	font-size: 95%;
+	width: 100%;
+	margin-bottom: 1.0em;
+}
+
+div#errorMessages ul li {
+  color: red;
+	margin-left: 2em;
+	list-style-type: disc;
+	margin-top: 0px;
+}
+
+/*
+=================================================================================
+ Instructions Sections
+=================================================================================
+*/
+div#instructionsFooter {
+	float: none;
+	clear: both;
+	width: 100%;
+	color: #000;
+	font-weight: normal;
+	border-top: 1px solid #666;
+	margin-top: 1.0em;
+}
+
+div#instructionsFooter h3 {
+	padding-top: 0.2em;
+	border-top: 2px solid #CCC;
+	text-align: center;
+}
+
+div.instructions {
+	display: block;
+	clear: both;
+	margin: 0 5px 1.5em 5px;
+	border: 3px solid #FFFFFF;
+}
+
+div.instructions h4 {
+	min-height: 1.65em;
+	vertical-align: middle;
+  line-height: 1.4em;
+	padding: 1px 0px 2px 0px;
+	font-size: 110%;
+	font-weight: bold;
+}
+
+div.instructions .topLink {
+	display: block;
+	clear: both;
+	position: relative;
+	text-align: right;
+}
+
+/*
+=================================================================================
+ Page Body & Groups
+=================================================================================
+*/
+div.group {
+  float: none;
+	position: relative;
+	height: 1%; /* Three pixel bug */
+  padding-bottom: 6px;
+  line-height: 2.0em;
+  vertical-align: middle;
+  border: 1px solid #000;
+	margin-bottom: 1.5em;
+}
+
+/* Make sure non-IE browsers wrap their content around the group */
+div.group:after {
+	content: ".";
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	display: block;
+}
+
+div.group h4 {
+  vertical-align: middle;
+  line-height: 1.9em;
+  min-height: 1.9em;
+	text-indent: 8px;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #999;
+  background: #E3E8F5 url(../images/h4bg.png) top left repeat-x;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+}
+
+div.group div {
+  clear: both;
+  vertical-align: middle !important;
+}
+
+div.group div.row {
+  clear: left;
+  width: 100%;
+}
+
+/* This is not used but may be used sometime (hopefully not) */
+div.group div.group {
+	margin-left: 0.5em;
+	margin-right: 0.6em;
+}
+
+/*
+=================================================================================
+ Miscellaneous In-Group Classes
+=================================================================================
+*/
+div.group p {
+  margin: 1.0em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  line-height: 1.2em;
+  vertical-align: middle;
+}
+
+div.group p.text {
+	clear: both;
+  margin: 0.5em;
+}
+
+p.spacer {
+	margin-top: 0.9em;
+}
+
+span.required {
+  color: red;
+}
+
+div.group .help {
+  display: inline;
+  vertical-align: middle;
+}
+
+a.help {
+  text-decoration: none;
+  border: none;
+}
+
+div.spacer {
+  clear: left;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  height: 6px;
+  width: 100%;
+}
+
+div.spacer img {
+  height: 100%;
+  width: 100%;
+}
+
+/*
+=================================================================================
+ Labels & Data
+=================================================================================
+*/
+div.group .labelCenterLeft,
+div.group .labelLongLeft,
+div.group .labelLong,
+div.group .labelShort,
+div.group .labelCenter,
+div.group .labelCenterReq,
+div.group .labelCenterNotReq,
+div.group .labelTiny,
+div.group .labelTest {
+  float: left;
+  text-align: right;
+  width: 60%;
+  margin: 0.2em;
+}
+
+/* MANOLO [Start] */
+div.group div.row {
+	position: relative;
+}
+
+div.group .labelTest {
+	position: relative;
+	display: inline;
+	width: 49%;
+	right: 0.9em;
+	margin-left: 1.1em;
+}
+
+div.group .data {
+	position: absolute;
+	margin-bottom: 0 !important;
+	bottom: 0;
+}
+/* add min-width to content - same as header? */
+
+div.group span.required2 {
+  position: absolute;
+	right: -0.9em;
+	bottom: 0em;
+	padding-bottom: 0.6em;
+	line-height: normal;
+	color: #FF0000;
+}
+/* MANOLO [End] */
+
+div.group .labelShort {
+  width: 40%;
+}
+
+div.group .labelCenter {
+  width: 50%;
+}
+
+div.group .labelTiny {
+	width: 10%;
+}
+
+div.group .labelCenterLeft {
+  width: 50%;
+	padding-left: 2em;
+	text-align: left;
+}
+
+div.group .labelLongLeft {
+  width: 80%;
+	padding-left: 2em;
+	text-align: left;
+}
+
+div.group .c33,
+div.group .c50,
+div.group .c67,
+div.group .c100 {
+	float: left;	
+	clear: none;
+}
+
+div.group .c33 .label, 
+div.group .c50 .label, 
+div.group .c67 .label, 
+div.group .c100 .label,
+div#taxpayer-info .c33 .label, 
+div#taxpayer-info .c50 .label, 
+div#taxpayer-info .c67 .label, 
+div#taxpayer-info .c100 .label {
+  float: left;
+  text-align: right;
+  width: 200px;
+  font-weight: normal;
+}
+
+div.group .c33 .data, 
+div.group .c50 .data, 
+div.group .c67 .data, 
+div.group .c100 .data,
+div#taxpayer-info .c33 .data, 
+div#taxpayer-info .c50 .data, 
+div#taxpayer-info .c67 .data, 
+div#taxpayer-info .c100 .data {
+	float: left;
+	padding-left: 5px;
+	text-align: left;
+	width: auto;
+	font-weight: bold;
+	margin: 0;
+}
+
+div.group .data {
+  float: none;
+	clear: none;
+  width: auto;
+  text-align: left;
+  font-weight: bold;
+  margin: 0.2em;
+}
+
+div.group .data input,
+div.group .data label,
+div.group .data select {
+	font-weight: bold;
+}
+
+/* Default look for buttons */
+.button,
+div.buttonGroup input.button,
+div.float-left input.button,
+div.float-right input.button {
+	text-align: center;
+	padding: 0.1em;
+	height: 2em;
+	font-size: 100%;
+	margin-left: 0.3em;
+}
+
+/* Buttons within forms have a different look */
+div.group .data input.button {
+	font-weight: normal;
+	padding: 0;
+	margin-left: 0;
+	margin-bottom: 1px;
+	height: 1.7em;
+	font-size: 100%;
+}
+
+div.group p.address {
+	font-weight: bold;
+	margin-left: 40%;
+	text-align: left;
+	line-height: normal;
+}
+
+div.group .data label.hidden {
+	display: none !important;
+}
+
+div.group .labelCenter,
+div.group .data {
+	float: left;
+	display: inline;
+}
+
+div.buttonGroup {
+	padding: 0.4em 0 0.6em 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Input Groups */
+div.groupInstructions {
+	padding-left: 0.5em;
+}
+
+div.data span.label {
+	margin-left: 4em;
+	font-weight: normal;
+}
+
+div.moneyField,
+div.moneyField12 {
+	float: left;
+	clear: none;
+	padding: 0;
+	margin: 0;
+	width: 14.8em;
+	text-align: right;
+	margin-right: 0.5em; /* Keeps the help icons from being too close */
+}
+
+div.moneyField input,
+div.moneyField12 input,
+.moneyField {
+	text-align: right;
+}
+
+div.moneyField12 {
+	width: 8.8em;
+}
+
+div.footer {
+	width: 100%;
+	margin: auto auto;
+}
+
+div.footer div {
+	margin: 0 5px;
+}
+
+/* This is for lining up inline forms (e.g., a list of checkboxes that need to be lined up) within div.data */
+.inlineForm label {
+	float: left;
+	width: 70%;
+}
+
+div.data label {
+	margin-left: 2em;
+	font-weight: normal !important;
+}
+
+/* Used on div.labelLeft, etc when the <label> tag is not around the visible text */
+div.noLabel {
+	/* The border keeps the label from jumping when its checkbox takes or loses focus */
+	border: 1px solid #ffffff;
+}
+
+div.data span.subLabel {
+	margin-left: auto;
+	font-weight: normal;
+	/* The border keeps the label from jumping when its checkbox takes or loses focus */
+	border: 1px solid #ffffff;
+}
+
+.inlineLabel {
+	margin-left: 5em;
+	font-weight: normal;
+}
+
+span.dataMask {
+	margin-left: 0.2em;
+}
+
+ul.indentedList {
+	clear: both;
+	padding-left: 20px;
+	list-style-type: disc;
+}
+
+/* For text that wraps within a div class="data" and text in different lines doesn't need to be that far away from each other */
+div.data .clearLineHeight {
+	padding-top: 0.37em;
+	line-height: normal !important;
+}
+
+/*
+=================================================================================
+ Progress Bar
+=================================================================================
+*/
+div#progress-bar {
+  float: left;
+  clear: both;
+  margin-top: 10px;
+  background-color: #D6D6D6;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+div.pbLastBg {
+	background-color: #30295A !important;
+}
+
+div#progress-bar a,
+div#progress-bar a:active,
+div#progress-bar a:link,
+div#progress-bar a:visited {
+  color: #000080;
+}
+
+div#progress-bar a:hover {
+	color: #990000;
+}
+
+div#progress-bar ol {
+	list-style-type: none;
+}
+
+div#progress-bar ol li {
+	margin: 0;
+	padding: 0;
+}
+
+/* PB universal styles */
+.pbBeforeSel, .pbSelected, .pbAfterSel, .pbNormal, .pbLastOne {
+  float: left;
+  line-height: 27px;
+  height: 27px;
+  min-height: 27px;
+  text-indent: -15px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pbBeforeSel {
+  background: #D6D6D6 url( '../images/light-to-dark.png' ) top right no-repeat;
+}
+
+.pbSelected {
+  color: #FFF;
+  background: #30295A url( '../images/dark-to-light.png' ) top right no-repeat;
+}
+
+.pbNormal {
+  background: #D6D6D6 url( '../images/light-to-light.png' ) top right no-repeat;
+}
+
+.pbLastOne {
+	/* No background color on this one*/
+}
+
+.pbSelected a {
+	color: white;
+}
+
+/*
+=================================================================================
+ Breadcrumbs
+=================================================================================
+*/
+div#breadcrumbs {
+	float: left;
+	clear: both;
+	width: 100%;
+	overflow: hidden;
+} 
+
+
+div.breadCrumbWrapper {
+  float: left;
+	width: 100%;
+	margin: 5px 0 0 5px;
+}
+
+div#breadcrumbs span,
+div#breadcrumbs a,
+div#breadcrumbs a:active,
+div#breadcrumbs a:link,
+div#breadcrumbs a:visited {
+  padding: 0 0.5em 0 0.3em;
+}
+
+div#breadcrumbs a:hover {
+	color: crimson;
+}
+
+/*
+=================================================================================
+ Blocks (<div class="block">)
+=================================================================================
+*/
+div.block {
+	width: 100%;
+}
+
+div.block div.float-left,
+div.group div.block div.float-left, div.group div.float-left {
+	padding: 0.6em;
+	float: left;
+}
+
+div.block div.float-right, div.group div.block div.float-right, div.group div.float-right {
+	padding: 0.6em;
+	float: right;
+}
+
+/*
+==================================================================================
+ Result Sets
+==================================================================================
+*/
+div.rset {
+	width: 100%;
+	margin-top: 4px;
+	color: #333;	
+}
+
+/* Header */
+div.rset_head {
+	height: 1%;
+	padding: 0 6px;
+	overflow: hidden;
+	line-height: 1.2em !important;
+}
+
+div.rset_head div.float-left {
+	font-size: 110%;
+	font-weight: bold;
+}
+
+div.rset_head div {
+	clear: none;
+	padding: 0 !important;
+}
+
+div.rset_head div.float-right a,
+div.rset_head div.float-right input {
+	float: left;
+	margin-left: 0.5em;
+}
+
+/* Body */
+div.rset_body {
+	margin: 3px 6px 0 6px;
+}
+
+div.rset_body table {
+	position: relative;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+div.rset_body thead {
+	line-height: 2.4em;
+	height: 2.4em;
+	background: #F1F1F1 url(../images/rsetbg.png) top left repeat-x;
+}
+
+div.rset_body th {
+	padding: 2px;
+	line-height: 1em;
+	text-align: left;
+	font-weight: normal;
+	color: #333;
+	vertical-align: top;
+	border: 1px solid #AAA;
+}
+
+div.rset_body tbody td {
+	padding: 0 2px;
+	line-height: 1.5em;
+	height: 1.5em;
+	font-weight: normal;
+	vertical-align: top;
+	border: 1px solid #AAA;
+}
+
+tr.alternateRow {
+	background-color: #F1F1F1;
+}
+
+tr.normalRow {
+	background-color: #FFF;
+}
+
+/* Grayed-out cells */
+div.rset_body tbody td.notApplicable {
+	background-color: #CCC;
+	border-style:: solid;
+	border-color: #AAA;
+	border-width: 0;
+	border-bottom: 1px solid #CCC;
+}
+
+/* Rset's footer styles */
+div.rset tfoot {
+	width: 100%;
+	background-color: #FFF;
+	text-align: right;
+}
+
+div.rset tfoot td {
+	border: none;
+	border-top: 3px solid #AAA;
+	padding: 0.7em 2px;
+	font-weight: bold;
+}
+
+div.rset tfoot td.rowHeader {
+	padding-right: 1em;
+}
+
+div.rset tfoot td.hasBorder {
+	border: 1px solid #AAA;
+	border-top: 3px solid #AAA;
+}
+
+div.rset h5 {
+	padding: 0.1em 0;
+	font-size: 105%;
+	font-weight: bold;
+}
+
+div.rset input {
+	vertical-align: top;
+}
+
+div.rset .button {
+	padding: 0;
+	margin-bottom: 1px;
+	height: 1.7em;
+	font-size: 90%;
+}
+
+/* if buttons want to display same width, use these accordingly (or add new ones), else don't use them */
+div.rset .rsetButtonTiny {
+	width: 2.7em; /* ~30px */
+}
+
+div.rset .rsetButtonSmall {
+	width: 4.5em; /* ~50px */
+}
+
+div.rset .rsetButtonMedium {
+	width: 6.3em; /* ~70px */
+}
+
+/*
+==================================================================================
+ Error pages
+==================================================================================
+*/
+
+div#errorPageMessage {
+	margin: 0 auto;
+	margin-top: 2.0em !important;
+	text-align: left;
+}
+
+div#errorPageMessage p {
+	font-size: 1.5em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+div#errorPageMessage p.smallText {
+	font-size: 110%;
+}
+
+/* Maintenance Downtime page */
+div.maintenancePage p {
+	margin: 0.5em 0.5em 0.5em 0.5em;
+	clear: both;
+}
+div.maintenancePage div.scheduleLeftCol,
+div.maintenancePage div.scheduleRightCol {
+	font-size: 130%;
+	float: left;
+	width: 45%;
+	margin-bottom: 0.5em;
+}
+div.maintenancePage div.scheduleLeftCol {
+	padding-right: 0.5em;
+	text-align: right;
+}
+div.maintenancePage div.scheduleRightCol {
+	padding-left: 0.5em;
+}

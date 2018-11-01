@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>Login</title>
+    <meta name="format-detection" content="telephone=no">
+    <link href="../../assets/ols/css/main.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- === DEMO ASSETS: START === -->
+    <link href="../../assets/css/demo.css" rel="stylesheet" type="text/css" media="all">
+    <!-- === DEMO ASSETS: END === -->
+
+</head>
+<body class="tax-demo-page">
+    <div class="cui-hide-from-screen feta-hidden-jump-links">
+        <a href="#nav">Go to navigation</a>
+        <a href="#main">Go to content</a>
+    </div>
+
+    <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30"></div>
+
+    <script type="text/javascript">
+        // Global objects for JSON objects and corresponding templates
+        var fwData = {
+            "templates": [],
+            "tables": [],
+            "buttonMenus":[],
+            "environment": "iflow",
+            "app": {
+                "title": "",
+            },
+            "page": {
+                "title": "",
+            },
+        };
+
+        fwData.banners = {
+            "sections": { // Optional. Use this to suppress or override specific pieces of the banner/footer
+                "agencyWrapper": {
+                    "suppress": false, // `true` means to skip rendering this piece
+                },
+                "appHeader": {
+                    "suppress": true
+                },
+                "linkFooter": {
+                    "suppress": true
+                },
+                "frgFooter": {
+                    "suppress": true,
+                },
+            },
+
+        };
+
+        fwData.helpMenu = {
+            "text": "Get Help", // Optional, will default to 'Help'
+            "items": [
+                {
+                    "text": "Support",
+                    "href": "https://www.tax.ny.gov/",
+                },
+                {
+                    "text": "Contact Us",
+                    "href": "https://www.tax.ny.gov/e-services/otc/contact_us.htm",
+                },
+            ],
+        };
+
+
+    </script>
+
+    <div id="cui-body-wrapper">
+
+        <header class="feta-header"></header>
+
+        <!-- main content -->
+        <main role="main" id="main">
+
+            <ol class="feta-progressbar"></ol>
+
+            <div class="feta-page-instructions-wrapper">
+                <div class="feta-page-instructions-toggle-wrapper">
+                    <span class="feta-page-instructions-toggle">Instructions</span>
+                </div>
+                <div class="feta-page-instructions feta-hide-instructions">
+                    <p>Enter your username and password and select Sign in. If you don't have a New York State Tax Department Online Services account, return to the Online Services page and select Create Account. All online services that require your personal information are secure. Please do not bookmark this page.</p>
+                </div>
+            </div>
+
+            <ul class="cui-messages feta-messages cui-hidden"></ul>
+
+            <form name="form1" id="form1" action="" method="post">
+
+
+                <div class="cui-row">
+                    <div class="cui-col-small-4">
+                        <span class="cui-no-wrap"></span>
+                    </div>
+                    <div class="cui-col-small-4">
+                        <div class="cui-row">
+                            <div class="cui-col cui-align-center">
+                                <p style="font-size:12px; font-weight:bold;">Please login after reading the Acceptable Use Policy below</p>
+                            </div>
+                        </div>
+
+                        <section class="" style="max-width:260px; margin:0 auto;">
+                            <header class="tax-login-header">
+                                <h3>NY.gov ID</h3>
+                            </header>
+
+                            <div class="cui-row">
+                                <div class="cui-col">
+                                    <div class="cui-field">
+                                        <div class="cui-field-main">
+                                            <div class="cui-label">
+                                                <label for="username" class="cui-desc">Username:</label>
+                                            </div>
+                                            <div class="cui-data">
+                                                <input type="text" class="cui-value" id="username" size="30" maxlength="30" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                           <div class="cui-row">
+                                <div class="cui-col">
+                                    <div class="cui-field">
+                                        <div class="cui-field-main">
+                                            <div class="cui-label">
+                                                <label for="password" class="cui-desc">Password:</label>
+                                            </div>
+                                            <div class="cui-data">
+                                                <input type="password" class="cui-value" id="password" size="30" maxlength="30" value="">                       
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cui-row">
+                                <div class="cui-col cui-align-center">
+                                    <button type="button" class="cui-button" style="width:200px; max-width:100%; height:50px;" onclick="document.location.href='42_Tax-Summit-Secret.html'">Sign In</button>
+                                </div>
+                            </div>
+
+                            <div class="cui-row">
+                                <div class="cui-col cui-align-center">
+                                    <p style="font-size:10px">Forgot your <a href="#" style="font-size:12px">Username</a> or <a href="#" style="font-size:12px">Password</a></p>
+                                </div>
+                            </div>
+
+                            <div class="cui-row">
+                                <div class="cui-col cui-align-center">
+                                    <p style="font-size:8px"><a href="#">NY.gov ID - Terms of Service</a></p>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <div class="cui-row" style="margin-top:20px;">
+                            <div class="cui-col cui-align-center">
+                                <p style="font-size:12px"><a href="#">Agency Assistance &amp; Contact Information</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cui-col-small-4">
+                        <span class="cui-no-wrap"></span>
+                    </div>
+                </div>
+
+            </form>
+        </main>
+
+        <!-- Everything below the last section -->
+        <footer class="feta-footer"></footer>
+
+        <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+    </div>
+
+    <nav role="navigation" class="feta-nav"></nav>
+
+    <div class="feta-field-instructions">
+        <div id="i1">
+            <header>Sample Instructions</header>
+            <p>Sample iTag instructions</p>
+        </div>
+    </div>
+
+    <script id="require" src="../../assets/ols/js/main.js"></script>
+    <script type="text/javascript">
+        require(['feta', 'ols', 'iflow', 'domReady!'], function (feta, ols, iflow) {
+            // This block is only needed for page-specific scripts
+        });
+    </script>
+
+</body>
+</html>

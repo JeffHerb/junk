@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Quick Pay</title>
+      <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banner Container [Start] -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Banner Container [End] -->
+        <script>
+        uiIncludes.header.setup();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li> <a class="navHeaderFirstLink navHeaderLastLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Quick Pay</h1>
+        </div>
+        <div class="hr"> </div>
+        <h2>Security Check</h2>
+        <!--<h2>&nbsp;</h2>-->
+        <div id="pageInstructions">
+            <p class="text">Enter the security code displayed below and then select <strong>Continue</strong>.</p>
+        </div>
+        <div id="legend">
+            <ul>
+                <!-- <li><span class="required">*</span> Required fields</li>  -->
+            </ul>
+        </div>
+        <div class="formWrapper">
+            <div class="leftFluid"> </div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post" onsubmit="window.location.href='20_QPAY_PINF01PaymentInformation.html'; return false;">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Security check</h4>
+                        <div class="groupInstructions">
+                            <p class="text">The following security code is necessary to prevent unauthorized use of this web site. If you are using a screen reading program, select <a href="#"><strong>listen</strong></a> to have the number announced.</p>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap"></div>
+                            </div>
+                            <div class="dataPn"> <img src="../../assets/iflow/images/captchaimage.gif"></div>
+						
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="securityCode">Enter the security code displayed above:<span class="hidden"> Required field</span></label>
+                                </div>
+								<div class="required">*</div>
+                            </div>
+                            <div class="dataPn">
+                                <input type="text" id="securityCode" value="" size="14" maxlength="6" tabindex="1">
+                            </div>
+                        </div>
+                    </div>
+ 
+					 <div class="buttonGroup">
+                        <input type="button" class="button primary" value="Continue" title="Continue" onclick="window.location.href='155_QPAY_PINF01TaxpayerVerification.html';" tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script>
+    uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+</html>

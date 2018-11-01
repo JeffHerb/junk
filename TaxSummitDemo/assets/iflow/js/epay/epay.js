@@ -1,0 +1,17 @@
+/*! New York State Department of Taxation & Finance External Applications
+ *  @description  Iflow External Applications
+ *  @version      4.2.55.REL20180514
+ *  @copyright    2018 New York State Department of Taxation & Finance
+ */
+
+var epay = function() { 
+	 var continueButton, bankNameElem, bnkNameDisplay, _setup = function() { bankNameElem = document.getElementById("bankName"), bnkNameDisplay = document.getElementById("bankNameDiv"), (continueButton = document.getElementById("continue")) || uiUtil.queryOne('[value="Continue"]'), continueButton && (uiUtil.css.addClass(continueButton, "mutexElement"), uiUtil.css.addClass(continueButton, "noSpinner"), uiMethods.buttons.mutex.pageSetup()) },
+		_processDeleteSuccess = function(xhr) { try { var child, replyObj = JSON.parse(xhr.responseText); "SUCCESS" === replyObj.status ? ((child = document.getElementById("account" + replyObj.id)).parentNode.removeChild(child), "Y" === replyObj.chkNewAcct && document.getElementById("bankAccountNew").click()) : "ERROR" === replyObj.status || "FORWARD" === replyObj.status && (window.location.href = replyObj.forwardPage) } catch (e) {} finally { uiMethods.buttons.mutex.enableAll() } },
+		_processAbaSuccess = function(xhr) { try { var replyObj = JSON.parse(xhr.responseText); "SUCCESS" === replyObj.status ? (_removeBnkName(), bnkNameDisplay.appendChild(document.createTextNode(replyObj.bankName)), bankNameElem.value = replyObj.bankName, uiUtil.setFocus("bankAcctNumber")) : "ERROR" === replyObj.status ? _removeBnkName() : "FORWARD" === replyObj.status && (window.location = replyObj.forwardPage) } catch (e) {} finally { uiMethods.buttons.mutex.enableAll() } },
+		_processError = function() { try { window.location.href = "error.jsp" } catch (e) {} },
+		_processTimeout = function() { try { window.location.href = "error.jsp" } catch (e) {} },
+		_removeBnkName = function() { for (; 1 <= bnkNameDisplay.childNodes.length;) bnkNameDisplay.removeChild(bnkNameDisplay.firstChild);
+			bankNameElem.value = "" }; return window.attachEvent || "function" != typeof domready ? uiUtil.attachEvent(window, "load", _setup) : domready(_setup), { deleteBnkAccount: function(id, jadeAction) { "string" != typeof jadeAction && (jadeAction = "GENE_BANK03_DELETE_ACTION"); var callSettings = { sUrl: "IFlowAjaxGatewayServlet", iTimeout: "", sMethod: "post", oParams: "id=" + id + "&jadeAction=" + jadeAction, sSpinElemId: "chooseAcctGrp", sFocusElemId: "errorMessages", onSuccessXtra: _processDeleteSuccess, onError: _processError, onTimeout: _processTimeout };
+			uiMethods.buttons.mutex.disableAll(), uiMethods.ajax.execute(callSettings) }, resolveAbaNumber: function(spinElementId, jadeAction) { var abaNmbr = document.getElementById("bankRoutingNumber"); if ("string" != typeof jadeAction && (jadeAction = "GENE_BANK03_RETRIEVE_BANK_NAME_ACTION"), "" !== uiUtil.trim(abaNmbr.value)) { var callSettings = { sUrl: "IFlowAjaxGatewayServlet", iTimeout: "", sMethod: "post", oParams: "bankRoutingNumber=" + abaNmbr.value + "&jadeAction=" + jadeAction, sSpinElemId: spinElementId, sFocusElemId: "errorMessages", onSuccessXtra: _processAbaSuccess, onError: _processError, onTimeout: _processTimeout };
+				uiMethods.buttons.mutex.disableAll(), uiMethods.ajax.execute(callSettings) } else _removeBnkName() }, getVersion: function() { return "1.0.1.REL20150924" } } 
+			}();

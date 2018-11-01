@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Cancel Scheduled Payment</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script type="text/javascript" src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script type="text/javascript" src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a></li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li><a class="navHeaderFirstLink navHeaderLastLink" href="https://nystax.custhelp.com/app/answers/list/c/6,76" target="_blank" title="This will open a new window to Help">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Cancel Scheduled Payment</h1>
+            <!-- Progress Bar -->
+            <div id="taxpayer-info">
+                <div class="leftFluid">
+                </div>
+                <div class="sectionBorder">
+                    <div class="c33">
+                        <div class="label">
+                            Taxpayer ID:
+                        </div>
+                        <div class="data">
+                            XXX-XX-0123
+                        </div>
+                    </div>
+                    <div class="c67">
+                        <div class="label">
+                            Taxpayer name:
+                        </div>
+                        <div class="data">
+                           JANE DOE
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Scheduled Payment(s)</h2>
+        <div id="pageInstructions">
+            <p class="text"><strong>A scheduled payment:</strong></p>
+            <ul class="indentedList">
+                <li>has a payment date at least four days in the future</li>
+                <li>can only be viewed prior to the payment date</li>
+                <li>must be cancelled at least four days before the scheduled payment date</li>
+                <li>will not appear below if the bank already processed it or you previously cancelled it</li>
+            </ul>
+            <p class="text">To cancel your payment scheduled for future date, check the corresponding box in the 'Cancel' column and then select <strong>Continue</strong>. If you choose to cancel a payment and need to make a replacement payment, see <a href="https://www.tax.ny.gov/e-services/generic/replace_pmt.htm" title="This will open a new window to see instructions." target="_blank">instructions</a>.</p>
+        </div>
+        <div id="legend">
+            <ul>
+                <!-- <li><span class="required">*</span> Required fields</li> -->
+                <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+            </ul>
+        </div>
+      
+        <div class="formWrapper">
+            <div class="leftFluid">
+            </div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Scheduled Payment(s)</h4>
+                        <div class="rset checkBoxCollection form-table">
+                            <div class="rset_head">
+                                <div class="rset_title">Payment(s)</div>
+                            </div>
+                            <div class="rset_body">
+                                <table id="table1" summary="Currently warehoused payments">
+                                    <thead>
+                                        <tr>
+                                            <th class="center table-select" scope="col">Cancel</th>
+                                            <th scope="col" class="table-primary">Original confirmation number</th>
+                                            <th scope="col">Tax type</th>
+                                            <th scope="col">Payment for</th>
+                                            <th scope="col">Original transaction date <a href="#i1" class="help icon-button icon-help" role="button" tabindex="1">More information</a></th>
+                                            <th scope="col">Bank account number</th>
+                                            <th scope="col">Scheduled payment date</th>
+                                            <th scope="col" class="table-secondary">Amount ($)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="center">
+                                                <label class="hidden" for="checkBox1">Select this row</label>
+                                                <input type="checkbox" id="checkBox1" value="" tabindex="1">
+                                            </td>
+                                            <td>PPPMT1809101278748</td>
+                                            <td>Personal Income Tax</td>
+                                            <td>Estimated Payment</td>
+                                            <td>09/10/2018</td>
+                                            <td>X2345</td>
+                                            <td>01/15/2019</td>
+                                            <td class="noWrap rt">5,200.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button primary" tabindex="1" value="Continue" onclick="javascript:window.location.href='10_FWVERF01ESVerificationViewandCancelScheduledPayment.html';" title="Continue">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="instructionsFooter">
+            <h3>Instructions</h3>
+            <div>
+                <h4 id="i1">Original transaction date</h4>
+                <p class="text">Original transaction date is the date you originally submitted the payment and scheduled it for a future date.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script type="text/javascript">
+    uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+</html>

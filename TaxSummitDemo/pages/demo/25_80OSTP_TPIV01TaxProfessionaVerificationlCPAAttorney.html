@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Tax Professional Account Creation</title>
+<link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+<!-- This uiscript.js JavaScript file is for UI testing only -->
+<script src="../../assets/iflow/js/uiscript.js"></script>
+<!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  <!-- Banners --> 
+  <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script> 
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li> <a class="navHeaderFirstLink navHeaderLastLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Tax Professional Account Creation</h1>
+  </div>
+  <div class="hr"> </div>
+  <h2>CPA/Attorney Verification</h2>
+  <div id="pageInstructions">
+    <p class="text">Complete the following information and then select <strong>Continue</strong>. To return to the previous page, select <strong>Back</strong>.</p>
+  </div>
+  <div id="legend">
+    <ul>
+      <li><span class="required">*</span> <span class="hidden">Required field</span> Required fields </li>
+      <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+    </ul>
+  </div>
+  <div id="errorMessages"></div>
+  <div class="formWrapper">
+    <div class="leftFluid"> </div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post">
+        <!-- Group -->
+        <div class="group">
+          <h4>Verification information</h4>
+          <fieldset class="valueDepRadiosWrapper">
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <legend><span class="legendWrap"> Have you filed a New York State income tax return (Form IT-201 or IT-203) for at least one of the past five years? <span class="hidden"> Required field</span></span></legend>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <label for="FILED_TAXRETURN_1">Yes</label>
+                <input type="radio" name="FILED_TAXRETURN" id="FILED_TAXRETURN_1" value="1" tabindex="1">
+                <label for="FILED_TAXRETURN_2">No</label>
+                <input type="radio" name="FILED_TAXRETURN" id="FILED_TAXRETURN_2" value="" tabindex="1">
+              </div>
+            </div>
+            <div class="checkblock hidden" id="FILED_TAXRETURN_1_block">
+              <div class="linePn labelM">
+                <div class="labelPn">
+                  <div class="labelWrap">
+                    <label for="returnYear">Tax year you filed a return:<span class="hidden">Required field</span> </label>
+                  </div>
+                  <div class="required"> * </div>
+                </div>
+                <div class="dataPn">
+                  <select id="returnYear" tabindex="1">
+                    <option value="">Select tax year</option>
+                    <option value="2010">2013</option>
+                    <option value="2011">2014</option>
+                    <option value="2012">2015</option>
+                    <option value="2013">2016</option>
+                    <option value="2014">2017</option>
+                  </select>
+                  <a href="#instructions1" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+              </div>
+              <div class="linePn labelM">
+                <div class="labelPn">
+                  <div class="labelWrap">
+                    <label for="taxableNYS">Taxable income reported on your return ($):<span class="hidden">Required field</span> </label>
+                  </div>
+                  <div class="required"> * </div>
+                </div>
+                <div class="dataPn">
+                  <div class="moneyField">
+                    <input type="text" id="taxableNYS" size="20" maxlength="20" tabindex="1">
+                    <span class="appended-text">.00</span> </div>
+                  <a href="#instructions2" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+              </div>
+              <fieldset>
+                <div class="linePn labelM">
+                  <div class="labelPn">
+                    <div class="labelWrap">
+                      <legend><span class="legendWrap">Did you request a refund on your return?<span class="hidden">Required field</span></span></legend>
+                    </div>
+                    <div class="required">*</div>
+                  </div>
+                  <div class="dataPn">
+                    <label for="requestRefund_Y">Yes</label>
+                    <input type="radio" name="requestRefund" id="requestRefund_Y" tabindex="1">
+                    <label for="requestRefund_N">No</label>
+                    <input type="radio" name="requestRefund" id="requestRefund_N" tabindex="1">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="checkblock hidden" id="requestRefund_Y_block">
+              <div class="linePn labelM">
+                <div class="labelPn">
+                  <div class="labelWrap">
+                    <label for="reqAmount">Requested refund amount ($):<span class="hidden">Required field</span> </label>
+                  </div>
+                  <div class="required"> * </div>
+                </div>
+                <div class="dataPn">
+                  <div class="moneyField">
+                    <input type="text" id="reqAmount" size="20" maxlength="20" tabindex="1">
+                    <span class="appended-text">.00</span> </div>
+                  <a href="#instructions3" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+              </div>
+            </div>
+            <div class="checkblock hidden" id="requestRefund_N_block">
+              <div class="linePn labelM">
+                <div class="labelPn">
+                  <div class="labelWrap">
+                    <label for="amountOwed">Amount you owed ($):<span class="hidden">Required field</span> </label>
+                  </div>
+                  <div class="required"> * </div>
+                </div>
+                <div class="dataPn">
+                  <div class="moneyField">
+                    <input type="text" id="amountOwed" size="20" maxlength="20" tabindex="1">
+                    <span class="appended-text">.00</span> </div>
+                  <a href="#instructions4" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+              </div>
+            </div>
+            <div class="checkblock hidden" id="FILED_TAXRETURN_2_block">
+              <div class="linePn labelM masktoggle">
+                <div class="labelPn">
+                  <div class="labelWrap">
+                    <label for="reenterTpIdNumber2">Re-enter Social Security  number (SSN):<span class="hidden">Required field</span> </label>
+                  </div>
+                  <div class="required"> * </div>
+                </div>
+                <div class="dataPn">
+                  <input type="text" id="reenterTpIdNumber2" size="19" maxlength="11" tabindex="1">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="buttonGroup">
+          <input type="button" class="button" value="Back" onclick="javascript:window.location.href='20_70OSTP_TPCP01TaxProfessionalIdentificationCPA_Attorney.html';" title="Back" tabindex="1">
+          <input type="button" class="button primary" value="Continue" onclick="javascript:window.location.href='30_200OSTP_TPIN01TaxProfessionalInformation.html';" title="Continue" tabindex="1">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="instructionsFooter">
+    <h3>Instructions</h3>
+    <div>
+      <h4 id="instructions1">Tax year you filed a return</h4>
+      <p class="text">Select the tax year an income tax return was filed.</p>
+    </div>
+    <div>
+      <h4 id="instructions2">Taxable income reported on your return</h4>
+      <p class="text">Enter the taxable income reported on your New York State income tax return (IT-201 or IT-203) or amended income tax return (IT-201-X or IT-203-X) for the year selected. If your taxable income is negative, enter a minus sign (-) in front of the number (Ex. -2500).  Do not enter any dollar signs, commas, or decimals.</p>
+      <p class="text">See <a href="https://www.tax.ny.gov/e-services/otc/indverification.htm" target="_blank" title="This will open a new window for more information."> Individual verification</a> for instructions on where to find this amount on your return.</p>
+      <p class="text">If you have filed only Form IT-214, <em>Real Property Tax Credit</em>, or Form NYC-210, <em>School Tax Credit</em>, you must choose a different verification method.</p>
+    </div>
+    <div>
+      <h4 id="instructions3">Requested refund amount</h4>
+      <p class="text">Enter the refund amount requested on your New York State income tax return (IT-201 or IT-203) or amended income tax return (IT-201-X or IT-203-X) for the year selected. Do not enter any dollar signs, commas, or decimals.</p>
+      <p class="text">See <a href="https://www.tax.ny.gov/e-services/otc/indverification.htm" target="_blank" title="This will open a new window for more information."> Individual verification</a> for instructions on where to find this amount on your return.</p>
+    </div>
+    <div>
+      <h4 id="instructions4">Amount you owed</h4>
+      <p class="text">Enter the amount you reported owed on your New York State income tax return (IT-201 or IT-203) or amended income tax return (IT-201-X or IT-203-X) for the year selected. If you did not owe an amount, enter a single '0.' Do not enter any dollar signs, commas, or decimals.</p>
+      <p class="text">See <a href="https://www.tax.ny.gov/e-services/otc/indverification.htm" target="_blank" title="This will open a new window for more information."> Individual verification</a> for instructions on where to find this amount on your return.</p>
+    </div>
+  </div>
+</div>
+<!-- end of page-container --> 
+<script type="text/javascript">
+    uiIncludes.footer.bShowTermsAndConditions = true;
+    </script> 
+<script type="text/javascript">
+    uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+</html>

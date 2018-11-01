@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Personal Income Tax Extension</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Personal Income Tax Extension</h1>
+        </div>
+        <div id="taxpayer-info">
+            <div class="leftFluid"></div>
+            <div class="sectionBorder">
+                <div class="c33">
+                    <div class="label">Taxpayer ID:</div>
+                    <div class="data">XXX-XX-0123</div>
+                </div>
+                <div class="c67">
+                    <div class="label">Taxpayer name:</div>
+                    <div class="data">JANE DOE</div>
+                </div>
+            </div>
+        </div>
+        <h2>Taxes You Owe</h2>
+        <div id="pageInstructions"> <p class="text">Complete the following information and select <strong>Continue</strong>.</p>
+        </div>
+        <!--legend begin-->
+        <div id="legend">
+            <ul>
+                <li><span class="required">*</span> Required fields</li>
+                <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+            </ul>
+        </div>
+        <!--legend end-->
+        <div id="errorMessages"></div>
+        <div class="formWrapper">
+            <div class="leftFluid"></div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Filing details</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="taxesYouAreSubTo">Taxes you are subject to: <span class="hidden">Required field</span></label>
+                                </div>
+                                   <div class="required">*</div>
+                            </div>
+                            <div class="dataPn">
+                              <select id="taxesYouAreSubTo" tabindex="1">
+                <option value="" selected="selected">Select local taxes</option>
+                <option value="1">New York State</option>
+                <option value="2">New York State/New York City</option>
+                <option value="3">New York State/New York City/City of Yonkers </option>
+                <option value="2">New York State/City of Yonkers</option>
+				<option value="1">New York State/MCTMT</option>
+                <option value="2">New York State/New York City/MCTMT</option>
+                <option value="3">New York State/New York City/City of Yonkers/MCTMT</option>
+                <option value="2">New York State/City of Yonkers/MCTMT</option>
+
+              </select>
+                            </div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="salesUse">Sales & use tax ($):
+                                        <span class="hidden">Required field</span>
+                                    </label>
+                                </div>
+                                <div class="required">*</div>
+                            </div>
+                            <div class="dataPn">
+                                <div class="moneyField">
+                                    <input type="text" id="salesUse" value="" size="20" maxlength="20" tabindex="1" title="Enter a dollar amount">
+                                      <span class="appended-text">.00</span>
+                                </div>
+                                  <a href="#i1" class="help icon-button icon-help" role="button" tabindex="1">More information</a>
+                            </div>
+                        </div>
+                    <div class="linePn labelM">
+                      <div class="labelPn">
+                        <div class="labelWrap">
+                          <label for="totalPaymentAmount">Total payment amount ($): <span class="hidden">Required field</span> </label>
+                        </div>
+                        <div class="required">*</div>
+                      </div>
+                      <div class="dataPn">
+                        <div class="moneyField">
+                          <input type="text" id="inccomeTax" value="" size="20" maxlength="20" tabindex="1" title="Enter a dollar amount">
+                          <span class="appended-text">.00</span> </div>
+                        <a href="#i2" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+                    </div></div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button" value="Back" title="Back" onclick="window.location.href='102SF1_20RPXT_FINF01FilingInformation.html';" tabindex="1">
+                        <input type="button" class="button primary" value="Continue" title="Continue" onclick="window.location.href='104SF1_60GENE_PYMD01Selectyourpaymentmethod.html';"  tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="instructionsFooter">
+            <h3>Instructions</h3>
+            <div>
+                <h4 id="i1">Sales & use tax</h4>
+                <p class="text"> For information on how to determine the amount of sales or use tax you owe, see <a href="https://www.tax.ny.gov/pit/file/sales_and_use_tax_on_my_income_tax_return.htm" target="_blank" title="This will open a new window for more information.">instructions</a>. If you do not owe any sales or use tax, you must enter 0 in this field. Do not leave this field blank.</p>
+            </div>
+             <div>
+                <h4 id="i2">Total payment amount</h4>
+                <p class="text">Total payment amount is the amount you would expect to pay if you filed your return today. The total payment amount includes the total of any New York State, New York City, Yonkers and MCTMT tax liabilities, plus sales and use tax, minus any prepayments. Prepayments include estimated tax payments, credit carry forwards, credits, and withholding tax payments.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script>
+    uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+</html>

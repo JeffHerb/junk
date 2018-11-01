@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Online Services Account Creation</title>
+<link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+<!-- This uiscript.js JavaScript file is for UI testing only -->
+<script src="../../assets/iflow/js/uiscript.js"></script>
+<!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  <!-- Banners --> 
+  <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script> 
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li><a class="navHeaderFirstLink navHeaderLastLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Tax Professional Account Creation</h1>
+  </div>
+  <div class="hr"></div>
+  <h2>Tax Professional Information</h2>
+  <div id="pageInstructions">
+    <p class="text">Complete the following information and then select <strong>Continue</strong>. To return to the previous page, select <strong>Back</strong>.</p>
+  </div>
+  <div id="legend">
+    <ul>
+      <li><span class="required">*</span> Required fields</li>
+      <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+    </ul>
+  </div>
+  <div id="errorMessages"></div>
+  <div class="formWrapper">
+    <div class="leftFluid"></div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post">
+        <!-- Group 1 -->
+        <div class="group">
+          <h4>Tax professional information</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Certified public accountant (CPA) license number:</div>
+            </div>
+            <div class="dataPn">020122</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Social Security number (SSN):</div>
+            </div>
+            <div class="dataPn">XXX-XX-0122</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Legal name of business:</div>
+            </div>
+            <div class="dataPn">TAX SUMMIT 2018</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Tax professional name:</div>
+            </div>
+            <div class="dataPn">JOHN SMITH</div>
+          </div>
+        </div>
+        <div class="group">
+          <h4>eSignature</h4>
+          <div class="groupInstructions">
+            <p class="text">By checking the “I agree” box and selecting <strong>Submit</strong>, I certify that I am an owner, partner, or officer duly authorized to create a Tax Professional Online Services Account on behalf of my business, firm or company, that all information provided herein is true, correct, and complete, and that I have read and agree to the <a href="https://www.tax.ny.gov/e-services/otc/terms_and_conditions_ero.htm" target="_blank" title="This will open a new window">Terms and Conditions of Use for Tax Professionals</a>.</p>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <input type="checkbox" id="esignatureAgree" name="esignatureAgree" value="Y" tabindex="1">
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <label for="esignatureAgree">I agree <span class="hidden">Required field</span> </label>
+            </div>
+          </div>
+        </div>
+        <div class="buttonGroup">
+          <input type="button" class="button" value="Back" onclick="javascript:window.location.href='25_80OSTP_TPIV01TaxProfessionaVerificationlCPAAttorney.html';" title="Back" tabindex="1">
+          <input type="button" class="button primary" value="Submit" onclick="javascript:window.location.href='35_10ECSP_LINF01LoginInformation.html';" title="Submit" tabindex="1">
+          <input type="button" class="button" value="Cancel" onclick="javascript:window.location.href='';" title="Cancel" tabindex="1">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="instructionsFooter">
+    <h3>Instructions</h3>
+    <div>
+      <h4 id="i1A">Phone number</h4>
+      <p>Enter a 10 digit phone number.  International phone numbers are not accepted.</p>
+    </div>
+    <div>
+      <h4 id="i1">Physical Street address</h4>
+      <p>The physical street address cannot include a P.O. Box. If entering a foreign address, other than U.S. or Canada, include your foreign ZIP/postal code in this field.</p>
+    </div>
+    <div>
+      <h4 id="i2">Physical Zip/Postal code</h4>
+      <p>Enter a ZIP/postal code in the format of your country choice: U.S. format 12345 or 12345-6789, Canadian format A1B-2C3. If entering a foreign address, other than US or Canada, include your foreign ZIP/postal code in the street address field.</p>
+    </div>
+    <div>
+      <h4 id="i3">My mailing address is the same as my physical address</h4>
+      <p class="text">If your mailing address is the same as the physical address entered above, select 'Yes.' If they are not the same, select 'No' and enter your mailing address.</p>
+    </div>
+    <div>
+      <h4 id="i4">Mailing street address</h4>
+      <p>Mailing street address may contain a P.O. Box. If entering a foreign address, other than U.S. or Canada, include your foreign ZIP/postal code in this field.</p>
+    </div>
+    <div>
+      <h4 id="i5">Mailing Zip/Postal code</h4>
+      <p>Enter a ZIP/postal code in the format of your country choice: U.S. format 12345 or 12345-6789, Canadian format A1B-2C3. If entering a foreign address, other than US or Canada, include your foreign ZIP/postal code in the street address field.</p>
+    </div>
+  </div>
+</div>
+<!-- end of page-container --> 
+<script>uiIncludes.footer.bShowTermsAndConditions = true;</script> 
+<script>uiIncludes.footer.renderXHTML();</script> 
+</body>
+</html>

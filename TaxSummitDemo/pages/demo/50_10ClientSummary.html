@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<title></title>
+<meta name="format-detection" content="telephone=no">
+<link href="../../assets/ols/css/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+<div class="cui-hide-from-screen feta-hidden-jump-links"> <a href="#nav">Go to navigation</a> <a href="#main">Go to content</a> </div>
+<div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30"></div>
+<script>
+        // Global objects for JSON objects and corresponding templates
+        var fetaData = {
+            templates: [],
+            tables: [],
+            environment: 'ols',
+            app: {
+                title: 'Client Summary',
+                userType: 'tp', // Only required for OLS. Indicates the type of logged in user: `ind`, `fid`, `tp`, or `bus`
+            },
+             page: {
+                title: 'Client Summary',
+            },
+        };
+
+        fetaData.banners = {
+            sections: { // Optional. Use this to suppress or override specific pieces of the banner/footer
+                agencyWrapper: {
+                    suppress: false, // `true` means to skip rendering this piece
+                },
+                appHeader: {
+                    suppress: false,
+                },
+                frgFooter: {
+                    suppress: false,
+                },
+            },
+            urls: {
+                userName: {
+                    href: 'https://www.tax.ny.gov/e-services/otc/help/tips_os.htm',
+                },
+                contactUs: {
+                    href: 'https://www.tax.ny.gov/help/contact/how_to_reach.htm',
+                },
+                logout: {
+                    href: 'Logoff?langId=-1&amp;storeId=10151&amp;catalogId=10001&amp;URL=StoreView',
+                },
+            },
+        };
+
+        fetaData.preferences = {
+            text: 'Preferences', // Optional, will default to 'Preferences'
+            isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+            items: [
+                {
+                    text: 'Edit personal information',
+                    href: '#editinformation',
+                },
+                 {
+                    text: 'Delete Tax Professional Account',
+                    href: '#deleteaccount',
+                },
+            ],
+        };
+
+        fetaData.helpMenu = {
+            text: 'Get Help', // Optional, will default to 'Help'
+            isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+            items: [
+                {
+                    text: 'Help Center',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                },
+                {
+                    text: 'Frequently asked questions (FAQs)',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                },
+                {
+                    text: 'Learn about online services',
+                    href: 'https://www.tax.ny.gov/online/moreinfo.htm',
+                },
+                {
+                    text: 'View demos and videos',
+                    href: 'https://www.tax.ny.gov/e-services/otc/demos/demo.htm',
+                },
+                {
+                    text: 'E-ZRep TR-2000',
+                    href: 'https://www.tax.ny.gov/e-services/otc/tr_2000_info.htm',
+                },
+                {
+                    type: 'divider',
+                },
+                {
+                    text: 'Support',
+                    href: 'https://www.tax.ny.gov/',
+                },
+                {
+                    text: 'Contact Us',
+                    href: 'https://www.tax.ny.gov/e-services/otc/contact_us.htm',
+                },
+            ],
+        };
+
+        fetaData.userAcct = {
+            name: 'John Smith',
+            legalName: 'TAX SUMMIT 2018',
+			id: 'XXX-XXX-0122',
+            type: 'Tax Professional',
+            role: 'Administrator',
+        };
+
+        fetaData.navigation = {
+            filter: {
+                type: 'text',
+                closeButton: true,
+            },
+            title: 'Services', // Optional; this goes in the toggle button in the app banner
+            items: [
+                {
+                    text: 'Tax Professional',
+                    isHeader: true,
+                    items: [
+                        {
+                            text: 'Client summary',
+                            className: 'feta-nav-menu-current-item',
+                        },
+                        {
+                            text: 'Employee summary',
+                            href: '55_10EmployeeSummary.html',
+                        },
+                    ],
+                },
+                {
+                    "text": "Services",
+                    "isHeader": true,
+                    "items": [
+                        {
+                            "text": "Uploads",
+                            "items": [
+                                {
+                                    "text": "MCTMT upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81557&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "NYS-1 upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81558&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "NYS-45 upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81559&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "Wage reporting upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81560&clientFlag=N",
+                                    "target": "blank"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+        };
+
+    </script>
+<div id="cui-body-wrapper">
+  <header class="feta-header"></header>
+  
+  <!-- main content -->
+  <main role="main" id="main">
+    <h2 class="feta-page-title">Client Summary</h2>
+    <div class="ols-clientbar-wrapper"></div>
+    <div class="ols-clientbar-action-popover-content cui-hidden cui-hide-from-screen">
+      <header>Menu</header>
+      <div class="ols-client-services-filter-wrapper">
+        <div class="ols-client-services-filter">
+          <input type="text" placeholder="Filter services">
+          <button type="button" class="ols-client-services-clear" style="display: none;">Clear</button>
+        </div>
+      </div>
+      <div class="ols-client-services-filter-results" style="display: none;">
+        <ul>
+        </ul>
+      </div>
+      <ul>
+      </ul>
+    </div>
+    <div class="cui-messages cui-hidden">
+      <ul>
+        <li class="cui-error">
+          <p>Error message</p>
+        </li>
+        <li class="cui-warning">
+          <p>Warning message</p>
+        </li>
+        <li class="cui-informational">
+          <p>Informational message</p>
+        </li>
+        <li class="cui-success">
+          <p>Successful message</p>
+        </li>
+      </ul>
+    </div>
+    <form name="form1" id="form1" action="https://tax.ny.gov" method="post">
+      <section>
+        <header>
+          <h3>Clients</h3>
+        </header>
+        
+        <!-- Add client button -->
+        <div class="cui-row">
+          <div class="cui-col cui-align-right">
+			<button type="button" class="cui-button-primary" onclick="javascript:window.location.href='90_20ClientType.html';">Add Client</button>
+			
+			
+          </div>
+        </div>
+        
+        <!-- Clients table -->
+        <div class="cui-row">
+          <div id="table_clients" class="cui-col"> </div>
+        </div> 
+      </section>
+    </form>
+  </main>
+  <script>
+// Client summary
+fetaData.tables.push(
+    {
+        container: '#table_clients',        
+        selectionType: '',
+        primaryCols: [0],
+        secondaryCols: [1],
+        renderStyle: {
+            type: "action",
+            actionCols: [3],
+            indicatorCols: [2],
+        },
+        filter: {
+            basic: {
+                query: '',
+                label: "Client name or taxpayer ID",
+                showClearButton: true,
+                rules: {
+                    matchAll: true,
+                    matchText: {
+                        fuzzy: true,
+                        columns: [0, 1],
+                    },
+                },
+            },
+            advanced: {
+                rows: [
+                    {
+                        type: 'checkbox-any',
+                        label: 'Client type:',
+                        rules: [
+                            {
+                                value: 'BUS', // This is for the server to consume; the client does not carry about this
+                                checked: false, // Initial checked state
+                                label: 'Business',
+                                comparisons: [ // An array of comparisons that must be satisfied if the box is checked; if they are not all satisfied, the row will be filtered out
+                                    {
+                                        rowMetadata: 'tptype', // This means to look in the row's `metadata` object and find the `tptype` property
+                                        value: 'bus', // The row's `metadata.tptype` must match this
+                                    },
+                                ],
+                            },
+                            {
+                                value: 'IND',
+                                checked: false,
+                                label: 'Individual',
+                                comparisons: [
+                                    {
+                                        rowMetadata: 'tptype',
+                                        value: 'ind',
+                                    },
+                                ],
+                            }, 
+                            {
+                                value: 'FID',
+                                checked: false,
+                                label: 'Fiduciary',
+                                comparisons: [
+                                    {
+                                        rowMetadata: 'tptype',
+                                        value: 'fid',
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        type: 'checkbox-any',
+                        label: 'Include only:',
+                        rules: [
+                            {
+                                value: 'unread_msg',
+                                checked: false,
+                                label: 'Clients with unread messages',
+                                comparisons: [
+                                    {
+                                        mathOperator: 'gt',
+                                        column: 2,
+                                        value: 0,
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+
+                ],
+            },
+        },       
+        head: {
+            rows: [
+                {
+                    columns: [
+                        {
+                            text: 'Client',
+                            attributes: {
+                                'data-type': 'alpha',
+                            }
+                        },
+                        {
+                            text: 'Taxpayer ID',
+                            attributes: {
+                                'data-type': 'alpha',
+                            },
+                        },
+                        {
+                            text: 'Messages',
+                            attributes: {
+                                'data-type': 'numeric',
+                                'text-align': 'right',
+                            },
+                        },
+                        {
+                            text: 'Actions',
+                            attributes: {
+                                'data-type': 'alpha',
+                            },
+                            type: 'control',
+                        },
+                    ],
+                },
+            ],
+        },
+        body: {
+            rows: [
+            ]
+        }
+    }
+);
+</script> 
+ 
+  <!-- Everything below the last section -->
+  <footer class="feta-footer"></footer>
+  <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+</div>
+<nav role="navigation" class="feta-nav"></nav>
+<script id="require" src="../../assets/ols/js/main.js"></script> 
+<script>
+        require(['feta', 'ols', 'iflow', 'domReady!'], function (feta, ols, iflow) {
+            // This block is only needed for page-specific scripts
+        });
+    </script>
+</body>
+</html>

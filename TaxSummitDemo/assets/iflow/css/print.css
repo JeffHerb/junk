@@ -1,0 +1,202 @@
+@charset "utf-8";
+/*! New York State Department of Taxation & Finance External Applications
+ *  @description  Iflow External Applications
+ *  @version      4.2.55.REL20180514
+ *  @copyright    2018 New York State Department of Taxation & Finance
+ */
+body {
+  *font-size: 0.6em;
+  background: none no-repeat scroll left top #fff;
+  padding-top: 0;
+  margin-bottom: 0; }
+
+#nygovBanner,
+.nygov-universal-container {
+  display: none; }
+
+#banner {
+  font-size: 95% !important; }
+
+#navHeader {
+  position: relative !important;
+  left: auto !important;
+  right: 15px !important;
+  top: 0 !important;
+  border-bottom: 1px solid #dddddd; }
+
+.frg-banner-title,
+.frg-banner-links,
+.frg-banner {
+  height: 48px !important;
+  max-height: 48px !important;
+  min-height: 48px !important;
+  overflow: hidden !important; }
+
+#pageContainer {
+  background-color: #ffffff !important;
+  margin: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important; }
+
+div.group .c33 .label,
+div.group .c50 .label,
+div.group .c67 .label,
+div.group .c100 .label,
+#taxpayer-info .c33 .label,
+#taxpayer-info .c50 .label,
+#taxpayer-info .c67 .label,
+#taxpayer-info .c100 .label {
+  width: 145px; }
+
+div.group,
+div.linePn,
+div.line {
+  page-break-inside: avoid; }
+
+.ie9 div.group {
+  page-break-inside: auto; }
+
+div.rset {
+  page-break-inside: auto; }
+
+.dataPn .moneyField input[size="20"] {
+  *width: 139px; }
+
+.dataPn .moneyField .appended-text {
+  *top: -4px !important;
+  *right: 3px !important; }
+
+div.group .dataPn input[type="text"] + .moneyField .appended-text,
+div.group .dataPn label.hidden + .moneyField .appended-text {
+  *top: -4px !important;
+  *right: 0px !important; }
+
+.linePn {
+  *min-height: 26px;
+  *line-height: 26px; }
+
+div.group .line .data {
+  float: none; }
+  div.group .line .data span.dataMask {
+    float: none; }
+
+.linePn .dataPn input[type="file"],
+.line .data input[type="file"] {
+  width: 300px; }
+
+.form-inline-section,
+.selDepFldsWrapper {
+  display: block !important; }
+
+.selDepFields {
+  border: 1px solid #A7C9D1;
+  border-radius: 3px; }
+
+.fieldWrapper {
+  display: block !important;
+  padding: 0 0 0.3em 0;
+  background-color: #F0F5F7;
+  border-top: 1px solid #A7C9D1; }
+
+.group fieldset {
+  clear: both; }
+
+[aria-expanded="false"] {
+  display: inherit !important; }
+
+div[aria-expanded="false"],
+.linePn[aria-expanded="false"] {
+  display: block !important; }
+
+label[aria-expanded="false"],
+.dataPn input[aria-expanded="false"],
+.labelWrap input[aria-expanded="false"] {
+  display: inline !important; }
+
+div.tooltip,
+div.tooltip:before,
+div.tooltip:after,
+#tooltip_pointer,
+div.topLink {
+  display: none !important; }
+
+.formError p {
+  *float: left;
+  *margin-left: 5px !important;
+  margin-top: 2px\9  !important;
+  *margin-top: 1px !important; }
+
+.groupInstructions .formError li {
+  margin-left: 10px\9  !important;
+  *margin-left: 0 !important; }
+
+.groupInstructions .formError p {
+  margin-top: 0\9  !important; }
+
+.mainGroups > form > .buttonGroup,
+form > .mainGroups > .buttonGroup {
+  page-break-inside: avoid;
+  margin-bottom: 1em; }
+
+div.formWrapper {
+  *float: none !important; }
+
+@media \0print {
+  div.formWrapper {
+    float: none !important; } }
+
+#instructionsFooter {
+  display: inherit;
+  *display: inline-block;
+  float: none;
+  clear: both;
+  font-weight: normal;
+  padding-top: 1.5em;
+  width: 100%; }
+
+#instructionsFooter h3 {
+  display: block;
+  clear: both;
+  padding-top: 0.8em;
+  border-top: 2px solid #BFBFBF;
+  text-align: center;
+  line-height: 1em;
+  margin: 1em 15px;
+  *overflow: hidden; }
+
+.instructions,
+#instructionsFooter > div {
+  display: block;
+  clear: both;
+  margin: 0 15px 1.5em 15px; }
+
+.instructions h4,
+#instructionsFooter > div h4 {
+  min-height: 1.65em;
+  vertical-align: middle;
+  line-height: 1.4em;
+  padding: 1px 0 2px 0;
+  font-size: 110%;
+  font-weight: bold; }
+
+.instructions p,
+#instructionsFooter > div p {
+  line-height: 1.4em;
+  margin-bottom: 0.5em; }
+
+#pb-popover,
+#pb-popover *,
+.popover {
+  display: none !important; }
+
+#footer {
+  background: #ffffff; }
+
+.has-dropdown select {
+  display: inline !important; }
+
+.dropdown,
+.dropdown[aria-hidden="true"],
+.dropdown-list,
+.dropdown-list[aria-hidden="true"] {
+  display: none !important; }

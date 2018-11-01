@@ -1,0 +1,1686 @@
+/*
+|==================================================================================|
+| State of New York Department of Taxation & Finance                               |
+| e-MPIRE Application: general.css - Release 3                                     |
+| Created by: Web UI Team                                                          |
+| Date Created: 01/11/2006                                                         |
+| Description: Screen styles needed to properly render e-MPIRE pages.              |
+|                                                                                  |
+| Change History (Include major changes/additions only)                            |
+| Date        Author            Description [fmk: framework changes also involved] |
+| -------------------------------------------------------------------------------- |
+| 04/02/2008  Craig Patik       Initial baseline, copied from XHTML-UI             |
+|==================================================================================|
+*/
+
+/*
+====================================================================================
+ Style Initialization - Resets all page elements to use styles below
+====================================================================================
+*/
+* {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+/*
+====================================================================================
+ XHTML Elements
+====================================================================================
+*/
+html {
+	height: 100%;
+}
+
+body {
+	color: #000;
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+	/*background: #FFF url(../images/shadow-body.gif) repeat-y 984px top;*/
+	margin-bottom: 20px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+img, a img {
+	border: 0px;
+}
+
+label {
+	font-weight: normal;
+	margin-right: 3px;
+}
+
+input, select, textarea {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	padding: 1px;
+	margin-top: 1px;
+}
+
+select {
+	margin: 1px 0;
+}
+
+/* Lines up dropdowns with the input text fields in the page body */
+div.group div select {
+	padding-top: 2px;
+	margin-top: 2px;
+}
+
+button {
+	cursor: hand;
+}
+
+acronym {
+	border-bottom: 1px dashed #999;
+}
+
+li {
+	margin: 5px 0 0 10px;
+}
+
+/* Headings H1-H6 */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 160%;
+}
+
+h3 {
+	font-size: 140%;
+}
+
+h2, h4, h5 {
+	font-size: 120%;
+}
+
+h6 {
+	font-size: 90%;
+}
+
+/*
+====================================================================================
+ e-MPIRE Homepage styles
+====================================================================================
+*/
+#homepage_body {
+	background: url(../images/homepageBackgroundBlue.jpg) no-repeat top left;
+	overflow: hidden;
+	height: 685px;
+	width: 984px;
+	margin: 0px;
+}
+
+.homepageWarningContainer {
+	width: 750px;
+	margin-left: 112px;
+	margin-top: 450px;
+	background-color: #243E92;
+	filter: alpha(opacity=8);
+}
+
+.homepageWarningHeader {
+	width: 100%;
+	background-color: #2B4495 !important;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	filter: alpha(opacity=70);
+	position: relative;
+	color: white;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.4em;
+	text-align: center;
+}
+
+.homepageWarningBody {
+	padding: 10px;
+	position: relative;
+	color: black;
+	font-size: 1.4em;
+	font-weight: normal;
+	text-align: justify;
+}
+
+.homepageWarningBody span {
+	color: #330000;
+}
+
+/*
+=================================================================================
+ Main Structure General styles
+=================================================================================
+*/
+/* Sets elements using a float:left style to use 100% of the horizontal space */
+#general_head,
+#tabset,
+#page_title,
+#page_body,
+#tabset_scroll,
+#search,
+#page_messages {
+	clear: both;
+}
+
+/* Gives proper width to all sections. Based on a 1024 x 768 screen res */
+.mast {
+	float: left;
+	width: 984px;
+	max-width: 984px;
+	text-align: left;
+}
+
+/* Sets float style to proper place elements. Very important with div */
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+/*
+=================================================================================
+ Screen Overlay ("PLEASE WAIT" message)
+=================================================================================
+*/
+
+.screenOverlayShield, .screenOverlayShield table {
+	position: absolute;
+	z-index: 999;
+	width: 100%;
+}
+	
+.screenOverlay {
+	position: absolute;
+	z-index: 1000;
+	width: 100%;
+}
+
+.screenOverlayText {
+	text-align: center;
+	border: 1px solid;
+	border-color: #EFEFEF #AAAAAA #AAAAAA #EFEFEF;
+	background-color: #E5E5E5;
+	color: #333333;
+	width: 250px;
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=135,color=#AAAAAA,strength=2);
+}
+
+/* [TODO] Is this class used? */
+#screen_overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: expression(document.body.scrollHeight  + "px");
+	background-color: #FFF;
+	z-index: 1000 !important;
+}
+
+/*
+=================================================================================
+ Framework's Code Main Sections
+=================================================================================
+*/
+/* Global Header Section
+	 ****************************************************************************** */
+#global_head div.mast {
+	border-bottom: 1px solid #AAA;
+	background-color: #CCC;
+}
+
+#global_head-left {
+	float: left;
+}
+
+#global_head-right {
+	margin-left: 142px;
+}
+
+#global_head-left h1 {
+	text-indent: -9999px;
+	width: 162px;
+	height: 50px;
+	background: transparent url(../images/logoBlue.gif) no-repeat center center;
+}
+
+#navi {
+	color: #FFF;
+	font-weight: bold;
+	background: transparent url(../images/background-naviBlue.gif) no-repeat left top;
+	padding: 6px 0 6px 35px;
+}
+
+#navi ul li {
+	display: inline;
+}
+
+#navi a:link,
+#navi a:visited {
+	margin-right: 15px;
+	color: #FFF;
+}
+
+#navi a:hover,
+#navi a:active {
+	color: #BFE4FF;
+}
+
+#tabset_title {
+	color: #444;
+	padding: 5px 0px 5px 35px;
+}
+
+div#tabset_title div.float-right a {
+	line-height: 19px;
+	float: left;
+	margin-left: 3px;
+}
+
+/* General Header Section
+   ****************************************************************************** */
+#general_head div.mast {
+	background-color: #EEE;
+	padding: 8px 0px 8px 0px;
+}
+
+#general_head div.buttons-area {
+	float: left;
+	margin: 2px 5px 0px 5px;
+	width: 50px;
+	height: 4em;
+}
+
+#general_head div.split-area, #general_head div.whole-area {
+	float: left;
+	margin: 0px 0px 0px 5px;
+	width: 92.5%;
+}
+
+#general_head div.split-area div.c100,
+#general_head div.whole-area div.c100,
+#general_head div.whole-area div.c67,
+#general_head div.whole-area div.c33 {
+	line-height: 16px;
+}
+
+#general_head div.float-right,
+#general_head div.float-left {
+	margin: 0 5px;
+}
+
+/* Gives width to labels so max space is used for data. em used for font size changes in Preferences */
+div.split-area .headerLabel, div.whole-area .headerLabel {
+	float: left;
+	text-align: right;
+	width: 5em !important;
+	font-weight: normal;
+}
+
+.headerLabelLeft, .headerLabelRight {
+	float: left;
+	text-align: right;
+	width: 6em;
+	font-weight: normal;
+}
+
+.headerLabelRight {
+	width: 10.4em;
+}
+
+/* Tabset Section
+	 ****************************************************************************** */
+/* If there is no general_head, let's add a spacing between global_header and tabset */
+#tabset div.mast {
+	background: #EEEEEE url(../images/background-tabsBlue.gif);
+	border-top: expression(document.getElementById("general_head") && document.getElementById("general_head").hasChildNodes() ? "0px" : "6px solid #EEE");
+}
+
+/* Tab default anchor styles */
+#tab-container a {
+	margin: 0px 0px 0px 5px;
+	padding: 3px 5px 5px 5px;
+	font-weight: bold;
+	line-height: 24px;
+	color: #333;
+	border: 1px solid #AAA;
+	border-bottom: 1px solid #D5D5D5 !important;
+	background: #DDD url(../images/tabTab-Blue.jpg) top left repeat-x;
+}
+
+#tab-container {
+	background: #EEEEEE url(../images/background-tabsBlue.gif);
+	height: 42px;
+	width: 940px;
+	float: left;
+	overflow: auto;
+	overflow-y: hidden; /* Fix to hide Vert. Scrollbar when Window's Font-Size changed in Control Panel > Display > Appearance > Font Size */
+	white-space: nowrap;
+	padding: 0px;
+	margin-left: -5px;
+	scrollbar-face-color: #6C81A2;
+	scrollbar-track-color: #415C81;
+	scrollbar-arrow-color: #FFF;
+	scrollbar-shadow-color: #415C81;
+	scrollbar-darkshadow-color: #415C81;
+	scrollbar-3dlight-color: #415C81;
+	scrollbar-highlight-color: #415C81;
+}
+
+/* Tab anchor styles when mouse over */
+#tab-container a:hover,
+#tab-container a:active,
+#tab-container a.tab-current {
+	color: #FFF !important;
+	border: 1px solid #212F41 !important;
+	border-bottom: 1px solid #415C81 !important;
+	background: #415C81 url(../images/tabCurrent-Blue.jpg) top left repeat-x !important;
+}
+
+/* Search Box Section
+	 ****************************************************************************** */
+#search div.mast {
+	background: #415C81;
+	padding: 0px 0px 3px 0px;
+	border-bottom: 1px solid #212F41;
+}
+
+#search div.float-left {
+	margin: 0 5px;
+}
+
+#search-retrieve {
+	margin: 9px 0 0px 0 !important;
+}
+
+#search_area {
+	background: #DDD url(../images/SearchBG-Blue.jpg) top left repeat-y;
+	padding: 6px 8px;
+	text-align: right;
+	width: 840px;
+	border: 1px solid #212F41;
+	height: expression((parseInt(this.scrollHeight)<72) ? "60px" : (parseInt(this.scrollHeight)-12) + "px");
+}
+
+#search_area select {
+	margin: 1px 0px 3px 0px;
+}
+
+/* Error Messages Section
+	 ****************************************************************************** */
+#errorTableClient {
+	padding: 1px 0px 1px 1px;
+	width: 964px;
+	float: left;
+}
+
+#errorTableClient img {
+	margin-bottom: 1px;
+}
+
+.error,
+.warn,
+.fail {
+	color: #CC3300;
+}
+
+.confirm {
+	color: #009900;
+}
+
+/* Page Title Section
+	 ****************************************************************************** */
+#page_title div.mast {
+	background: url(../images/shadow-page_title.gif) repeat-x left bottom;
+}
+
+#page_title div.float-left,
+#page_title div.float-right {
+	padding: 10px 5px 15px 5px;
+}
+
+/*
+=================================================================================
+ Page Body
+=================================================================================
+*/
+/* General Styles
+	 ****************************************************************************** */
+#page_body  {
+}
+
+/* [TODO] Two classes below - Not sure if they are used for R3 */
+#page_body h5 {
+	border-bottom: 1px solid #EEE;
+	padding-bottom: 5px;
+}
+
+#page_body p,
+#page_body h1,
+#page_body h2,
+#page_body h3,
+#page_body h4,
+#page_body h5,
+#page_body h6 {
+	margin-bottom: 5px;
+}
+
+/* Groups (div class="group"/class="group_closed") and Group Titles (H4)
+	 ****************************************************************************** */
+/* Main div.group declaration */
+div.group,
+div.group_closed {
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding-bottom: 6px;
+	float: left;
+	clear: both;
+	width: 100%;
+  line-height: 2.0em;
+	vertical-align: middle;
+}
+
+/* This adds extra space between parent div.groups so we can tell there are different "blocks" of data */
+div.mast div.group {
+	margin-bottom: 15px;
+}
+
+/* This adds extra space between parent div.group_closed so we can tell there are different "blocks" of closed data */
+div.mast div.group_closed {
+	margin-bottom: 5px;
+}
+
+/* Tabbing fix with hidden elements. Prevents "tabbing" to get into elements inside hidden sections */
+div div.group_closed div,
+div.group_closed table,
+div.group_closed hr {
+	display: none;
+}
+
+/* Width of div.groups and margins within parent elements. IE 7 change! */
+div.group, div.group_closed {
+	padding-bottom: 6px;
+	margin: 5px 5px 5px 3px;
+	width: 98.8%; /* Must be less than 99.2% so there's enough of a margin on the groups */
+}
+
+/* Override margin for closed groups */
+div.group_closed {
+	margin: 0px 3px 5px 3px;
+}
+
+/* Styles for opened/closed groups <div class="c50"> and <div class="c100"> */
+* div.c50 div.group,
+* div.c50 div.group_closed,	
+* div.c100 div.group,
+* div.c100 div.group_closed {
+	width: 99%;
+}
+
+div.group div.group {
+	width: 98.5%;
+	margin-left: 6px;
+}
+
+div.group div.group div.group {
+	width: 98.5%;
+}
+
+div.group div.group_closed {
+  margin-left: 7px;
+	width: 98.5%;
+}
+
+div.group div.group div.group_closed {
+  width: 97%;
+}
+
+* div.c50 div.group,
+* div.c100 div.group,
+div.c50 div.group,
+div.c100 div.group {
+	margin: 3px 7px 6px 10px;
+  padding-bottom: 6px;
+}
+
+div.c50 div.group div.group,
+div.c50 div.group div.group_closed {
+	margin-left: 6px;
+	width: 97.5%;
+}
+
+div.c50 div.group_closed,
+div.c100 div.group_closed {
+	margin: 3px 8px 6px 10px;
+}
+
+
+/* H4 Styles */
+div.group h4,
+div.group_closed h4 {
+	min-height: 1.65em;
+	vertical-align: middle;
+  line-height: 1.4em;
+}
+
+/* H4 Line Heights */
+div.group div.group h4 {
+  line-height: 1.6em;
+}
+
+div.group div.group div.group h4 {
+  line-height: 1.4em;
+}
+
+div.group div.group_closed h4 {
+  line-height: 1.6em;
+}
+
+div.group div.group div.group_closed h4 {
+  line-height: 1.4em;
+}
+
+/* Opened group's title */
+* div.group h4 {
+	padding: 1px 0px 2px 5px;
+	border-bottom: 1px solid #AAA;
+}
+
+/* Closed group's title */
+div div.group_closed h4 {
+	padding: 1px 0px 2px 5px;
+	background: #FFFFFF !important;
+	border-bottom: 1px solid #AAA !important;
+}
+
+/* Headers with image need to have same vertical alignment as those ones without images (check padding-top and bottom) */
+div.group h4 img,
+div.group_closed h4 img {
+	padding: 3px 0px 2px 0px;
+	vertical-align: middle;
+}
+
+/* H4's <button class="imgbutton">...</button> needs special styles */
+div.group h4 button.imgbutton,
+div.group_closed h4 button.imgbutton {
+	margin: 3px 0px 0px 0px;
+	vertical-align: text-bottom;
+}
+
+/* H4's <button class="imgbutton"><img src=""... /></button> needs special styles */
+div.group h4 button.imgbutton img,
+div.group_closed h4 button.imgbutton img {
+	padding: 0px 0px 0px 2px;
+	vertical-align: middle;
+}
+
+/* [TODO] Check if this class is used, I believe we just use images and not ASCII check marks anymore */
+div.group h4 span.checkmark-yes,
+div.group_closed h4 span.checkmark-yes,
+div.group h4 span.checkmark-no,
+div.group_closed h4 span.checkmark-no {
+	line-height: 1.15em;
+	vertical-align: middle;
+}
+
+/* Sets padding for H4 and nested opened/closed groups' H4s */
+* div.group h4,
+* div.group_closed h4 {
+	cursor: hand;
+	padding-left: 20px;
+	/*padding-left: 5px;*/
+}
+
+/*div.group_closed h4,*/
+div div.group_closed h4,
+div.group div.group_closed h4 {
+	padding-left: 15px;
+	/*padding-left: 5px;*/
+}
+
+
+div.group h4,
+div.group div.group h4 {
+	background: #CCCCCC url(../images/icon-minus_leftpad.gif) no-repeat left center !important;
+	/*background-color: #CCCCCC;*/
+}
+
+div.group_closed h4,
+div.group div.group_closed h4,
+div div.group_closed h4 {
+	background: transparent url(../images/icon-plus.gif) no-repeat left center !important;
+}
+
+/* For old pages that still use <a>nchors inside <h4><a href="#">Title</a></h4> */
+div h4 a {
+	color: #000;
+}
+
+div.group {
+	border: 1px solid #AAA;
+}
+
+/* [TODO] If class above is not needed, this one may be obsolete then. Forces border to div.group that has no border */
+.hasBorder {
+	border: 1px solid #AAA !important;
+}
+
+/* Some H4's do not need to collapse/expand - Basically used in Framework's popup screens (framework folder) */
+div.group h4.noShowHide,
+div.group div.group h4.noShowHide {
+	cursor: default;
+	behavior: none;
+	background: #CCCCCC !important;
+}
+
+/* Sometimes we do not want a border, especially in div.groups */
+.noBorder {
+	border: 0px !important;
+}
+
+/* Gives additional spacing to indicators within a div.group */
+div.group ul.list-indicators {
+	margin: 0px 4px 4px 0px;
+}
+
+div.block ul.list-indicators {
+	margin: 0px 4px 4px 4px;
+}
+
+
+
+/* Blocks (<div class="block">)
+	 ****************************************************************************** */
+div.block {
+	width: 100%;
+}
+
+div.block div.float-left, div.group div.block div.float-left, div.group div.float-left,
+div.historyBlock div.float-left, div.group div.historyBlock div.float-left {
+	padding: 6px;
+	float: left;
+}
+
+div.block div.float-right, div.group div.block div.float-right, div.group div.float-right,
+div.historyBlock div.float-right, div.group div.historyBlock div.float-right {
+	padding: 6px;
+	float: right;
+}
+
+div.historyBlock {
+	width: 100%;
+	display: block;
+	margin-top: 1.2em;
+	margin-bottom: 1.2em;
+	text-align: center;
+}
+
+div.historyBlock a {
+	color: #000000;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+/* Notifiers
+	 ****************************************************************************** */
+ul.list-indicators {
+	margin: 0px 0px 4px 0px;
+}
+
+ul.list-indicators li,
+.rsetNotify,
+div.c50 .rsetNotify,
+.headerIndicators,
+.headerNotify {
+	display: block;
+	float: left;
+	background-color: #B40000;
+	border: 1px solid #666;
+	font-weight: bold;
+	color: #F4F6E8;
+	text-align: center;
+	padding: 1px 2px;
+	margin: 2px 0px 1px 1px;
+	white-space: nowrap;
+	line-height: 1em;
+}
+
+.rsetNotify {
+	float: left;
+	min-width: 1%;
+}
+
+ul.list-indicators li {
+	padding: 1px 3px 2px 3px;
+	line-height: 1.27em;
+}
+
+.headerIndicators  {
+	display: inline;
+	float: none;
+}
+
+.rsetNotifyBankruptcy  {
+	float: left;
+	background-color: #C8D8FB;
+	border: 1px solid #757575;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+	padding: 0px 2px;
+	margin: 2px 3px 0px 2px;
+	white-space: nowrap;
+	line-height: 1.1em;
+}
+
+ul.list-indicators li a {
+	display: block;
+	background: #B40000 url(../images/iNotifierPopup.gif) 1px right no-repeat;
+	color: white !important;
+	padding: 2px 19px 0px 3px;
+	margin: 0px -3px;
+	line-height: 1.04em;
+}
+
+ul.list-indicators li a:hover {
+  color: #D2FFFF !important;
+}
+
+ul.list-indicators li img {
+	display: block;
+	margin: -2px -4px;
+}
+
+ul.list-indicators li select {
+	display: block;
+	margin: -2px -4px;
+}
+
+/* Generic Input Buttons
+	 ****************************************************************************** */
+button.button,
+input.button {
+	border: 1px solid;
+	border-color: #AAA #666 #666 #AAA;
+	overflow: visible; /* Removes button's extra horizontal spacing and margins */
+	background: #CCC url(../images/bgButton-Blue.jpg) repeat-x left bottom;
+	font-weight: bold;
+	margin: 0px 2px 1px 0px;
+	padding: 1px 3px 1px 3px;
+	color: #000000;
+}
+
+input.button_secondary {
+	border: 1px solid #CCE1FF;
+	background: #FFF url(../images/background-light_button.gif) repeat-x left bottom;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 1px;
+}
+
+/* Icons (HTCs calls were removed here)
+	 ****************************************************************************** */
+ul.list-icons li {
+	float: left;
+	margin: 0px;
+	margin-left: 10px;
+}
+
+a.icon {
+	display: block;
+	width: 16px;
+	height: 16px;
+	text-indent: -9999px;
+}
+
+#icon-search_open {
+	margin: 3px 10px 0px 0px;
+	background: transparent url(../images/icon-search_close_Blue.gif) no-repeat;
+}
+
+#icon-search_closed {
+	margin: 3px 10px 0px 0px;
+	background: transparent url(../images/icon-search_open_Blue.gif) no-repeat;
+}
+
+/* [TODO] Are these retrieve classes still used? */
+#icon-retrieve_open {
+	margin-right: 10px;
+	background: transparent url(../images/iRetrieveClose.gif) no-repeat;
+}
+
+#icon-retrieve_closed {
+	margin-right: 10px;
+	background: transparent url(../images/iRetrieveOpen.gif) no-repeat;
+}
+
+#icon-expand_all {
+	background: transparent url(../images/icon-expand_all.gif) no-repeat;
+}
+
+#icon-collapse_all {
+	background: transparent url(../images/icon-collapse_all.gif) no-repeat;
+}
+
+.icon-expand_all_subgroup {
+	background: transparent url(../images/icon-expand_all.gif) no-repeat;
+}
+
+.icon-collapse_all_subgroup {
+	background: transparent url(../images/icon-collapse_all.gif) no-repeat;
+}
+
+#icon-print {
+	background: transparent url(../images/iprint.gif) no-repeat;
+}
+
+/* Hard Buttons (Buttons that really display as images)
+	 ****************************************************************************** */
+a.hard_button {
+	display: block;
+	height: 16px;
+	width: 46px;
+	text-indent: -9999px;
+}
+
+#button-send_id {
+	background: transparent url(../images/button-send_id.gif) no-repeat;
+}
+
+#button-switch_tp {
+	background: transparent url(../images/button-switch_tp.gif) no-repeat;
+	margin-top: 5px;
+}
+
+#button-get_id {
+	background: transparent url(../images/button-get_id.gif) no-repeat;
+	margin-top: 10px;
+}
+
+#button-retrieve {
+	background: transparent url(../images/button-retrieve.gif) no-repeat;
+	border: 0px;
+	width: 50px;
+	line-height: 13px;
+}
+
+#button-clear {
+	background: transparent url(../images/button-clear.gif) no-repeat;
+	border: 0px;
+	width: 50px;
+	line-height: 13px;
+}
+
+#button-clear_all {
+	background: transparent url(../images/button-clear-all.gif) no-repeat;
+	border: 0px;
+	width: 50px;
+	line-height: 13px;
+}
+
+#button-favorites{
+	background: transparent url(../images/button-favorites.gif) no-repeat;
+	float: left;
+}
+
+#button-help {
+	background: transparent url(../images/button-help.gif) no-repeat;
+	margin-right: 3px;
+}
+
+#button-employee {
+	background: transparent url(../images/button-employee.gif) no-repeat;
+	margin-right: 0px;
+}
+
+#button-filter {
+	background: transparent url(../images/button-filter.gif) no-repeat;
+	border: 0px;
+	width: 50px;
+	line-height: 16px;
+	margin: 4px 0 0 15px;
+}
+
+#button-previous {
+	background: transparent url(../images/buttonPrevious.gif) no-repeat;
+	margin-right: 6px;
+	margin-top: 3px;
+	float: left;
+}
+
+#button-next {
+	background: transparent url(../images/buttonNext.gif) no-repeat;
+	margin-right: 2px;
+	margin-top: 3px;
+}
+
+/* Styles for ResultSet Resize button */
+button.resizeTextarea {
+	vertical-align: top;
+	border: 0;
+	background: transparent;
+	height: 16x;
+	margin-top: 2px;
+}
+
+/* Horizontal Partitions
+	 ****************************************************************************** */
+.c33 {
+	width:33.3%;
+}
+
+.c50 {
+	width:49%;
+}
+
+.c100 {
+	width:100%;
+}
+
+.c67 {
+	width:66.6%;
+}
+
+.c33 label,
+.c50 label,
+.c100 label,
+.c67 label {
+	float: left;
+	text-align: right;
+	width: 176px;
+}
+
+div.c33 div,
+div.c50 div,
+div.c67 div,
+div.c100 div,
+.c33,
+.c50,
+.c100,
+.c67 {
+	font-weight: bold;
+	float: left;
+	margin: 0;
+	padding: 0;
+	display: block;
+	display: inline;
+}
+
+/* Anchors inside divisions */
+.c33 a,
+.c50 a,
+.c67 a,
+.c100 a {
+	text-decoration: underline;
+	color: black;
+}
+
+/* Side by Side DIVs - Rarely used */
+.d100 {
+	width: 100%;
+}
+
+.d50 {
+	width: 49%;
+}
+
+.d40 {
+	width: 39%;
+}
+
+.d60 {
+	width: 58.8%;
+}
+
+div.d60 div.group .rset {
+	width: 98.5%;
+}
+
+/* This ensures that read-only data lines up with the labels */
+div.c33 > label,
+div.c50 > label,
+div.c67 > label,
+div.c100 > label {
+  line-height: 2.0em;
+}
+
+/*
+====================================================================================
+ Screen Contrast - generalBlue.css (more changes in resultset.css)
+ ------------------------------------------------------------------------------------------------------------
+ Based on web content and usability research, the contrast for eMPIRE web pages should be defined as follows:
+  1. High Contrast (Eg. Dark-Blue Background and White-Colored Font)
+  2. Default (Uses this CSS AS-IS - not as High Contrast as option 1 - although pretty close to option 1)
+  3. Grayscale (All grayed colors should infer the same results as options 1 or 2 even when grayed-out)
+====================================================================================
+/* 1. High Contrast */
+.high {
+	background-color: #FFF;
+}
+
+.high h4 {
+	background-color: #D6D6D6 !important;
+	color: #000;
+}
+
+.high #navi {
+	background: transparent url(../images/background-naviBluehigh.gif) no-repeat left top;
+}
+
+.high #search div.mast {
+	background: #364E6D;
+	border-bottom: 1px solid #213041;
+}
+
+.high #global_head div.mast {
+	border-bottom: 1px solid #999;
+	background-color: #D6D6D6;
+}
+
+.high #tabset div.mast {
+	background: #EEEEEE url(../images/background-tabsBluehigh.gif);
+}
+
+.high #tab-container a {
+	border: 1px solid #999;
+	background: #EEEEEE url(../images/tabTab-Bluehigh.jpg) top left repeat-x;
+}
+
+.high #tab-container {
+	background: #EEEEEE url(../images/background-tabsBluehigh.gif);
+	scrollbar-face-color: #7B97BF;
+	scrollbar-track-color: #364E6D;
+	scrollbar-arrow-color: #FFF;
+	scrollbar-shadow-color: #364E6D;
+	scrollbar-darkshadow-color: #364E6D;
+	scrollbar-3dlight-color: #364E6D;
+	scrollbar-highlight-color: #364E6D;
+}
+
+.high #tab-container a:hover,
+.high #tab-container a:active,
+.high #tab-container a.tab-current {
+	color: #FFF !important;
+	border: 1px solid #212F41 !important;
+	border-bottom: 1px solid #364E6D !important;
+	background: #364E6D url(../images/tabCurrent-Bluehigh.jpg) top left repeat-x !important;
+}
+
+.high #search_area {
+	background: #EEE url(../images/SearchBG-Bluehigh.jpg) top left repeat-y;
+	border: 1px solid #213041;
+}
+
+.high div.group {
+	border: 1px solid #666;
+}
+
+/* 2. Normal Contrast - No changes */
+
+/* 3. Grayscale */
+.mono, .mono th {
+  filter: gray;
+}
+
+.mono {
+  background-color: #F1F1F1;
+  color: #000;
+}
+
+/* Generic Page Body Classes
+	 ****************************************************************************** */
+/* [TODO] Are these checkmark classes still used? */
+.checkmark-yes {
+	font-weight: lighter;
+	font-family: Webdings;
+	text-transform: lowercase;
+	color: #882626;
+	font-size: 150%;
+}
+
+.checkmark-no {
+	font-family: Webdings;
+	text-transform: lowercase;
+	color: #882626;
+	font-size: 100%;
+}
+
+/* Show/Hide related classes */
+.show {
+	display: inline;
+}
+
+.nodisplay,
+.hidden {
+	display: none;
+}
+
+div.collapsed {
+	display: none;
+}
+
+/* [TODO] Are these Unordered list classes still used? */
+ul.list-inline li {
+	display: inline;
+	margin: 0 3px 0 0;
+}
+
+ul.list-floats li {
+	float: left;
+	margin: 0 3px 0 0;
+}
+
+/* Adds red asterisk image to indicate that field is required */
+.mandatory {
+	background: url(../images/icon-mandatory.gif) top right no-repeat;
+	padding-right: 4px;
+	margin-right: -1px;
+}
+
+/* Adds a right margin to money values so they don't look far off to the right. Same with numbers that are not currency.
+   c33 space is too small for money fields to apply this padding (wraps text) 23-char value assumption. */
+.c50 span.moneyField,
+.c67 span.moneyField,
+.c100 span.moneyField {
+	float: right;
+	padding-right: 88px;
+}
+
+/* CR (Checkbox/Radiobutton) and FCR (Floating CR) Styles. */
+/* Same as one in div.group, this will ensure elements outside div.group will be properly vertically-aligned */
+div.cr, div.fcr {
+	line-height: 2.0em;
+}
+
+.cr span.label {
+	float: left;
+	text-align: right;
+	width: 176px;
+	margin-right: 5px;
+}
+
+.cr span.label img {
+	margin-top: 3px;
+}
+
+.fcr span.label {
+	float:left;
+	margin-left: 20px;
+}
+
+.fcr label {
+	float: none;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.cr label {
+	float: none;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.cr, .normal {
+	font-weight: normal;
+}
+
+.cr img,
+.cr input {
+	margin-left: 20px;
+}
+
+/* This accomodates labels that require more than 176px - Used for Reference Tables dynamic pages */
+.labelL {
+	width: 20em !important;
+}
+
+.labelXL {
+	width: 25em !important;
+}
+
+/* Rights align text inside wrapper element */
+.rt {
+	text-align: right;
+}
+
+/* [TODO] Are these crGroup classes used? */
+.crGroup input,
+.crGroup span {
+	float: left;
+}
+
+label.crGroup {
+	text-align: left;
+	width: 250px;
+	white-space: nowrap;
+}
+
+.crGroup img,
+.crGroup input {
+	margin-left: 40px;
+}
+
+div.chboxGroup {
+	margin-left: 160px;
+}
+
+/* Sets text as bold */
+.bold {
+	font-weight: bold;
+}
+
+/* Crappy class used by Framework and that should've been done differently */
+#focusTop {
+	width: 0px;
+	height: 0px;
+	border: 0px;
+	background: transparent;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+/* [TODO] Is this class still used? */
+#get-id-container {
+	width: 50px;
+}
+
+/* imgbutton used for icons <img> wrapped by a <button> tag */
+.imgbutton,
+div.group_closed h4 button.imgbutton,
+div.group h4 button.imgbutton {
+	border: 0;
+	background: transparent;
+}
+
+/* Added height since button's default height is greater and this causes problems */
+.imgbutton {
+	height: 16px;
+	margin: 2px 1px 0px 0px;
+}
+
+/* [TODO] Is this class still used? */
+.readonly-textarea {
+	border: 0;
+	behavior: none;
+	font-weight: bold;
+}
+
+/* Primarily used for negative monetary amounts inside ResultSets */
+.red {
+	color:#cc0000;
+}
+
+/* LineUpA, B and C used for Group title <h4> data alignment - See TA pages */
+.lineUpA,
+.lineUpB,
+.lineUpC {
+	position: absolute;
+}
+
+.lineUpA {
+	left: 400px;
+	width: 100px;
+}
+
+.lineUpB {
+	left: 500px;
+	width: 195px;
+}
+
+.lineUpC {
+	left: 750px;
+	width: 220px;
+}
+
+/* Headers with LineUpA, B and C should display correctly based on weather an <img> is added or not */
+h4 span.lineUpA,
+h4 span.lineUpB,
+h4 span.lineUpC {
+	margin-top: expression(hasSiblingElement(this,"IMG","BUTTON") ? "0px" : "-3px");
+}
+
+h4 span.moneyField {
+	width: 125px;
+	text-align: right;
+}
+
+/* Bar that displays width based on a percentage value - Used in CISS pages */
+img.bar {
+	border: 1px solid #757575;
+	padding-right: expression((100 - parseInt(this.currentStyle.width)) + "px");
+	margin: 4px 2px 0px 2px;
+	height: 10px;
+}
+
+/* Hand class (applies to calendar icon too) */
+.calendar, .hand {
+	cursor: hand;
+}
+
+/* Created for ResultSets that use a filter */
+div.filter {
+	float: left;
+	width: 100%;
+	text-align: right;
+	margin: 5px 0px 2px 0px;
+	padding: 0px;
+}
+
+div.filter button.imgbutton {
+	margin-right: -3px;
+}
+
+/* Spacer - Always needed for something... <div class="spacer"><img src="spacer.gif" alt="" /></div> */
+div.spacer {
+	clear: left;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	height: 3px;
+	width: 100%;
+}
+
+div.spacer img {
+	height: 100%;
+	width: 100%;
+}
+
+/* Horizontal Spacers */
+/* HSpacer1: Used in Search Areas in between fields in the same row. */
+.HSpacer1 {
+	width: 10px;
+	height: 1px;
+	vertical-align: middle;
+}
+
+/* HSpacer2: Used in <h4>s to add space between header data. */
+.HSpacer2 {
+	width: 35px;
+	height: 16px;
+	vertical-align: middle;
+}
+
+.noWrap {
+	white-space: nowrap;
+}
+
+/* Used to emulate a readonly textarea - Primarily used for Events pages */
+div.comments {
+	width: 98%;
+	overflow-x: visible;
+	overflow-y: auto;
+	height: 100%;
+	border: 1px solid #999999;
+	padding: 0px;
+	margin: 6px 8px 0px 9px !important;
+}
+
+div.comments hr {
+	width: 95%;
+	text-align: center;
+	color: #CCCCCC;
+	height: 1px;
+}
+
+div.comments label, div.comments span {
+	float: left !important;
+}
+
+/* These two classes, "maxSize" and "monoSpaced", are only used for NDC200S (Correspondence) and need to fit exactly 111 characters */
+.maxSize textarea {
+	margin-left: 6px;
+	width: 905px;
+}
+
+.monoSpaced textarea {
+	font-size: 13px;
+	font-family: Courier New, Courier, monospace;
+}
+
+.center {
+	text-align: center;
+}
+
+/* Aligns <span> and <label> text with sibling images in c100, 67, 33, 50 images */
+img.textSibling {
+	margin-top: 2px;
+	vertical-align: text-bottom;
+}
+
+/* Vertical Align - used for icons (images) */
+.vAlignM {
+	vertical-align: middle !important;
+}
+
+a.vAlignM {
+	vertical-align: middle !important;
+}
+
+.tooltipFooter {
+	clear: both;
+	border-top: 1px dashed #999;
+	margin: 5px -2px -2px -2px;
+	color: #818181;
+	padding: 3px;
+	font-style: italic;
+	font-size: 10px;
+	text-indent: 18px;
+	background: url('../images/iMouse.gif') top left no-repeat;
+}
+
+
+
+
+/* Tree Styles
+	 ****************************************************************************** */
+/* Tree <A>nchors */
+div.tree a:link,
+div.tree a:visited,
+div.tree a:hover,
+div.tree a:active {
+	color: mediumblue;
+}
+
+/* Handles styles for full size div container */
+div.treeContainerStyleClass {
+	width: 100%;
+	padding: 5px 0 10px 0;
+}
+
+/* Handles outer span around images */
+span.nodeCollapsedStyleClass,
+span.nodeExpandedStyleClass,
+span.leafStyleClass {
+	width: 60px;
+	height: 30px;
+	padding: 5px 0 10px 5px;
+	text-align: center;
+}
+
+span.nodeCollapsedStyleClass,
+span.nodeExpandedStyleClass {
+	cursor: hand;
+}
+
+/* Handles inner span around images */
+span.nodeExpandedStyleClass span {
+	padding: 0 22px 0 5px;
+}
+
+span.nodeCollapsedStyleClass span {
+	padding: 0 22px 0 5px;
+}
+
+span.leafStyleClass span {
+	padding: 0 22px 0 5px;
+}
+
+/* Selected Item */
+span.selectedStyleClass {
+	border: solid #330099 0px;
+	background-color: #C8E8FB;
+}
+
+/* Handles style for labels */
+span.labelStyleClass {
+	padding: 3px 0 5px 0;
+	color: #000000;
+	font-weight: bold;
+	cursor: hand;
+}
+
+/* Dynamic Pages - Tab (Used for RP pages, NRP221S, NRP651S, etc)
+	 ****************************************************************************** */
+.hasTabs div.rset {
+	margin-top: 0px !important;
+}
+
+div.rsetTabContainer {
+	margin-left: 3px;
+	float: left;
+	clear: both;
+	width: 100%;
+	background-color: #FFFFFF;
+	padding-right: 10px;
+}
+
+div.rsetTab {
+	float: left;
+	overflow-x: hidden;
+	width: 9999px;
+	height: 25px;
+	white-space: nowrap;
+	margin: 0px 0px 0px -26px;
+}
+
+div.rsetTab a.rTab, div.rsetTab a.rTabCurrent {
+	float: left;
+	padding: 1px 5px;
+	margin: 0.6em 2px 0px 0px;
+	line-height: 1.4em;
+	border: 1px solid #999999;
+	border-bottom: 0px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+div.rsetTab a.rTab {
+	background: #BBB url(../images/tabTab-Blue.jpg) top left repeat-x;
+	color: #333;
+}
+
+div.rsetTab a.rTabCurrent {
+	color: #FFF;
+	border: 1px solid #666666;
+	border-bottom: 0px;
+	background: #415C81 url(../images/tabCurrent-Blue.jpg) top left repeat-x;
+	margin-top: 0px;
+	line-height: 2em;
+}
+
+/* 26 is the margin-left for the Tabs ; 6 is the padding-left for the Tabs ; 18 is the width for the Scrollbar. */
+div.rsetTab img.rScroll {
+	float: left;
+	position: relative;
+	border: 0px;
+	vertical-align: bottom;
+	cursor: pointer;
+	top: expression(parseInt(document.getElementById(this.id.substr(this.id.indexOf("_")+1)).clientHeight) - this.clientHeight);
+	/* If div.rset changes from 99.3% to something else, the (4) after the ...6 + 4...may need to be adjusted */
+	left: expression((parseInt(document.getElementById(document.getElementById("CurrentTableID_" + this.id.substr(this.id.indexOf("_")+1)).value).clientWidth) - parseInt(this.clientWidth) + ((-1)*(isNaN(parseInt(document.getElementById(this.id.substr(this.id.indexOf("_")+1)).style.marginLeft))?-26:parseInt(document.getElementById(this.id.substr(this.id.indexOf("_")+1)).style.marginLeft))) + 6 + 4) + "px");
+}
+
+div.hasTabs tr.rset_Section td {
+	font-weight: bold;
+	padding-left: 3px;
+	border-top: 1px solid #757575;
+	border-bottom: 1px solid #AAAAAA;
+	color: white;
+	background-color: #3A5374 !important;
+}
+
+div.hasTabs tr.Fed {
+	background-color: #E5E1F4;
+}
+
+div.hasTabs div.hasTab {
+	overflow-y: scroll;
+}
+
+div.hasTabs td.innerRT input {
+	text-align: right;
+}
+
+/* These 2 classes should be deprecated with IE7 */
+div.hasTabs div.headOut {
+	width: 99.3%;
+}
+
+#lastTH {
+	border-right: 0px;
+}
+
+div.rset_body select.rsetTabSel {
+	width: 262px;
+}
+
+
+
+/* Google Search Appliance button
+	 ****************************************************************************** */
+
+div.c50 div#GSAMain,
+div.c67 div#GSAMain,
+div.c100 div#GSAMain {
+	float: left;
+}
+
+div#GSAMain.rt {
+	float: right !important;
+}
+
+div#GSAMain {
+	background-color: /*#F1F1F1*/;
+	border: 0px;
+	width: 21.6em;
+	padding: 0px;
+	margin: 0px 5px 0px 3px;
+}
+
+div.c100 div#GSAMain {
+	margin: 4px 5px 2px 6px !important;
+}
+
+#GSAResize {
+	margin-top: -6px;
+	padding-left: 2px;
+	float: left;
+}
+
+#GSAResize img {
+	cursor: hand;
+}
+
+#GSABlock {	
+	padding-left: 4px;
+	height: 23px;
+}
+
+#GSATextbox {
+	padding-left: 0px;
+	height: 100%;
+}
+
+.GSAButton {
+	margin-top: 5px;
+}
+

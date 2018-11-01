@@ -1,0 +1,1055 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>Account Summary for: JANE DOE (XXX-XX-0123)</title>
+    <meta name="format-detection" content="telephone=no">
+    <link href="../../assets/ols/css/main.css" rel="stylesheet" type="text/css" media="all">
+
+    <style>
+        .feta-page-title a{
+            color:#454545;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .feta-page-title a:visited{
+            color:#454545;
+            text-decoration: none;
+            font-weight: 600;   
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="cui-hide-from-screen feta-hidden-jump-links">
+        <a href="#nav">Go to navigation</a>
+        <a href="#main">Go to content</a>
+    </div>
+    <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30"></div>
+    <script>
+        // Global objects for JSON objects and corresponding templates
+        var fetaData = {
+            templates: [],
+            inboxes: [],
+            tables: [],
+            environment: 'ols',
+            app: {
+                title: 'Account Summary',
+                userType: 'tp', // Only required for OLS. Indicates the type of logged in user: `ind`, `fid`, `tp`, or `bus`
+            },
+            page: {
+
+            },
+        };
+
+        fetaData.banners = {
+            sections: { // Optional. Use this to suppress or override specific pieces of the banner/footer
+                agencyWrapper: {
+                    suppress: false, // `true` means to skip rendering this piece
+                },
+                appHeader: {
+                    suppress: false,
+                },
+                frgFooter: {
+                    suppress: false,
+                },
+            },
+            urls: {
+                userName: {
+                    href: 'https://www.tax.ny.gov/e-services/otc/help/tips_os.htm',
+                },
+                contactUs: {
+                    href: 'https://www.tax.ny.gov/help/contact/how_to_reach.htm',
+                },
+                logout: {
+                    href: '../demo4/142default.html',
+                },
+            },
+        };
+
+        fetaData.helpMenu = {
+            text: 'Get Help', // Optional, will default to 'Help'
+            isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+            items: [{
+                    text: 'Help Center',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                },
+                {
+                    text: 'Frequently asked questions (FAQs)',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                },
+                {
+                    text: 'Learn about online services',
+                    href: 'https://www.tax.ny.gov/online/moreinfo.htm',
+                },
+                {
+                    text: 'View demos and videos',
+                    href: 'https://www.tax.ny.gov/e-services/otc/demos/demo.htm',
+                },
+                {
+                    text: 'E-ZRep TR-2000',
+                    href: 'https://www.tax.ny.gov/e-services/otc/tr_2000_info.htm',
+                },
+                {
+                    type: 'divider',
+                },
+                {
+                    text: 'Support',
+                    href: 'https://www.tax.ny.gov/',
+                },
+                {
+                    text: 'Contact Us',
+                    href: 'https://www.tax.ny.gov/e-services/otc/contact_us.htm',
+                },
+            ],
+        };
+
+        fetaData.userAcct = {
+            name: 'John Smith',
+            legalName: 'TAX SUMMIT 2018',
+            id: 'XXX-XXX-0122',
+            type: 'Tax Professional',
+            role: 'Administrator',
+        };
+
+        fetaData.preferences = {
+            text: 'Preferences', // Optional, will default to 'Preferences'
+            isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+            items: [{
+                    text: 'Edit personal information',
+                    href: '#editinformation',
+                },
+                {
+                    text: 'Delete tax professional account',
+                    href: '#deleteaccount',
+                }
+            ],
+        };
+
+        fetaData.navigation = {
+            filter: {
+                type: 'text',
+                closeButton: true,
+            },
+            title: 'Services', // Optional; this goes in the toggle button in the app banner
+            "items": [
+                {
+                    "text": "Tax Professional",
+                    "isHeader": true,
+                    "items": [
+                        {
+                            "text": "Client summary",
+                            "href": "../demo/115_10ClientSummary_final.html",
+                            "target":"blank"
+                        },
+                        {
+                            "text": "Employee summary",
+                            "href": "../demo/85_10EmployeeSummary_2.html",
+                            "target":"blank"
+                        }
+                    ]
+                },
+                {
+                    "text": "Services",
+                    "isHeader": true,
+                    "items": [
+                        {
+                            "text": "Uploads",
+                            "items": [
+                                {
+                                    "text": "MCTMT upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81557&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "NYS-1 upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81558&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "NYS-45 upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81559&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "Wage reporting upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81560&clientFlag=N",
+                                    "target": "blank"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+
+        fetaData.clientBar = {
+            container: '.ols-clientbar-wrapper',
+            template: 'clientBar',
+            name: 'clientBar',
+            activeClient: {
+                name: 'JANE DOE',
+                id: 'XXX-XX-0123',
+                type: 'tp',
+            },
+            clientList: {
+                clients: [{
+                    name: 'Doe, Jane',
+                    value: 'O324625',
+                }, ],
+            },
+            services: { //Services menu object
+                filter: {
+                    type: 'text',
+                    matching: 'fuzzy',
+                    caseSensitive: false,
+                },
+                title: 'Client Services', // Optional; this goes in the toggle button in the app banner
+                items: [{
+                    text: 'Services',
+                    isHeader: true,
+                    items: [
+
+                        {
+                            text: 'Payments, bills and notices',
+                            items: [{
+                                    text: 'Make a payment',
+                                    href: '30_10MPMT_WYNP01_WhatYouNeedToPay_NoCalculateMockup.html',
+                                    "target":"blank"
+                                    
+                                },
+                                {
+                                    text: 'Installment payment agreement',
+                                    href: '../demo4/110CIPA_BSUM01BalanceSummary.html',
+                                    "target":"blank"
+                                },
+                                {
+                                    text: 'Pay an open audit case',
+                                    href: '#',
+                                },
+                                {
+                                    text: 'View and print your statement',
+                                    href: '#',
+                                    
+                                },
+                                {
+                                    text: 'View and cancel scheduled payments',
+                                    href: '05_VCSP_SPMT01Scheduled Payment.html',
+                                    "target":"blank"
+                                },
+
+                                {
+                                    text: 'Voluntary disclosure application',
+                                    href: '#',
+                                    
+                                },
+                                {
+                                    text: 'Penalty and interest calculator',
+                                    href: '#',
+                                    
+                                },
+                                {
+                                    text: 'Income execution payment calculator',
+                                    href: '#',
+                                    
+                                },
+
+                            ],
+                        },
+
+                       {
+                            text: 'Personal income tax',
+                            items: [{
+                                    text: 'File an extension',
+                                    href: '../demo4/102SF1_20RPXT_FINF01FilingInformation.html',
+                                    "target":"blank"
+                                    
+                                },
+                                {
+                                    text: 'Claim your family tax relief credit',
+                                    href: 'AgilityStoreCatalogDisplay?catalogId=10001&storeId=10151&ddkey=https:OLSLogon#',
+                                    
+                                },
+                                {
+                                    text: 'Check refund status',
+                                    href: '../demo3/115FWSHSCESIncomeTaxRefundStatusCaptcha.html',
+                                    "target":"blank"
+                                    
+                                },
+                                {
+                                    text: 'Family tax relief credit lookup',
+                                    href: 'AgilityStoreCatalogDisplay?catalogId=10001&storeId=10151&ddkey=https:OLSLogon#',
+                                    
+                                },
+                                {
+                                    text: 'View and print wage reporting transcript (W-2)',
+                                    href: 'AgilityStoreCatalogDisplay?catalogId=10001&storeId=10151&ddkey=https:OLSLogon#',
+                                    
+                                },
+                                {
+                                    text: 'Form 1099-G',
+                                    href: '../demo3/90FWSHSCESCaptcha.html',
+                                    "target":"blank"
+                                    
+                                },
+                            ],
+                        },
+                        {
+                            "text": "Metropolitan commuter transportation mobility tax",
+                            "items": [
+                                {
+                                    "text": "Web file MCTMT annual return",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=53996&clientId=O",
+                                    
+                                },
+                                {
+                                    "text": "MCTMT form 1099-G online",
+                                    "href": "https://www.tax.ny.gov/pit/file/1099g.htm",
+                                    "target": "NoSAML"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Respond to department notice",
+                            "items": [
+                                {
+                                    "text": "Respond to department notice",
+                                    "href": "../demo5/10-01RTDN_QSTN01Questionnaire.html",
+                                    "target":"blank"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Casual sale",
+                            "items": [
+                                {
+                                    "text": "Casual sale",
+                                    "href": "#",
+                                    
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Change of address",
+                            "items": [
+                                {
+                                    "text": "Change of address",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=54472&clientId=O",
+                                    "target": "9wC4lBsBFlNGqcusJ-OSwz9window_iadd"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Power of attorney",
+                            "items": [
+                                {
+                                    "text": "File a power of attorney",
+                                    "href": "../demo4/20POAW_POAI01POAInformation.html",
+                                    "target":"blank"
+                                    
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Other tools",
+                            "items": [
+                                {
+                                    "text": "File a power of attorney",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=78057&clientId=O",
+                                    
+                                },
+                                {
+                                    "text": "Register for STAR",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=78059&clientId=O",
+                                    
+                                },
+                                {
+                                    "text": "Voluntary disclosure application",
+                                    "href": "https://www.tax.ny.gov/enforcement/vold/default.htm",
+                                    "target": "NoSAML"
+                                },
+                                {
+                                    "text": "Check refund status",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=54459&clientId=O",
+                                    
+                                },
+                                {
+                                    "text": "Family tax relief credit lookup",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=78061&clientId=O",
+                                    
+                                },
+                                {
+                                    "text": "Form 1099-G online",
+                                    "href": "http://dvm.int.nystax.gov/PIGI/pigiHome?",
+                                    "target": "NoSAML"
+                                },
+                                {
+                                    "text": "Penalty and interest calculator",
+                                    "href": "http://www8.nystax.gov/PAIC/paicHome",
+                                    "target": "NoSAML"
+                                },
+                                {
+                                    "text": "Income execution payment calculator",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=78069&clientId=O",
+                                    
+                                },
+                                {
+                                    "text": "NYS Warrants on the web",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=78063&clientId=O",
+                                    
+                                },
+                                {
+                                    "text": "File a tax preparer complaint",
+                                    "href": "https://www8.nystax.gov/TPCF/iflowStart",
+                                    "target": "NoSAML"
+                                },
+                                {
+                                    "text": "Report tax evasion and fraud",
+                                    "href": "http://www.tax.state.ny.us/reporttaxfraud.htm",
+                                    "target": "NoSAML"
+                                },
+                                {
+                                    "text": "MCTMT Form 1099-G online",
+                                    "href": "https://www.tax.ny.gov/pit/file/1099g.htm",
+                                    "target": "NoSAML"
+                                },
+                                {
+                                    "text": "Volunteer income tax assistance",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=78065&clientId=O",
+                                    
+                                }
+                            ]
+                        }
+                    ],
+                }, ],
+            },
+        };
+
+        fetaData.userMessages = {
+            "template": "userMessages",
+            "parameters": {
+                "page": [],
+                "field": [{
+                        "elem": "#Filings-table-3",
+                        "parameters": {
+                            "pageNotifier": "false",
+                            "scroll": "false",
+                        },
+                        "messages": [{
+                            "template": "message",
+                            "type": "informational",
+                            "text": "You have no recent filings at this time.",
+
+                        }]
+                    },
+
+                ]
+            }
+        };
+    </script>
+    <div id="cui-body-wrapper">
+        <header class="feta-header"></header>
+        <!-- main content -->
+        <main role="main" id="main">
+            <h2 class="feta-page-title"><a href="01_12AccountSummary_TaxPreparer_Client_DetailsV2.html">Account Summary for: Jane Doe (XXX-XX-0123)</a></h2>
+            <div class="ols-clientbar-wrapper"></div>
+            <div class="ols-clientbar-action-popover-content cui-hidden cui-hide-from-screen">
+                <header>Menu</header>
+                <div class="ols-client-services-filter-wrapper">
+                    <div class="ols-client-services-filter">
+                        <input type="text" placeholder="Filter services">
+                        <button type="button" class="ols-client-services-clear" style="display: none;">Clear</button>
+                    </div>
+                </div>
+                <div class="ols-client-services-filter-results" style="display: none;">
+                    <ul></ul>
+                </div>
+                <ul></ul>
+            </div>
+            <div class="ols-clientbar-name-popover-content cui-hidden cui-hide-from-screen">
+                <section>
+                    <header>Mailing address</header>
+                    <p>123 Main St
+                        <br>Loudonville, NY 12211</p>
+                    <a href="#">Edit</a>
+                </section>
+                <!-- <section>
+                    <header>Home address</header>
+                    <p>456 Quail St<br>Albany, NY 12202</p>
+                    <a href="#">Edit</a>
+                </section> -->
+            </div>
+            <div class="cui-messages cui-hidden">
+                <ul>
+                    <li class="cui-error">
+                        <p>Error message</p>
+                    </li>
+                    <li class="cui-warning">
+                        <p>Warning message</p>
+                    </li>
+                    <li class="cui-informational">
+                        <p>Informational message</p>
+                    </li>
+                    <li class="cui-success">
+                        <p>Successful message</p>
+                    </li>
+                </ul>
+            </div>
+            <form name="form1" id="form1" action="https://tax.ny.gov" method="post">
+                <section>
+                    <header>
+                        <h3>Account messages</h3>
+                    </header>
+                    <div class="cui-row">
+                        <div class="cui-col" id="AccountMessagesList"></div>
+                    </div>
+                    <div class="cui-row">
+                        <div class="cui-col">
+                            <a href="#">More</a>
+                        </div>
+                    </div>
+                </section>
+                <script>
+                    fetaData.inboxes.push({
+                        "container": "#AccountMessagesList",
+                        "messages": [{
+                                "subject": "You have a new liability due.",
+                                "id": 123456,
+                                "date": 1531231200000,
+                                "body": [{
+                                    "template": "output",
+                                    "text": "<p>Our records indicate you have a new liability due. View the bill for details and a computation of the balance due. the bill contains important information, including response and payment deadlines</p><p>&nbsp;</p><p><strong>To view the bill:</strong><ul><li>Click the <em>View</em> button</li></ul></p><p>&nbsp;</p><p><strong>How to pay:</strong><ul><li>Online: The easiest and fastest way to pay, select <em>Make a payment</em> under <em>Payments, bills and notices</em> in the Services section to the left of this page.</li><li>Phone: Call (518) 457-5434</li><li>Mail: Print the payment portion of the notice and mail to the indicated address.</li></ul></p><p>&nbsp;</p><p><strong>How to contact us if you disagree:</strong><ul><li>Online: The easiest and fastest way to respond; select <em>Respond to department notice</em> in the Services section to the left of this page</li><li>Phone: Refer to the telephone number listed on the bill.<br/> &nbsp; Text Telephone (TTY) Hotline: (518) 485-5082.</li><li>Mail or Fax: Follow the instructions noted on the bill for sending disagreement documentation via mail or fax.</li></ul></p><p>&nbsp;</p><p>For a full explanation of your rights as a taxpayer, go to our <a href=\"\">taxpayer rights</a> page</p>"
+                                }],
+                                "attachments": [{
+                                    "url": "../../assets/files/DTF966_07102018wp.pdf",                                    
+                                }],
+                                "delete": {
+                                    "url": "/messageAction",
+                                    
+                                }
+                            },
+                            {
+                                "subject": "You have a new liability due.",
+                                "id": 1234567,
+                                "date": 1531317600000,
+                                "body": [{
+                                    "template": "output",
+                                    "text": "<p>Our records indicate you have a new liability due. View the bill for details and a computation of the balance due. the bill contains important information, including response and payment deadlines</p><p>&nbsp;</p><p><strong>To view the bill:</strong><ul><li>Click the <em>View</em> button</li></ul></p><p>&nbsp;</p><p><strong>How to pay:</strong><ul><li>Online: The easiest and fastest way to pay, select <em>Make a payment</em> under <em>Payments, bills and notices</em> in the Services section to the left of this page.</li><li>Phone: Call (518) 457-5434</li><li>Mail: Print the payment portion of the notice and mail to the indicated address.</li></ul></p><p>&nbsp;</p><p><strong>How to contact us if you disagree:</strong><ul><li>Online: The easiest and fastest way to respond; select <em>Respond to department notice</em> in the Services section to the left of this page</li><li>Phone: Refer to the telephone number listed on the bill.<br/> &nbsp; Text Telephone (TTY) Hotline: (518) 485-5082.</li><li>Mail or Fax: Follow the instructions noted on the bill for sending disagreement documentation via mail or fax.</li></ul></p><p>&nbsp;</p><p>For a full explanation of your rights as a taxpayer, go to our <a href=\"\">taxpayer rights</a> page</p>"
+                                }],
+                                "attachments": [{
+                                    "url": "../../assets/files/DTF966_07112018.pdf",                                    
+                                }],
+                                "delete": {
+                                    "url": "/messageAction",
+                                    
+                                }
+                            },
+                            {
+                                "subject": "A notice regarding your New York State tax account",
+                                "id": 2220222,
+                                "date": 1533908174000,
+                                "body": [{
+                                    "template": "output",
+                                    "text": "<div class=\"cui-row\"><div class=\"cui-col\"><div class=\"cui-row\"><div class=\"cui-col\"><p><span>The New York State Tax Departmkent has issued a notice regarding your tax account.</span></p></div></div></div></div><div class=\"cui-row\"><div class=\"cui-col\"><div class=\"cui-row\"><div class=\"cui-col\"><span>To view the notice, click the View button</span></div></div></div></div>"
+                                }],
+                                "attachments": [{
+                                    "url": "../../assets/files/DTF97356O_05292017.pdf",  
+                                }],
+                                "delete": {
+                                    "url": "/messageAction",                                  
+                                }
+                            }
+                        ]
+                    });
+                </script>
+                <section>
+                    <header>
+                        <h3>Account summary</h3>
+                    </header>
+                    <section>
+                        <header>
+                            <h3>Bills</h3>
+                        </header>
+                        <div class="cui-row">
+                            <div class="cui-col" id="AccountSummary-table-2"></div>
+                        </div>
+                        <div class="cui-row">
+                            <div class="cui-col">
+                                <a href="../demo3/60MPMT_WYNP01_WhatYouNeedToPay.html" target="_blank">Make a payment</a>&nbsp;&nbsp;<a href="../demo3/05RTDN_QSTN01Questionnaire.html" target="_blank">Respond</a>
+                            </div>
+                        </div>
+                    </section>
+                    <script>
+                        fetaData.tables.push({
+                            container: '#AccountSummary-table-2',
+                            primaryCols: [0, 1],
+                            head: {
+                                rows: [{
+                                    columns: [{
+                                            text: 'Assessment ID'
+                                        },
+                                        {
+                                            text: 'Tax type',
+                                            attributes: {
+                                                'data-type': 'alpha',
+                                            },
+                                        },
+                                        {
+                                            text: 'Filing period end date',
+                                            attributes: {
+                                                'data-type': 'alpha',
+                                            },
+                                        },
+                                        {
+                                            text: 'Original bill date',
+                                            attributes: {
+                                                'data-type': 'alpha',
+                                            },
+                                        },
+                                        {
+                                            text: 'Current balance ($)',
+                                            attributes: {
+                                                'data-type': 'currency',
+                                            }
+                                        }
+                                    ]
+                                }]
+                            },
+                            body: {
+                                rows: [{
+                                        columns: [
+
+                                            {
+                                                text: 'L-000101312-4-5'
+                                            },
+                                            {
+                                                text: 'Personal Income'
+                                            },
+                                            {
+                                                text: '12/31/2017'
+                                            },
+                                            {
+                                                text: '07/10/2018'
+                                            },
+                                            {
+                                                text: '3,097.07'
+                                            },
+                                        ],
+                                    },
+                                    {
+                                        columns: [{
+                                                text: 'L-000101288-6'
+                                            },
+                                            {
+                                                text: 'Personal Income'
+                                            },
+                                            {
+                                                text: '12/31/2017'
+                                            },
+                                            {
+                                                text: '07/10/2018'
+                                            },
+                                            {
+                                                text: '1,031.09'
+                                            },
+                                        ],
+                                    },
+
+                                ]
+                            },
+                        });
+                    </script>
+                    <section class="cui-inline-field feta-subsection">
+                        <header>
+                            <h3>Personal income tax details</h3>
+                        </header>
+                        <div class="cui-row">
+                            <div class="cui-col">
+                                <fieldset>
+                                    <div class="cui-field feta-label-width-xs">
+                                        <div class="cui-field-main">
+                                            <div class="cui-label">
+                                                <legend class="cui-desc">Periods on file:</legend>
+                                            </div>
+                                            <div class="cui-controls">
+                                                <button type="button" class="cui-button cui-button-selected" tabindex="1" value="perOnFile_1">12/31/2018</button>
+                                                <button type="button" class="cui-button" tabindex="1" value="perOnFile_2">12/31/2017</button>
+                                                <button type="button" class="cui-button" tabindex="1" value="perOnFile_2">12/31/2016</button>
+                                                <button type="button" class="cui-button" tabindex="1" value="perOnFile_2">12/31/2015</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <section>
+                            <header>
+                                <h3>Filings</h3>
+                            </header>
+                            <div class="cui-row">
+                                <div class="cui-col" id="Filings-table-3"></div>
+                            </div>
+                            <div class="cui-row">
+                                <div class="cui-col">
+                                    <a href="#">File an extension</a>
+                                </div>
+                            </div>
+                        </section>
+                        <script>
+                            fetaData.tables.push({
+                                container: '#Filings-table-3',
+                                primaryCols: [0, 1],
+                                head: {
+                                    rows: [{
+                                        columns: [{
+                                                text: 'Form'
+                                            },
+                                            {
+                                                text: 'Filing period end date',
+
+                                            },
+                                            {
+
+                                                contents: [{
+                                                        text: 'Transaction date',
+                                                    },
+                                                    {
+                                                        template: 'helpIcon',
+                                                        source: 'i1'
+                                                    }
+                                                ]
+                                            },
+                                            {
+
+                                                contents: [{
+                                                        text: 'Confirmation number',
+                                                    },
+                                                    {
+                                                        template: 'helpIcon',
+                                                        source: 'i2'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                text: 'Filing method',
+
+                                            },
+                                            {
+                                                text: 'Filing status',
+
+                                            }
+
+                                        ]
+                                    }]
+                                },
+                                body: {
+                                    rows: [],
+                                },
+                            });
+                        </script>
+                        <section>
+                            <header>
+                                <h3>Payments</h3>
+                            </header>
+                            <div class="cui-row feta-instructions">
+                                <div class="cui-col">
+                                    <p><strong>Note:</strong> It may take several days for a payment to appear in Account Summary. If you disagree with the <strong>estimated tax</strong> amount shown below, file <a href="#pi">Form IT-2105.1</a>.</p>
+                                </div>
+                            </div>
+                            <div class="cui-row">
+                                <div class="cui-col" id="Payments-table-4"></div>
+                            </div>
+                            <div class="cui-row">
+                                <div class="cui-col">
+                                    <a href="#">Make a payment</a>&nbsp;&nbsp;<a href="#">Cancel scheduled web payment</a>
+                                </div>
+                            </div>
+                        </section>
+                        <script>
+                            fetaData.tables.push({
+                                container: '#Payments-table-4',
+                                primaryCols: [0, 1],
+                                secondaryCols: [5],
+                                head: {
+                                    rows: [{
+                                        columns: [{
+
+                                                contents: [{
+                                                        text: 'Payment type'
+                                                    },
+                                                    {
+                                                        template: 'helpIcon',
+                                                        source: 'i3'
+                                                    }
+                                                ]
+
+
+                                            },
+
+
+                                            {
+
+                                                contents: [{
+                                                        text: 'Transaction date',
+                                                    },
+                                                    {
+                                                        template: 'helpIcon',
+                                                        source: 'i4'
+                                                    }
+                                                ]
+
+                                            },
+                                            {
+
+                                                contents: [{
+                                                        text: 'Confirmation number',
+                                                    },
+                                                    {
+                                                        template: 'helpIcon',
+                                                        source: 'i5'
+                                                    }
+                                                ]
+
+                                            },
+                                            {
+
+                                                contents: [{
+                                                        text: 'Status',
+                                                    },
+                                                    {
+                                                        template: 'helpIcon',
+                                                        source: 'i6'
+                                                    }
+                                                ]
+
+                                            },
+                                            {
+                                                contents: [{
+                                                        text: 'Original amount ($)',
+                                                    },
+                                                    {
+                                                        template: 'helpIcon',
+                                                        source: 'i7'
+                                                    }
+                                                ],
+                                                attributes: {
+                                                    'data-type': 'currency'
+                                                }
+                                            },
+                                            {
+                                                contents: [{
+                                                        text: 'Current amount ($)',
+                                                    },
+                                                    {
+                                                        template: 'helpIcon',
+                                                        source: 'i8'
+                                                    }
+                                                ],
+                                                attributes: {
+                                                    'data-type': 'currency'
+                                                }
+                                            },
+
+                                        ]
+                                    }]
+                                },
+                                foot: {
+                                    rows: [{
+                                        columns: [{
+
+                                            },
+                                            {
+
+                                            },
+                                            {
+
+                                            },
+                                            {
+
+                                            },
+                                            {
+                                                text: 'Total ($)',
+                                                style: "align-right"
+                                            },
+                                            {
+                                                text: '7,500.00',
+                                                style: "currency"
+                                            }
+                                        ]
+                                    }]
+                                },
+                                body: {
+                                    rows: [{
+                                            columns: [
+
+                                                {
+                                                    text: 'Estimated Payment(IT-2105)'
+                                                },
+                                                {
+                                                    text: '09/10/2018'
+                                                },
+                                                {
+                                                    text: 'PPMT1809101278748'
+                                                },
+                                                {
+                                                    text: 'Scheduled for 01/15/2019'
+                                                },
+                                                {
+                                                    text: '5,200.00'
+                                                },
+                                                {
+                                                    text: '0.00'
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            columns: [
+
+                                                {
+                                                    text: 'Estimated Payment(IT-2105)'
+                                                },
+                                                {
+                                                    text: '09/07/2018'
+                                                },
+                                                {
+                                                    text: 'PG1800000571'
+                                                },
+                                                {
+                                                    text: 'Posted'
+                                                },
+                                                {
+                                                    text: '2,500.00'
+                                                },
+                                                {
+                                                    text: '2,500.00'
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            columns: [
+
+                                                {
+                                                    text: 'Estimated Payment(IT-2105)'
+                                                },
+                                                {
+                                                    text: '09/07/2018'
+                                                },
+                                                {
+                                                    text: 'PG1800000572'
+                                                },
+                                                {
+                                                    text: 'Posted'
+                                                },
+                                                {
+                                                    text: '2,500.00'
+                                                },
+                                                {
+                                                    text: '2,500.00'
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            columns: [
+
+                                                {
+                                                    text: 'Estimated Payment(IT-2105)'
+                                                },
+                                                {
+                                                    text: '04/17/2018'
+                                                },
+                                                {
+                                                    text: 'PG1720000154'
+                                                },
+                                                {
+                                                    text: 'Posted'
+                                                },
+                                                {
+                                                    text: '2,500.00'
+                                                },
+                                                {
+                                                    text: '2,500.00'
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
+                            });
+                        </script>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Other information</h3>
+                        </header>
+                        <div class="feta-panel-grid">
+                            <div class="feta-panel feta-panel-half">
+                                <header>
+                                    <h4>Mailing address</h4>
+                                </header>
+                                <div class="feta-panel-body">
+                                    <p>123 Church St.
+                                        <br>Albany, NY 12227</p>
+                                </div>
+                                <div class="feta-panel-actions">
+                                    <button type="button" class="cui-button" tabindex="1">Edit</button>
+                                </div>
+                            </div>
+                            <div class="feta-panel feta-panel-half">
+                                <header>
+                                    <h4>Home address</h4>
+                                </header>
+                                <div class="feta-panel-body">
+                                    <p>123 Church St.
+                                        <br>Albany, NY 12227</p>
+                                </div>
+                                <div class="feta-panel-actions">
+                                    <button type="button" class="cui-button" tabindex="1">Edit</button>
+                                </div>
+                            </div>
+                            <div class="feta-panel feta-panel-half">
+                                <header>
+                                    <h4>Phone numbers</h4>
+                                </header>
+                                <div class="feta-panel-body">
+                                    <p>Home: (518)444-5555
+                                        <br>Work: (518)555-0101
+                                        <br>Mobile: (518)555-0102</p>
+                                </div>
+                                <div class="feta-panel-actions">
+                                    <button type="button" class="cui-button" tabindex="1">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Web survey</h3>
+                        </header>
+                        <div class="cui-row feta-instructions">
+                            <div class="cui-col">
+                                <p>Provide feedback about this online service through our <a href="#">Web survey</a>.</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </form>
+        </main>
+       
+        <!-- Everything below the last section -->
+        <footer class="feta-footer"></footer>
+        <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+    </div>
+    <nav role="navigation" class="feta-nav"></nav>
+    <script id="require" src="../../assets/ols/js/main.js"></script>
+    <script>
+        require(['feta', 'ols', 'iflow', 'domReady!'], function(feta, ols, iflow) {
+            // This block is only needed for page-specific scripts
+        });
+    </script>
+</body>
+
+</html>

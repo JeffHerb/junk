@@ -1,0 +1,982 @@
+/*
+|==================================================================================|
+| State of New York Department of Taxation & Finance                               |
+| e-MPIRE Application: style.css                                                   |
+| Created by: ITS UI/UX Team                                                       |
+| Date Created: 04/01/2008                                                         |
+| Description: Print styles needed to properly print external web pages.           |
+|                                                                                  |
+| Change History (Include major changes/additions only)                            |
+| Date        Author            Description                                        |
+| -------------------------------------------------------------------------------- |
+| 04/01/2008  Craig Patik       Initial Baseline                                   |
+| 09/10/2008  Manolo Farfan     Made changes to initial baseline                   |
+|==================================================================================|
+*/
+
+/*
+====================================================================================
+ Style Initialization - Resets all page elements to use styles below
+====================================================================================
+*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+====================================================================================
+ Basic XHTML Elements
+====================================================================================
+*/
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+form { /* needed to prevent footer text from displaying near the top in W3-compliant browers */
+    clear: both;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+img, a img {
+	border: 0px;
+}
+
+a {
+	text-decoration: underline;
+	color: blue;
+}
+
+input, select, textarea {
+	font: 100% Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	padding: 1px;
+	margin-top: 1px;
+}
+
+select {
+	margin: 1px 0;
+}
+
+/* Lines up dropdowns with the input text fields in the page body */
+div.group div select {
+	padding-top: 2px;
+	margin-top: 2px;
+}
+
+button {
+	cursor: pointer;
+}
+
+li {
+	margin: 0.5em 0 0 1em;
+}
+
+p {
+ vertical-align: bottom;
+}
+
+/* Headings H1-H6 */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+h1 {
+    float: left;
+    clear: both;
+    width: 100%;
+    text-indent: 0.3em;
+    margin: 0.5em 0 0.1em 0;
+    font-size: 160%;
+}
+
+h2 {
+    float: none;
+    clear: both;
+    padding: 0.2em;
+    font-size: 140%;
+}
+
+h3 {
+    font-size: 140%;
+}
+
+h4, h5 {
+    font-size: 120%;
+}
+
+h6 {
+    font-size: 90%;
+}
+
+/*
+====================================================================================
+ Generic Classes
+====================================================================================
+*/
+/* Sets float style to proper place elements. Very important with div */
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+/* Rights align text inside wrapper element */
+.rt {
+	text-align: right;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* mainly for text within "div.group .data" */
+.notBold {
+	font-weight: normal;
+}
+
+.hidden {
+	display: none;
+}
+
+.center {
+	text-align: center;
+}
+
+
+/*
+====================================================================================
+ Horizontal Partitions
+====================================================================================
+Notes on c50 and c67:
+--------------------
+A div with a width of 399px divided into 2 c50 DIVs will by default be 200px each and adding up to a total of 400px.
+This happens because the divs 50% width rounds up to the nearest integer and therefore we have to use smaller values.
+*/
+.c33 {
+	width: 33%;
+}
+
+.c50 {
+    width: 49%;
+}
+
+.c100 {
+	width: 100%;
+}
+
+.c67 {
+	width: 66%;
+}
+
+.c33 label,
+.c50 label,
+.c100 label,
+.c67 label {
+	float: left;
+	text-align: right;
+}
+
+
+div.c33 div,
+div.c50 div,
+div.c67 div,
+div.c100 div,
+.c33,
+.c50,
+.c100,
+.c67 {
+	font-weight: bold;
+	float: left;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+.c33 a,
+.c50 a,
+.c67 a,
+.c100 a {
+	text-decoration: underline;
+	color: black;
+}
+
+/* This ensures that read-only data lines up with the labels 
+div.c33 > label,
+div.c50 > label,
+div.c67 > label
+div.c100 > label {
+  line-height: 2.0em;
+}
+*/
+
+/*
+=================================================================================
+ Banner
+=================================================================================
+*/
+/* The whole page is inside this wrapper div */
+div#pageContainer {
+	width: auto;
+}
+
+/* Top logos */
+div#primaryBanner {
+	float: left;
+	width: 100%;
+    height: 60px;
+    background: url(../images/headerbg.jpg) top left repeat-x;
+    white-space: nowrap;
+}
+
+div#primaryBanner a, div#primaryBanner img {
+    border: none;
+}
+
+/* Using 3-col fluid layout (float: [left],[none],[left]) */
+div#logoLeft {
+    float: left;
+    width: 374px;
+	white-space: nowrap;
+}
+
+div#logoCenter {
+	float: none;
+    height: 60px;
+}
+
+div#logoRight {
+    float: right;
+    width: 293px;
+	white-space: nowrap;
+}
+
+/*
+====================================================================================
+ Taxpayer Info Box
+====================================================================================
+*/
+/* Using 2-col fluid layout (float: [left, none]) */
+div#taxpayer-info, div.formWrapper {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+div.leftFluid, div.rightFluid {
+	float: left;
+	width: 5px;
+}
+
+div.sectionBorder, div.mainGroups {
+    float: none;
+    margin: 0 5px 0 5px;	
+    overflow: hidden;
+}
+
+div.sectionBorder {
+    border: 1px solid #AAA;
+}
+
+div#taxpayer-info div.c33,
+div#taxpayer-info div.c50,
+div#taxpayer-info div.c67,
+div#taxpayer-info div.c100 {
+    font-size: 90%;
+    padding: 0.4em 0;
+}
+
+div#taxpayer-info .c33 .label, 
+div#taxpayer-info .c50 .label, 
+div#taxpayer-info .c67 .label, 
+div#taxpayer-info .c100 .label {
+    float: left;
+    text-align: right;
+    width: 200px;
+    font-weight: normal;
+}
+
+div#taxpayer-info .c33 .data, 
+div#taxpayer-info .c50 .data, 
+div#taxpayer-info .c67 .data, 
+div#taxpayer-info .c100 .data {
+	float: left;
+	padding-left: 5px;
+	text-align: left;
+	width: auto;
+	font-weight: bold;
+}
+
+/*
+=================================================================================
+ Top-of-the-Page Navigation, Titles, and Instructions
+=================================================================================
+*/
+div#pageHeader {
+	float: left;
+    display: block;
+	width: 100%;
+	margin-bottom: 0.3em;
+}
+
+/* Main navigation links */
+#skipnav {
+	position: absolute;
+	left: -999px;
+	width: 990px;
+}
+
+#mainContentLink { /* Undo all of the styles that make it look like a link */
+    text-decoration: none;
+    color: black;
+    cursor: text;
+}
+
+div#navHeader {
+	float: left;
+    line-height: 1.8em;
+    border-bottom: 1px solid #999;
+    background-color: #D6D6D6;
+    white-space: nowrap;
+}
+
+div#navLeft {
+	float: left;
+}
+
+div#navRight {
+	float: right;
+}
+
+div#navHeader a,
+div#navHeader a:visited,
+div#navHeader a:link,
+div#navHeader a:active {
+    float: left;
+    border-right: 1px dotted #999;
+    font-size: 85%;
+    color: navy;
+    padding: 0 0.8em;
+}
+
+div#navHeader a:hover {
+    color: #FFF;
+    background-color: #888;
+    text-decoration: none;
+}
+
+div#navHeader ul {
+    float: left;
+    list-style-type: none;
+}
+
+div#navHeader ul li {
+    float: left;
+    margin: 0;
+}
+
+a.navHeaderFirstLink {
+    border-left: 1px solid #AAA;
+}
+
+div#verification {
+    float: none;
+	clear: both;
+	width: 100%;
+	text-align: right;
+}
+
+div#verification img {
+	margin-right: 5px;
+    border: none;
+}
+
+div#pageInstructions {
+    color: #000;
+    font-weight: normal;
+    padding: 0.5em;
+}
+
+div#requiredFields {
+    color: #000;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+/*
+=================================================================================
+ Error Messages
+=================================================================================
+*/
+div#errorMessages {
+	float: left;
+    color: #FF0000;
+    font-weight: bold;
+	font-size: 85%;
+	width: 100%;
+	padding: 0.5em 0 1em 0;
+}
+
+div#errorMessages ul li {
+    color: red;
+	margin-left: 4em;
+	list-style-type: decimal;
+}
+
+/*
+=================================================================================
+ Instructions Sections
+=================================================================================
+*/
+div#instructionsFooter {
+	float: none;
+	clear: both;
+	width: 100%;
+	color: #000;
+	font-weight: normal;
+	border-top: 1px solid #666;
+	margin-top: 1.0em;
+}
+
+div#instructionsFooter h3 {
+	padding-top: 0.2em;
+	border-top: 2px solid #CCC;
+	text-align: center;
+}
+
+div.instructions {
+	display: block;
+	clear: both;
+	font-size: 90%;
+	margin: 0 5px 1.5em 5px;
+}
+
+div.instructions h4 {
+	min-height: 1.65em;
+	vertical-align: middle;
+  	line-height: 1.4em;
+	padding: 1px 0px 2px 0px;
+	font-size: 110%;
+}
+
+div.instructions .topLink {
+	display: block;
+	clear: both;
+	position: relative;
+	text-align: right;
+}
+
+/*
+=================================================================================
+ Page Body & Groups
+=================================================================================
+*/
+/* Groups (div class="group") and Group Titles (H4) */
+div.group {
+    float: none;
+	height: 1%; /* Three pixel bug */
+    padding-bottom: 6px;
+    line-height: 2.0em;
+    vertical-align: middle;
+    border: 1px solid #000;
+	margin-bottom: 2em;
+}
+
+/* Make sure non IE browsers wrap their content around the group */
+div.group:after {
+	content: ".";
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	display: block;
+}
+
+/* Gray Bar Styles */
+div.group h4 {
+    vertical-align: middle;
+    line-height: 1.8em;
+    min-height: 1.8em;
+	text-indent: 8px;
+	padding-bottom: 1px;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #999;
+    background: #D6D6D6 url(../images/h4bg.jpg) top left repeat-x;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+div.group div {
+    /* includes div.row */
+    clear: both;
+	font-size: 90%;
+    vertical-align: middle !important;
+}
+
+div.group div.row {
+    clear: left;
+    width: 100%;
+}
+
+/*
+=================================================================================
+ Miscellaneous In-Group Classes
+=================================================================================
+*/
+/* Manolo [X]:Changed a little some of these CSS */
+div.group p {
+    margin: 1.0em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    line-height: 1.2em;
+    vertical-align: middle;
+}
+
+div.group p.text {
+	font-size: 90%;
+    margin: 0.5em 8px;
+}
+
+/* Adds red asterisk image to indicate that field is required */
+span.required {
+    color: red;
+}
+
+div.group .itag {
+    display: inline;
+    width: 2%;
+    vertical-align: middle;
+}
+
+a.itag {
+    text-decoration: none;
+    border: none;
+}
+
+div.spacer {
+    clear: left;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    height: 6px;
+    width: 100%;
+}
+
+div.spacer img {
+    height: 100%;
+    width: 100%;
+}
+
+/*
+=================================================================================
+ Labels & Data
+=================================================================================
+*/
+div.group .labelLong,
+div.group .labelShort,
+div.group .labelCenter,
+div.group .labelTiny {
+    float: left;
+    text-align: right;
+    width: 60%;
+    margin: 0.2em;
+}
+
+div.group .labelShort {
+    width: 40%;
+}
+
+div.group .labelCenter {
+    width: 50%;
+}
+
+div.group .labelTiny {
+	width: 10%;
+}
+
+div.group .data {
+    float: none;
+	clear: none;
+    width: auto;
+    text-align: left;
+    font-weight: bold;
+    margin: 0.2em;
+}
+
+div.group .data input,
+div.group .data label {
+	font-weight: bold;
+}
+
+div.group .data input.button {
+	font-weight: normal;
+	text-align: center;
+}
+
+div.group p.address {
+	font-size: 90%;
+	font-weight: bold;
+	margin-left: 40%;
+	text-align: left;
+	line-height: normal;
+}
+
+div.group .data label.hidden {
+	display: none !important;
+}
+
+div.group .labelCenter,
+div.group .data {
+	float: left;
+	display: inline;
+}
+
+div.buttonGroup {
+	margin: 1.0em auto;
+	text-align: center;
+}
+
+/* Input Groups */
+/* Manolo - Work on this */
+div.groupInstructions {
+	padding-left: 1.0em;
+}
+
+div.groupInstructions .required {
+	display: inline;
+	clear: none;
+	color: red;
+	margin-left: 5px;
+}
+
+div.footer {
+	width: 100%;
+	margin: auto auto;
+	font-size: 90%;
+}
+
+div.footer div {
+	margin: 0 5px;
+}
+
+/*
+=================================================================================
+ Progress Bar
+=================================================================================
+*/
+div#progress-bar {
+    float: left;
+    clear: both;
+    margin-top: 10px;
+    background-color: #D6D6D6;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+
+div#progress-bar a,
+div#progress-bar a:active,
+div#progress-bar a:link,
+div#progress-bar a:visited {
+    color: navy; /* Change this and other named to #HEX */
+}
+
+div#progress-bar a:hover {
+	color: #990000;
+}
+
+/* PB universal styles */
+/*td.pbBeforeSel, td.pbSelected, td.pbAfterSel, td.pbNormal, td.pbLastOne {*/
+div.pbBeforeSel, div.pbSelected, div.pbAfterSel, div.pbNormal, div.pbLastOne {
+    float: left;
+    line-height: 27px;
+    height: 27px;
+    min-height: 27px;
+    font-size: 90%;
+    text-indent: -15px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+div.pbBeforeSel, td.pbBeforeSel {
+    background: url( '../images/light-to-dark.png' ) top right no-repeat;
+}
+
+div.pbSelected, td.pbSelected {
+    color: #FFF;
+    background: #30295A url( '../images/dark-to-light.png' ) top right no-repeat;
+}
+
+div.pbNormal, td.pbNormal {
+    background: url( '../images/light-to-light.png' ) top right no-repeat;
+}
+
+div.pbLastOne, td.pbLastOne {
+}
+
+/*
+=================================================================================
+ Breadcrumbs
+=================================================================================
+*/
+div#breadcrumbs {
+    float: left;
+    clear: both;
+    width: 100%;
+	overflow: hidden;
+    padding: 0 0 0.8em 0;
+    font-size: 90%;
+}
+
+div.breadCrumbWrapper {
+    float: left;
+	width: 100%;
+	margin: 5px 0 0 5px;
+}
+
+div#breadcrumbs span,
+div#breadcrumbs a,
+div#breadcrumbs a:active,
+div#breadcrumbs a:link,
+div#breadcrumbs a:visited {
+    padding: 0 0.5em 0 0.3em;
+}
+
+div#breadcrumbs a:hover {
+	color: crimson;
+}
+
+/*
+=================================================================================
+ Blocks (<div class="block">)
+=================================================================================
+*/
+div.block {
+	width: 100%;
+}
+
+div.block div.float-left,
+div.group div.block div.float-left, div.group div.float-left {
+	padding: 0.6em;
+	float: left;
+}
+
+div.block div.float-right, div.group div.block div.float-right, div.group div.float-right {
+	padding: 0.6em;
+	float: right;
+}
+
+/*
+==================================================================================
+ Result Sets
+==================================================================================
+*/
+/* Manolo - Need to work on this */
+/* Main container for Rset. Contains Header DIV, Table DIV and Footer DIV if applicable */
+div.rset {
+	display: block;
+	margin-top: 10px !important;
+	padding-left: 6px !important;
+}
+
+/* Contains <table>. Position must be relative (to the HTML) so the header positioned relative doesn't shift (big bug!) */
+div.rset_body {
+	border: 1px solid #BBB;
+	width: 99.3%;
+	position: relative;
+}
+
+/* When contained within a c50, a Rset must have less width due to extra padding/margin */
+div.c50 div.rset_body {
+	width: 98.5%;
+}
+
+div.rset_body table {
+	float: left;
+	width: 100%; /* FF */
+  /*width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '98.27%');*/
+	border-collapse: collapse;
+}
+
+/*
+div.group div.group div.rset_body table {
+  width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '98.25%');
+}
+Example: NDC200 
+div.group div.group div.group div.rset_body table {
+  width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '98.22%');
+}
+*/
+
+div.rset_head {
+	width: 100%;
+	min-height: 23px;
+}
+
+/* Header's TR. Must be relatively positioned so it stays on top and doesn't move when scrolling 
+div.rset_body thead tr {
+  position: relative;
+  top: expression(this.offsetParent.scrollTop);
+	z-index: 10;
+}*/
+
+div.rset_body th {
+	background: #9B9B9B url(../images/RsetTH.jpg) top left repeat-x;
+	padding: 2px;
+	text-align: left;
+	color: #333;
+	font-weight: bold;
+	vertical-align: top;
+	line-height: 1.19em;
+	height: 30px;
+	border: 1px solid #AAA;
+}
+
+div.rset_body thead th a:link, div.rset_body thead th a:visited {
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+
+div.rset_body thead th a:hover, div.rset thead th a:active {
+	text-decoration: none;
+}
+
+div.rset_body tbody tr a:link, div.rset_body tbody tr a:visited,
+div.rset_body tbody tr a:hover, div.rset tbody tr a:active {
+	color: #000;
+	text-decoration: underline;
+}
+
+div.rset_body tbody td {
+	font-weight: normal;
+	border-right: 1px solid #AAA;
+	border-top: 1px solid #AAA;
+	padding: 0 2px;
+	vertical-align: top;
+	line-height: 20px;
+}
+
+div.rset_body th label {
+	font-weight: bold;
+}
+
+/* Sets resulset's data to default case (however the data is formatted). Use like this: <div class="group caseNone"...> 
+div.caseNone div.rset_body table tr td, div.caseNone div.rset_body table tr td div.caseNone {
+	text-transform: none !important;
+}
+*/
+/* This is to make sure rows with checkboxes and radio buttons don't affect the <tr>'s height */
+div.rset_body tbody input {
+	margin: -1px 0px 0px 0px;
+}
+
+div.rset_body tbody select {
+	margin: 0px 0px -1px 0px;
+}
+
+/* Styles for ResultSet Title */
+div.rset_head div.float-left {
+	font-size: 120%;
+	font-weight: bold;
+	background-color: #FFFFFF;
+	border: 0px;
+	display: inline;
+	color: #333333;
+}
+
+/* No padding to header float-left/right sections */
+div.rset_head div.float-left, div.rset_head div.float-right {
+	padding: 0px;
+}
+
+/* Styles for Resize ResultSet Icon */
+div.rset_head div.float-right a, div.rset_head div.float-right button {
+	float: left;
+}
+
+/* Styles for ResultSet Resize button */
+div.rset_head div.float-right button.resizeRset {
+	height: 20px;
+	vertical-align: top;
+	margin: 3px 0px 2px 4px !important;
+	padding-right: 2px;
+}
+
+/* Rset's footer styles */
+div.rset_foot {
+	width: 100%;
+	background-color: #FFF;
+	text-align: right;
+	color: #4C6C99;
+}
+
+div.rset_foot label.totLabel {
+	padding-right: 3px;
+	white-space: nowrap;
+}
+
+div.rset_foot label.totLabel span {
+	color: #000;
+	padding: 0px 16px 0px 6px;
+}
+
+/* For displaying rows and alternate rows with different background colors */
+tr.alternateRow {
+	background-color: #F1F1F1;
+}
+
+tr.normalRow {
+	background-color: #FFF;
+}
+
+/* Used to highlight selected row in page body resultsets */
+tr.highlight {
+	background-color: #fefeb6;
+}
+
+.list-inline li span {
+	white-space:nowrap;
+}
+
+/* Used to highlight selected row in page body resultsets */
+tr.highlight {
+	background-color: #FEFEB6;
+}
+
+/*  Used to highlight selected row in popups */
+tr.tableSelection {
+	background-color: #ccffcc;
+}
+
+/*
+==================================================================================
+ Error pages
+==================================================================================
+*/
+
+div#errorPageMessage {
+	margin: 0 auto;
+	margin-top: 2.0em !important;
+	text-align: center;
+}
+
+div#errorPageMessage p {
+	font-size: 1.5em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}

@@ -1,0 +1,474 @@
+<!DOCTYPE HTML>
+<html lang="en" data-user-type="tp">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title></title>
+    <meta name="format-detection" content="telephone=no">
+    <link href="../../assets/ols/css/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+    <div class="cui-hide-from-screen feta-hidden-jump-links"> <a href="#nav">Go to navigation</a> <a href="#main">Go to content</a> </div>
+    <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30"></div>
+    <script>
+    // Global objects for JSON objects and corresponding templates
+    var fetaData = {
+        templates: [],
+        tables: [],
+        environment: 'testing',
+        app: {
+            title: 'Add Client',
+            userType: 'tp',
+        },
+        page: {
+            title: 'Client Information',
+        },
+    };
+
+    fetaData.banners = {
+        urls: {
+            userName: {
+                href: 'https://www.tax.ny.gov/e-services/otc/help/tips_os.htm',
+            },
+            contactUs: {
+                href: 'https://www.tax.ny.gov/help/contact/how_to_reach.htm',
+            },
+            logout: {
+                href: 'Logoff?langId=-1&amp;storeId=10151&amp;catalogId=10001&amp;URL=StoreView',
+            },
+        },
+    };
+
+    fetaData.preferences = {
+        text: 'Preferences', // Optional, will default to 'Preferences'
+        isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+        items: [
+             {
+                text: 'Edit personal information',
+                href: '#editinformation',
+            },
+            {
+                    text: 'Delete Tax Professional Account',
+                    href: '#deleteaccount',
+                },
+        ],
+    };
+
+    fetaData.helpMenu = {
+        text: 'Get Help', // Optional, will default to 'Help'
+        isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+        items: [
+            {
+                text: 'Help Center',
+                href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+            },
+            {
+                text: 'Frequently asked questions (FAQs)',
+                href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+            },
+            {
+                text: 'Learn about online services',
+                href: 'https://www.tax.ny.gov/online/moreinfo.htm',
+            },
+            {
+                text: 'View demos and videos',
+                href: 'https://www.tax.ny.gov/e-services/otc/demos/demo.htm',
+            },
+            {
+                text: 'E-ZRep TR-2000',
+                href: 'https://www.tax.ny.gov/e-services/otc/tr_2000_info.htm',
+            },
+            {
+                type: 'divider',
+            },
+            {
+                text: 'Support',
+                href: 'https://www.tax.ny.gov/',
+            },
+            {
+                text: 'Contact Us',
+                href: 'https://www.tax.ny.gov/e-services/otc/contact_us.htm',
+            },
+        ],
+    };
+
+    fetaData.userAcct = {
+        name: 'John Smith',
+        legalName: 'TAX SUMMIT 2018',
+		id: 'XXX-XXX-0122',
+        type: 'Tax Professional',
+        role: 'Administrator',
+    };
+
+    fetaData.navigation = {
+        title: 'Menu', // Optional; this goes in the toggle button in the app banner
+        filter: {
+            type: 'text',
+            closeButton: true,
+        },
+        items: [
+            {
+                text: 'Tax Professional',
+                isHeader: true,
+                items: [
+                    {
+                        text: 'Client summary',                        
+                    },
+                    {
+                        text: 'Employee summary',                        
+                    },                    
+                ],
+            },
+            {
+                "text": "Services",
+                "isHeader": true,
+                "items": [
+                    {
+                        "text": "Uploads",
+                        "items": [
+                            {
+                                "text": "MCTMT upload",
+                                "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81557&clientFlag=N",
+                                "target": "blank"
+                            },
+                            {
+                                "text": "NYS-1 upload",
+                                "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81558&clientFlag=N",
+                                "target": "blank"
+                            },
+                            {
+                                "text": "NYS-45 upload",
+                                "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81559&clientFlag=N",
+                                "target": "blank"
+                            },
+                            {
+                                "text": "Wage reporting upload",
+                                "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81560&clientFlag=N",
+                                "target": "blank"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+    };
+    </script>
+    <div id="cui-body-wrapper">
+        <header class="feta-header"></header>
+        <main role="main" id="main">
+            <h2 class="feta-page-title">Client Information</h2>
+			<div class="feta-page-legend">
+                <div class="feta-page-legend-item"><span class="cui-required">*</span> Required field</div>
+                <div class="feta-page-legend-item"><button type="button" class="cui-icon feta-icon-help">More information</button> Select to learn more about a particular field</div>
+            </div>
+            <form name="form1" id="form1" action="www.tax.ny.gov" method="post">
+                <section class="cui-inline-field feta-label-width-half">
+                    <header>
+                        <h3>Client verification</h3>
+                    </header>
+                    <div class="cui-row">
+                        <div class="cui-col">
+                            <div class="cui-field">
+                                <div class="cui-field-main">
+                                    <div class="cui-label"> <span class="cui-desc">Client taxpayer ID number:</span> </div>
+                                    <div class="cui-data"> <span class="cui-value">XXX-XX-0123</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cui-row">
+                        <div class="cui-col">
+                            <div class="cui-field">
+                                <div class="cui-field-main">
+                                    <div class="cui-label"> <span class="cui-desc">Client filer type:</span> </div>
+                                    <div class="cui-data"> <span class="cui-value">Individual</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cui-row feta-separator"></div>
+                    <fieldset class="feta-dynamic-wrapper">
+                        <div class="cui-row feta-dynamic-label">
+                            <div class="cui-col">
+                                <legend>Choose one of the client verification options below.</legend>
+                            </div>
+                        </div>
+                        <!-- Question 1 -->
+                        <div class="cui-row feta-dynamic-option">
+                            <div class="cui-col">
+                                <div class="cui-field cui-layout-order-data-label-controls">
+                                    <div class="cui-field-main">
+                                        <div class="cui-label">
+                                            <label class="cui-desc" for="clientVerification_1">A filed New York State income tax return (Form IT-201 or IT-203) for at least one of the past five years</label>
+                                        </div>
+                                        <div class="cui-data">
+                                            <input type="radio" class="cui-value" name="clientVerification" id="clientVerification_1" value="1" tabindex="1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Dynamic content 1 -->
+                                <div class="feta-dynamic-toggle feta-dynamic-toggle-highlight cui-hidden" id="clientVerification_1_block">
+                                    <div class="cui-row">
+                                        <div class="cui-col">
+                                            <div class="cui-field">
+                                                <div class="cui-field-main cui-required">
+                                                    <div class="cui-label">
+                                                        <label for="tax_type" class="cui-desc">Tax year for return filed:</label>
+                                                    </div>
+                                                    <div class="cui-data">
+                                                        <select id="tax_type" class="cui-value" tabindex="1">
+                                                            <option value="NA" class="tax_type_option_1">Select tax year</option>
+                                                            <option value="" class="tax_type_option_2">2012</option>
+                                                            <option value="" class="tax_type_option_3">2013</option>
+                                                            <option value="" class="tax_type_option_4">2014</option>
+															 <option value="" class="tax_type_option_5">2015</option>
+															  <option value="" class="tax_type_option_6">2016</option>
+															  <option value="" class="tax_type_option_7" selected="selected">2017</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cui-row cui-currency">
+                                        <div class="cui-col">
+                                            <div class="cui-field">
+                                                <div class="cui-field-main cui-required">
+                                                    <div class="cui-label">
+                                                        <label for="fed_adj_gross_incm_amount" class="cui-desc">Federal adjusted gross income ($):</label>
+                                                    </div>
+                                                    <div class="cui-data">
+                                                        <div class="cui-input-wrapper">
+                                                            <input type="text" id="fed_adj_gross_incm_amount" class="cui-value" size="19" maxlength="13" tabindex="1">
+                                                            <span class="cui-input-append">.00</span> </div>
+                                                    </div>
+                                                    <div class="cui-controls">
+                                                        <button type="button" data-tooltip-source="i1" class="cui-icon feta-icon-help" tabindex="1">More information</button>
+                                                    </div>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        <!-- Question 2 -->
+                        <div class="cui-row feta-dynamic-option">
+                            <div class="cui-col">
+                                <div class="cui-field cui-layout-order-data-label-controls">
+                                    <div class="cui-field-main">
+                                        <div class="cui-label">
+                                            <label class="cui-desc" for="clientVerification_2">A bill (assessment)</label>
+                                        </div>
+                                        <div class="cui-data">
+                                            <input type="radio" class="cui-value" name="clientVerification" id="clientVerification_2" value="1" tabindex="1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Dynamic content 2 -->
+                                <div class="feta-dynamic-toggle feta-dynamic-toggle-highlight cui-hidden" id="clientVerification_2_block">
+                                    <div class="cui-row">
+                                        <div class="cui-col">
+                                            <div class="cui-field">
+                                                <div class="cui-field-main cui-required">
+                                                    <div class="cui-label">
+                                                        <label for="assessment_id" class="cui-desc">Assessment ID number:</label>
+                                                    </div>
+                                                    <div class="cui-data">
+                                                        <input type="text" id="assessment_id" class="cui-value" size="19" maxlength="13" tabindex="1">
+                                                    </div>
+                                                    <div class="cui-controls">
+                                                        <button type="button" data-tooltip-source="i2" class="cui-icon feta-icon-help" tabindex="1" tabindex="1">More information</button>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 3 -->
+                        <div class="cui-row feta-dynamic-option">
+                            <div class="cui-col">
+                                <div class="cui-field cui-layout-order-data-label-controls">
+                                    <div class="cui-field-main">
+                                        <div class="cui-label">
+                                            <label class="cui-desc" for="clientVerification_3">A five-digit PIN</label>
+                                        </div>
+                                        <div class="cui-data">
+                                            <input type="radio" class="cui-value" name="clientVerification" id="clientVerification_3" value="1" tabindex="1">
+                                        </div>
+                                        <div class="cui-controls">
+                                            <button type="button" data-tooltip-source="i3" class="cui-icon feta-icon-help" tabindex="1" tabindex="1">More information</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Dynamic content 3 -->
+                                <div class="feta-dynamic-toggle feta-dynamic-toggle-highlight cui-hidden" id="clientVerification_3_block">
+                                    <div class="cui-row">
+                                        <div class="cui-col">
+                                            <div class="cui-field">
+                                                <div class="cui-field-main cui-required">
+                                                    <div class="cui-label">
+                                                        <label for="pin_number" class="cui-desc">Five-digit PIN:</label>
+                                                    </div>
+                                                    <div class="cui-data">
+                                                        <input type="text" id="pin_number" class="cui-value" size="6" maxlength="5" tabindex="1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 4 -->
+                        <div class="cui-row feta-dynamic-option">
+                            <div class="cui-col">
+                                <div class="cui-field cui-layout-order-data-label-controls">
+                                    <div class="cui-field-main">
+                                        <div class="cui-label">
+                                            <label class="cui-desc" for="clientVerification_4">None of the above</label>
+                                        </div>
+                                        <div class="cui-data">
+                                            <input type="radio" class="cui-value" name="clientVerification" id="clientVerification_4" value="1" tabindex="1">
+                                        </div>
+                                        <div class="cui-controls">
+                                            <button type="button" data-tooltip-source="i5" class="cui-icon feta-icon-help" tabindex="1">More information</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Dynamic content 4 -->
+                                <div class="feta-dynamic-toggle feta-dynamic-toggle-highlight cui-hidden" id="clientVerification_4_block">                                    
+									<div class="cui-row">
+										<div class="cui-col">
+											<div class="cui-field">
+												<div class="cui-field-main cui-required">
+													<div class="cui-label">
+														<label for="confirm_client_tpid" class="cui-desc">Confirm client taxpayer ID number:</label>
+													</div>
+													<div class="cui-data">
+														<input type="text" id="confirm_client_tpid" class="cui-value" size="19" maxlength="12" tabindex="1">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cui-row">
+										<div class="cui-col">
+											<div class="cui-field">
+												<div class="cui-field-main cui-required">
+													<div class="cui-label">
+														<label for="client_first_name" class="cui-desc">Client first name:</label>
+													</div>
+													<div class="cui-data">
+														<input type="text" id="client_first_name" class="cui-value" size="20" maxlength="30" tabindex="1">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cui-row">
+										<div class="cui-col">
+											<div class="cui-field">
+												<div class="cui-field-main">
+													<div class="cui-label">
+														<label for="client_middle_initial" class="cui-desc">Client middle initial:</label>
+													</div>
+													<div class="cui-data">
+														<input type="text" id="client_middle_initial" class="cui-value" size="2" maxlength="2" tabindex="1">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cui-row">
+										<div class="cui-col">
+											<div class="cui-field">
+												<div class="cui-field-main cui-required">
+													<div class="cui-label">
+														<label for="client_last_name" class="cui-desc">Client last name:</label>
+													</div>
+													<div class="cui-data">
+														<input type="text" id="client_last_name" class="cui-value" size="20" maxlength="30" tabindex="1">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cui-row">
+										<div class="cui-col">
+											<div class="cui-field">
+												<div class="cui-field-main">
+													<div class="cui-label">
+														<label for="client_suf" class="cui-desc">Client suffix:</label>
+													</div>
+													<div class="cui-data">
+														<select id="client_suf" class="cui-value" tabindex="1">
+															<option value="NA" class="client_suf_option_1">Select suffix</option>
+															<option value="" class="client_suf_option_2">I</option>
+															<option value="" class="client_suf_option_3">II</option>
+															<option value="" class="client_suf_option_4">III</option>
+															<option value="" class="client_suf_option_5">IV</option>
+															<option value="" class="client_suf_option_6">V</option>
+															<option value="" class="client_suf_option_7">JR</option>
+															<option value="" class="client_suf_option_8">SR</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>                                      
+                            </div>
+                        </div>
+                    </fieldset>
+                </section>
+                <div class="feta-button-group">
+                   <button type="button" class="cui-button" onclick="javascript:window.location.href='90_20ClientType.html';">Back</button>
+							<button type="button" class="cui-button-primary" onclick="javascript:window.location.href='100_35EZRepAuthorization.html';">Continue</button>
+                </div>
+            </form>
+        </main>
+  
+        <!-- Everything below the last section -->
+        <footer class="feta-footer">
+            <!-- Footers -->
+        </footer>
+        <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+		 <div class="feta-field-instructions">
+        <div id="i1">
+		<header>Federal adjusted gross income ($)</header>
+             <p>Enter the federal adjusted gross income from your client’s New York State income tax return (IT-201 or IT-203) for the year selected above. If the amount is negative, enter a minus sign (-) in front of the number. Do not enter any dollar signs, commas, or decimals.</p>
+              <p>If your client has only filed Form IT-214, <em>Real Property Tax Credit</em>, or Form NYC-210, <em>School Tax Credit</em>, you must choose a different verification method below.</p>
+        </div>
+        <div id="i2">
+		<header>Assessment ID number</header>
+            <p>Enter the 10-digit assessment ID number that begins with the letter "L" from your client's bill.</p>
+        </div>
+        <div id="i3">
+		<header>A five-digit PIN</header>
+             <p>Choose this option if your client received a letter with a five-digit PIN from the Tax Department.  The PIN is located in the top right corner of the letter your client received.</p>
+        </div>
+		 <div id="i5">
+		 <header>None of the above</header>
+            <p>Choose this verification method only if your client:</p>
+			<ul>
+			<li>has not filed a New York State personal income tax return (Form IT-201 or IT-203) for at least one of the past five years, or</li>
+			<li>has only filed Form IT-214, <em>Real Property Tax Credit</em>, or Form NYC-210, <em>New York City School Tax Credit</em>, for the past five years.</li>
+			</ul>
+
+        </div>
+    </div>
+    </div>
+    <nav role="navigation" class="feta-nav"></nav>
+    <script id="require" src="../../assets/ols/js/main.js"></script> 
+</body>
+
+</html>

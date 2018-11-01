@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="en" class="feta-page-type-splash">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<title>Online Services Information</title>
+<meta name="format-detection" content="telephone=no">
+<link href="../../assets/ols/css/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+<div class="cui-hide-from-screen feta-hidden-jump-links"> <a href="#nav">Go to navigation</a> <a href="#main">Go to content</a> </div>
+<div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30"></div>
+<script>
+        // Global objects for JSON objects and corresponding templates
+        var fetaData = {
+            templates: [],
+            tables: [],
+            environment: 'ols',
+            app: {
+                title: 'Online Services Information',
+                userType: 'tp', // Only required for OLS. Indicates the type of logged in user: `ind`, `fid`, `tp`, or `bus`
+            },
+            page: {
+                title: 'Online Services Information',
+                type: 'splash',
+            },
+        };
+
+        fetaData.banners = {
+            urls: {
+                contactUs: {
+                    href: 'https://www.tax.ny.gov/help/contact/how_to_reach.htm',
+                },
+                logout: {
+                    href: 'Logoff?langId=-1&amp;storeId=10151&amp;catalogId=10001&amp;URL=StoreView',
+                },
+            },
+        };
+
+        fetaData.preferences = {
+            text: 'Preferences', // Optional, will default to 'Preferences'
+            isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+            items: [
+                {
+                    text: 'Edit personal information',
+                    href: '#editinformation',
+                },
+                {
+                    text: 'Delete Tax Professional Account',
+                    href: '#deleteaccount',
+                },
+            ],
+        };
+
+        fetaData.helpMenu = {
+            text: 'Get Help', // Optional, will default to 'Help'
+            isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+            items: [
+                {
+                    text: 'Help Center',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                    target: '_blank',
+                },
+                {
+                    text: 'Frequently asked questions (FAQs)',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                    target: '_blank',
+                },
+                {
+                    text: 'Learn about online services',
+                    href: 'https://www.tax.ny.gov/online/moreinfo.htm',
+                    target: '_blank',
+                },
+                {
+                    text: 'View demos and videos',
+                    href: 'https://www.tax.ny.gov/e-services/otc/demos/demo.htm',
+                    target: '_blank',
+                },
+                {
+                    text: 'E-ZRep TR-2000',
+                    href: 'https://www.tax.ny.gov/e-services/otc/tr_2000_info.htm',
+                    target: '_blank',
+                },
+                {
+                    type: 'divider',
+                },
+                {
+                    text: 'Support',
+                    href: 'https://www.tax.ny.gov/',
+                    target: '_blank',
+                },
+                {
+                    text: 'Contact Us',
+                    href: 'https://www.tax.ny.gov/e-services/otc/contact_us.htm',
+                    target: '_blank',
+                },
+            ],
+        };
+
+        fetaData.userAcct = {
+            name: 'John Smith',
+			legalName: 'TAX SUMMIT 2018',
+			id: 'XXX-XXX-0122',
+            type: 'Tax Professional',
+            role: 'Administrator',
+        };
+    </script>
+<div id="cui-body-wrapper">
+  <header class="feta-header"></header>
+  <main role="main" id="main">
+    <form name="form1" id="form1" action="50_10ClientSummary.html" method="post">
+      <section class="feta-splash-content">
+        <header>
+          <h3>Welcome, <span class="feta-useracct-name">John Smith</span>!</h3>
+        </header>
+        <div class="cui-row">
+          <div class="cui-col">
+            <p>Learn about the tasks you can perform with your account.</p>
+            <h4>Add Clients:</h4>
+            <p>You can add clients to your account to immediately perform services and view messages on their behalf. Before you begin, you will need the following:</p>
+            <ul>
+              <li>your client's signed <a href="https://www.tax.ny.gov/pdf/documents/tr2000.pdf" target="_blank" tabindex="1">E-ZRep Form TR-2000, Tax Information Access and Transaction Authorization</a>
+                <button data-tooltip-source="i1" type="button" class="cui-icon feta-icon-help">More information</button>
+                ,</li>
+              <li>your client's taxpayer identification number, and</li>
+              <li>one of the client verification options below. Options include:
+                <ul>
+                  <li>a filed NYS tax return,</li>
+                  <li>a bill (assessment),</li>
+                  <li>a five-digit PIN (provided by the Tax Department), or</li>
+                  <li>confirming your client has not yet filed a NYS tax return.</li>
+                </ul>
+              </li>
+            </ul>
+            <h4>Add Employees:</h4>
+            <p>You can add your employees to your Tax Professional account. You will be able to select each employee's level of access and assign clients to each employee. To add an employee, you will need to provide the employee's:</p>
+            <ul>
+              <li>email address, and</li>
+              <li>phone number.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+   
+      
+      <section class="feta-button-group">
+        <div class="cui-row">
+          <div class="cui-col cui-inline-field">
+            <div class="cui-field cui-layout-order-data-label-controls cui-align-center">
+              <div class="cui-field-main">
+                <div class="cui-label">
+                  <label for="do_not_show_again" class="cui-desc">Do not show this again</label>
+                </div>
+                <div class="cui-data">
+                  <input type="checkbox" class="cui-value" id="do_not_show_again" value="true" tabindex="1">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cui-row">
+          <div class="cui-col-small-12 cui-align-center">
+            <button type="submit" class="cui-button-primary" onclick="javascript:window.location.href='50_10ClientSummary.html';">Continue</button>
+          </div>
+        </div>
+      </section>
+      <section class="feta-button-group"> </section>
+    </form>
+  </main>
+  <footer class="feta-footer"></footer>
+  <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+</div>
+<nav role="navigation" class="feta-nav"></nav>
+<div class="feta-field-instructions">
+  <div id="i1">
+    <header>E-ZRep Form TR-2000</header>
+    <p><a href="http://www.tax.ny.gov/e-services/otc/tr_2000_info.htm" target="_blank">E-ZRep Form TR-2000</a>, Tax Information Access and Transaction Authorization, is required and allows a tax professional to receive and access a client's tax information and perform services on their behalf.</p>
+  </div>
+</div>
+<script id="require" src="../../assets/ols/js/main.js"></script>
+</body>
+</html>

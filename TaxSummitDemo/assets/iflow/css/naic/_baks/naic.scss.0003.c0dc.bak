@@ -1,0 +1,460 @@
+$body-bg-color: #EBF0F4;
+$body-border-color: #9CAEBD;
+$body-border-color-dark: #526D84;
+$group-header-margin-bottom: 0.8em;
+
+$bp-small: 43em; // Where most of the changes occur
+$bp-large: 60em; // Some other tweaks
+
+@mixin transition($t) {
+    -webkit-transition: $t;
+            transition: $t;
+}
+
+@mixin vertical-gradient($top, $bottom) {
+    background-image: -webkit-linear-gradient(top, $top, $bottom);
+    background-image:         linear-gradient(to bottom, $top, $bottom);
+}
+
+@mixin translate-z($val) {
+    -webkit-transform: translateZ($val);
+            transform: translateZ($val);
+}
+
+.selDepFields {
+    position: relative; // Needed for .invisible
+}
+
+.naics-loading {
+    color: #aaa;
+}
+
+.nc-nested-item-wrapper {
+    margin: 0 $group-header-margin-bottom 1em $group-header-margin-bottom; /* left/right margin should match the bottom margin on `.group h4` for visual consistency */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.5em;
+
+    a {
+        cursor: pointer;
+    }
+
+    /* First item */
+    & > .nc-nested-item {
+        margin-left: 0.6em;
+        margin-right: 0.6em;
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.nc-nested-item {
+    position: relative;
+    margin-left: 1.8em;
+    margin-right: 1.8em;
+
+    &:before {
+        position: absolute;
+        top: 1px;
+        left: -14px;
+        display: block;
+        content: "";
+        width: 10px;
+        height: 14px;
+        background: transparent url("../../images/breadcrumb-lshape.png") top center no-repeat;
+    }
+
+    a {
+        color: #43596b; /* #526D84 */
+        line-height: 1.4em;
+        display: inline-block;
+    }
+
+    /* All but the first item */
+    .nc-nested-item {
+        margin-top: 0.4em;
+    }
+}
+
+h3 {
+    font-size: 100%;
+    margin-left: 1em;
+}
+
+@media (min-width: $bp-small) {
+    h3 {
+        font-size: 100%;
+    }
+
+    .selDepFldsWrapper h3.rBtnWrapper {
+        padding-left: 0;
+    }
+
+    .selectedRB h3 {
+        font-size: 100%;
+        padding-left: 0.75em;
+        margin-bottom: 0;
+    }
+}
+
+.nc-results-wrapper h3 {
+    font-weight: bold;
+}
+
+.selectedRB .fieldWrapper {
+    overflow: hidden;
+}
+
+// .side-by-side fieldset label {
+//     font-weight: bold !important;
+// }
+
+fieldset .labelXXS .selDepFldsWrapper {
+    width: auto !important;
+    margin-right: 1em !important;
+}
+
+fieldset .nc-long-desc {
+    font-weight: normal !important;
+    padding: 0.5em 2.5em 0.5em 2.5em;
+    min-height: 2em;
+}
+
+.selDepFldsWrapper .fieldWrapper .buttonGroup {
+    margin-bottom: 1em;
+}
+
+.nc-separator {
+    // margin-top: 1em;
+    border-top: 1px dotted #aaa;
+    width: 98%;
+    margin-left: 1%;
+}
+
+fieldset div.linePn.labelXXS div.labelPn {
+    width: 3%;
+}
+
+fieldset .nc-long-desc {
+    line-height: 1.2em;
+}
+
+.selectedRB .fieldWrapper.not-expanded {
+    padding-bottom: 0;
+}
+
+a:active,
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+.group .selDepFldsWrapper .fieldWrapper {
+    display: block;
+    padding-bottom: 0;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+@media (max-width: $bp-large) {
+    body {
+        min-width: auto;
+    }
+
+    div#pageContainer {
+        margin: 0;
+    }
+}
+
+.nc-category-wrapper {
+    float: none;
+    width: 100%;
+}
+
+@media (min-width: $bp-small) {
+    .nc-category-wrapper {
+        float: left;
+        width: 45%;
+    }
+}
+
+.nc-description-wrapper {
+    display: none;
+}
+
+@media (min-width: $bp-small) {
+    .nc-description-wrapper {
+        display: block;
+        float: left;
+        clear: none !important;
+
+        //TODO: Set this to 55% width and use a margin to provide spacing on the right of the textarea
+        width: 54% !important;
+        margin: 0 0 1em 0 !important;
+
+        textarea {
+            height: 100%;
+        }
+    }
+}
+
+// Banner search
+.searchScope {
+    display: none;
+}
+
+@media (min-width: $bp-small) {
+    .searchScope {
+        display: block;
+    }
+}
+
+.group .selDepFldsWrapper .fieldWrapper {
+    display: block;
+}
+
+// .nc-nested-item-wrapper {
+// }
+
+fieldset .nc-long-desc {
+    max-height: auto;
+    @include translate-z(0);
+
+    //TODO: Use classes to vary transition time based on the height of the container
+
+    // &.nc-trans-height-short {
+        @include transition(max-height 0.15s ease-in);
+    // }
+    // &.nc-trans-height-med {
+        // @include transition(max-height 0.25s ease-in);
+    // }
+    // &.nc-trans-height-long {
+        // @include transition(max-height 0.35s ease-in);
+    // }
+
+    &.nc-truncated {
+        max-height: 4em;
+        overflow-y: hidden;
+        @include translate-z(0);
+    }
+}
+
+fieldset {
+    margin-left: 0.7em;
+}
+
+// Radio buttons
+
+.group .selectedRB {
+    margin-top: 0 !important;
+    margin-right: 1em !important;
+    margin-left: 0 !important;
+    margin-bottom: 1em !important;
+}
+
+.selectedRB .selDepFields {
+    border: 1px solid #A7C9D1;
+}
+
+// Descriptions
+
+.nc-read-more {
+    display: block;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    @include vertical-gradient(#f0f0f0, #e0e0e0);
+    background-repeat: repeat-x;
+    color: #444;
+    cursor: pointer;
+    border-top: 1px solid #A7C9D1;
+    height: 2em;
+    font-weight: normal;
+    box-shadow: 0px -1px 10px 3px rgba(122, 147, 153, 0.4); /* #7a9399 */
+    @include transition(box-shadow 1s ease-in);
+    @include translate-z(0);
+
+    &:hover {
+        background-position: 0 -2em;
+        @include transition(background-position 0.1s linear);
+    }
+
+    &.nc-opened {
+        box-shadow: none;
+        @include translate-z(0);
+    }
+}
+
+@media (min-width: $bp-small) {
+    .nc-read-more {
+        display: none;
+    }
+}
+
+@media (max-width: $bp-small) {
+    // `div.group` needed for specificity for margin only
+    div.group {
+        div.labelXXS,
+        div.labelXS,
+        div.labelS,
+        div.labelM,
+        div.labelabelMLeft,
+        div.labelabelAuto,
+        div.labelL,
+        div.labelXL,
+        div.labelXXL,
+        div.labelXXLLeft {
+            div.labelPn,
+            div.dataPn {
+                float: none;
+                clear: both;
+                width: auto;
+                margin-top: 0;
+                margin-left: 1.5em;
+                text-align: left;
+            }
+
+            div.labelPn {
+                margin-bottom: 0;
+            }
+
+            div.dataPn {
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    .nc-results-wrapper {
+        div.group {
+            div.labelXXS,
+            div.labelXS,
+            div.labelS,
+            div.labelM,
+            div.labelabelMLeft,
+            div.labelabelAuto,
+            div.labelL,
+            div.labelXL,
+            div.labelXXL,
+            div.labelXXLLeft {
+                div.dataPn {
+                    width: 90%; // Reign in the Show More button
+                    overflow: hidden;
+                }
+            }
+        }
+
+        .nc-read-more {
+            width: 99%; // Reveal right border
+        }
+    }
+}
+
+// Large version
+@media (min-width: $bp-small) {
+
+    // Individual description containers
+    .group {
+        .selDepFldsWrapper .fieldWrapper {
+            display: none;
+        }
+
+        .selectedRB {
+            margin-top: 1px !important;
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+            margin-bottom: 1px !important;
+        }
+
+        // Prevent radio buttons from 'expanding' div.data to the left when there is a lot of text in the label
+        .nc-category-list div.linePn div.dataPn {
+            float: none;
+        }
+    }
+
+    // Radio buttons
+
+    .selectedRB {
+        .selDepFields {
+            border-color: transparent;
+        }
+
+        .rBtnWrapper {
+            border-color: transparent;
+            background-color: transparent;
+        }
+
+        .fieldWrapper {
+            border-top-color: transparent;
+            background-color: transparent;
+        }
+    }
+
+    .selDepFields {
+        margin-left: 1em;
+        margin-right: 1em;
+
+        h3,
+        p.text {
+            margin-left: 0;
+        }
+    }
+
+    fieldset {
+        div.linePn.labelXXS div.labelPn {
+            width: 1.3em;
+        }
+    }
+
+    div.group div.labelTop.nc-description-wrapper div.dataPn textarea,
+    div.group div.labelXS.nc-description-wrapper div.dataPn textarea {
+        width: 98%;
+    }
+
+    .selDepFldsWrapper .fieldWrapper .buttonGroup {
+        margin-bottom: 1em;
+    }
+
+    .nc-results-wrapper h3 {
+        font-weight: bold;
+        margin-left: 1em;
+    }
+
+    .nc-separator {
+        margin-top: 1em;
+        border-top: 1px dotted #aaa;
+        width: 98%;
+        margin-left: 1%;
+    }
+}
+
+
+// -------------------------------------------
+// Probably move this block back to style.css
+// -------------------------------------------
+
+
+// Gives an element its natural width/height without being visible
+.invisible {
+    visibility: hidden;
+    position: absolute;
+    display: block;
+}
+
+.rBtnWrapper input {
+    position: absolute;
+    top: 0.7em;
+    left: 0.5em;
+}
+
+.visibleLabel {
+    margin-left: 1.5em;
+}
+
+// -------------------------------------------
+// -------------------------------------------
+// -------------------------------------------

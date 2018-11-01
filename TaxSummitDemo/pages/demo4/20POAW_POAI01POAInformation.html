@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Power of Attorney (POA)</title>
+<link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../assets/iflow/js/script.js"></script>
+<!-- This uiscript.js JavaScript file is for UI testing only -->
+<script type="text/javascript" src="../../assets/iflow/js/uiscript.js"></script>
+<!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  <!-- Banners --> 
+  <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script> 
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Power of Attorney (POA)</h1>
+    <div id="taxpayer-info">
+      <div class="leftFluid"> </div>
+      <div class="sectionBorder">
+        <div class="c33">
+          <div class="label"> Taxpayer ID: </div>
+          <div class="data"> XX-XXX-0123</div>
+        </div>
+        <div class="c67">
+          <div class="label"> Taxpayer name: </div>
+          <div class="data"> JANE DOE </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>POA Information</h2>
+  <div id="pageInstructions">
+    <p class="text">Complete the following information and select <strong>Continue</strong>. </p>
+  </div>
+  <div id="legend">
+    <ul>
+      <li> <span class="required">*</span> Required fields </li>
+      <li><img src="../../assets/iflow/images/info.png" height="12" width="12" alt="More information icon" title="Click for more information about this question"> - Select to learn more about a particular field</li>
+    </ul>
+  </div>
+  <div id="errorMessages"></div>
+  <div class="formWrapper">
+    <div class="leftFluid"> </div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post" onsubmit="window.location.href='30POAW_GRAU01GrantAuthority.html'; return false;">
+        <!-- Group 1 -->
+        <div class="group">
+          <h4>Important information before you begin</h4>
+          <div class="groupInstructions">
+            <p class="text">To successfully complete and submit your power of attorney using this online service, you must:</p>
+            <ul class="indentedList">
+              <li>Fill in the required information.</li>
+              <li>Print the POA.</li>
+              <li>Sign and date it.</li>
+              <li>Scan the POA into a single file.</li>
+              <li>Attach the file from your computer.</li>
+              <li>Submit your signed POA.</li>
+            </ul>
+            <p class="text">If you are unable to print, scan and submit the POA now, you will be able to save your progress and return to the POA web application at a later time.</p>
+          </div>
+        </div>
+        <!-- Group 2 -->
+        <div class="group">
+          <h4>POA information</h4>
+          <fieldset>
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <legend><span class="legendWrap">Will this POA include you and your spouse? <span class="hidden">Required field</span></span> </legend>
+                </div>
+                <div class="required"> * </div>
+              </div>
+              <div class="dataPn">
+                <label for="representSpouse_yes">Yes</label>
+                <input type="radio" id="representSpouse_yes"  name="representSpouse" tabindex="1">
+                <label for="representSpouse_no">No</label>
+                <input type="radio" id="representSpouse_no" name="representSpouse"   tabindex="1">
+                <a href="#i1" class="help icon-button icon-help" role="button" tabindex="1">More information</a></div>
+            </div>
+          </fieldset>
+          <div class="hidden checkblock" id="representSpouse_yes_block">
+            <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="spouseFirstName">Spouse first name:<span class="hidden"> Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="spouseFirstName" size="16" maxlength="16" value="" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="spouseMiddleIn">Spouse middle initial:</label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="spouseMiddleIn" size="2" maxlength="1" value="" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="spouseLastName">Spouse last name:<span class="hidden"> Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="spouseLastName" size="30" maxlength="138" value="" tabindex="1">
+            </div>
+          </div>
+            <div class="linePn labelM masktoggle">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="maskedSSN">Spouse Social Security number:<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <input type="password" id="maskedSSN" value="" size="12" maxlength="12" tabindex="1">
+                <a href="#i2" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+            </div>
+            <div class="linePn labelM masktoggle">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="maskedSSN2">Confirm spouse Social Security number:<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <input type="password" id="maskedSSN2" value="" size="12" maxlength="12" tabindex="1">
+              </div>
+            </div>
+          </div>
+          <fieldset>
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <legend><span class="legendWrap">Do you want this POA to revoke all POAs you have on file for the tax matters granted by this POA? <span class="hidden">Required field</span></span> </legend>
+                </div>
+                <div class="required"> * </div>
+              </div>
+              <div class="dataPn">
+                <label for="poaRevokeAll_yes">Yes</label>
+                <input type="radio" id="poaRevokeAll_yes"  name="poaRevokeAll" tabindex="1">
+                <label for="poaRevokeAll_no">No</label>
+                <input type="radio" id="poaRevokeAll_no" checked="checked" name="poaRevokeAll" tabindex="1">
+                <a href="#i3" class="help icon-button icon-help" role="button" tabindex="1">More information</a></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <legend><span class="legendWrap">Is this POA for either an Offer in Compromise (OIC) case or a Bureau of Conciliation and Mediation Services (BCMS)/ Division of Tax Appeals (DTA) case?<span class="hidden">Required field</span></span> </legend>
+                </div>
+                <div class="required"> * </div>
+              </div>
+              <div class="dataPn">
+                <label for="bcmsOic_yes">Yes</label>
+                <input type="radio" id="bcmsOic_yes" name="bcmsOic" tabindex="1">
+                <label for="bcmsOic_no">No</label>
+                <input type="radio" id="bcmsOic_no" name="bcmsOic"  tabindex="1">
+              </div>
+            </div>
+          </fieldset>
+          <div class="hidden checkblock" id="bcmsOic_yes_block">
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="limitPoa">This POA is for:<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required"> * </div>
+              </div>
+              <div class="dataPn">
+                <select id="limitPoa" tabindex="1">
+                  <option value="1" selected="selected">Select one</option>
+                  <option value="2">OIC</option>
+                  <option value="3">BCMS/DTA</option>
+                </select>
+                <a href="#i4" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <h4>Additional authority</h4>
+          <fieldset class="same-line">
+            <legend>I authorize all representatives on this POA to: (check all that apply)</legend>
+            <div class="linePn labelXS">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <input type="checkbox" id="taxProfessional" value=""  tabindex="1">
+                </div>
+              </div>
+              <div class="dataPn">
+                <label for="taxProfessional">Sign tax returns on my behalf</label>
+                <a href="#i5" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+            </div>
+            <div class="linePn labelXS">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <input type="checkbox" id="delAnotherInd" value="" tabindex="1">
+                </div>
+              </div>
+              <div class="dataPn">
+                <label for="delAnotherInd">Delegate authority to another individual</label>
+                <a href="#i6" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="buttonGroup">
+          <input type="button" class="button primary" value="Continue" title="Continue" onclick="javascript:window.location.href='30POAW_GRAU01GrantAuthority.html';" tabindex="1">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="instructionsFooter">
+    <h3>Instructions</h3>
+    <div>
+      <h4 id="i1">Will this POA include you and your spouse? </h4>
+      <p class="text">If yes, both you and your spouse must sign and date the POA.</p>
+    </div>
+    <div>
+      <h4 id="i2">Spouse Social Security number</h4>
+      <p class="text">Enter your spouse's nine-digit Social Security number (SSN). If they do not have an SSN, enter their New York State tax identification number beginning with "TF."</p>
+    </div>
+    <div>
+      <h4 id="i3">Do you want this POA to revoke all POAs you have on file for the tax matters granted by this POA?</h4>
+      <p class="text">This POA will remain active until you (the taxpayer) revoke it or your representative withdraws from representing you. For information on how to revoke a POA, or how a representative can withdraw, see <a href="https://www.tax.ny.gov/poa/#beforerevokeorwithdraw" title="This will open a new window to get more information." target="_blank">Power of Attorney</a>.</p>
+    </div>
+    <div>
+      <h4 id="i4">This POA is for:</h4>
+      <p class="text">If you select OIC, this POA will apply to all tax types and all tax periods for your offer in compromise case. You must complete a separate POA for all other matters. </p>
+    </div>
+    <div>
+      <h4 id="i5">Sign tax returns on my behalf</h4>
+      <p class="text">Tax returns include refund/credit applications.</p>
+    </div>
+    <div>
+      <h4 id="i6">Delegate authority to another individual</h4>
+      <p class="text">If you select this, these representatives do not need the consent of any other representative to make a delegation, unless you add a limitation on authority on the next page. </p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- end of page-container --> 
+<script type="text/javascript">
+    uiIncludes.footer.renderXHTML();
+    </script> 
+
+</body>
+</html>

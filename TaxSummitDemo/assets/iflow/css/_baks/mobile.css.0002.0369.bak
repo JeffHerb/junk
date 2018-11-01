@@ -1,0 +1,196 @@
+/*
+|==================================================================================|
+| State of New York Department of Taxation & Finance                               |
+| e-MPIRE Application: mobile.css                                                  |
+| Created by: ITS UI/UX Team                                                       |
+| Date Created: 08/02/2013                                                         |
+| Description: Mobile styles needed to properly render external web pages.         |
+| Version: 0.0.1.REL20130802                                                       |
+| Change History (Include major changes/additions only)                            |
+| Date        Author          Description                                          |
+| -------------------------------------------------------------------------------- |
+| 08/02/2013  Craig Patik     Initial Baseline                                     |
+|==================================================================================|
+*/
+@media (max-width: 60em) {
+  body {
+    min-width: 100%;
+  }
+
+  div#pageContainer {
+    margin: 0;
+  }
+}
+a:active,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+.searchScope {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .searchScope {
+    display: block;
+  }
+}
+h3 {
+  font-size: 100%;
+  margin-left: 1em;
+}
+
+@media (min-width: 48em) {
+  .selectedRB h3 {
+    font-size: 100%;
+    padding-left: 0.75em;
+    margin-bottom: 0;
+  }
+}
+.selectedRB .fieldWrapper {
+  overflow: hidden;
+}
+
+.selDepFldsWrapper .fieldWrapper .buttonGroup {
+  margin-bottom: 1em;
+}
+
+fieldset {
+  margin-left: 0.7em;
+}
+fieldset .labelXXS .selDepFldsWrapper {
+  width: auto !important;
+  margin-right: 1em !important;
+}
+fieldset div.linePn.labelXXS div.labelPn {
+  width: 3%;
+}
+
+.group .selDepFldsWrapper .fieldWrapper {
+  display: block;
+  padding-bottom: 0;
+}
+.group .selDepFldsWrapper .fieldWrapper.hidden {
+  display: none;
+}
+
+.selDepFields {
+  position: relative;
+}
+
+.group .selectedRB {
+  margin-top: 0 !important;
+  margin-right: 1em !important;
+  margin-left: 0 !important;
+  margin-bottom: 1em !important;
+}
+
+.selectedRB .selDepFields {
+  border: 1px solid #A7C9D1;
+}
+
+@media (min-width: 48em) {
+  .group .selDepFldsWrapper .fieldWrapper {
+    display: none;
+  }
+  .group .selectedRB {
+    margin-top: 1px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 1px !important;
+  }
+
+  .selectedRB .selDepFields {
+    border-color: transparent;
+  }
+  .selectedRB .rBtnWrapper {
+    border-color: transparent;
+    background-color: transparent;
+  }
+  .selectedRB .fieldWrapper {
+    border-top-color: transparent;
+    background-color: transparent;
+  }
+
+  .selDepFields {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .selDepFields h3,
+  .selDepFields p.text {
+    margin-left: 0;
+  }
+
+  fieldset div.linePn.labelXXS div.labelPn {
+    width: 1.3em;
+  }
+}
+@media (max-width: 48em) {
+  div.group div.labelXXS div.labelPn,
+  div.group div.labelXXS div.dataPn,
+  div.group div.labelXS div.labelPn,
+  div.group div.labelXS div.dataPn,
+  div.group div.labelS div.labelPn,
+  div.group div.labelS div.dataPn,
+  div.group div.labelM div.labelPn,
+  div.group div.labelM div.dataPn,
+  div.group div.labelabelMLeft div.labelPn,
+  div.group div.labelabelMLeft div.dataPn,
+  div.group div.labelabelAuto div.labelPn,
+  div.group div.labelabelAuto div.dataPn,
+  div.group div.labelL div.labelPn,
+  div.group div.labelL div.dataPn,
+  div.group div.labelXL div.labelPn,
+  div.group div.labelXL div.dataPn,
+  div.group div.labelXXL div.labelPn,
+  div.group div.labelXXL div.dataPn,
+  div.group div.labelXXLLeft div.labelPn,
+  div.group div.labelXXLLeft div.dataPn {
+    float: none;
+    clear: both;
+    width: auto;
+    margin-top: 0;
+    margin-left: 1.5em;
+    text-align: left;
+  }
+  div.group div.labelXXS div.labelPn,
+  div.group div.labelXS div.labelPn,
+  div.group div.labelS div.labelPn,
+  div.group div.labelM div.labelPn,
+  div.group div.labelabelMLeft div.labelPn,
+  div.group div.labelabelAuto div.labelPn,
+  div.group div.labelL div.labelPn,
+  div.group div.labelXL div.labelPn,
+  div.group div.labelXXL div.labelPn,
+  div.group div.labelXXLLeft div.labelPn {
+    margin-bottom: 0;
+  }
+  div.group div.labelXXS div.dataPn,
+  div.group div.labelXS div.dataPn,
+  div.group div.labelS div.dataPn,
+  div.group div.labelM div.dataPn,
+  div.group div.labelabelMLeft div.dataPn,
+  div.group div.labelabelAuto div.dataPn,
+  div.group div.labelL div.dataPn,
+  div.group div.labelXL div.dataPn,
+  div.group div.labelXXL div.dataPn,
+  div.group div.labelXXLLeft div.dataPn {
+    margin-bottom: 1em;
+  }
+}
+.invisible {
+  visibility: hidden;
+  position: absolute;
+  display: block;
+}
+
+.rBtnWrapper input {
+  position: absolute;
+  top: 0.7em;
+  left: 0.5em;
+}
+
+.visibleLabel {
+  margin-left: 1.5em;
+}

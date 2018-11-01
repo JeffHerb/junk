@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<title></title>
+<meta name="format-detection" content="telephone=no">
+<link href="../../assets/ols/css/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+<div class="cui-hide-from-screen feta-hidden-jump-links"> <a href="#nav">Go to navigation</a> <a href="#main">Go to content</a> </div>
+<div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30"></div>
+<script>
+        // Global objects for JSON objects and corresponding templates
+        var fetaData = {
+            templates: [],
+            tables: [],
+            environment: 'ols',
+            app: {
+                title: 'Add Employee',
+                userType: 'tp',
+            },
+            page: {
+                title: 'Employee Role',
+            },
+        };
+
+        fetaData.banners = {
+            urls: {
+                contactUs: {
+                    href: 'https://www.tax.ny.gov/help/contact/how_to_reach.htm',
+                },
+                logout: {
+                    href: 'Logoff?langId=-1&amp;storeId=10151&amp;catalogId=10001&amp;URL=StoreView',
+                },
+            },
+        };
+
+        fetaData.preferences = {
+            text: 'Preferences',
+            items: [
+                {
+                text: 'Edit personal information',
+                href: '#editinformation',
+            },
+             {
+                    text: 'Delete Tax Professional Account',
+                    href: '#deleteaccount',
+                },
+            ],
+        };
+
+        fetaData.helpMenu = {
+            text: 'Get Help',
+            items: [
+                {
+                    text: 'Help Center',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                    target: '_blank',
+                },
+                {
+                    text: 'Frequently asked questions (FAQs)',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                    target: '_blank',
+                },
+                {
+                    text: 'Learn about online services',
+                    href: 'https://www.tax.ny.gov/online/moreinfo.htm',
+                    target: '_blank',
+                },
+                {
+                    text: 'View demos and videos',
+                    href: 'https://www.tax.ny.gov/e-services/otc/demos/demo.htm',
+                    target: '_blank',
+                },
+                {
+                    text: 'E-ZRep TR-2000',
+                    href: 'https://www.tax.ny.gov/e-services/otc/tr_2000_info.htm',
+                    target: '_blank',
+                },
+                {
+                    type: 'divider',
+                },
+                {
+                    text: 'Support',
+                    href: 'https://www.tax.ny.gov/',
+                    target: '_blank',
+                },
+                {
+                    text: 'Contact Us',
+                    href: 'https://www.tax.ny.gov/e-services/otc/contact_us.htm',
+                    target: '_blank',
+                },
+            ],
+        };
+
+        fetaData.userAcct = {
+            name: 'John Smith',
+            legalName: 'TAX SUMMIT 2018',
+			id: 'XXX-XXX-0122',
+            type: 'Tax Professional',
+            role: 'Administrator',
+        };
+
+        fetaData.navigation = {
+            filter: {
+                type: 'text',
+                closeButton: true,
+            },
+            title: 'Services', // Optional; this goes in the toggle button in the app banner
+            items: [
+                {
+                    text: 'Tax Professional',
+                    isHeader: true,
+                    items: [
+                        {
+                            text: 'Client summary',                            
+                        },
+                        {
+                            text: 'Employee summary',                          
+                        },                        
+                    ],
+                },
+                {
+                    "text": "Services",
+                    "isHeader": true,
+                    "items": [
+                        {
+                            "text": "Uploads",
+                            "items": [
+                                {
+                                    "text": "MCTMT upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81557&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "NYS-1 upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81558&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "NYS-45 upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81559&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "Wage reporting upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81560&clientFlag=N",
+                                    "target": "blank"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+        };
+    </script>
+<div id="cui-body-wrapper">
+  <header class="feta-header"></header>
+  
+  <!-- main content -->
+  <main role="main" id="main">
+    <h2 class="feta-page-title">Employee Role</h2>
+    <form name="form1" id="form1" action="https://tax.ny.gov" method="post">
+      <section class="cui-inline-field feta-label-width-half">
+        <header>
+          <h3>Roles</h3>
+        </header>
+        
+        <!-- Add client button -->
+        <div class="cui-row">
+          <div class="cui-col">
+            <p>Select a level of access for the employee. 
+          </div>
+        </div>
+        
+        <!-- Clients table -->
+        <div class="feta-panel-selection-list">
+          <div class="feta-panel">
+            <header>
+              <h4>Administrator</h4>
+            </header>
+            <div class="feta-panel-body">
+              <ul class="feta-list">
+                <li>Perform tax services for all clients</li>
+                <li>Add and assign employees and clients</li>
+                <li>Delete the account</li>
+              </ul>
+            </div>
+            <div class="feta-panel-actions">
+              <button type="button" class="cui-button-primary" tabindex="1">Select</button>
+            </div>
+          </div>
+          <div class="feta-panel">
+            <header>
+              <h4>Manager</h4>
+            </header>
+            <div class="feta-panel-body">
+              <ul class="feta-checkmark-list">
+                <li>Perform tax services for all clients</li>
+                <li>Add and assign employees and clients</li>
+              </ul>
+            </div>
+            <div class="feta-panel-actions">
+              <button type="button" class="cui-button-primary" tabindex="1">Select</button>
+            </div>
+          </div>
+          <div class="feta-panel">
+            <header>
+              <h4>User</h4>
+            </header>
+            <div class="feta-panel-body">
+              <ul class="feta-checkmark-list">
+                <li>Perform tax services for clients as assigned</li>
+              </ul>
+            </div>
+            <div class="feta-panel-actions">
+              <button type="button" class="cui-button-primary" onclick="javascript:window.location.href='65_30EmployeeDetails.html';">Select</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feta-button-group">
+        <div class="cui-row">
+          <div class="cui-col-small-12 cui-align-center">
+            <button type="button" class="cui-button" onclick="javascript:window.location.href='55_10EmployeeSummary.html';">Back</button>
+          </div>
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <footer class="feta-footer"></footer>
+  <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+</div>
+<nav role="navigation" class="feta-nav"></nav>
+<script id="require" src="../../assets/ols/js/main.js"></script>
+</body>
+</html>

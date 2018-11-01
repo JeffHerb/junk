@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>View Your 1099-G Information</title>
+    <script type="text/javascript" src="../../js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+     <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+</head>
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a></li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li><a class="navHeaderFirstLink navHeaderLastLink" href="https://tax.custhelp.com/app/answers/list/c/6,76" target="_blank" title="This will open a new window to Help">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">View Your 1099-G Information</h1>
+            <div id="taxpayer-info">
+                <div class="leftFluid">
+                </div>
+                <div class="sectionBorder">
+                    <div class="c100">
+                        <div class="label">
+                            Taxpayer ID:
+                        </div>
+                        <div class="data">
+                            XXX-XX-0123
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>View and Print </h2>
+        <div id="pageInstructions">
+            <p class="text">If you had an overpayment of New York State income tax or the <a href="https://www.tax.ny.gov/bus/mctmt/default.htm" target="_blank" title="This will open a new window for more information on Metropolitan Commuter Transportation Mobility Tax">Metropolitan Commuter Transportation Mobility Tax</a>, you may need to report it on your federal income tax in the following year. To find out if you need to report this information on a federal income tax return, see the instructions for that return, or contact the IRS or a tax preparer.</p>
+            <p class="text"><strong>How to view/print copies</strong></p>
+            <ul class="indentedList">
+                <li>
+                    Select <strong>Print</strong> to print this page
+                </li>
+                <li>
+                    Select <strong>View/Print</strong> to print a 1099-G
+                </li>
+                <li>
+                    Select <strong>Back</strong> to select another filing year
+                </li>
+            </ul>
+            <p class="text">Tax professionals who prepare returns for more than one taxpayer can select the <strong>View Another Taxpayer</strong> to access the 1099-G information of additional clients.</p>
+        </div>
+        <div id="legend">
+            <ul>
+                <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+            </ul>
+        </div>
+        <div id="errorMessages"></div>
+        <div class="formWrapper">
+            <div class="leftFluid">
+            </div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Summary for your 2017 tax return</h4>
+                        <div class="rset form-table">
+                            <div class="rset_head">
+                                <div class="rset_title">1099-G Information</div>
+                            </div>
+                            <div class="rset_body">
+                                <table id="table1" summary="Select your 1099-G for a specific year to View/Print">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="table-primary">Tax year</th>
+                                            <th scope="col" class="table-primary">Tax type</th>
+                                            <th scope="col">Form</th>
+                                            <th scope="col">Reference number <a href="#instructions1" class="help icon-button icon-help" role="button" tabindex="1">More information</a></th>
+                                            <th scope="col" class="table-secondary">Amount reported to IRS ($)</th>
+                                            <th class="center minWidth" scope="col">&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2016</td>
+                                            <td>Personal Income</td>
+                                            <td>1099-G</td>
+                                            <td>PITR1801030001033</td>
+                                            <td class="rt noWrap">3,500.00</td>
+                                            <td class="center minWidth">
+                                                <input type="button" class="button rsetButtonMedium" value="View/Print" title="View/Print" tabindex="1">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <h4>Web survey</h4>
+                        <div class="groupInstructions">
+                            <p class="text">Provide feedback about this online service through our <a href="https://tax.custhelp.com/ci/documents/detail/5/40" target="_blank" title="This link will open in a new window to the Web Survey">Web Survey</a>.</p>
+                        </div>
+                    </div>
+                </form>
+                <form name="form2" id="form2" action="" method="post">
+                    <div class="buttonGroup">
+                        <input type="button" class="button" value="Back" title="Back" onclick="javascript:window.location.href='100PIGI_FINF01FilingInformation.html';" tabindex="1">
+                        <input type="button" class="button" onclick="window.print();" value="Print" title="Print" tabindex="1">
+                        <input type="button" class="button primary" value="View Another Taxpayer" title="View Another Taxpayer" tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="instructionsFooter">
+            <h3>Instructions</h3>
+            <div class="instructions">
+                <div>
+                    <h4 id="instructions1">Reference number</h4>
+                    <p class="text">You will need this number if you contact us for assistance. For help, call the 1099-G Information Center. See <a href="https://www.tax.ny.gov/help/contact/default.htm#OI1099G" target="_blank" title="This will open a new window to Contact Us">Contact Us</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script type="text/javascript">
+    uiIncludes.footer.renderXHTML();
+    </script>
+ 
+</body>
+</html>

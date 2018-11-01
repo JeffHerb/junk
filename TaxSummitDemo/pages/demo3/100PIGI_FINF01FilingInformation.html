@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>View Your 1099-G Information</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script type="text/javascript" src="../../js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a></li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li><a class="navHeaderFirstLink navHeaderLastLink" href="https://tax.custhelp.com/app/answers/list/c/6,76" target="_blank" title="This will open a new window to Help">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">View Your 1099-G Information</h1>
+            <div id="taxpayer-info">
+                <div class="leftFluid">
+                </div>
+                <div class="sectionBorder">
+                    <div class="c100">
+                        <div class="label">
+                            Taxpayer ID:
+                        </div>
+                        <div class="data">
+                            XXX-XX-0123
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Filing Information</h2>
+        <div id="pageInstructions">
+            <p class="text">Choose the tax year of the return you are filing, and then select <strong>Continue</strong>. To find out if you need to report this information on a federal income tax return, see the instructions for that return, or contact the IRS or a tax preparer.</p>
+        </div>
+        <div id="legend">
+            <ul>
+                <li>
+                    <span class="required">*</span> Required fields
+                </li>
+            </ul>
+        </div>
+        <div id="errorMessages"></div>
+        <div class="formWrapper">
+            <div class="leftFluid">
+            </div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                    <div class="group">
+                        <h4>Filing information</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="filingYear">I am filing my tax return for:<span class="hidden"> Required field</span></label>
+                                </div>
+                                <div class="required">*</div>
+                            </div>
+                            <div class="dataPn">
+                                <select id="filingYear" tabindex="1">
+                                    <option value="0">Select year</option>
+                                    <option value="1">2017</option>
+                                    <option value="2">2016</option>
+                                    <option value="3">2015</option>
+                                    <option value="4">2014</option>
+                                    <option value="5">2013</option>
+                                    <option value="6">2012</option>
+                                    <option value="7">2011</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button primary" value="Continue" onclick="javascript:window.location.href='105PIGI_VWPT01ViewAndPrint1099G.html';" title="Continue" tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script type="text/javascript">
+    uiIncludes.footer.renderXHTML();
+    </script>
+    <script>
+  
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Respond to Department Notice</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script type="text/javascript" src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+
+<body>
+    <div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+            uiResponsive.setup();
+            uiIncludes.banners.display();
+
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a></li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li><a class="navHeaderFirstLink navHeaderLastLink" href="https://nystax.custhelp.com/app/answers/list/c/6,76" target="_blank" title="This will open a new window to Help">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Respond to Department Notice</h1>
+            <div id="taxpayer-info">
+                <div class="leftFluid"> </div>
+                <div class="sectionBorder">
+                    <div class="c33">
+                        <div class="label"> Taxpayer ID: </div>
+                        <div class="data"> XXX-XX-0123</div>
+                    </div>
+                    <div class="c67">
+                        <div class="label"> Taxpayer name: </div>
+                        <div class="data"> JANE DOE </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Questionnaire</h2>
+        <div id="pageInstructions">
+            <p class="text"> Learn more about how to communicate with the Department through <a href="https://www.tax.ny.gov/e-services/acvw/rtdn.htm" title="This will open a new window to learn more about how to communicate with the Department through Respond to department notice" target="_blank">Respond to department notice</a>. </p>
+            <p> Depending on the notice you received and your response, you may need to attach scanned documents to use this service. </p>
+        </div>
+        <div id="legend">
+            <ul>
+                <li><span class="required">*</span> Required fields</li>
+                <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+            </ul>
+        </div>
+       
+        <div class="formWrapper">
+            <div class="leftFluid"> </div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Notice type</h4>
+                        <fieldset>
+                            <legend>Please choose one of the options below and fill in the corresponding information: <span class="required">*</span><span class="hidden"> Required field</span></legend>
+                            <!-- Option 1 -->
+                            <div class="linePn labelXS">
+                                <div class="labelPn">
+                                    <div class="labelWrap"> </div>
+                                </div>
+                                <div class="dataPn selDepFldsWrapper">
+                                  <div class="selDepFields">
+                                        <div class="rBtnWrapper" aria-controls="rb_1_depFields">
+											<input type="radio" name="dynamicRadioButtons" id="rb_1" class="rbDynamic" value="2" tabindex="1">
+											<div class="visibleLabel"> I received a bill. </div>
+                                            <label for="rb_1" id="rb_1_label" class="hideOffScreen">I received a bill. Additional fields are revealed when this option is selected.</label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Option 2 (no dynamic fields)-->
+                            <div class="linePn labelXS">
+                                <div class="labelPn">
+                                    <div class="labelWrap"> </div>
+                                </div>
+                                <div class="dataPn selDepFldsWrapper">
+                                    <div class="selDepFields">
+                                        <div class="rBtnWrapper" aria-controls="rb_2_depFields">
+                                            <input type="radio" name="dynamicRadioButtons" id="rb_2" class="rbDynamic" value="1" tabindex="1">
+                                            <div class="visibleLabel"> I received a notice about my refund. </div>
+                                            <label for="rb_2" id="rb_2_label" class="hideOffScreen"> I received a notice about my refund. Additional fields are revealed when this option is selected.</label>
+                                        </div>
+                                        <div id="rb_2_depFields" class="fieldWrapper" aria-hidden="true" aria-live="polite" aria-expanded="false" role="region" aria-describedby="rb_2_label">
+                                            <div class="linePn labelS">
+                                                <div class="labelPn">
+                                                    <div class="labelWrap">
+                                                        <label for="selectNotice">Select notice:<span class="hidden"> Required field</span></label>
+                                                    </div><div class="required">*</div>
+                                                </div>
+                                                <div class="dataPn">
+                                                    <select name="select2" id="selectNotice" tabindex="1">
+                                                        <option value="0">Select notice</option>
+                                                        <option value="1">DTF-973.56-0</option>
+                                                        <option value="2">DTF-973.87</option>
+                                                        <option value="4">DTF-160</option>
+                                                        <option value="5">DTF-160-A</option>
+                                                        <option value="6">DTF-161</option>
+                                                        <option value="7">DTF-161-A</option>
+                                                    </select>
+                                                    <a href="#instructions1" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+                                            </div>
+                                            <div class="linePn labelS">
+                                                <div class="labelPn">
+                                                    <div class="labelWrap">
+                                                        <label for="noticeDLN">Document locator number:<span class="hidden"> Required field</span></label>
+                                                    </div><div class="required">*</div>
+                                                </div>
+                                                <div class="dataPn">
+                                                    <input name="text2" type="text" id="noticeDLN" tabindex="1" value="" size="10" maxlength="17" />
+                                                    <a href="#instructions2" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Option 3  -->
+                            <div class="linePn labelXS">
+                                <div class="labelPn">
+                                    <div class="labelWrap"> </div>
+                                </div>
+                                <div class="dataPn selDepFldsWrapper">
+                                    <div class="selDepFields">
+                                        <div class="rBtnWrapper"aria-controls="rb_3_depFields">
+										 <input type="radio" name="dynamicRadioButtons" id="rb_3" class="rbDynamic" value="2" tabindex="1">
+										 <div class="visibleLabel"> My return was selected for review or audit? </div>
+                                            <label for="rb_3" id="rb_3_label" class="hideOffScreen"> My return was selected for review or audit? Additional fields are revealed when this option is selected.</label>
+                                        </div>
+                                    <div id="rb_3_depFields" class="fieldWrapper" aria-hidden="true" aria-live="polite" aria-expanded="false" role="region" aria-describedby="rb_3_label">
+                                        <div class="linePn labelS">
+                                            <div class="labelPn">
+                                                <div class="labelWrap">
+                                                    <label for="selectNotice2">Select notice:<span class="hidden"> Required field</span></label>
+                                                </div><div class="required">*</div>
+                                            </div>
+                                            <div class="dataPn">
+                                                <select id="selectNotice2" tabindex="1">
+                                                    <option value="0">Select notice</option>
+                                                    <option value="1">DTF-973.39</option>
+                                                    <option value="2">DTF-973.42</option>
+                                                    <option value="3">DTF-973.52</option>
+                                                    <option value="4">DTF973.73</option>
+                                                    <option value="5">DTF-973.84</option>
+													 <option value="6">Other audit letter</option>
+                                                </select>
+                                                <a href="#instructions1" class="help icon-button icon-help" role="button" tabindex="1">More information</a></div>
+                                        </div>
+                                        <div class="linePn labelS">
+                                            <div class="labelPn">
+                                                <div class="labelWrap">
+                                                    <label for="caseNmbr">Case number:<span class="hidden"> Required field</span></label>
+                                                </div><div class="required">*</div>
+                                            </div>
+                                            <div class="dataPn">
+                                                <input name="text2" type="text" id="caseNmbr" tabindex="1" value="" size="10" maxlength="17" />
+                                                <a href="#instructions3" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							</div>
+                            <!-- Option 4 (no dynamic fields) -->
+                            <div class="linePn labelXS">
+                                <div class="labelPn">
+                                    <div class="labelWrap"> </div>
+                                </div>
+                                <div class="dataPn selDepFldsWrapper">
+                                   <div class="selDepFields">
+                                        <div class="rBtnWrapper" aria-controls="rb_4_depFields">
+                                            <input type="radio" name="dynamicRadioButtons" id="rb_4" class="rbDynamic" value="2" tabindex="1">
+                                            <div class="visibleLabel"> I received one of the notices listed below. </div>
+                                            <label for="rb_4" id="rb_4_label" class="hideOffScreen"> I have one of the notices listed below. Additional fields are revealed when this option is selected.</label>
+                                        </div>
+                                        <div id="rb_4_depFields" class="fieldWrapper" aria-hidden="true" aria-live="polite" aria-expanded="false" role="region" aria-describedby="rb_4_label">
+                                            <div class="linePn labelS">
+                                                <div class="labelPn">
+                                                    <div class="labelWrap">
+                                                        <label for="selectNotice3">Select notice:<span class="hidden"> Required field</span></label>
+                                                    </div><div class="required">*</div>
+                                                </div>
+                                                <div class="dataPn">
+                                                    <select id="selectNotice3" tabindex="1">
+                                                        <option value="0">Select notice</option>
+                                                        <option value="1">CT-155</option>
+                                                        <option value="2">DTF-275</option>
+                                                        <option value="3">ST-565</option>
+                                                        <option value="4">TR-100</option>
+                                                        <option value="5">TR-576</option>
+                                                        <option value="6" id="other">Other</option>
+
+                                                    </select>
+                                                    <a href="#instructions1" class="help icon-button icon-help" role="button" tabindex="1">More information</a></div>
+                                            </div>
+                                            <div class="hidden checkblock" id="other_block">
+                                                <div class="linePn labelS">
+                                                    <div class="labelPn">
+                                                        <div class="labelWrap">
+                                                            <label for="noticeID">Notice/form ID:<span class="hidden"> Required field</span></label>
+                                                        </div><div class="required">*</div>
+                                                    </div>
+                                                    <div class="dataPn">
+                                                        <input type="text" id="noticeID" size="20" maxlength="20" value="" tabindex="1"> <a href="#instructions4" class="help icon-button icon-help" role="button" tabindex="1">More information</a>
+                                                    </div> 
+                                                </div>
+                                                 <div class="linePn labelS">
+                                                    <div class="labelPn">
+                                                        <div class="labelWrap">
+                                                            <label for="noticeDate">Notice date:</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dataPn">
+                                                        <input type="text" id="noticeDate" value="" size="10" maxlength="10" tabindex="1">
+                                                        <a href="#" id="cal_noticeDate" class="calendar" tabindex="1"></a> 
+														<a href="#instructions5" class="help icon-button icon-help" role="button" tabindex="1">More information</a>
+                                                    </div>
+													
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+						</div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button primary" value="Continue" title="Continue"onclick="javascript:window.location.href='15_10RTDN_RFRS10ReasonForResponse.html';"  tabindex="1" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="instructionsFooter">
+            <h3>Instructions</h3>
+            <div class="instructions">
+                <h4 id="instructions1">Selection notice</h4>
+                <p class="text"> You can find the notice number in the upper right corner or lower left corner of your notice.</p>
+            </div>
+          
+            <div class="instructions">
+                <h4 id="instructions2">Document locator number</h4>
+                <p class="text"> You can find the document locator number (DLN) in the upper right hand corner of your notice. </p>
+                <p class="text">If it is longer than 12 digits, enter only the first 12.</p>
+            </div>
+            
+            <div class="instructions">
+                <h4 id="instructions3">Case number</h4>
+                <p class="text">The case number begins with an X and is followed by nine digits. It is located either in the upper right-hand corner of your notice or in the subject line of your letter.</p>
+            </div>
+           
+			 <div class="instructions">
+                <h4 id="instructions4">Notice/form ID</h4>
+                <p class="text">The notice or form ID is in either the upper right-hand corner or the lower left-hand corner of your notice.</p>
+            </div>
+			 <div class="instructions">
+                <h4 id="instructions5">Notice date</h4>
+                <p class="text">Please enter the date shown on the notice we sent you. If there is no date on your notice, please use today’s date in this format: MM/DD/YYYY.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script type="text/javascript">
+        uiIncludes.footer.renderXHTML();
+
+    </script>
+</body>
+
+</html>

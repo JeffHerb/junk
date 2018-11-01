@@ -1,0 +1,41 @@
+
+<script language="jscript">
+attachEvent("onclick", clickHandler);
+attachEvent("onreadystatechange", onload);
+
+function onload()
+{
+
+    style.position = "relative";
+    //style.pixelLeft = -20;
+    style.listStyleType = "none";
+}
+
+function clickHandler()
+{ //alert("click handler");
+    var SourceElement = window.event.srcElement;
+//alert("source element " + SourceElement.tagName);
+    if (SourceElement.tagName.toLowerCase() == 'img' && SourceElement.parentElement.children.tags("ul").length > 0)
+    {
+	//SourceElement is a clickable image
+
+	var targetElement = SourceElement.parentElement.children.tags("ul").item(0); 
+		
+	if (targetElement.style.display == '')
+        {
+		//targetElement is displayed - hide it.
+		targetElement.style.display = 'none';
+		SourceElement.src = '../../images/tree_closed.gif';
+	}
+	else
+        {
+		//targetElement is not empty - display it.
+		targetElement.style.display = '';
+		SourceElement.src = '../../images/tree_open.gif';
+        }
+
+	event.cancelBubble = true;
+    }
+}
+
+</script>

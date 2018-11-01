@@ -1,0 +1,4249 @@
+@charset "utf-8";
+/*
+ * State of New York Department of Taxation & Finance
+ * Iflow Main Style Sheet
+ * Version: 3.4.34.REL20140610
+ * Created by: ITS UI/UX Team
+ * Date Created: 04/01/2008
+ * Description: Styles needed to properly render external web pages.
+ * Change History (Include major changes/additions only)
+ * Date        Author          Description
+ * --------------------------------------------------------------------------------
+ * 04/01/2008  Craig Patik     Initial Baseline
+ * 09/10/2008  Manolo Farfan   Made changes to initial baseline (gral structures)
+ * 04/28/2009  Manolo Farfan   Removal of image spacers and bottom-aligning of data
+ * 08/25/2009  Craig Patik     Updated server copy with new styles since 4/28/09,
+ *                             namely div.row/div.line definitions
+ * 09/27/2010  Manolo & Craig  Added new styles for table paging
+ * 11/15/2010  Manolo Farfan   Reworked div.line (labels and data) for improved
+ *                             and to allow more flexible structures
+ * 01/10/2011  Craig Patik     Updated many styles to match the new My Account look
+ * 03/01/2011  Manolo Farfan   Modified banner CSS
+ * 03/14/2011  Craig Patik     Hid the VeriSign section
+ * 04/28/2011  Manolo Farfan   Added modalDiv CSS
+ * 05/18/2011  Craig Patik     Changed margin for p.text in .group & .instructions
+ * 08/23/2011  Craig Patik     Added tooltips
+ * 10/28/2011  Manolo Farfan   Added styles for selection-dependent fields
+ * 11/21/2011  Manolo Farfan   iFlowMessages
+ * 12/06/2011  Manolo Farfan   Dynamic rows (expandRows) and other cosmetic changes
+ * 12/07/2011  Craig Patik     Added fieldset and legend. Added .hideOffScreen for
+ *                             screen reader content
+ * 12/15/2011  Manolo Farfan   Added Ajax styles
+ * 12/21/2011  Craig Patik     Adjusted alignment for inputs and div.moneyField
+ * 01/15/2012  Manolo Farfan   Combined old & new iFlowMessages into errorMessages
+ * 02/13/2012  Craig Patik     Added file/folder tree
+ * 05/02/2012  Manolo Farfan   Added calendar
+ * 05/11/2012  Manolo Farfan   Added lists (listA)
+ * 06/12/2012  Manolo Farfan   Expanded view
+ * 06/13/2012  Craig Patik     Generic and iflow-specific tooltip styles
+ * 02/13/2013  Manolo Farfan   Guess what? New banner!
+ * 09/30/2013  Craig Patik     Added .center-block
+ * 12/10/2013  Craig Patik     Selection-dependent field labels can wrap; removed
+ *                             tag names from ID-based selectors
+ * 12/11/2013  Craig Patik     Reverted selection-dependent changes because of
+ *                             inconsistencies with XHTML doctypes in IE
+ * 12/30/2013  Craig Patik     Result sets now use CSS for stripes
+ * 01/24/2014  Craig Patik     Added `.icon-button` and fixed rset input alignment
+ */
+
+/* Style initialization adapted from http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, em, img, strong, tt, fieldset, legend, b, u, i, center, ol, ul, li, form, label, table, tbody, tfoot, thead {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1em;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tr,
+td,
+th {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+legend {
+    display: inline-block;
+    *display: inline;
+    *margin-left: -7px;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+}
+
+/*
+====================================================================================
+ Basic XHTML Elements
+====================================================================================
+*/
+html {
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    height: 100%;
+    margin-bottom: 15px;
+    font-family: "Avenir", "Segoe UI", Helmet, FreeSans, "Helvetica Neue", "Roboto", "Droid Sans", Tahoma, sans-serif;
+    font-size: 0.8em;
+    background: #CED6E1 url("../images/BodyBg.png") repeat-x scroll left top;
+    background-image: -webkit-linear-gradient(#EBF0F4, #CED6E1);
+    background-image:         linear-gradient(#EBF0F4, #CED6E1);
+    color: #454545;
+    text-rendering: optimizeLegibility;
+    min-width: 950px;
+}
+
+/* needed to prevent footer text from displaying near the top */
+form {
+    clear: both;
+    height: 1%;
+    display: inline;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+img,
+a img {
+    border: 0px;
+}
+
+a {
+    text-decoration: underline;
+    color: blue;
+}
+
+input,
+select,
+textarea {
+    font: 100% "Avenir", "Segoe UI", Helmet, FreeSans, "Helvetica Neue", "Roboto", "Droid Sans", Tahoma, sans-serif;
+    color: #454545;
+    vertical-align: middle;
+    padding: 2px 1px 2px 3px;
+    margin-top: -3px;
+    border: 1px solid #7F9DB9;
+    border-radius: 4px;
+    background-clip: padding-box;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="image"] {
+    border: none;
+}
+
+select {
+    margin: 1px 0;
+}
+
+div.group div select {
+    padding-top: 2px;
+    margin-top: 2px;
+}
+
+textarea {
+    margin-top: 3px;
+    resize: vertical;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    margin: 0.5em 0 0 1em;
+}
+
+p {
+    vertical-align: bottom;
+}
+
+/* Headings H1-H6 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+h1 {
+    float: left;
+    clear: both;
+    margin: 0.5em 0 0.3em 0;
+    padding-right: 15px;
+    font-size: 160%;
+    font-weight: bold;
+    line-height: normal;
+}
+
+h2 {
+    float: none;
+    clear: both;
+    padding: 7px 15px 7px 0;
+    margin: 8px 0 0 0;
+    font-size: 140%;
+    font-weight: bold;
+    line-height: normal;
+}
+
+h3 {
+    font-size: 140%;
+    margin-bottom: 0.5em;
+}
+
+h4,
+h5 {
+    font-size: 140%;
+}
+
+h6 {
+    font-size: 100%;
+}
+
+/*
+====================================================================================
+ Generic Classes
+====================================================================================
+*/
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.rt,
+.rt input { /* second selector is meant for text inputs inside <td class="rt"> */
+    text-align: right;
+}
+
+.lt {
+    text-align: left;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.notBold {
+    font-weight: normal !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.hideOffScreen {
+    display: block !important;
+    position: absolute !important;
+    left: -9999em !important;
+    top: -9999em !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.center {
+    text-align: center;
+}
+
+.text-top {
+    vertical-align: text-top;
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.smallestTextSize {
+    font-size: 80%;
+    font-weight: normal;
+}
+
+.clearPadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.noTopMargin {
+    margin-top: 0 !important;
+}
+
+.numberBullet {
+    list-style-type: decimal !important;
+}
+
+.removeLink {
+    font-weight: normal;
+    margin-left: 1.5em;
+}
+
+.minWidth {
+    width: 1% !important;
+}
+
+.expandRows .minWidth {
+    /* (CP) In expandable tables `1%` doesn't work in IE7. Likely it's because IE7 requires that the class must be defined in every `<td>`. However expandable tables have "extra" rows (the dynamic ones) with a single `<td colspan="n">` that cannot use this class... */
+    *width: 1px !important;
+}
+
+.expandRows .selected .minWidth {
+    /* ...but when a row is expanded, we have to go back to using a percentage. (CP) */
+    *width: 1% !important;
+}
+
+.mediumWidth { /* Usually for result sets */
+    width: 6em;
+}
+
+.noBackgroundImage {
+    background-image: none !important;
+}
+
+.verticalAlignMiddle {
+    vertical-align: middle !important;
+}
+
+.italicized {
+    font-style: italic;
+}
+
+.bullet {
+    margin: 0 0.75em;
+}
+
+/*
+====================================================================================
+ Horizontal Partitions
+====================================================================================
+Notes on c50 and c67:
+--------------------
+A div with a width of 399px divided into 2 c50 DIVs will by default be 200px each and adding up to a total of 400px.
+This happens because the divs 50% width rounds up to the nearest integer and therefore we have to use smaller values.
+*/
+.c33 {
+    width: 33%;
+}
+
+.c50 {
+    width: 49%;
+}
+
+.c100 {
+    width: 100%;
+}
+
+.c67 {
+    width: 66%;
+}
+
+.c33 label,
+.c50 label,
+.c100 label,
+.c67 label {
+    float: left;
+    text-align: right;
+}
+
+div.c33 div,
+div.c50 div,
+div.c67 div,
+div.c100 div,
+.c33,
+.c50,
+.c100,
+.c67 {
+    font-weight: bold;
+    float: left;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.c33 a,
+.c50 a,
+.c67 a,
+.c100 a {
+    text-decoration: underline;
+    color: #454545;
+}
+
+/* The whole page is inside this wrapper div */
+#pageContainer {
+    margin: 15px 15px 2px 15px;
+    background-color: #fff;
+    border-color: #9CAEBD #526D84 #526D84 #9CAEBD;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0 0 15px 15px;
+    overflow: hidden;
+}
+
+.w50 {
+    width: 50%;
+}
+
+/*
+=================================================================================
+ Banner
+=================================================================================
+*/
+#bannerContainer {
+    margin-left: -15px;
+}
+
+#banner, #footer {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    color: #454545;
+}
+
+#banner {
+    font-size: 0.9em;
+}
+
+#bannerMain {
+    width: 100%;
+    position: relative;
+    /* min-height: 136px; *//* This complies with the static's site height - referential only */
+    background: #0E3E62 url("../images/BannerBg.png") left top repeat-x;
+    background-image: -webkit-linear-gradient(#0F5D80, #0E3E62);
+    background-image:         linear-gradient(#0F5D80, #0E3E62);
+}
+
+.bannerLeft,
+.bannerRight {
+    vertical-align: top;
+    min-height: 75px;
+}
+
+.bannerLeft {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+}
+
+.bannerRight {
+    margin-left: 80px;
+    background: transparent url("../images/BannerStatueLiberty.png") top right no-repeat;
+}
+
+.bannerBlock {
+    display: inline-block;
+    *float: left;
+    width: 49.5%;
+    vertical-align: top;
+    padding-top: 0.7em;
+}
+
+/* Sub-block sections */
+/* Text */
+.bannerNYSDTF * {
+    color: #FFF;
+}
+
+.bannerNYSDTF a {
+    text-decoration: none;
+}
+
+.bannerNYS {
+    margin-top: -0.05em;
+    font: italic 1.25em Georgia, "Times New Roman", Times, serif;
+}
+
+.bannerDepartment {
+    font: 1.85em Georgia, "Times New Roman", Times, serif;
+    margin-top: -0.1em;
+}
+
+.bannerNames {
+    display: inline-block;
+    *float: left;
+    *clear: both;
+    font: 1.17em Georgia, "Times New Roman", Times, serif;
+    margin-top: 0.2em;
+    padding-top: 0.15em;
+    border-top: 1px solid #888;
+    white-space: nowrap;
+}
+
+.bannerNames a {
+    text-decoration: none;
+}
+
+.bannerNames a:hover,
+.bannerNames a:visited:hover,
+.bannerNames a:hover span,
+.bannerNames a:visited:hover span {
+    text-decoration: underline;
+    color: #FC6;
+}
+
+.bannerNames a:visited {
+    color: #FFF;
+}
+
+/* Top Links */
+#dtfLinks,
+#dtfSearch {
+    height: 1%;
+    clear: both;
+}
+
+#dtfLinks ul {
+    float: right;
+    list-style-type: none;
+}
+
+#dtfLinks ul li {
+    float: left;
+}
+
+#dtfLinks ul li {
+    padding: 0 6px;
+    margin: 0;
+}
+
+#dtfLinks ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.1em;
+    *line-height: 1.25em;
+    -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+}
+
+#dtfLinks ul li a:hover,
+#dtfLinks ul li a:visited:hover {
+    text-decoration: underline;
+    color: #FC6;
+}
+
+#dtfLinks ul li a:visited {
+    color: #FFF;
+}
+
+#dtfLinks ul li span {
+    padding-right: 4px;
+}
+
+#footer li.lastItem {
+    border: 0;
+    padding-right: 0;
+}
+
+/* Search */
+#dtfSearch {
+    padding-top: 1em;
+    padding-right: 5px;
+}
+
+#dtfSearch label {
+    margin: 0 2px;
+}
+
+#dtfSearch .searchWrapper {
+    float: right;
+    position: relative;
+}
+
+#dtfSearch .searchWrapper select,
+#dtfSearch .searchWrapper input,
+.searchBtnIcon {
+    margin-top: -3px;
+    float: left;
+    font-size: 1.1em;
+    line-height: normal;
+}
+
+#dtfSearch .searchWrapper select {
+    border: 0 none;
+    margin: 1px 0;
+    *margin-top: 0;
+    padding: 1px;
+    vertical-align: top;
+}
+
+#dtfSearch .searchWrapper input {
+    border: 0 none;
+    border-radius: 0 0 0 0;
+    margin-left: 6px;
+    margin-top: 3px;
+    padding: 0;
+}
+
+.textIconCombo,
+.searchScope {
+    float: left;
+    border: 1px solid #036;
+    border-radius: 4px;
+    background-clip: padding-box;
+    background-color: #FFF;
+    min-height: 23px;
+    line-height: 23px;
+}
+
+.searchScope {
+    margin-left: 0.5em;
+}
+
+.searchBtnIcon {
+    background-color: transparent;
+    background-image: url("../images/BannerSearchBtnIcon.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 0 none;
+    padding: 2px 0;
+    text-indent: 1000em;
+    width: 22px;
+    height: 22px;
+    margin-top: 0;
+}
+
+.searchBtnIcon:focus,
+.searchBtnIcon:hover {
+    background-image: url("../images/BannerSearchBtnIconOver.png");
+}
+
+/* 2011 OFT-issued mandatory banner [Start] */
+#nysbanner input,
+#searchbox,
+#searchbutton {
+    font: 13px Arial, Helvetica, sans-serif !important;
+}
+
+#nysbanner #searchbox {
+    margin: 5px 0 0 0 !important;
+    *margin: -4px 0 0 0 !important;
+    vertical-align: baseline !important;
+    *vertical-align: baseline !important;
+    padding: 0 !important;
+}
+
+#nysbanner #searchbutton {
+    margin: 3px 0 0 0 !important;
+    *margin: 2px 0 0 0 !important;
+    vertical-align: baseline !important;
+    padding: 0 3px !important;
+}
+
+#nysbanner form {
+    clear: none;
+}
+
+/* 2011 OFT-issued mandatory banner [End] */
+
+/*
+====================================================================================
+ Taxpayer Info Box
+====================================================================================
+*/
+/* Using 2-col fluid layout (float: [left, none]) */
+#taxpayer-info,
+div.formWrapper {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+div.sectionBorder,
+div.mainGroups {
+    float: none;
+    overflow: hidden;
+}
+
+div.sectionBorder {
+    height: 1%;
+    border: 1px solid #AAA;
+    margin-right: 15px;
+}
+
+/* See "Labels & Data" CSS for taxpayer-info additional horizontal partitions */
+#taxpayer-info div.c33,
+#taxpayer-info div.c50,
+#taxpayer-info div.c67,
+#taxpayer-info div.c100 {
+    line-height: 2.0em;
+    width: auto;
+    margin: 0 4em 0 0;
+}
+
+#taxpayer-info div.c100 {
+    width: 100%;
+}
+
+.hr {
+    clear: both;
+    height: 2px;
+    line-height: 2px;
+    margin-right: 15px;
+    overflow: hidden;
+    border-top: 2px solid #CCC;
+    font-size: 1em;
+}
+
+/*
+=================================================================================
+ Top-of-the-Page Navigation, Titles, and Instructions
+=================================================================================
+*/
+#pageHeader {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-bottom: 0.3em;
+}
+
+/* Main navigation links */
+#skipnav {
+    position: absolute;
+    left: -999px;
+    width: 990px;
+}
+
+#navHeader {
+    display: block;
+    float: left;
+    clear: both;
+    position: relative;
+    right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    height: auto;
+    list-style: none outside none;
+    line-height: 2em;
+    white-space: nowrap;
+    background: url("../images/MenuNormalBg.png") repeat-x scroll left top #D0D7DE;
+    background-image: -webkit-linear-gradient(#F8F9FA, #D2D9DF);
+    background-image:         linear-gradient(#F8F9FA, #D2D9DF);
+    border-top: 1px solid #9CAEBD;
+    border-bottom: 1px solid #9CAEBD;
+}
+
+#navHeader ul {
+    display: block;
+}
+
+#navHeader #navLeft {
+    float: left;
+    position: relative;
+    right: 15px;
+}
+
+#navHeader #navRight {
+    float: right;
+}
+
+#navHeader li {
+    float: left;
+    margin: 0;
+}
+
+#navHeader #navRight a:first-child, /*remove this selector after the new 2011 Framework baseline is adapted */
+#navHeader #navRight li:first-child a {
+    border-left: 1px solid #B4C1CD;
+}
+
+#navHeader a,
+#navHeader a:visited,
+#navHeader a:link,
+#navHeader a:active {
+    color: #454545;
+    float: left;
+    font-size: 110%;
+    font-weight: bold;
+    border-right: 1px solid #B4C1CD;
+    height: 2.25em;
+    line-height: 2.25em;
+    padding:  0 0.8em;
+    text-align: center;
+    text-decoration: none;
+}
+
+#navHeader a:hover {
+    background: url("../images/MenuOverBg.png") repeat-x scroll left top #A0B0C5;
+    background-image: -webkit-linear-gradient(#DEE3E9, #A0B0C5);
+    background-image:         linear-gradient(#DEE3E9, #A0B0C5);
+}
+
+/* prevent double borders in IE */
+#navRight a.navHeaderLastLink, /* remove this selector once all menus are rendered with <li> */
+#navRight li a.navHeaderFirstLink,
+#navRight li a.navHeaderLastLink {
+    border-right-width: 0;
+}
+
+/*
+====================================================================================
+ Pre-2011 iflow Banner
+====================================================================================
+*/
+#primaryBanner {
+    float: none;
+    min-width: 670px;
+    height: 60px;
+    margin-left: -15px;
+    background: #30295A url("../images/headerbg.jpg") top left repeat-x;
+    white-space: nowrap;
+}
+
+#primaryBanner a,
+#primaryBanner img {
+    float: left;
+    border: none;
+}
+
+#logoLeft {
+    float: left;
+    width: 374px;
+    height: 60px;
+    white-space: nowrap;
+}
+
+/* Force left-size banner's size for now to cover for hybrid apps 05/05/2010 */
+#logoLeft img {
+    width: 432px !important;
+    height: 60px !important;
+}
+
+#logoCenter {
+    float: none;
+    height: 60px;
+}
+
+#logoRight {
+    float: right;
+    width: 293px;
+    height: 60px;
+    white-space: nowrap;
+}
+
+/*
+====================================================================================
+ [END] Pre-2011 iflow Banner
+====================================================================================
+*/
+
+#verification {
+    display: none;
+}
+
+#pageInstructions {
+    clear: both;
+    padding: 6px 15px 6px 0;
+    overflow: hidden;
+}
+
+#pageInstructions ul {
+    margin-bottom: 0.5em;
+}
+
+#legend,
+.legend {
+    height: 1%;
+    font-weight: bold;
+}
+
+#legend:after,
+.legend:after {
+    content: ".";
+    clear: both;
+    height: 0;
+    display: block;
+    visibility: hidden;
+}
+
+#legend {
+    margin-bottom: 1em;
+}
+
+#legend ul,
+.legend ul {
+    float: left;
+    list-style-type: none;
+}
+
+#legend ul li,
+.legend ul li {
+    font-size: 90%;
+    float: left;
+    margin: 0;
+    margin-right: 6em;
+    line-height: 1.8em;
+}
+
+#legend ul li img,
+.legend ul li img {
+    vertical-align: middle;
+    padding-bottom: 3px;
+    *padding-bottom: 0px;
+}
+
+#legend img.required {
+    margin-left: -5px;
+}
+
+#legend span.required {
+    font-weight: bold;
+}
+
+#legend .icon-help {
+    /* IE7 needs more space between the icon and text */
+    *display: block;
+    *float: left;
+    *margin-right: 0.2em;
+}
+
+div.tablePagingOptions .legend,
+div.tablePagingOptions .legend li {
+    padding-left: 0px !important;
+}
+
+div.tablePagingOptions .legend li {
+    font-size: 100% !important;
+    font-weight: normal !important;
+}
+
+span.errMsg {
+    font-weight: bold;
+    color: red;
+}
+
+p.text {
+    margin-bottom: 0.5em;
+    line-height: 1.4em;
+}
+
+.instructionsSection {
+    margin-bottom: 1em;
+}
+
+.instructionsSection h3 {
+    color: #444;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+/*
+=================================================================================
+ Error Messages
+=================================================================================
+*/
+#errorMessages {
+    float: none;
+    clear: both;
+    color: #CC0000;
+    font-weight: bold;
+    width: auto;
+    margin: 0 15px 1em 0;
+}
+
+#errorMessages ul,
+div.formMessages ul {
+    overflow: hidden;
+}
+
+div.formMessages {
+    margin-top: 0;
+}
+
+#errorMessages ul li,
+ul.formError li {
+    float: left;
+    clear: both;
+    width: 100%;
+    list-style-type: none;
+    min-height: 14px;
+    line-height: normal;
+    margin: 0 0 0.25em 0;
+    background: transparent url("../images/error.gif") top left no-repeat;
+    text-indent: 20px;
+}
+
+ul.formError li {
+    font-weight: normal;
+}
+
+ul li.msgWarning,
+ul li.msgInformational,
+ul li.msgError,
+ul li.msgSuccess,
+ul.formError li.msgWarning,
+ul.formError li.msgInformational,
+ul.formError li.msgError,
+ul.formError li.msgSuccess {
+    background: none !important;
+    text-indent: 0 !important;
+}
+
+div.pageMsg ul li p,
+ul.formError li p {
+    margin: -1px 0 0 20px;
+    padding-right: 10px;
+    line-height: normal;
+}
+
+li.msgWarning,
+li.msgInformational {
+    color: #454545;
+}
+
+li.msgError {
+    color: #CC0000;
+}
+
+li.msgSuccess {
+    color: #009933;
+}
+
+.msgIcon {
+    background: transparent url("../images/icons_sprite.png") top left no-repeat;
+    float: left;
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    text-indent: -99999em;
+}
+
+.formMessages .msgIcon {
+    margin-top: 1px;
+}
+
+.msgErrorIcon {
+    background-position: -16px 0;
+}
+
+.msgWarningIcon {
+    background-position: 0px 0;
+}
+
+.msgInformationalIcon {
+    background-position: -32px 0;
+}
+
+.msgSuccessIcon {
+    background-position: -48px 0;
+}
+
+.labelError {
+    color: #CC0000 !important;
+}
+
+span.customPageMsg {
+    display: none;
+    clear: both;
+    overflow: hidden;
+    margin: 2px 0 0.5em 0;
+}
+
+/*
+=================================================================================
+ Page Body & Groups
+=================================================================================
+*/
+div.group {
+    float: none;
+    height: 1%; /* Three pixel bug */
+    padding-bottom: 0.8em;
+    line-height: 2.0em;
+    vertical-align: middle;
+    border: 1px solid #BFBFBF;
+    margin: 0 15px 1.25em 0;
+}
+
+/* Make sure non-IE browsers wrap their content around the group */
+div.group:after {
+    content: ".";
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    display: block;
+}
+
+div.group h4 {
+    vertical-align: middle;
+    line-height: 1.9em;
+    min-height: 1.9em;
+    text-indent: 8px;
+    border-bottom: 1px solid #BFBFBF;
+    background: none repeat scroll 0 0 #E9E9E9;
+    font-weight: bold;
+    font-size: 110%;
+    color: #444;
+    margin-bottom: 0.8em;
+    position: relative;
+}
+
+div.group div {
+    clear: both;
+    vertical-align: middle !important;
+}
+
+/* No spacers 04/28/2009 */
+div.group div.row,
+div.group div.line {
+    clear: both;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+div.group div.group {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border: 1px solid #bfbfbf;
+}
+
+div.group div.line + div.group,
+.linePn + .group,
+fieldset + .group {
+    margin-top: 0.8em;
+}
+
+/*
+=================================================================================
+ Miscellaneous In-Group Classes
+=================================================================================
+*/
+div.group p,
+div.group .text {
+    margin: 0.5em 1.0em;
+    line-height: 1.4em;
+    vertical-align: middle;
+}
+
+div.group .text {
+    clear: both;
+}
+
+p.spacer {
+    margin-top: 0.9em;
+}
+
+p.tableSpacer {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
+
+span.required {
+    color: #CC0000;
+}
+
+div.group .help {
+    *display: inline; /* ie7 */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+a.help {
+    text-decoration: none;
+    border: none;
+}
+
+a.help img {
+    vertical-align: text-top;
+    margin-top: -1px;
+}
+
+/* Needed because some older apps (pre-2011) have height/width rendered in the HTML */
+img[src*="info.png"] {
+    width: 16px;
+    height: 16px;
+}
+
+/* Sample check image container */
+.sampleCheckImage {
+    display: block;
+    margin: 0.75em auto 0 auto;
+}
+
+/* Left-aligns with `.rset_body` */
+.marginLeftSmall {
+    margin-left: 0.5em;
+}
+
+.marginBottomMedium {
+    margin-bottom: 1em;
+}
+
+/*
+=================================================================================
+ Labels & Data
+=================================================================================
+*/
+div.group div.row .labelCenterLeft,
+div.group div.row .labelLongLeft,
+div.group div.row .labelLong,
+div.group div.row .labelShort,
+div.group div.row .labelCenter,
+div.group div.row .labelTiny {
+    float: left;
+    text-align: right;
+    margin: 0.2em;
+}
+
+div.group div.row .labelLong {
+    width: 60%;
+}
+
+div.group .labelCenterLeft {
+    width: 50%;
+    padding-left: 2em;
+    text-align: left !important;
+}
+
+div.group .labelLongLeft {
+    width: 80%;
+    padding-left: 2em;
+    text-align: left !important;
+}
+
+div.group .labelShort {
+    width: 40%;
+}
+
+div.group .labelCenter {
+    width: 50%;
+}
+
+div.group .labelTiny {
+    width: 10%;
+}
+
+div.group .c33,
+div.group .c50,
+div.group .c67,
+div.group .c100 {
+    float: left;
+    clear: none;
+    position: relative;
+}
+
+div.group .c33 .label,
+div.group .c50 .label,
+div.group .c67 .label,
+div.group .c100 .label,
+#taxpayer-info .c33 .label,
+#taxpayer-info .c50 .label,
+#taxpayer-info .c67 .label,
+#taxpayer-info .c100 .label {
+    float: left;
+    text-align: right;
+    width: auto;
+    padding-left: 1em;
+    font-weight: normal;
+}
+
+div.group label span.hidden,
+div.tablePagingOptions span.hidden {
+    display: inline-block;
+    position: absolute;
+    left: -9999px;
+}
+
+div.group .c33 .data,
+div.group .c50 .data,
+div.group .c67 .data,
+div.group .c100 .data,
+#taxpayer-info .c33 .data,
+#taxpayer-info .c50 .data,
+#taxpayer-info .c67 .data,
+#taxpayer-info .c100 .data {
+    float: left;
+    padding-left: 5px;
+    text-align: left;
+    width: auto;
+    font-weight: bold;
+    margin: 0;
+}
+
+div.group .data {
+    float: none;
+    clear: none;
+    width: auto;
+    text-align: left;
+    font-weight: bold;
+    margin: 0.2em;
+}
+
+div.group .data input,
+div.group .data label,
+div.group .data select {
+    font-weight: bold;
+}
+
+div.group .data input,
+div.group .data input.button {
+    margin-top: 2px;
+}
+
+/* Default look for buttons */
+.button,
+.buttonGroup input.button,
+div.float-left input.button,
+div.float-right input.button,
+input[type="submit"] {
+    text-align: center;
+    padding: 0.1em 0.5em;
+    height: 2em;
+    font-size: 100%;
+    margin-left: 0.3em;
+    cursor: pointer;
+}
+
+.button,
+.buttonXS,
+.buttonS,
+.buttonM,
+.buttonL,
+.buttonXL,
+input[type="submit"] {
+    width: auto;
+    height: 1.85em;
+    overflow: hidden;
+    margin: 0.75em 0.2em 0 0;
+    /* A button within div.data/div.dataPn still needs a 0.4em left margin in Webkit... */
+    padding: 0.1em 0.5em;
+    background: url("../images/ButtonBg.png") repeat-x scroll left top #DDEAF9;
+    background-image: -webkit-linear-gradient(#FEFEFF 0%, #E9ECF7 44%, #D4DBED 44%, #DFE4F4 100%);
+    background-image:         linear-gradient(#FEFEFF 0%, #E9ECF7 44%, #D4DBED 44%, #DFE4F4 100%);
+    border: 1px solid #576F86;
+    color: #333333;
+    -webkit-transition: box-shadow 0.1s ease;
+            transition: box-shadow 0.1s ease;
+}
+
+.button:hover, .buttonXS:hover, .buttonS:hover, .buttonM:hover, .buttonL:hover, .buttonXL:hover,
+.button:focus, .buttonXS:focus, .buttonS:focus, .buttonM:focus, .buttonL:focus, .buttonXL:focus,
+input[type="submit"]:hover, input[type="submit"]:focus {
+    background: url("../images/ButtonBgHover.png") repeat-x scroll left top #FEFEFF;
+    background-image: -webkit-linear-gradient(#FEFEFF 0%, #F0F2FA 44%, #E1E6F3 44%, #E9ECF7 100%);
+    background-image:         linear-gradient(#FEFEFF 0%, #F0F2FA 44%, #E1E6F3 44%, #E9ECF7 100%);
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+.button:active, .buttonXS:active, .buttonS:active, .buttonM:active, .buttonL:active, .buttonXL:active,
+input[type="submit"]:active {
+    box-shadow: none;
+}
+
+.primary,
+.primary[type="submit"] {
+    color: #FFF;
+    border: 1px solid #405264;
+    border-radius: 4px;
+    background: #405264 url("../images/button-main-bg.png") top left repeat-x;
+    background-image: -webkit-linear-gradient(#7D94AA, #405264);
+    background-image:         linear-gradient(#7D94AA, #405264);
+}
+
+.primary:hover,
+.primary:active,
+.primary:focus,
+.primary[type="submit"]:hover,
+.primary[type="submit"]:active,
+.primary[type="submit"]:focus {
+    color: #FFF;
+    background: #516377 url("../images/button-main-over-bg.png") top left repeat-x;
+    background-image: -webkit-linear-gradient(#8FA2B5, #516377);
+    background-image:         linear-gradient(#8FA2B5, #516377);
+}
+
+.buttonXS {
+    width: 30px;
+}
+
+.buttonS {
+    width: 60px;
+}
+
+.buttonM {
+    width: 90px;
+}
+
+.buttonL {
+    width: 120px;
+}
+
+.buttonXL {
+    width: 150px;
+}
+
+/* Buttons within forms have a different look */
+div.group .data input.button {
+    font-weight: normal;
+    margin-left: 0;
+    margin-bottom: 1px;
+    margin-top: 3px !important;
+    *margin-top: 1px !important;
+    height: 1.7em;
+    font-size: 100%;
+}
+
+div.group p.address,
+p.address {
+    font-weight: bold;
+    margin-left: 40%;
+    text-align: left;
+    line-height: normal;
+}
+
+div.group .data label.hidden {
+    display: none !important;
+}
+
+div.group .labelCenter,
+div.group .data {
+    float: left;
+    display: inline;
+}
+
+.buttonGroup {
+    padding: 0 15px 1px 0; /* 1px is for IE7/XP */
+    margin: 0.25em 15px 0 15px;
+    overflow: hidden;
+    text-align: center;
+    clear: both;
+}
+
+.group .buttonGroup {
+    padding: 0 15px 1px 15px; /* 1px is for IE7/XP */
+    margin-bottom: 0;
+    margin-top: 0.75em;
+}
+
+.group .buttonGroup input.button {
+    margin-top: 0;
+}
+
+.buttonGroup + .group {
+    margin-top: 1.5em;
+}
+
+/* Input Groups */
+div.groupInstructions,
+.section-label {
+    padding-left: 0;
+    margin-bottom: 0.5em;
+}
+
+div.data span.label {
+    margin-left: 4em;
+    font-weight: normal;
+}
+
+div.moneyField,
+.numFieldS {
+    display: inline-block;
+    *display: inline; /* IE7 hack */
+    *float: left; /* IE7 hack */
+    clear: none;
+    min-height: 2em; /* Needed for empty fields with class .totalLine; must match inherited line-height value */
+    white-space: nowrap;
+}
+
+.moneyField,
+.moneyField input,
+.numFieldS,
+.numFieldS input {
+    text-align: right;
+}
+
+.numFieldS {
+    width: 5.4em;
+}
+
+.numFieldS input {
+    width: 5.1em;
+}
+
+/* Unfortunately I have to use these hacks for moneyField. iFlow2 should resolve these HTML issues */
+div.moneyField {
+    margin-right: 3px; /* Keeps the help icons from being too close */
+    *margin-right: 8px; /* IE7 hack */
+    width: 12.6em;
+    *width: 13.3em; /* IE7 hack */
+}
+
+div.group div.moneyField {
+    clear: none; /* Needed to overcome the specificity of div.group div */
+}
+
+div.moneyField input[size="23"] {
+    width: 12.35em;
+    width: 12.3em\9;
+    *width: 12.95em; /* IE7 hack */
+    vertical-align: top\9; /* IE9 hack */
+}
+
+div.moneyField input[size="20"] {
+    width: 10.95em;
+    width: 10.85em\9;
+    *width: 11.6em; /* IE7 hack */
+    margin-right: -0.25em;
+    margin-right: -0.15em\9; /* IE9 hack */
+    vertical-align: baseline;
+    *vertical-align: middle; /* IE7 hack */
+}
+
+@media \0screen { /* IE8 hack */
+    div.moneyField {
+        width: 13.3em;
+    }
+
+    div.moneyField input[size="23"] {
+        width: 13em;
+        margin-top: 0 !important;
+        vertical-align: top;
+    }
+
+    div.moneyField input[size="20"] {
+        width: 11.55em;
+        margin-right: -0.2em;
+    }
+}
+
+@-moz-document url-prefix() { /* Mozilla hack */
+    div.moneyField input[size="23"] {
+        margin-top: -0.3em !important;
+        width: 12.32em;
+    }
+    div.moneyField input[size="20"] {
+        width: 10.95em;
+    }
+}
+
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { /* Opera hack */
+    div.moneyField input[size="23"] {
+        width: 12.32em;
+    }
+}
+
+/* End of hacks */
+
+div.moneyField input {
+    margin-top: 2px;
+}
+
+/* Labels between two money fields will cause the second field to wrap due to its 'clear:none' */
+div.moneyField + span.subLabel {
+    *float: left;
+    *padding-right: 0.5em;
+}
+
+div.totalLine {
+    margin-top: 0.4em !important;
+    margin-bottom: 1.6em !important;
+}
+
+div.totalLine div.labelWrap {
+    font-weight: bold !important;
+}
+
+div.totalLine div.dataPn div.moneyField {
+    border-top: 2px solid #AAA;
+}
+
+div.footer {
+    width: 100%;
+    margin: auto auto;
+}
+
+div.footer div {
+    margin: 0 5px;
+}
+
+/* This is for lining up inline forms (e.g., a list of checkboxes that need to be lined up) within div.data */
+.inlineForm label {
+    float: left;
+    width: 70%;
+}
+
+div.data label {
+    margin-left: 2em;
+    font-weight: normal !important;
+}
+
+div.data span.subLabel {
+    margin-left: auto;
+    font-weight: normal;
+}
+
+.inlineLabel {
+    margin-left: 5em;
+    font-weight: normal;
+}
+
+span.dataMask {
+    margin-left: 0.2em;
+}
+
+ul.indentedList {
+    clear: both;
+    padding-left: 1.6em;
+    list-style-type: disc;
+    line-height: 1.2em;
+}
+
+/* For text that wraps within a div class="data" and text in different lines doesn't need to be that far away from each other */
+div.data .clearLineHeight {
+    padding-top: 0.37em;
+    line-height: normal !important;
+}
+
+/* For labels above textareas; default behavior should expand textarea. */
+div.dataBelow {
+    margin: 0.2em 0 !important;
+    width: 100% !important;
+}
+
+div.dataBelow * {
+    margin-left: 0.5em !important;
+}
+
+div.dataBelow textarea {
+    width: 98%;
+}
+
+.fixedWidth,
+div.fixedWidth textarea {
+    width: auto !important;
+}
+
+/* Free form text inside groups : [TODO: Redefine this] */
+.freeText {
+    padding: 0px 0.5em;
+}
+
+.freeText p {
+    line-height: normal;
+    margin: 0px !important;
+}
+
+.freeText p.text {
+    margin-top: 1.0em !important;
+}
+
+.freeText ul.indentedList {
+    margin-left: 1.6em;
+    padding: 0px !important;
+}
+
+.freeText ul li {
+    line-height: 1.3em !important;
+    margin: 0px 0px 0px 1em !important;
+}
+
+/* Captcha image */
+div.data img[src*="iflowDrawCaptchaCode.jpg"],
+#captchaImage {
+    margin: 0.5em 0 0.25em 0;
+}
+
+/*
+=================================================================================
+ Progress Bar
+=================================================================================
+*/
+#progress-bar {
+    clear: both;
+    margin: 10px 15px 0.8em 0;
+    background-color: #e9e9e9;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+div.pbLastBg {
+    background-color: #0E3E62 !important;
+}
+
+#progress-bar a,
+#progress-bar a:active,
+#progress-bar a:link,
+#progress-bar a:visited {
+    color: #0E3E62;
+}
+
+#progress-bar a:hover {
+    color: #990000;
+}
+
+#progress-bar ol {
+    list-style-type: none;
+}
+
+#progress-bar ol li {
+    margin: 0;
+    padding: 0;
+}
+
+/* PB universal styles */
+.pbBeforeSel,
+.pbSelected,
+.pbAfterSel,
+.pbNormal,
+.pbLastOne {
+    float: left;
+    line-height: 27px;
+    height: 27px;
+    min-height: 27px;
+    text-indent: -15px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.pbBeforeSel {
+    background: #e9e9e9 url("../images/light-to-dark-flat.png") top right no-repeat;
+}
+
+.pbSelected {
+    color: #FFF;
+    background: #0E3E62 url("../images/dark-to-light-flat.png") top right no-repeat;
+}
+
+.pbNormal {
+    background: #e9e9e9 url("../images/light-to-light-flat.png") top right no-repeat;
+}
+
+.pbLastOne {
+/* No background color needed on this one in old browsers */
+}
+
+.pbSelected a {
+    color: white;
+}
+
+/*
+=================================================================================
+ Breadcrumbs
+=================================================================================
+*/
+#breadcrumbs {
+    float: left;
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    margin-right: 12px;
+    margin-bottom: 0.5em;
+    line-height: 1.4em;
+}
+
+.breadCrumbWrapper {
+    float: left;
+    margin: 5px 0 0 0;
+    padding-right: 15px;
+    line-height: 1.2em;
+}
+
+#breadcrumbs span,
+#breadcrumbs a,
+#breadcrumbs a:active,
+#breadcrumbs a:link,
+#breadcrumbs a:visited {
+    padding: 0 0.5em 0 0.3em;
+}
+
+#breadcrumbs a:hover {
+    color: #DC143C;
+}
+
+/*
+=================================================================================
+ Blocks (<div class="block">)
+=================================================================================
+*/
+div.block {
+    width: 100%;
+}
+
+div.block div.float-left,
+div.group div.block div.float-left,
+div.group div.float-left {
+    padding: 0.6em;
+    float: left;
+}
+
+div.block div.float-right,
+div.group div.block div.float-right,
+div.group div.float-right {
+    padding: 0.6em;
+    float: right;
+}
+
+div.group div.float-right {
+    clear: none;
+}
+
+/*
+==================================================================================
+ Spacing options
+==================================================================================
+*/
+.spaceXS {
+    margin-top: 0.2em !important;
+}
+
+.spaceS {
+    margin-top: 0.3em !important;
+}
+
+.spaceM {
+    margin-top: 0.5em !important;
+}
+
+.spaceL {
+    margin-top: 0.8em !important;
+}
+
+.spaceXL {
+    margin-top: 1.1em !important;
+}
+
+.spaceXXL {
+    margin-top: 1.4em !important;
+}
+
+/*
+==================================================================================
+ Lists
+==================================================================================
+*/
+/* Three-col list
+   ----------------------- */
+.listA {
+    width: 100%;
+}
+
+/* Main structure (3-col layout) */
+.listA ul {
+    margin: 1em 1em 0.5em 1em;
+    padding: 0;
+    position: relative;
+}
+
+.listA li {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0.35em 0;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.listA li.first {
+    border-top: 1px solid #E5E5E5;
+}
+
+.listA li .icon {
+    position: absolute;
+    width: 35px;
+    top: 8px;
+    left: 5px;
+}
+
+.listA li .info {
+    margin: 0 0 0 45px;/*margin: 0 110px 0 45px; Size was hidden for now */
+}
+
+.listA li .size {
+    position: absolute;
+    width: 0;
+    /*width: 100px; Size was hidden for now */
+  top: 0px;
+    right: 0;
+    margin: 0;
+    padding: 0;/*padding: 0 10px 0 0; Size was hidden for now */
+}
+
+/* Inner content */
+.listA .link,
+.listA .desc {
+    line-height: normal;
+    padding: 0 0.5em 0.3em 0.5em;
+}
+
+.listA strong {
+    color: #555555;
+}
+
+/* Miscellaneous */
+.colorBrick {
+    color: #D1480E;
+}
+
+/* Over */
+.listA li.over {
+    border-top-color: #B0CEDF;
+    border-bottom-color: #B0CEDF;
+    background-color: #F0F5F9 !important;
+    cursor: pointer;
+}
+
+.listA .bBottom {
+    border-bottom-color: #B0CEDF;
+}
+
+.listA .bTop {
+    border-top-color: #B0CEDF;
+}
+
+/*
+==================================================================================
+ Tables
+==================================================================================
+*/
+.rset {
+    width: 100%;
+    clear: both;
+    height: 1%;
+    padding: 2px 0px;
+    position: relative;
+}
+
+.buttonGroup + .rset {
+    margin-top: 1em;
+}
+
+/* Header */
+.rset_head {
+    height: 1%;
+    padding: 0px 6px;
+    overflow: hidden;
+    line-height: normal !important;
+}
+
+.rset_head div.float-left {
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.rset_head div {
+    clear: none;
+    padding: 0 !important;
+}
+
+.rset_head div.float-right a,
+.rset_head div.float-right input {
+    float: left;
+    margin-left: 0.5em;
+}
+
+.rset .legend {
+    margin-top: 0.3em;
+    font-weight: normal;
+}
+
+.rset .expandRowsFunctions {
+    overflow: hidden;
+    margin-right: 0.3em;
+}
+
+.rset .expandRowsFunctions li {
+    float: left;
+    padding-top: 0.1em;
+}
+
+.rset .expandRowsFunctions li a {
+    margin-left: 0 !important;
+}
+
+.rset_title {
+    display: none;
+}
+
+/* Body */
+.rset_body {
+    clear: both;
+    height: 1%;
+    padding: 2px 6px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.rset_body table {
+    position: relative;
+    width: 100%;
+}
+
+.expView table {
+    position: static !important;
+}
+
+.rset_body thead {
+    line-height: 2.4em;
+    background: url("../images/TableHeaderBg.png") repeat-x scroll left top #C8DBE4;
+    background-image: -webkit-linear-gradient(#FFFFFF 0%, #E0EBF0 42%, #D9E6EC 43%, #C8DBE4 100%);
+    background-image:         linear-gradient(#FFFFFF 0%, #E0EBF0 42%, #D9E6EC 43%, #C8DBE4 100%);
+}
+
+.rset_body th,
+.rset_body td {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.rset_body th {
+    padding: 5px 4px;
+    line-height: normal;
+    text-align: left;
+    font-weight: normal;
+    vertical-align: top;
+    border-color: #AAA;
+}
+
+.rset_body th.center {
+    text-align: center;
+}
+
+.rset_body tbody td {
+    padding: 3px 4px;
+    line-height: normal;
+    font-weight: normal;
+    vertical-align: top;
+    border-color: #AAA;
+}
+
+/* Zebra striping
+   Skip tables with an ID containing `nostripes` or the class `.expandRows`,
+   and skip rows with class `.ignoreRow` */
+.rset_body table:not([id*="nostripes"]):not(.expandRows) tbody tr:nth-child(odd):not(.ignoreRow) td {
+    background-color: #FFF;
+}
+
+.rset_body table:not([id*="nostripes"]):not(.expandRows) tbody tr:nth-child(even):not(.ignoreRow) td {
+    background-color: #F1F1F1;
+}
+
+/* JS-based striping classes for older browsers */
+.alternateRow,
+.alternateRow td {
+    background-color: #F1F1F1 !important;
+}
+
+.normalRow,
+.normalRow td {
+    background-color: #FFF !important;
+}
+
+/* Grayed-out cells */
+.rset_body tbody td.notApplicable {
+    background-color: #CCC;
+    border-style: solid;
+    border-color: #AAA;
+    border-width: 0;
+    border-bottom: 1px solid #CCC;
+}
+
+/* Result set sections */
+
+tr.section-header td,
+tr.section-header td a {
+    font-weight: bold;
+}
+
+tr.section-header,
+tr.section-header td {
+    background-color: #d4d4d4 !important;
+    min-height: 2em;
+    line-height: 2em;
+}
+
+.rset_body td.indented {
+    padding-left: 2em;
+}
+
+/* Rset's footer styles */
+.rset tfoot {
+    width: 100%;
+    text-align: right;
+}
+
+.rset tfoot td {
+    border: none;
+    border-top: 3px solid #AAA;
+    padding: 0.7em 2px;
+    font-weight: bold;
+}
+
+.rset tfoot td.rowHeader {
+    padding-right: 1em;
+}
+
+.rset tfoot td.hasBorder {
+    border: 1px solid #AAA;
+    border-top: 3px solid #AAA;
+}
+
+.rset h5 {
+    padding: 0.1em 0;
+    font-size: 105%;
+    font-weight: bold;
+}
+
+.rset input {
+    vertical-align: top;
+    margin-top: 0;
+}
+
+.rset table tr td img {
+    vertical-align: middle;
+    margin: -3px 0 -2px 0; /* [-3 and -2]... to deal w/browser diffs */
+}
+
+.rset .button {
+    padding: 0;
+    height: 1.7em;
+    font-size: 90%;
+}
+
+/* if buttons want to display same width, use these accordingly (or add new ones), else don't use them */
+.rset .rsetButtonAuto {
+    width: auto;
+    padding: 0 0.5em !important;
+    *padding: 0 !important;
+}
+
+.rset .rsetButtonTiny {
+    width: 2.7em; /* ~30px */
+}
+
+.rset .rsetButtonSmall {
+    width: 4.5em; /* ~50px */
+}
+
+.rset .rsetButtonMedium {
+    width: 6.3em; /* ~70px */
+}
+
+.rset .rsetButtonLarge {
+    width: 7.8em;
+}
+
+.rset .rsetButtonExtraLarge {
+    width: 9.3em;
+}
+
+.rset .rsetButtonTall {
+    padding: 0.1em 0.5em !important;
+    height: 1.9em;
+    line-height: 1em;
+    margin-top: 0.2em !important;
+}
+
+.rset .icon {
+    cursor: pointer;
+}
+
+.rset .tableBtnGroupBelow {
+    position: absolute;
+    bottom: 1.2em;
+    left: 0;
+}
+
+.expView .tableBtnGroupBelow {
+    position: static !important;
+    margin: -2.4em 0 0 -0.5em !important;
+    padding-bottom: 2.4em;
+}
+
+.rset .tableBtnGroupBelowNoFooter {
+    position: relative;
+    top: -0.3em !important;
+    left: -0.4em !important;
+}
+
+.rset .tableBtnGroupBelow .float-left,
+.rset .tableBtnGroupBelow .float-right {
+    margin: 0;
+    padding: 0 0.2em !important;
+}
+
+div.tableBtnGroupBelowNoFooter div.float-right {
+    padding-right: 0;
+}
+
+div.tableBtnGroupBelowNoFooter div.float-right .button:last-child {
+    margin-right: 0;
+}
+
+.rset td > input[type="checkbox"],
+.rset th > input[type="checkbox"],
+.rset td > input[type="radio"],
+.rset th > input[type="radio"] {
+    margin-top: -2px !important; /* IE only */
+    vertical-align: middle;
+}
+
+.rset.form-table td > input[type="checkbox"],
+.rset.form-table th > input[type="checkbox"],
+.rset.form-table td > input[type="radio"],
+.rset.form-table th > input[type="radio"] {
+    margin-top: 3px !important;
+    *margin-top: 0px !important;
+}
+
+.rset th > input,
+.rset td > input,
+.rset th > select,
+.rset td > select,
+.rset th > textarea,
+.rset td > textarea {
+    padding: 0 1px !important;
+    margin: 3px 0 0 0 !important;
+    *margin: 4px 0 0 0 !important;
+}
+
+.rset .expandRows td > .button,
+.rset .expandRows th > .button {
+    margin-top: 0 !important;
+}
+
+.rset.form-table th > input,
+.rset.form-table td > input,
+.rset.form-table th > select,
+.rset.form-table td > select,
+.rset.form-table th > textarea,
+.rset.form-table td > textarea {
+    padding: 0 1px !important;
+    margin: 2px 0 !important;
+    *margin: 1px 0 0 0 !important; /* IE only */
+}
+
+.rset.form-table th > .button,
+.rset.form-table td > .button {
+    *margin: 2px 0 0 0 !important; /* IE only */
+}
+
+.rset td > textarea {
+    margin-bottom: 3px !important;
+}
+
+.rset table tbody .help {
+    vertical-align: baseline !important;
+}
+
+.rset table tbody .help img {
+    margin-top: -2px !important;
+}
+
+/*
+==================================================================================
+ Dynamic rows in tables
+==================================================================================
+*/
+table.expandRows img.expImg {
+    *margin-top: 2px !important;
+    padding: 0 0.4em 0 0.1em;
+}
+
+table.expandRows tr.mouseOver td {
+    background: #FFEFCA url("../images/RowOverBg.png") top left repeat-x !important;
+    background-image: -webkit-linear-gradient(#fffdf7, #fff0cc) !important;
+    background-image:         linear-gradient(#fffdf7, #fff0cc) !important;
+}
+
+table.expandRows tr.selected td {
+    background: #FFDC89 url("../images/RowSelectedBg.png") top left repeat-x !important;
+    background-image: -webkit-linear-gradient(#fff7e4 0%, #fff7e3 4%, #ffdd8d 100%) !important;
+    background-image:         linear-gradient(#fff7e4 0%, #fff7e3 4%, #ffdd8d 100%) !important;
+}
+
+table.expandRows tr.expanded td {
+    background-color: #FFF8DF;
+    border: 1px solid #aaa;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+table.expandRows tbody td input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+table.expandRows div.expandedRow {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+}
+
+table.expandRows div.lineTable {
+    border-color: #FFDD8D;
+    border-width: 0px 2px 2px 2px;
+    border-style: solid;
+    padding: 8px 6px 4px 6px;
+    overflow: hidden;
+}
+
+table.expandRows .expandedRow div.linePn input,
+table.expandRows .expandedRow div.linePn select {
+    padding: 2px 1px !important;
+}
+
+table.expandRows div.numFieldS {
+    width: 5.35em;
+}
+
+table.expandRows div.numFieldS input {
+    width: 5.2em;
+    *width: 5.15em;
+}
+
+table.expandRows div.moneyField {
+    *margin-right: 8px; /* IE7 hack */
+    *width: 13.3em; /* IE7 hack */
+    *float: left; /* IE7 hack */
+    *display: inline; /* IE7 hack */
+}
+
+table.expandRows div.moneyField input[size="23"] {
+    width: 12.5em;
+    width: 12.4em\9; /* IE9 hack */
+    *width: 13.1em; /* IE7 hack */
+    vertical-align: top\9; /* IE9 hack */
+}
+
+table.expandRows div.moneyField input[size="20"] {
+    width: 11.1em;
+    width: 11em\9; /* IE9 hack */
+    *width: 11.7em; /* IE7 hack */
+    margin-right: -0.25em !important;
+    vertical-align: baseline;
+    *vertical-align: middle; /* IE7 hack */
+}
+
+@media \0screen { /* IE8 hack */
+    table.expandRows div.moneyField {
+        width: 13.3em;
+    }
+
+    table.expandRows div.moneyField input[size="23"] {
+        width: 13.15em;
+        margin-top: 0 !important;
+        vertical-align: top;
+    }
+
+    table.expandRows div.moneyField input[size="20"] {
+        width: 11.75em;
+        margin-right: -0.25em !important;
+    }
+}
+
+@-moz-document url-prefix() { /* Mozilla hack */
+    table.expandRows div.moneyField input[size="23"] {
+    width: 12.55em;
+    margin-top: -0.1em !important;
+    }
+    table.expandRows div.moneyField input[size="20"] {
+        width: 11.15em;
+    }
+}
+
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { /* Opera hack */
+    table.expandRows div.moneyField input[size="23"] {
+        width: 12.45em;
+    }
+}
+
+.rset table .expandedRow .help img {
+    margin-top: -6px !important;
+    *margin-top: 2px !important;
+}
+
+/*
+=================================================================================
+ Table Paging
+=================================================================================
+*/
+/* Main container */
+div.group div.tablePagingOptions {
+    float: none;
+    clear: both;
+    width: 100%;
+    line-height: normal;
+    margin-top: 0.3em;
+}
+
+/* Inner containers */
+div.tablePagingOptions div.tablePagingPaneLeft,
+div.tablePagingOptions div.tablePagingPaneMiddle,
+div.tablePagingOptions div.tablePagingPaneRight {
+    float: left;
+    clear: none !important;
+}
+
+/* Widths */
+div.tablePagingOptions div.tablePagingPaneLeft {
+    width: 30%;
+}
+
+div.tablePagingOptions div.tablePagingPaneRight {
+    width: 30%;
+}
+
+div.tablePagingOptions div.tablePagingPaneMiddle {
+    width: 39.9%; /* IE7 made me use 39.9% not 40% (rounding bug) */
+}
+
+/* Content divs */
+div.tablePagingOptions div.tablePagingPaneLeft div {
+    padding-left: 6px;
+}
+
+div.tablePagingOptions div.tablePagingPaneMiddle div {
+    text-align: center;
+}
+
+div.tablePagingOptions div.tablePagingPaneRight div {
+    padding-right: 6px;
+    *line-height: 1.83em; /* IE7 */
+    float: right;
+}
+
+/* Lists and other */
+div.tablePagingOptions p.labelText,
+div.tablePagingOptions ul,
+div.tablePagingOptions ul li {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.tablePagingOptions p.labelText {
+    padding: 0;
+    *padding: 0px 3px; /* IE7 */
+}
+
+div.tablePagingOptions div.tablePagingPaneMiddle p.labelText {
+    padding: 0px 8px 0px 12px;
+    *padding: 0px 12px; /* IE7 */
+}
+
+div.tablePagingOptions ul {
+    list-style-type: none;
+}
+
+div.tablePagingOptions div.tablePagingPaneLeft ul li,
+div.tablePagingOptions div.tablePagingPaneMiddle ul li,
+div.tablePagingOptions div.tablePagingPaneRight ul li {
+    padding: 0px 0px 0px 3px;
+    margin: 0em;
+    vertical-align: middle;
+}
+
+/* Buttons */
+.tablePagingOptions input {
+    background: transparent url("../images/tablePagingSprite.png") top left no-repeat;
+    width: 22px;
+    height: 22px;
+    margin: auto;
+    border: none;
+}
+
+.tablePagingOptions input.tablePagingButtonFirst {
+    background-position: 0 0;
+}
+
+.tablePagingOptions input.tablePagingButtonFirst:hover {
+    background-position: 0 -22px;
+}
+
+.tablePagingOptions input.tablePagingButtonPrevious {
+    background-position: -24px 0;
+}
+
+.tablePagingOptions input.tablePagingButtonPrevious:hover {
+    background-position: -24px -22px;
+}
+
+.tablePagingOptions input.tablePagingButtonNext {
+    background-position: -48px 0;
+}
+
+.tablePagingOptions input.tablePagingButtonNext:hover {
+    background-position: -48px -22px;
+}
+
+.tablePagingOptions input.tablePagingButtonLast {
+    background-position: -72px 0;
+}
+
+.tablePagingOptions input.tablePagingButtonLast:hover {
+    background-position: -72px -22px;
+}
+
+
+/*
+==================================================================================
+ Tabled-divisions
+==================================================================================
+*/
+.tableDiv {
+    width: 100%;
+    clear: both;
+    font-size: 1.5em !important;
+    overflow: auto;
+}
+.tableDiv div {
+    line-height: normal !important;
+    margin: 0 0.3em;
+}
+
+/*
+==================================================================================
+ Error pages
+==================================================================================
+*/
+#errorPageMessage {
+    margin: 2em 8em 0 8em;
+    text-align: left;
+}
+
+#errorPageMessage p {
+    font-size: 1.5em;
+    margin-bottom: 1.0em;
+    line-height: normal;
+}
+
+#errorPageMessage p.smallText {
+    font-size: 110%;
+}
+
+#errorPageMessage ul.indentedList {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* Maintenance Downtime page */
+div.maintenancePage p {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    clear: both;
+}
+
+div.maintenancePage div.scheduleLeftCol,
+div.maintenancePage div.scheduleRightCol {
+    font-size: 130%;
+    float: left;
+    width: 45%;
+    margin-bottom: 0.5em;
+}
+
+div.maintenancePage div.scheduleLeftCol {
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+div.maintenancePage div.scheduleRightCol {
+    padding-left: 0.5em;
+}
+
+/*
+==================================================================================
+ Labels and data - new layout 04/28/2009
+==================================================================================
+Note:
+----
+In order to make this transition easier, parent div of class "row" is changing to class "line".
+All children elements will keep their names unchanged and inherit the modified CSS from "line".
+When cleaning this, look for "row", "line", "required"...
+*/
+div.group div.line .labelCenterLeft,
+div.group div.line .labelLongLeft,
+div.group div.line .labelLong,
+div.group div.line .labelShort,
+div.group div.line .labelCenter,
+div.group div.line .labelCenterReq,
+div.group div.line .labelCenterNotReq,
+div.group div.line .labelTiny {
+    float: left;
+    position: relative;
+    right: 0.9em;
+    text-align: right;
+    margin: 0.2em;
+    margin-left: 1.1em;
+}
+
+div.group div.line .labelLong,
+div.group div.line .labelCenterReq,
+div.group div.line .labelCenterNotReq {
+    width: 59%;
+}
+
+div.group div.line .labelCenterLeft {
+    width: 49%;
+}
+
+div.group div.line .labelLongLeft {
+    width: 79%;
+}
+
+div.group div.line .labelShort {
+    width: 39%;
+}
+
+div.group div.line .labelCenter {
+    width: 49%;
+}
+
+div.group div.line .labelTiny {
+    width: 9%;
+}
+
+div.group div.line .labelAbove {
+    clear: both;
+    text-indent: 0.5em;
+    line-height: 1.25em;
+    margin-top: 0.5em;
+    width: 100%;
+}
+
+div.group div.line span.required {
+    position: absolute;
+    right: -0.9em;
+    padding-bottom: 0.4em;
+    line-height: normal;
+    color: #CC0000;
+}
+
+div.labelAbove span.required {
+    position: static !important;
+}
+
+/*
+==================================================================================
+ Labels and data - flexible layout 11/15/2010 (should be final main structures)
+==================================================================================
+Note:
+----
+Label classes go now with class=linePn to define children's (labels and data) width
+and to give proper layout to these inner sections.
+- - - - - - - - - - - - - - - - - - - - - - - - -
+.labelTiny = labelXXS
+.labelShort = labelS
+.labelCenter = labelM
+.labelCenterLeft = labelMLeft
+.labelLong = labelL
+.labelLongLeft = labelXXLLeft
+.labelTop = labelAbove
+- - - - - - - - - - - - - - - - - - - - - - - - -
+*/
+/* Width is not 100% bcoz there's no parent container I can give padding to and I don't want to add more XHTML beyond this level */
+div.group div.linePn {
+    width: 99.2%;
+    clear: both;
+    position: relative;
+    margin: 0em 0.4%;/*overflow: hidden;*/
+}
+
+div.group div.labelXXS,
+div.group div.labelXS,
+div.group div.labelS,
+div.group div.labelM,
+div.group div.labelMLeft,
+div.group div.labelL,
+div.group div.labelXXLLeft,
+div.group div.labelXL,
+div.group div.labelXXL {
+    position: relative;
+    text-align: right;
+    overflow: hidden;
+}
+
+/* Auto is like inline */
+div.group div.labelAuto {
+    width: 100%;
+    clear: both;
+}
+
+div.group div.labelAuto div.labelPn {
+    text-align: left;
+    width: auto;
+}
+
+/* All other sizes have a fixed size */
+div.labelXXS div.labelPn {
+    width: 10%;
+}
+
+div.labelXXS div.dataPn {
+    width: 90%;
+    *width: 89.9%;
+}
+
+div.labelXS div.labelPn {
+    width: 25%;
+}
+
+div.labelXS div.dataPn {
+    width: 75%;
+    *width: 74.9%;
+}
+
+div.labelS div.labelPn {
+    width: 40%;
+}
+
+div.labelS div.dataPn {
+    width: 60%;
+    *width: 59.9%;
+}
+
+div.labelM div.labelPn {
+    width: 50%;
+}
+
+div.labelM div.dataPn,
+div.labelMLeft div.dataPn {
+    width: 50%;
+    *width: 49.9%;
+}
+
+div.labelL div.labelPn {
+    width: 60%;
+}
+
+div.labelL div.dataPn {
+    width: 40%;
+    *width: 39.9%;
+}
+
+div.labelXL div.labelPn {
+    width: 70%;
+}
+
+div.labelXL div.dataPn {
+    width: 30%;
+    *width: 29.9%;
+}
+
+div.labelXXL div.labelPn {
+    width: 80%;
+}
+
+div.labelXXL div.dataPn,
+div.labelXXLLeft div.dataPn {
+    width: 20%;
+    *width: 19.9%;
+}
+
+/* Left-aligned labels */
+div.labelMLeft div.labelPn {
+    width: 48%;
+    padding-left: 2%;
+    text-align: left !important;
+}
+
+div.labelXXLLeft div.labelPn {
+    width: 78%;
+    padding-left: 2%;
+    text-align: left !important;
+}
+
+/* linePn immediate children */
+div.group div.linePn div.labelPn,
+div.group div.linePn div.dataPn {
+    float: left;
+    clear: none;
+    position: relative;
+    margin: 0.2em 0;
+}
+
+div.group div.linePn div.dataPn {
+    text-align: left;
+}
+
+div.group div.linePn div.dataPn,
+div.group div.linePn div.dataPn input,
+div.group div.linePn div.dataPn select {
+    font-weight: bold;
+}
+
+div.group div.linePn div.dataPn input {
+    margin-top: 0;
+    margin-top: 2px\9; /* IE9 and lower */
+}
+
+div.group div.linePn div.dataPn input[type="text"],
+div.group div.linePn div.dataPn input[type="number"],
+div.group div.linePn div.dataPn input[type="file"],
+div.group div.linePn div.dataPn input[type="password"] {
+    margin-bottom: 2px;
+}
+
+.rset input[type="text"]:focus,
+.rset input[type="number"]:focus,
+div.data input[type="text"]:focus,
+div.data input[type="number"]:focus,
+div.dataPn input[type="text"]:focus,
+div.dataPn input[type="number"]:focus,
+.rset select:focus,
+div.data select:focus,
+div.dataPn select:focus,
+.rset textarea:focus,
+div.data textarea:focus,
+div.dataPn textarea:focus {
+    background: #fff; /* Ensures that inputs are not gray in striped result sets */
+}
+
+/* No extra browser UI on number inputs */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+div.group div.linePn div.dataPn input.button,
+div.group div.linePn div.dataPn label,
+div.group div.linePn div.dataPn span.label,
+div.group div.linePn div.dataPn span.subLabel,
+div.group div.linePn div.dataPn .noLabel {
+    font-weight: normal;
+}
+
+div.group div.linePn div.clearLineHeight {
+    line-height: normal;
+    margin-top: 0.4em;
+}
+
+/* Buttons within forms have a different look */
+div.group .dataPn input.button {
+    padding: 0.1em 0.5em;
+    margin: 2px 0 1px 0 !important;
+    height: 1.7em;
+    *line-height: 0.8em;
+}
+
+/* Spacing between inputs and adjacent buttons */
+div.group div.dataPn select {
+    margin-right: 0.25em;
+}
+
+/* Inner label */
+div.group div.linePn div.labelWrap {
+    position: relative;
+    margin-right: 1.3em;
+    font-weight: normal;
+}
+
+div.group div.linePn div.labelWrap span.hidden {
+    display: inline-block !important;
+    position: absolute;
+    left: -9999px;
+    top: 0px;
+    width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 0;
+}
+
+div.group div.linePn div.labelWrap input[type="radio"],
+div.group div.linePn div.labelWrap input[type="checkbox"] {
+    margin: 2px -0.3em 0 0;
+    *margin: 3px -0.5em 0 0;
+    vertical-align: text-top;
+}
+
+/* Fieldsets and legends
+ *
+ * Note that we can differentiate between the main fieldset patterns we use:
+ * 1. Vertical check list:           `.group > .same-line`
+ * 2. Selection-dependent fields:    `.group > fieldset > legend`
+ * 3. Inline (yes/no) radio buttons: `.group > fieldset > .linePn`
+ */
+
+/* Legend styles for all patterns */
+.group > fieldset > legend {
+    margin: 0 1em 0.5em 1em;
+    *margin-top: 0; /* Override the global `legend` definition which was coded for field-level legends (radio buttons) */
+    *margin-left: 0.5em; /* Override the global `legend` definition which was coded for field-level legends (radio buttons) */
+    line-height: 1.4em;
+    vertical-align: middle;
+}
+
+/* Space between fieldsets and other items at the same level */
+/* Note that we cannot add a space below sel-dep fields because `.group fieldset + .foo` matches other patterns as well */
+
+/* Between a check list and a normal line: */
+div.group > div.linePn + .same-line,
+div.group > .same-line + div.linePn > div.labelPn,
+div.group > .same-line + div.linePn > div.dataPn,
+/* Between two check lists: */
+div.group > .same-line + .same-line,
+/* Between a normal line and sel-dep fields (or check list): */
+div.group > div.linePn + fieldset > legend,
+/* Between instructions and any field: */
+div.group > div.groupInstructions + .same-line,
+div.group > div.linePn + .section-label,
+div.group > fieldset + .section-label {
+    margin-top: 1.5em;
+}
+
+/* Prevent a doubled top margin on check list legends */
+div.group > div.linePn + .same-line > legend {
+    margin-top: 0;
+}
+
+/* Inline (yes/no) radio button legends */
+.labelWrap legend {
+    float: right; /* Only needed for IE7/8 and Webkit, but doesn't hurt others (CP 2011-12) */
+    *margin: -7px -7px 0 0 !important; /* IE7 only */
+}
+
+/* This span is needed to make text align properly in IE7 when the label wraps (CP 2012-01) */
+legend .legendWrap {
+    display: inline-block; /* Needed for IE8 with Compatibility View, doesn't affect others (CP 2013-09) */
+    text-align: right;     /* Must be declared again for IE */
+}
+
+/* Needed for IE8 with Compatibility View, doesn't affect others (CP 2013-09) */
+@media \0screen {
+    legend .legendWrap {
+        display: block;
+        width: 100%;
+    }
+}
+
+div.group div.linePn div.required {
+    position: absolute;
+    bottom: 0.1em;
+    right: 0.4em;
+    color: #CC0000;
+    font-weight: normal;
+}
+
+/* Label top (above) */
+div.group div.labelTop div.labelPn {
+    line-height: 1.25em;
+}
+
+div.group div.labelTop div.dataPn {
+    clear: both;
+    margin: 0.2em 0 !important;
+    width: 100% !important;
+}
+
+div.group div.labelTop div.dataPn textarea {
+    width: 99%;
+}
+
+.dataPn input[type="radio"] {
+    margin-bottom: 3px;
+}
+
+.dataPn ul {
+     margin-left: 0;
+     padding-left: 0;
+     *margin-top: -0.3em; /* This compensates for IE7's lack of `:first-child` support, used below */
+}
+
+.dataPn ul li {
+    line-height: normal;
+    margin-left: 0;
+    margin-top: 0.25em;
+    *margin-top: -0.2em;
+}
+
+.dataPn ul li:first-child {
+    margin-top: 0.4em;
+}
+
+/* Sublabel centered between two input fields (e.g. two dates) */
+input + .subLabel.centered,
+.calendar + .subLabel.centered {
+    margin-left: 0.35em;
+    *margin-left: 0.75em;
+}
+
+.subLabel.centered + input,
+.subLabel.centered + label + input {
+    margin-left: 0.7em;
+}
+
+/* Center a block that fits its text
+   ----------------------- */
+.center-block {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.center-block .block-row {
+    display: inline-block;
+    width: auto;
+    text-align: left;
+    *display: inline;
+    *zoom: 1;
+}
+
+.center-block .indented {
+    padding-left: 0.3em;
+}
+
+.center-block .category-label {
+    display: inline-block;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Selection-dependent fields
+   ----------------------- */
+.selDepFldsWrapper,
+.selectedRB {
+    padding: 0;
+    margin: 1px 0 !important;
+}
+
+.selDepFldsWrapper .selDepFields {
+    border: 1px solid #FFF;
+}
+
+.rBtnWrapper {
+    padding: 0 0 0 0.3em;
+    border: 1px solid #FFF;
+}
+
+.selDepFldsWrapper .fieldWrapper {
+    display: none;
+    border-top: 1px solid #FFF;
+}
+
+.selectedRB .selDepFields {
+    border: 1px solid #A7C9D1;
+    border-radius: 3px;
+    background-clip: padding-box;
+}
+
+.selectedRB .rBtnWrapper {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E8F1FD #D1E5EF #E8F1FD #D1E5EF;
+    background-color: #D7E6EA;
+}
+
+.selectedRB .fieldWrapper {
+    display: block;
+    padding: 0 0 0.3em 0;
+    background-color: #F0F5F7;
+    border-top: 1px solid #A7C9D1;
+}
+
+.visibleLabel {
+    clear: none;
+    display: inline-block;
+    *display: inline;
+    font-weight: normal;
+}
+
+.visibleLabel,
+.noLabel {
+    cursor: default; /* Show the arrow pointer, not the text selection cursor */
+}
+
+/* Sizes XXS-S not recommended for sizes M+ */
+.labelXXS .selDepFldsWrapper {
+    width: 75% !important;
+}
+
+.labelXS .selDepFldsWrapper {
+    width: 55% !important;
+}
+
+.labelS .selDepFldsWrapper {
+    width: 35% !important;
+}
+
+/* Footer (#footer)
+   ----------------------- */
+#footer {
+    *width: auto; /* Needed for Windows system font size > 100% */
+    display: inline-block;
+    clear: both;
+}
+
+#footerCenter {
+    float: none;
+    width: 100%;
+    *width: auto; /* Needed for Windows system font size > 100% */
+    position: relative;
+    height: 1%;
+    text-align: center;
+}
+
+#footer ul {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 6px;
+}
+
+#footer ul li {
+    display: inline;
+    padding: 2px 6px;
+    border-right: 1px solid #999;
+    margin: 0;
+}
+
+#footer ul li.hidden {
+    display: none;
+}
+
+#footer ul li a {
+    width: 100%;
+    line-height: 21px;
+    height: 21px;
+    color: #336699;
+    text-decoration: none;
+}
+
+#footer ul li a:hover,
+#footer ul li a:visited:hover {
+    text-decoration: underline;
+    color: #CC6633;
+}
+
+#footer ul li a:visited {
+    color: #993399;
+}
+
+#footer div.sslLogo {
+    width: 100%;
+    clear: both;
+}
+
+#footer div.sslLogo div {
+    margin: 0px auto;
+}
+
+#footer img {
+    clear: both;
+    margin: 2px 0px 0px 0px;
+}
+
+#footer ul li a img {
+    vertical-align: middle;
+    padding: 0px 4px 1px 0px;
+}
+
+/* Hide instructions by default */
+#instructionsFooter {
+    display: none;
+}
+
+/* Force instructions to display when clicking the help icon in legend */
+#instructionsFooter.displayInstructions {
+    display: inherit;
+    *display: inline-block;
+    float: none;
+    clear: both;
+    font-weight: normal;
+    padding-top: 1.5em;
+    width: 100%;
+}
+
+#instructionsFooter.displayInstructions h3 {
+    display: block;
+    padding-top: 0.8em;
+    border-top: 2px solid #BFBFBF;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.displayInstructions .instructions,
+#instructionsFooter.displayInstructions > div {
+    display: block;
+    clear: both;
+    margin: 0 15px 1.5em 0;
+}
+
+.displayInstructions .instructions h4,
+#instructionsFooter.displayInstructions > div h4 {
+    min-height: 1.65em;
+    vertical-align: middle;
+    line-height: 1.4em;
+    padding: 1px 0px 2px 0px;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.displayInstructions .instructions p,
+#instructionsFooter.displayInstructions > div p {
+    line-height: 1.4em;
+    margin-bottom: 0.5em;
+}
+
+.displayInstructions .instructions .topLink {
+    display: block;
+    clear: both;
+    position: relative;
+    text-align: right;
+}
+
+/*
+==================================================================================
+ Centered Loading message
+==================================================================================
+*/
+.loadingMessageCentered {
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    width: 20%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background-clip: padding-box;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    z-index: 10000;
+}
+
+.loadingMessageCentered .spinnerHolder {
+    margin: 1em auto 0 auto;
+    width: 36px;
+    height: 36px;
+}
+
+.loadingMessageCentered p {
+    font-size: 1.25em;
+    line-height: normal;
+    margin: 0 1em 1em 1em;
+}
+
+/* Modal div overlay */
+.loadingMessagePageOverlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #7f7f7f;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+/*
+==================================================================================
+ Ajax
+==================================================================================
+*/
+.ajaxOverlay {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: transparent url("../images/modalBg.png") top left repeat;
+}
+
+.ajaxOverlay img {
+    position: absolute;
+    top: 44.5%;
+    left: 47.5%;
+}
+
+/*
+==================================================================================
+ Copy Buttons
+==================================================================================
+*/
+.copyValue {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: transparent url("../images/icons_sprite.png") -16px -16px no-repeat;
+    overflow: hidden;
+    text-indent: 1000em;
+}
+
+/*
+==================================================================================
+ Tooltips - Base styles
+==================================================================================
+*/
+
+.tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    float: none;
+    max-width: 400px;
+    height: auto;
+    margin: 0 0.5em 0.5em 0;
+    padding: 0.1em;
+    outline: none !important;
+    border-color: #444;
+    border-style: solid;
+    border-width: 1px;
+    background: #FFFFFF none top left repeat-x scroll;
+    box-shadow: 2px 2px 4px #bbb;
+    z-index: 2;
+}
+
+/* Tooltip pointer fill */
+.tooltip:after {
+    position: absolute;
+    display: block;
+    margin-top: 2px;
+    content: " ";
+    width: 0;
+    height: 0;
+    z-index: 2;
+}
+
+.tooltip:after {
+    top: -18px;
+    left: 200px;
+    border-top: 9px solid transparent;
+    border-bottom: 8px solid #ffffff;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+}
+
+/* Tooltip pointer border */
+.tooltip:before {
+    position: absolute;
+    display: block;
+    margin-top: 2px;
+    margin-left: -1px;
+    content: " ";
+    width: 0;
+    height: 0;
+    z-index: 1;
+}
+
+.tooltip:before {
+    top: -19px;
+    left: 200px;
+    border-top: 9px solid transparent;
+    border-bottom: 8px solid #444444;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+}
+
+.tooltip .tooltipCloseContainer {
+    display: block;
+    clear: both;
+    margin: 1em;
+    padding: 1px;
+    text-align: center;
+}
+
+.tooltip .tooltipClose,
+.tooltip .tooltipClose:hover,
+.tooltip .tooltipClose:focus {
+    cursor: pointer;
+}
+
+.tooltip .tooltipClose:active {
+/*outline: none;*/
+}
+
+.tooltip .tooltipBody {
+    display: block;
+    /*float: none;*/
+  clear: both;
+    padding: 0.4em;
+}
+
+.tooltipPointer {
+    display: block;
+    position: absolute;
+    left: -9999em;
+    top: -9999em;
+    z-index: 3;
+}
+
+/*
+==================================================================================
+ Tooltips - iflow styles
+==================================================================================
+*/
+
+.tooltip.ttFieldInstructions {
+    border-color: #9CAEBD #526D84 #526D84 #9CAEBD;
+    background: #FFFFBA url("../images/tooltip_bg.png") top left repeat-x scroll;
+    background-image: -webkit-linear-gradient(#FFFFE8, #FFFFBA);
+    background-image:         linear-gradient(#FFFFE8, #FFFFBA);
+    border-radius: 4px;
+    background-clip: padding-box;
+}
+
+/* Tooltip pointer fill */
+.tooltip.ttFieldInstructions:after {
+    border-bottom: 8px solid #FFFFE8;
+}
+
+/* Tooltip pointer border */
+.tooltip.ttFieldInstructions:before {
+    border-bottom: 8px solid #9CAEBD;
+}
+
+.tooltip.ttFieldInstructions .tooltipBody h4,
+.tooltip.ttFieldInstructions .tooltipBody .topLink {
+    display: none !important;
+}
+
+.tooltip.ttFieldInstructions p {
+    vertical-align: baseline;
+}
+
+.tooltip.ttFieldInstructions .tooltipCloseContainer {
+    margin: 1em auto;
+}
+
+.tooltip.ttFieldInstructions .tooltipClose {
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    width: 4em;
+    height: 1.85em;
+    line-height: 1.75em;
+    font-size: 100%;
+    border: 1px solid #576F86;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    background: #DDEAF9 url("../images/ButtonBg.png") repeat-x scroll left top;
+    background-image: -webkit-linear-gradient(#FEFEFF 0%, #E9ECF7 44%, #D4DBED 44%, #DFE4F4 100%);
+    background-image:         linear-gradient(#FEFEFF 0%, #E9ECF7 44%, #D4DBED 44%, #DFE4F4 100%);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    border-radius: 4px;
+    background-clip: padding-box;
+    -webkit-transition: 0.1s ease all;
+            transition: 0.1s ease all;
+}
+
+.tooltip.ttFieldInstructions .tooltipClose:hover,
+.tooltip.ttFieldInstructions .tooltipClose:focus {
+    text-decoration: none;
+    background: #FEFEFF url("../images/ButtonBgHover.png") repeat-x scroll left top;
+    background-image: -webkit-linear-gradient(#FEFEFF 0%, #F0F2FA 44%, #E1E6F3 44%, #E9ECF7 100%);
+    background-image:         linear-gradient(#FEFEFF 0%, #F0F2FA 44%, #E1E6F3 44%, #E9ECF7 100%);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.tooltip.ttFieldInstructions .tooltipClose:active {
+    text-decoration: none;
+    box-shadow: 1px 1px 0 rgba(0,0,0,0.8);
+}
+
+.tooltip.ttFieldInstructions .tooltipBody {
+    line-height: 1.2em;
+    padding: 0.4em;
+}
+
+/*
+==================================================================================
+ Retrieve Balance
+==================================================================================
+*/
+/* Icon */
+.retrieveBalance {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: transparent;
+    background-image: url("../images/moneyDollar16.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    text-indent: 1000em;
+}
+
+/* Tooltips */
+.tooltip.ttRetrieveBalance {
+    background-color: #f0f5f9;
+    border: 1px solid #b0cedf;
+    border-radius: 3px;
+    background-clip: padding-box;
+}
+
+.tooltip.ttRetrieveBalance:before {
+    border-color: transparent transparent #b0cedf;
+}
+
+.tooltip.ttRetrieveBalance:after {
+    border-color: transparent transparent #f0f5f9;
+}
+
+.tooltip.ttRetrieveBalance .tooltipBody {
+    padding-right: 3em;
+}
+
+.ttRetrieveBalance .label {
+    margin-bottom: 0.6em;
+}
+
+.ttRetrieveBalance .amount {
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 0.25em;
+}
+
+.tooltip.ttRetrieveBalance .tooltipCloseContainer {
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    margin: 0;
+}
+
+.tooltip.ttRetrieveBalance .tooltipClose {
+    display: block;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    line-height: 12px;
+    *line-height: 16px;
+    vertical-align: middle;
+    *vertical-align: top;
+    *padding-bottom: 7px;
+    color: #454545;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-clip: padding-box;
+}
+
+.tooltip.ttRetrieveBalance .tooltipClose:active,
+.tooltip.ttRetrieveBalance .tooltipClose:hover {
+    color: #333;
+    background-color: #d8dce0;
+    border-color: #bbb;
+}
+
+/*
+==================================================================================
+ File/folder tree table
+==================================================================================
+*/
+.fileTree {
+    padding: 1em 0.5em;
+    overflow: auto;
+    margin-top: 1em;
+}
+
+.linePn .fileTree {
+    margin-top: 0;
+}
+
+.fileTree table {
+    width: 100%;
+    border: 1px solid #9caebd;
+}
+
+.fileTree thead {
+    background: url("../images/MenuNormalBg.png") repeat-x scroll left top #d0d7de;
+    background-image: -webkit-linear-gradient(#f8f9fA, #d2d9df);
+    background-image:         linear-gradient(#f8f9fA, #d2d9df);
+}
+
+.fileTree tbody {
+    border: 1px solid #9caebd;
+    border-top: 1px solid #ccc;
+}
+
+.fileTree .folderRow {
+    color: black;
+}
+
+.fileTree .folderRow:hover {
+    cursor: pointer;
+}
+
+.fileTree th {
+    text-align: left;
+    color: #505050;
+    font-weight: normal;
+    line-height: 1.3em;
+    border-top: 1px solid #9caebd;
+    border-bottom: 1px solid #ccc;
+    padding: 0.25em 1.2em 0.25em 0;
+}
+
+.fileTree td {
+    padding: 0 14px 0 0;
+    margin: 0;
+    line-height: 1.75em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fileTree tr:last-child td {
+    padding-bottom: 0.5em;
+}
+
+.fileTree .firstCol {
+    width: 25px;
+    padding: 2px;
+    border-left: 1px solid #9caebd;
+}
+
+.fileTree .secondCol {
+    min-width: 45%;
+}
+
+.fileTree .lastCol {
+    text-align: center;
+    border-right: 1px solid #9caebd;
+}
+
+.fileTree .folderRow td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.fileTree .folderRow .firstCol {
+    border-left: 1px solid #9caebd;
+}
+
+.fileTree .folderRow .lastCol {
+    border-right: 1px solid #9caebd;
+}
+
+.fileTree .folderRow .secondCol {
+    padding-left: 1px; /* Should match padding in image file, if any */
+}
+
+.fileTree .folderRow:hover td {
+    background-color: #e9ecf7;
+}
+
+.fileTree .fileRow td {
+    border-bottom: 1px dashed #ccc;
+}
+
+.fileTree .fileRow .firstCol,
+.fileTree .fileRow.empty td {
+    border-bottom: none;
+}
+
+.fileTree .fileCountDisplay {
+    display: inline-block;
+    margin-left: 0.5em;
+    color: #777;
+    font-size: 90%;
+}
+
+.fileTree .fileTreeIcon {
+    background-image: url("../images/fileTree_sprite.png");
+    background-position: 0 0;
+    display: block;
+    float: left;
+    position: relative;
+    top: 3px;
+    left: 0;
+    width: 25px;
+    height: 16px;
+    margin-left: 3px;
+}
+
+.fileTree .fileRow .fileTreeIcon {
+    width: 16px;
+}
+
+.fileTree .folderExpanded .fileTreeIcon {
+    background-position: 25px 0;
+    *top: -2px;
+}
+
+.fileTree .folderCollapsed .fileTreeIcon {
+    background-position: 49px 0;
+    *top: -2px;
+}
+
+.fileTree .empty .secondCol {
+    text-indent: 0;
+    padding-left: 0;
+    background-image: none;
+    font-style: italic;
+}
+
+.fileTree .button {
+    font-size: 90%;
+    margin: -0.25em 0.2em 0 0;
+    *margin-top: 0;
+    padding: 0 0.2em;
+    *padding: 0;
+    vertical-align: middle;
+    height: 1.5em;
+    line-height: 1em;
+    border: 1px solid #508AAD;
+    color: #2E4F63;
+}
+
+/*
+==================================================================================
+ Calendar
+==================================================================================
+*/
+/* TEMPORARY WHILE CALENDAR FUNCTIONALITY IS IN DEVELOPMENT [Start] */
+.calendarIcon {
+    display: inline-block;
+    margin-top: 1px;
+    margin-left: 0.25em; /* for IE9 printing */
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background: transparent url("../images/icons_sprite.png") 0 -16px no-repeat;
+    text-indent: -9999em;
+}
+
+/* TEMPORARY WHILE CALENDAR FUNCTIONALITY IS IN DEVELOPMENT [End] */
+
+/* Calendar icon */
+.calendar {
+    display: inline-block;
+    width: 20px;
+    height: 19px;
+    border: 1px solid transparent;
+    background: transparent url("../images/CalendarSprite.png") 0 0 no-repeat;
+    vertical-align: middle;
+    border-radius: 4px;
+    background-clip: padding-box;
+    margin: 2px 0.3em 3px 0.3em;
+}
+
+.calendar:hover {
+    border: 1px solid #BDDBFF;
+    background-color: #FFFBFF;
+}
+
+/* Main */
+.dp {
+    position: absolute;
+    font-size: 100%; /* sizes to match page's default font size */
+    overflow: visible;
+    min-width: 16.5em;
+    white-space: nowrap;
+}
+
+.dpCalWrap {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: visible;
+    display: inline-block;
+    *width: 16.46em;
+}
+
+.dpCal {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px solid #C6D5E8;
+    background-color: #FFF;
+    z-index: 2;
+}
+
+/* General */
+.dp a,
+.dp img {
+    border: 0;
+}
+
+.dp ul {
+    list-style: none;
+    overflow: visible;
+}
+
+.dp ul,
+.dp li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.dpHead {
+    position: relative;
+    clear: both;
+    padding: 0;
+    margin: 0;
+    background-color: #F1F5FB;
+    border-bottom: 1px solid #C6D5E8;
+    overflow: hidden;
+    text-align: center;
+}
+
+.dpHead ul {
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.dpHead .lIcons {
+    left: 0.2em;
+}
+
+.dpHead .rIcons {
+    right: 0.2em;
+}
+
+.dpHead li {
+    float: left;
+    padding: 0.25em 0.1em 0 0.1em;
+}
+
+.dpHead li a,
+.dpHead .grayedOut {
+    float: left;
+    line-height: 1.25em;
+    height: 1.25em;
+    padding: 0 0.25em;
+}
+
+.dpHead .fastNavPrevQtr,
+.dpHead .navPrevMon,
+.dpHead .navNextMon,
+.dpHead .fastNavNextQtr {
+    border: 1px solid #F1F5FB;
+}
+
+.dpHead .fastNavPrevQtr:hover,
+.dpHead .navPrevMon:hover,
+.dpHead .navNextMon:hover,
+.dpHead .fastNavNextQtr:hover {
+    border: 1px solid #BBCADB;
+    background-color: #DDE6EF;
+    border-radius: 3px;
+    background-clip: padding-box;
+}
+
+.dpHead img {
+    *vertical-align: middle;
+    padding-top: 2px;
+    *padding-top: 0px;
+}
+
+.dpHead .title {
+    line-height: 1.75em;
+    width: 100%;
+}
+
+.dpHead .monthYear {
+    position: relative;
+    top: 0px;
+    color: #333;
+    padding: 0 0.7em 2px 0.7em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dpHead .monthYear:hover {
+    color: #CC6633;
+    text-decoration: underline;
+}
+
+/* Body */
+.dpBody {
+    background-color: #FFF;
+}
+
+.dpDayDesc,
+.dpWeekNbrDays {
+    clear: both;
+    overflow: hidden;
+}
+
+.dpDayDesc {
+    background-color: #E7EBF6;
+    border-top: 1px solid #E7EBF6;
+    line-height: 1.5em;
+}
+
+.dpDayDesc ul {
+    /*margin-left: 2.1em; -- week nbr -- */
+    overflow: hidden;
+}
+
+.dpDayDesc li {
+    float: left;
+    margin: 0;
+    padding: 2px 0 3px 0;
+    width: 2.3em;
+    text-align: center;
+}
+
+.dpWeekNbr,
+.dpDays {
+    float: left;
+}
+
+.dpWeekNbr {
+    background-color: #E7EBF6;
+    width: 2.15em;
+    text-align: center;
+    color: #4C607A;
+}
+
+.dpWeekNbr li,
+.dpDays a,
+.dpDays .disabled {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.dpWeekNbr li {
+    padding: 1px 0 2px 0;
+    border-color: #E7EBF6;
+}
+
+.dpDays li {
+    float: left;
+    width: 2.3em;
+    text-align: right;
+    padding-bottom: 1px;
+}
+
+.dpDays .prevMonthDay a,
+.dpDays .nextMonthDay a,
+.dpDays .disabled,
+.dpMon .disabled,
+.dpYr .disabled {
+    color: #999999 !important;
+}
+
+.dpDays a,
+.dpDays .disabled {
+    float: left;
+    color: #333;
+    margin-left: 1px;
+    width: 1.45em;
+    line-height: 1.5em;
+    padding-right: 0.5em;
+    text-decoration: none;
+    border-color: #FFF;
+    border-radius: 4px;
+    background-clip: padding-box;
+}
+
+.dpDays .today a {
+    border: 1px solid transparent;
+    background-color: none;
+    color: #C30;
+}
+
+.dpDays a:hover,
+.dpDays li.selectedDay a:hover,
+.dpDays .today a:hover {
+    border: 1px solid #8FB0D6;
+    color: #4C607A;
+    background-color: #EFF3F7;
+}
+
+.dpDays .today a:hover {
+    color: #C60;
+}
+
+.dpDays li.selectedDay a {
+    border: 1px solid #8FB0D6;
+    color: #4C607A;
+    background-color: #D0E4FC;
+}
+
+/* Footer */
+.dpFoot {
+}
+
+/* Shadow */
+.dpCalShadow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 3px;
+    width: 100%;
+    height: 100%;
+    background-color: #BBB;
+    z-index: 1;
+}
+
+/* Select */
+.dpOptWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #BBB;
+    color: #333;
+    background-color: #FFF;
+    z-index: 3;
+}
+
+.dpOpt {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 12.85em;
+    overflow: hidden;
+    padding: 0.3em 0.25em 0.35em 0.3em;
+    background-color: #FFF;
+    z-index: 5;
+}
+
+.dpOpt li {
+    float: left;
+}
+
+.dpMon,
+.dpYr {
+    float: left;
+    color: #333;
+}
+
+.dpMon {
+    width: 5.9em;
+    border-right: 1px solid #E1E1E1;
+    padding-right: 0.2em;
+    margin-right: 0.35em;
+}
+
+.dpYr {
+    width: 6.25em;
+}
+
+.dpMon li,
+.dpYr li {
+    margin: 0.25em 0.25em 0 0.2em;
+    text-align: center;
+}
+
+.dpMon li {
+    width: 2.4em;
+}
+
+.dpYr li {
+    width: 2.6em;
+}
+
+.dpMon a,
+.dpMon .disabled,
+.dpYr a,
+.dpYr .disabled,
+.dpYr .grayedOut {
+    display: inline-block;
+    line-height: 1.45em;
+    width: 100%;
+    color: #333;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-clip: padding-box;
+    text-decoration: none;
+}
+
+.dpMon li a:hover,
+.dpMon li.selected a:hover,
+.dpYr li a:hover,
+.dpYr li.selected a:hover {
+    border: 1px solid #8FB0D6;
+    color: #4C607A;
+    background-color: #EFF3F7;
+}
+
+.dpMon li.selected a,
+.dpYr li.selected a {
+    color: #4A617B;
+    border-color: #8CB2D6;
+    background-color: #CEE3FF;
+}
+
+.dpMon li.selected .disabled {
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+    background-clip: padding-box;
+}
+
+.dpYr .fastNavPrevYrs,
+.dpYr .fastNavNextYrs {
+    *display: block;
+    width: 60%;
+    height: 1.45em;
+}
+
+.dpYr .fastNavPrevYrs img,
+.dpYr .fastNavNextYrs img,
+.dpYr .grayedOut img {
+    margin: 0.25em 0 0 -0.1em;
+}
+
+.dpOther {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+.dpOtherL,
+.dpOtherR {
+    float: left;
+}
+
+.dpOtherL {
+    width: 40%;
+}
+
+.dpOtherR {
+    width: 60%;
+    text-align: right;
+}
+
+.dpOtherL a,
+.dpOtherR a {
+    display: inline-block;
+    padding: 0.2em 0.4em;
+    margin: 0.2em 0.2em 0 0.2em;
+    color: #0059C6;
+    text-decoration: underline;
+}
+
+.dpOtherL a:hover,
+.dpOtherR a:hover {
+    color: #CC6633;
+}
+
+/* Shadow */
+.dpOptShadow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 3px;
+    width: 100%;
+    height: 100%;
+    background-color: #BBB;
+    z-index: 4;
+}
+
+/* Misc */
+.dp .newLine {
+    clear: left !important;
+}
+
+.dp .grayedOut {
+    border: 1px solid transparent;
+}
+
+.dp .grayedOut img {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+.invalidDate {
+    color: #B32D34;
+    border-color: #D18185;
+}
+
+/* Make textareas use full width on legacy .line/.data structure (for TPRA, CP 6/2013) */
+.labelCenter + .data.fullWidth {
+    width: 48%;
+}
+
+/* For use with `<button>` elements */
+.img-button {
+    border: none;
+    background: none;
+    *padding-top: 2px;
+}
+
+.rset .img-button {
+    margin-top: 1px; /* Default */
+    margin-top: 4px\9; /* IE 8-9 only */
+    *margin-top: 1px; /* Reset IE7 back to the default */
+}
+
+.form-inline-section {
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    background-color: #F8F9FA;
+    width: 80% !important;
+    margin-left: 10% !important;
+    border: 1px solid #D2D9DF;
+    border-radius: 3px;
+    padding: 0.5em 0;
+}
+
+/*
+==================================================================================
+ Icon Buttons
+==================================================================================
+*/
+
+.icon-button {
+    display: inline-block;
+    *display: block;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: -1px -1px;
+    text-indent: 1000em;
+    *text-indent: -1000em;
+    cursor: pointer;
+
+    /* Override these properties using a class specific to a particular image */
+    background-image: none;
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+}
+
+#legend .icon-button {
+    *float: left;
+}
+
+/* Trash can */
+.icon-delete {
+    background-image: url("../images/delete.png");
+    *width: 18px;
+    *height: 20px;
+    *background-position: -1px 0;
+}
+
+/* Green question mark */
+.icon-help {
+    background-image: url("../images/info.png");
+    *background-position: 0 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 192dppx) {
+    .icon-help {
+        background-image: url("../images/info@2x.gif");
+    }
+}
+
+/* Magnifying glass over a document */
+.icon-view-details {
+    background-image: url("../images/icon-view-details.png"); /* IE7/8 */
+    background-image: url("../images/icon-view-details.svg"), none;
+    *width: 20px;
+    *height: 20px;
+    *background-position: 0 0;
+}

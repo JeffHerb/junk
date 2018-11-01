@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Respond to Department Delinquency or Bills</title>
+  <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+<!-- This uiscript.js JavaScript file is for UI testing only -->
+<script type="text/javascript" src="../../js/uiscript.js"></script>
+<!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  
+  <!-- Banners --> 
+  <script>uiResponsive.setup(); uiIncludes.banners.display();</script> 
+  
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a></li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li><a class="navHeaderFirstLink navHeaderLastLink" href="https://nystax.custhelp.com/app/answers/list/c/6,76" target="_blank" title="This will open a new window to Help">Help</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Respond to Department Delinquency or Bills</h1>
+    <div id="taxpayer-info">
+      <div class="leftFluid"> </div>
+      <div class="sectionBorder">
+        <div class="c33">
+          <div class="label"> Taxpayer ID: </div>
+          <div class="data"> XXX-XX-0123</div>
+        </div>
+        <div class="c67">
+          <div class="label"> Taxpayer name: </div>
+          <div class="data"> JANE DOE </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Penalty</h2>
+  <div id="pageInstructions">
+    <p class="text">If you disagree with the penalty on your notice,  select one choice that best describes why you disagree in the <strong>Response to penalty</strong> section.</p>
+  </div>
+  <div id="legend">
+    <ul>
+      <li><span class="required">*</span> Required fields</li>
+    </ul>
+  </div>
+  <div class="formWrapper">
+    <div class="leftFluid"> </div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post">
+        <!-- Group 1 -->
+        <div class="group">
+          <h4>Issue information</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Assessment ID number: </div>
+            </div>
+            <div class="dataPn"> L-000101288-6 </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Issue: </div>
+            </div>
+            <div class="dataPn"> Assessed Penalty </div>
+          </div>
+        </div>
+        <div class="group">
+          <h4>Response to penalty</h4>
+          <fieldset class="same-line">
+            <legend>Select one of the following<span class="required">*</span><span class="hidden"> Required field</span></legend>
+            <div class="linePn labelXS">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <input type="radio" id="radio_1" name="radioGroup" tabindex="1">
+                </div>
+              </div>
+              <div class="dataPn">
+                <label for="radio_1">I was unable to get and assemble information needed to file a complete and timely return for reasons beyond my control</label>
+              </div>
+            </div>
+            <div class="linePn labelXS">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <input type="radio" id="radio_2" name="radioGroup" tabindex="1">
+                </div>
+              </div>
+              <div class="dataPn">
+                <label for="radio_2">A death or serious illness prevented timely filing of the return or payment</label>
+              </div>
+            </div>
+            <div class="linePn labelXS">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <input type="radio" id="radio_3" name="radioGroup" tabindex="1">
+                </div>
+              </div>
+              <div class="dataPn">
+                <label for="radio_3">I had an unavoidable absence from my usual place of business</label>
+              </div>
+            </div>
+            <div class="linePn labelXS">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <input type="radio" id="radio_4" name="radioGroup" tabindex="1">
+                </div>
+              </div>
+              <div class="dataPn">
+                <label for="radio_4">My business and/or records were destroyed by fire or other documented casualty</label>
+              </div>
+            </div>
+            <div class="linePn labelXS">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <input type="radio" id="radio_5" name="radioGroup" tabindex="1">
+                </div>
+              </div>
+              <div class="dataPn">
+                <label for="radio_5">I relied on written information, professional advice or facts, and my reliance was reasonable because I had no cause to question the accuracy of the information provided to me</label>
+              </div>
+            </div>
+            <div class="linePn labelXS">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <input type="radio" id="radio_6" name="radioGroup" tabindex="1">
+                </div>
+              </div>
+              <div class="dataPn">
+                <label for="radio_6">My issue isn't addressed above</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="buttonGroup">
+          <input type="button" class="button" value="Back" title="Back" onclick="javascript:window.location.href='10RTDB_QSTN01BillInformation.html';" tabindex="1" />
+          <input type="button" class="button primary" tabindex="1" title="Continue" onclick="javascript:window.location.href='25RTDN_RFRS10ReasonForResponse.html';" value="Continue"> 
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- end of page-container --> 
+<script type="text/javascript">uiIncludes.footer.renderXHTML();</script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Quick Pay</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li><a class="navHeaderFirstLink navHeaderLastLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Quick Pay</h1>
+  </div>
+  <div class="hr"></div>
+  <h2>Taxpayer Verification</h2>
+  <div id="pageInstructions">
+    <div class="text">Complete the following information. To pay directly from your bank account, select <strong>Continue</strong>.</div>
+     <p class="text">To pay by credit card, see <a href="https://www.tax.ny.gov/pay/all/wells_fargo_card_payment_information.htm" target="_blank" title="This will open a new window for more information.">card payment information</a>.</p>
+<p class="text">If you do not pay the total amount, we may continue collection activities on unpaid balances for bills, audit cases, and collection cases.</p>
+<p class="text">The Payment Authorization that will be displayed on the Review and Verify page will certify that you, the taxpayer, are providing the information requested below and submitting this application.</p>
+  </div>
+  <!--legend begin-->
+  <div id="legend">
+    <ul>
+      <li><span class="required">*</span> Required fields</li>
+      <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+    </ul>
+  </div>
+  <!--legend end-->
+  <div class="formWrapper">
+    <div class="leftFluid"></div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post" onsubmit="window.location.href='30_GENE_BANK03PayFromBankAccount.html'; return false;">
+        <!-- Group 1 -->
+        <div class="group">
+          <h4>Taxpayer verification</h4>
+          <div class="linePn labelM masktoggle">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="maskedSSN">Social Security number (SSN):<span class="hidden">Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="password" id="maskedSSN" value="" size="11" maxlength="11" tabindex="1">
+              <a href="#i1" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+		  <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="taxYear">Tax year for verification:<span class="hidden"> Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <select id="taxYear" tabindex="1">
+                <option value="1" selected="selected">Select one</option>
+				<option value="2" id="2017">2017</option>
+                <option value="2" id="2016">2016</option>
+                <option value="3" id="2015">2015</option>
+                <option value="4" id="2014">2014</option>
+                <option value="5" id="2013">2013</option>
+              </select>
+			  <a href="#i2" class="help icon-button icon-help" role="button" tabindex="1">More information</a>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="transStatus">Filing status:<span class="hidden"> Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <select id="transStatus" tabindex="1">
+                <option value="1" selected="selected">Select one</option>
+                <option value="2" id="single">Single</option>
+                <option value="3" id="MarriedFilJoint">Married filing joint</option>
+                <option value="4" id="MarriedfilSep">Married filing separate</option>
+                <option value="5" id="HeadOfHouse">Head of household</option>
+              </select>
+			  <a href="#i3" class="help icon-button icon-help" role="button" tabindex="1">More information</a>
+            </div>
+          </div>
+          <div class="checkblock hidden" id="MarriedFilJoint_block">
+            <div class="linePn labelM masktoggle">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="maskedSSN">Spouses Social Security number (SSN):<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <input type="password" id="maskedSSN" value="" size="12" maxlength="11" tabindex="1">
+                <a href="#i4" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="zipOnYourReturn">Mailing ZIP code on your return: <span class="hidden">Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="zipOnYourReturn" value="" size="10" maxlength="10" tabindex="1" />
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="firstName">First name: <span class="hidden">Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="firstName" value="" size="16" maxlength="16" tabindex="1" />
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="lastName">Last name:<span class="hidden">Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="lastName" value="" size="30" maxlength="138" tabindex="1" />
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="emailAddress">E-mail address: <span class="hidden">Required field</span> </label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="emailAddress" value="" size="30" maxlength="64" tabindex="1" />
+              <a href="#i5" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="confirmEmailAddress">Confirm e-mail address: <span class="hidden">Required field</span> </label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="confirmEmailAddress" value="" size="30" maxlength="64" tabindex="1" />
+            </div>
+          </div>
+        </div>
+<!-- Group 2 -->
+        <div class="group">
+          <h4>Payment information</h4>
+        
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="transStatus">I want to pay my:<span class="hidden"> Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <select id="transStatus" tabindex="1">
+                <option value="1" selected="selected">Select one</option>
+                <option value="2" id="assessment">Assessment</option>
+                <option value="3" id="auditcase">Audit case</option>
+                <option value="3" id="collectioncase">Collection case</option>
+                <option value="3" id="incomeexecution">Income execution</option>
+                <option value="3" id="installmentpayment">Installment payment Agreement</option>
+              </select>
+            </div>
+          </div>
+          <div class="checkblock hidden" id="assessment_block">
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="assessment">Assessment ID:<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <input type="text" id="assessment" value="" size="12" maxlength="13" tabindex="1">
+                <a href="#i6" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+            </div>
+          </div>
+          <div class="checkblock hidden" id="auditcase_block">
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="auditcasse">Audit case ID:<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <input type="text" id="auditcase" value="" size="11" maxlength="13" tabindex="1">
+                <a href="#i7" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+            </div>
+          </div>
+          <div class="checkblock hidden" id="collectioncase_block">
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="collectioncase">Collection case ID:<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <input type="text" id="collectioncase" value="" size="11" maxlength="13" tabindex="1">
+                <a href="#i8" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+            </div>
+          </div>
+          <div class="checkblock hidden" id="incomeexecution_block">
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="incomeexecution">Income execution ID:<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <input type="text" id="incomeexecution" value="" size="11" maxlength="18" tabindex="1">
+                <a href="#i9" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+            </div>
+          </div>
+          <div class="checkblock hidden" id="installmentpayment_block">
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="installmentpayment">Installment payment ID:<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <input type="text" id="installmentpayment" value="" size="11" maxlength="18" tabindex="1">
+                <a href="#i10" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="paymentAmount">Payment amount ($):<span class="hidden">Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">
+                <input type="text" id="paymentAmount" value="" size="23" maxlength="23" tabindex="1"> <a href="#i11" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+              </div>
+            </div>
+          </div>
+       
+        <div class="buttonGroup">
+		  <input type="button" class="button primary" value="Continue" title="Continue" onclick="window.location.href='160_GENE_BANK03PayFromBankAccount.html';" tabindex="1">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="instructionsFooter">
+    <h3>Instructions</h3>
+    <div>
+      <h4 id="i1">Social Security number (SSN)</h4>
+      <p class="text">
+      <p>Enter your nine-digit Social Security number (SSN). If you do not have a SSN, <a href="https://www.tax.ny.gov/help/contact/" target="_blank" title="This will open a new window">Contact us</a>.</p>
+    </div>
+    <div>
+      <h4 id="i2">Taxpayer year for validation</h4>
+      <p class="text">Select the tax year for the return you will use to verify your identification. We will ask you for specific information from that return.</p>
+    </div>
+	 <div>
+      <h4 id="i3">Filing status</h4>
+      <p class="text">Select your income tax filing status for the year you selected.</p>
+    </div>
+	<div>
+      <h4 id="i4">Spouse Social Security number</h4>
+      <p class="text">Enter your spouse’s nine-digit Social Security number (SSN). If they do not have a SSN, <a href="https://www.tax.ny.gov/help/contact/" target="_blank" title="This will open a new window">Contact us</a>.</p>
+    </div>
+	 <div>
+      <h4 id="i5">E-mail address</h4>
+      <p class="text">Enter an email address where we can send your confirmation email. If you do not enter an email address, you will not receive a confirmation email and must print the Transaction Confirmation page when you submit your payment.</p>
+    </div>
+    <div>
+      <h4 id="i6">Assessment ID</h4>
+      <p class="text">Your assessment ID begins with the letter “L” and is found on your consolidated statement of tax liabilities. Enter your assessment ID in the following format: L-123456789.</p>
+    </div>
+    <div>
+      <h4 id="i7">Audit case ID</h4>
+      <p class="text">Your audit case ID begins with the letter “X” and is found on your statement of proposed audit change. Enter your audit case ID in the following format: X123456789.</p>
+    </div>
+    <div>
+      <h4 id="i8">Collection case ID</h4>
+      <p class="text">Your collection case ID begins with the letter “E” and is found on your collection notice. Enter your collection case ID in the following format: E-123456789.</p>
+    </div>
+    <div>
+      <h4 id="i9">Income execution ID</h4>
+      <p class="text">Your income execution (IE) ID begins with the letter “E” and is found on your Income Execution Billing Notice. Enter your IE ID in the following format: E 111111111-E222-3.</p>
+    </div>
+    <div>
+      <h4 id="i10">Installment payment agreement ID</h4>
+      <p class="text">Your IPA ID begins with the letter “E” and is found on your Installment Payment Agreement Billing Notice. Enter your IPA ID in the following format: E 111111111-D222-3.</p>
+    </div>
+   <div>
+      <h4 id="i11">Payment amount</h4>
+      <p class="text">Enter the payment amount as a positive number in dollar and cents format.</p> 
+<p class="text">Your amount due is shown on your bill. If you do not have your bill, you may login to your <a href="https://www.tax.ny.gov/online/" target="_blank" title="This will open a new window for more information.">Online Services</a> account to view your current balance. If you need additional assistance, please see Help.</p>
+    </div>
+  </div>
+</div>
+<!-- end of page-container --> 
+<script>
+    uiIncludes.footer.bShowTermsAndConditions = true;
+    </script> 
+<script>
+    uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+</html>

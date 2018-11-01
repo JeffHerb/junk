@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>View Your 1099-G Application</title>
+   <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+<!-- This uiscript.js JavaScript file is for UI testing only -->
+<script type="text/javascript" src="../../js/uiscript.js"></script>
+<!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  <!-- Banner Container [Start] --> 
+  <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script> 
+  <!-- Banner Container [End] --> 
+  <script type="text/javascript">
+        uiIncludes.header.setup();
+        </script> 
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li> <a class="navHeaderFirstLink navHeaderLastLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">View Your 1099-G Application</h1>
+  </div>
+  <div class="hr" id="hr"></div>
+  <h2>Individual Verification</h2>
+  <div id="pageInstructions">
+    <p class="text">Before you begin, you will need your New York State income tax return (Form IT-201, IT-201-X, IT-203 or IT-203-X) filed for one of the past five years. Provide the following filing information below. When finished, select <strong>Continue</strong>.</p>
+  </div>
+  <div id="legend">
+    <ul>
+      <li> <span class="required">*</span> Required fields </li>
+      <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+    </ul>
+  </div>
+  <div class="formWrapper">
+    <div class="leftFluid"></div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post">
+        <!-- Group 1 -->
+        
+        <div class="group">
+          <h4>Taxpayer information</h4>
+          <div class="linePn labelM masktoggle">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="maskedSSN">Social Security number (SSN):<span class="hidden">Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="password" id="maskedSSN" value="" size="11" maxlength="11" tabindex="1">
+              <a href="#i1" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="lastName"> Last name: <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="lastName" value="" size="30" maxlength="30" tabindex="1" />
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="suffix">Tax year:<span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required"> * </div>
+            </div>
+            <div class="dataPn">
+              <select id="suffix" tabindex="1">
+                <option value="1"   selected="selected">Select one</option>
+                <option value="2">2016</option>
+                <option value="3">2015</option>
+                <option value="4">2014</option>
+                <option value="5">2013</option>
+                <option value="6">2012</option>
+              </select>
+              <a href="#i2" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="taxableNYS">Total payments from return ($):<span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required"> * </div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">
+                <input type="text" id="taxableNYS" size="20" maxlength="20" tabindex="1">
+                <span class="appended-text">.00</span> </div>
+              <a href="#i3" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="zip2">ZIP/Postal code: <span class="hidden">Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="zip2" value="" size="10" maxlength="10" tabindex="1" />
+              <a href="#i4" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+        </div>
+        <div class="buttonGroup">
+          <input type="button" class="button primary" value="Continue" onclick="javascript:window.location.href='100PIGI_FINF01FilingInformation.html';" title="Continue" tabindex="1" />
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="instructionsFooter">
+    <h3>Instructions</h3>
+    <div class="instructions">
+      <h4 id="i1">Social Security number (SSN)</h4>
+      <p class="text">Enter your nine-digit Social Security number (SSN).  If you do not have an SSN, <a href="https://www.tax.ny.gov/help/contact/default.htm#1099" target="_blank" title="This will open a new window for more information.">contact us</a>.</p>
+    </div>
+    <div class="instructions">
+      <h4 id="i2">Tax year</h4>
+      <p class="text">Select the tax year for the return you will use to verify your identification. We will ask you for specific information from that return. </p>
+    </div>
+    <div class="instructions">
+      <h4 id="i3">Total payment from return</h4>
+      <p class="text">To locate the Total Payments you reported on your previously filed return, please refer to <a href="https://www.tax.ny.gov/e-services/otc/lookup-verification.htm" target="_blank" title="This will open a new window for more information.">Total payments verification</a>.</p>
+    </div>
+    <div class="instructions">
+      <h4 id="i4">ZIP/Postal code</h4>
+      <p class="text"> Enter a ZIP/postal code: US format 12345 or 123456789, Canadian format A1B 2C3. If your ZIP or postal code is for a country other than the United States or Canada, <a href="https://www.tax.ny.gov/help/contact/default.htm#1099" target="_blank" title="This will open a new window for more information.">contact us</a>. </p>
+    </div>
+  </div>
+</div>
+<!-- end of page-container --> 
+<script type="text/javascript">
+    uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+</html>

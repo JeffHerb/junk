@@ -1,0 +1,357 @@
+/* ResultSet Styles:
+	 ****************************************************************************** */
+/* Main container for Rset. Contains Header DIV, Table DIV and Footer DIV if applicable */
+div.rset {
+	display: block;
+	margin-top: 10px !important;
+	padding-left: 6px !important;
+}
+
+/* Contains <table>. Position must be relative (to the HTML) so the header positioned relative doesn't shift (big bug!) */
+div.rset_body {
+	border: 1px solid #BBB;
+	overflow-y: auto;
+	overflow-x: visible;
+	/*width: 97.5%; IE7*/
+	width: 99.3%;
+	position: relative;
+}
+
+/* xLock is the main class used for freezing columns. Should be used with rset_body: <div class="rset_body xLock"...> */
+div.xLock {
+	overflow-x: auto;
+	/*width: 98.6 %; IE7*/
+}
+
+/* When contained within a c50, a Rset must have less width due to extra padding/margin */
+div.c50 div.rset_body {
+	/*width: 96%; IE7*/
+	width: 98.5%;
+}
+
+div.rset_body table {
+	float: left;
+	/*width: 100%; IE7*/
+	/* 98.3%; If it's 100%, the scrollbar will overlap the last column */
+  /* this.parentNode.offsetHeight returns the height of the visible space + 2
+     this.offsetHeight returns the actual height of the table, not the height of the area displayed  */
+  width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '98.27%');
+}
+
+div.group div.group div.rset_body table {
+  width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '98.25%');
+}
+/* Example: NDC200 */
+div.group div.group div.group div.rset_body table {
+  width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '98.22%');
+}
+
+/* Removes sidescroll on rsets in IE7 due to extra space added to the right of the table */
+div.c50 div.rset_body table {
+  width: 96.312%;
+}
+
+
+
+/* Example: NRP865S */
+div.c50 div.group div.group div.rset_body table {
+	width: 100%;
+}
+
+
+div.rset_head {
+	width: 100%;
+	min-height: 23px;
+}
+
+/* Header's TR. Must be relatively positioned so it stays on top and doesn't move when scrolling */
+div.rset_body thead tr {
+  position: relative;
+  top: expression(this.offsetParent.scrollTop);
+	z-index: 10;
+}
+
+div.rset_body th {
+	background: #9B9B9B url(../../images/RsetTH.jpg) top left repeat-x;
+	padding: 2px;
+	text-align: left;
+	color: #333;
+	font-weight: bold;
+	vertical-align: top;
+	line-height: 1.19em;
+	height: 30px;
+	border-right: 1px solid #AAA;
+}
+
+div.rset_body thead th a:link, div.rset_body thead th a:visited {
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+
+div.rset_body thead th a:hover, div.rset thead th a:active {
+	text-decoration: none;
+}
+
+
+/* Column widths for special Rset columns */
+div.rset_body table col.icon {
+	width: 20px;
+}
+
+div.rset_body table col.ind1 {
+	/*width: 2.35em; IE7*/
+	width: 2.35em;
+  min-width: 2.35em;
+}
+
+div.rset_body table col.ind2 {
+	/*width: 3.55em; IE7*/
+	width: 3.55em;
+  min-width: 3.55em;
+}
+
+div.rset_body table col.indS1 {
+	/*width: 4.25em; IE7*/
+	width: 4.25em;
+  min-width: 4.25em;
+}
+
+div.rset_body tbody tr a:link, div.rset_body tbody tr a:visited,
+div.rset_body tbody tr a:hover, div.rset tbody tr a:active {
+	color: #000;
+	text-decoration: underline;
+}
+
+div.rset_body tbody td {
+	font-weight: normal;
+	border-right: 1px solid #AAA;
+	border-top: 1px solid #AAA;
+	padding: 0 2px;
+	vertical-align: top;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+/* Sets resulset's data to default case (however the data is formatted). Use like this: <div class="group caseNone"...> */
+div.caseNone div.rset_body table tr td, div.caseNone div.rset_body table tr td div.caseNone {
+	text-transform: none !important;
+}
+
+/* This is to make sure rows with checkboxes and radio buttons don't affect the <tr>'s height */
+div.rset_body tbody input {
+	margin: -1px 0px 0px 0px;
+}
+
+div.rset_body tbody select {
+	margin: 0px 0px -1px 0px;
+}
+
+/* Classes used to lock ResultSet's left/right columns - Must follow ResultSet's structure. Note on resultset.js (fx GetRsetBodyDiv()) */
+div.rset_body thead th.LockedL, div.rset_body thead th.LockedR	{
+	background: #888888 url(../../images/RsetTH_Frozen.jpg) top left repeat-x;
+}
+
+div.rset_body tbody td.LockedL, div.rset_body thead th.LockedL {
+	left: expression(this.parentNode.parentNode.parentNode.parentNode.scrollLeft);
+	position: relative;
+}
+
+div.rset_body tbody td.LockedR, div.rset_body thead th.LockedR {
+	left: expression(this.parentNode.parentNode.parentNode.parentNode.clientWidth - this.parentNode.parentNode.parentNode.parentNode.scrollWidth +  this.parentNode.parentNode.parentNode.parentNode.scrollLeft);
+	position: relative;
+}
+
+div.rset_body tbody td.LockedL {
+	border-left: 0px solid #999 !important;
+	border-right: 1px !important;
+}
+
+div.rset_body tbody td.LockedR {
+	border-left: 1px solid #AAA !important;
+	border-right: 0px !important;
+}
+
+div.rset_body thead th.LockedL, div.rset_body thead th.LockedR {
+	top: expression(this.scrollTop);
+}
+
+div.rset_body thead th.LockedL {
+	border-left: 0px !important;
+	border-right: 1px solid #AAA !important;
+}
+
+div.rset_body thead th.LockedR {
+	border-left: 1px solid #AAA !important;
+	border-right: 0px !important;
+}
+
+div.rset_body thead th.LockedL {
+  z-index: 2; /* Prevents cells from overlapping the locked columns when scrolling right */
+}
+
+/* Negative number style */
+div.rset_body tbody td span.nRed {
+	color: crimson;
+}
+
+/* Styles for ResultSet Title */
+div.rset_head div.float-left {
+	font-size: 120%;
+	font-weight: bold;
+	background-color: #FFFFFF;
+	border: 0px;
+	display: inline;
+	color: #333333;
+}
+
+/* No padding to header float-left/right sections */
+div.rset_head div.float-left, div.rset_head div.float-right {
+	padding: 0px;
+}
+
+/* Styles for Resize ResultSet Icon */
+div.rset_head div.float-right a, div.rset_head div.float-right button {
+	float: left;
+}
+
+/* Styles for ResultSet Resize button */
+div.rset_head div.float-right button.resizeRset {
+	height: 20px;
+	vertical-align: top;
+	margin: 3px 0px 2px 4px !important;
+	padding-right: 2px;
+}
+
+/* Rset's footer styles */
+div.rset_foot {
+	width: 100%;
+	background-color: #FFF;
+	text-align: right;
+	color: #4C6C99;
+}
+
+div.rset_foot label.totLabel {
+	padding-right: 3px;
+	white-space: nowrap;
+}
+
+div.rset_foot label.totLabel span {
+	color: #000;
+	padding: 0px 16px 0px 6px;
+}
+
+/* Sort Classes - Properly indents text */
+div.rset a.sort div {
+	padding-left: 12px;
+	margin-top: -1.2em;
+}
+
+div.rset a.sort img {
+	border: 0px;
+	padding: 2px 1px 0px 1px;
+	vertical-align: top;
+}
+
+/* For displaying rows and alternate rows with different background colors */
+tr.alternateRow {
+	background-color: #F1F1F1;
+}
+
+tr.normalRow {
+	background-color: #FFF;
+}
+
+/* Used to highlight selected row in page body resultsets */
+tr.highlight {
+	background-color: #fefeb6;
+}
+
+.list-inline li span {
+	white-space:nowrap;
+}
+
+div.rset a.sort_server {
+	background: transparent url(../../images/icon-sortwhite.gif) no-repeat left top;
+	padding-left: 16px;
+}
+
+/* Used to highlight selected row in page body resultsets */
+tr.highlight {
+	background-color: #FEFEB6;
+}
+
+/*  Used to highlight selected row in popups */
+tr.tableSelection {
+	background-color: #ccffcc;
+}
+
+/* Special Formatting - Adjustment ID styles */
+.codeS1 {
+	background-color: #007F00;
+	color: #FFF;
+}
+
+.codeS2 {
+	background-color: #DFDFDF;
+	color: #333;
+}
+
+/* Styles for different contrast settings */
+/* -------------------------------------- */
+.high div.rset_body {
+	border-color: #999;
+}
+
+.high div.rset_body th, .high div.rset_body tbody td {
+	border-color: #757575;
+}
+
+.high div.rset_body tbody td.LockedL,
+.high div.rset_body tbody td.LockedR,
+.high div.rset_body thead th.LockedL,
+.high div.rset_body thead th.LockedR  {
+	border-color: #666 !important;
+}
+
+.high div.rset_foot {
+	background-color: #FFF;
+	text-align: right;
+	color: #2B3F55;
+}
+
+.high tr.highlight {
+	background-color: #FFFF80;
+}
+
+.mono tr.highlight {
+	background-color: #D1D1D1;
+}
+
+.high div.rset_body thead th.LockedL, .high div.rset_body thead th.LockedR	{
+  background: #888888 url(../../images/RsetTH_Frozen.jpg) top left repeat-x;
+}
+
+
+
+/* Colored bars for IPA (e.g. CH7190) */
+.IPABar {
+  border: 1px solid #999999;
+  font-size: 10px;
+  line-height: 14px;
+  padding-left: 3px;
+  margin: 2px 0px;
+  color: white;
+}
+.IPARed {
+  width: 360px;
+  background-color: #DB0000;
+}
+.IPAYellow {
+  width: 240px;
+  background-color:#FF9900;
+}
+.IPAGreen {
+  width: 120px;
+  background-color: #008000;
+}

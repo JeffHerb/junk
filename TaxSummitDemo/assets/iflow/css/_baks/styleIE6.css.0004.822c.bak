@@ -1,0 +1,124 @@
+/*
+|==================================================================================|
+| State of New York Department of Taxation & Finance                               |
+| Created by: Web UI Team                                                          |
+| Date Created: 06/09/2008                                                         |
+| Description: Screen styles needed to properly render e-MPIRE pages on Internet   |
+|              Explorer 6.0. Only contains style definitions which do not work for |
+|              both 6.0 and 7.0. All other styles are contained in general*.css    |
+|              and resultset.css                                                   |
+|                                                                                  |
+| Change History (Include major changes/additions only)                            |
+| Date        Author            Description [fmk: framework changes also involved] |
+| -------------------------------------------------------------------------------- |
+| 06/09/2008  Craig Patik       Initial Baseline                                   |
+|==================================================================================|
+*/
+
+
+/* Solve issue of page_body being pushed to the right too far */
+#page_body div.mast {
+	margin-left: -1px;
+}
+
+/* Fixes problem on a few pages with cramped result sets where IE6 doesn't respect the rsetNotify padding */
+.rsetNotify {
+	float: none;
+	width: 1%;
+}
+
+
+/* This ensures that read-only data lines up with the labels */
+div.c33 label,
+div.c50 label,
+div.c67 label,
+div.c100 label,
+div.c33 span,
+div.c50 span,
+div.c67 span,
+div.c100 span {
+  line-height: 2.0em;
+	height: 100%;
+	vertical-align:baseline;
+}
+
+
+/* Lining up the header labels and data */
+div.split-area div.c50 div.c100 span,
+div.whole-area div.c100 span,
+div.whole-area div.c100 span.headerLabelLeft {
+	height: 100%;
+	line-height: 1.6em !important;
+	vertical-align:baseline;
+}
+
+
+/* Keeps div.groups inside c50s from appearing too far to the left */
+* div.c50 div.group,
+* div.c100 div.group {
+  margin: 3px 7px 6px 7px !important;
+  padding-bottom: 6px;
+}
+
+
+div.group div.group {
+	margin-left: 3px;
+}
+
+
+
+/* *** 9/24: This seems to cause an extra space to the right of some result sets in IE6 */
+/* In IE6, the scrollbar appears outside (to the left of) the result set, so using 100% width isn't an issue. If 100% is used with IE7, the scrollbar will overlap the last column. 
+div.rset_body,
+div.rset_body table {
+	width: 98.5%;
+}*/
+
+/* These two fix the horizontal position and margin of first-level groups or standalone result sets */
+div.rset {
+  width: 99.3%;
+}
+
+div.rset_body {
+	width: 98.4%;
+}
+
+div.group div.group div.rset_body table {
+  width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '98.25%');
+}
+/* Example: NDC200 */
+div.group div.group div.group div.rset_body table {
+  width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '98.22%');
+}
+
+div.c50 div.rset_body table {
+  width: expression( ((this.parentNode.offsetHeight-2) >= this.offsetHeight) ? '100%' : '96.312%');
+}
+
+div.group div.group div.c50 div.rset {
+	margin-left: 0px !important;
+}
+
+div.mast > div.group {   /* Must include greater-than, or else groups that take up 50% are shifted left too much */
+	margin-left: 1px !important;
+  width: 98.5%;
+}
+
+div.group div.group div.group {
+  width: 98.5%;
+}
+
+/* Example of where this is used: Release3/RP/NRP865 */
+div.group div.c50 div.group div.group {
+  width: 96.5%;
+}
+
+div.group div.c50 div.group div.group {
+	margin-left: 7px !important;
+}
+
+div#primaryBanner {
+	height: 73px;
+	background: url(../../images/headerbg.jpg) top left repeat-x;
+	white-space: nowrap;
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="en" data-user-type="tp">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title></title>
+    <meta name="format-detection" content="telephone=no">
+    <link href="../../assets/ols/css/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+    <div class="cui-hide-from-screen feta-hidden-jump-links">
+        <a href="#nav">Go to navigation</a>
+        <a href="#main">Go to content</a>
+    </div>
+
+    <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30"></div>
+    <script>
+        // Global objects for JSON objects and corresponding templates
+        var fetaData = {
+            templates: [],
+            tables: [],
+            environment: 'testing',
+            app: {
+                title: 'Add Employee',
+                userType: 'tp',
+            },
+            page: {
+                title: 'Client Assignment',
+            },
+        };
+
+        fetaData.banners = {
+            urls: {
+                userName: {
+                    href: 'https://www.tax.ny.gov/e-services/otc/help/tips_os.htm',
+                },
+                contactUs: {
+                    href: 'https://www.tax.ny.gov/help/contact/how_to_reach.htm',
+                },
+                logout: {
+                    href: 'Logoff?langId=-1&amp;storeId=10151&amp;catalogId=10001&amp;URL=StoreView',
+                },
+            },
+        };
+
+        fetaData.preferences = {
+            text: 'Preferences', // Optional, will default to 'Preferences'
+            isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+            items: [
+                 {
+                text: 'Edit personal information',
+                href: '#editinformation',
+            },
+             {
+                    text: 'Delete Tax Professional Account',
+                    href: '#deleteaccount',
+                },
+            ],
+        };
+
+        fetaData.helpMenu = {
+            text: 'Get Help', // Optional, will default to 'Help'
+            isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+            items: [
+                {
+                    text: 'Help Center',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                },
+                {
+                    text: 'Frequently asked questions (FAQs)',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                },
+                {
+                    text: 'Learn about online services',
+                    href: 'https://www.tax.ny.gov/online/moreinfo.htm',
+                },
+                {
+                    text: 'View demos and videos',
+                    href: 'https://www.tax.ny.gov/e-services/otc/demos/demo.htm',
+                },
+                {
+                    text: 'E-ZRep TR-2000',
+                    href: 'https://www.tax.ny.gov/e-services/otc/tr_2000_info.htm',
+                },
+                {
+                    type: 'divider',
+                },
+                {
+                    text: 'Support',
+                    href: 'https://www.tax.ny.gov/',
+                },
+                {
+                    text: 'Contact Us',
+                    href: 'https://www.tax.ny.gov/e-services/otc/contact_us.htm',
+                },
+            ],
+        };
+
+        fetaData.userAcct = {
+            name: 'John Smith',
+            legalName: 'TAX SUMMIT 2018',
+			id: 'XXX-XXX-0122',
+            type: 'Tax Professional',
+            role: 'Administrator',
+        };
+
+        fetaData.navigation = {
+            title: 'Menu', // Optional; this goes in the toggle button in the app banner
+            filter: {
+                type: 'text',
+                closeButton: true,
+            },
+            items: [
+                {
+                    text: 'Tax Professional',
+                    isHeader: true,
+                    items: [
+                        {
+                            text: 'Client summary',                            
+                        },
+                        {
+                            text: 'Employee summary',                        
+                        },                        
+                    ],
+                },
+                {
+                    "text": "Services",
+                    "isHeader": true,
+                    "items": [
+                        {
+                            "text": "Uploads",
+                            "items": [
+                                {
+                                    "text": "MCTMT upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81557&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "NYS-1 upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81558&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "NYS-45 upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81559&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "Wage reporting upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81560&clientFlag=N",
+                                    "target": "blank"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+        };
+    </script>
+
+    <div id="cui-body-wrapper">
+        <header class="feta-header"></header>
+
+        <!-- main content -->
+        <main role="main" id="main">
+            <h2 class="feta-page-title"></h2>
+
+            <form name="form1" id="form1" action="https://tax.ny.gov" method="post">
+                <section>
+                    <header>
+                        <h3>Client assignment</h3>
+                    </header>
+							  
+                    <div class="cui-row cui-inline-field">
+                        <div class="cui-col">
+                            <div class="cui-field">
+                                <div class="cui-field-main">
+                                    <div class="cui-label">
+                                        <span class="cui-desc">Employee:</span>
+                                    </div>
+                                    <div class="cui-data">
+                                        <span class="cui-value">USER, ULYSSES</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<script>
+    if (!fetaData.tables) {
+        fetaData.tables = [];
+    }
+
+    fetaData.tables.push(
+        {
+            container: '#employee-list',
+			  primaryCols: [0],
+						 secondaryCols:[1],
+            id: 'employee-list-table',
+            primaryColIndicies: [0, 1],
+            selectionType: 'multiple',
+                   filter: {
+                basic: {
+                    query: '', // Default
+                    label: "Client name or taxpayer ID",
+                    showClearButton: true,
+                    // url: "/FilterPage.jsp", // The presence of this property indicates that filtering will happen server-side
+                    rules: {
+                        matchAll: true, // Default
+                    matchText: {
+                                fuzzy: true, // Default
+                                columns: [1, 2],
+                        },
+                    },
+                },
+                advanced: {
+                    isOpen: false,
+                    // url: "/FilterPage.jsp", // The presence of this property indicates that filtering will happen server-side
+                    rows: [
+                        {
+                            type: 'checkbox-any',
+                            label: 'Role:',
+                            rules: [
+                                {
+                                    value: 'ADM', // This is for the server to consume; the client does not carry about this
+                                    checked: false, // Initial checked state
+                                    label: 'Business',
+                                    comparisons: [ // An array of comparisons that must be satisfied if the box is checked; if they are not all satisfied, the row will be filtered out
+                                        {
+                                            rowMetadata: 'emptype', // This means to look in the row's `metadata` object and find the `emptype` property
+                                            value: 'adm', // The row's `metadata.emptype` must match this
+                                        },
+                                    ],
+                                },
+                                {
+                                    value: 'MAN',
+                                    checked: false,
+                                    label: 'Individual',
+                                    comparisons: [
+                                        {
+                                            rowMetadata: 'emptype',
+                                            value: 'man',
+                                        },
+                                    ],
+                                },
+                                {
+                                    value: 'USE',
+                                    checked: false,
+                                    label: 'Fiduciary',
+                                    comparisons: [
+                                        {
+                                            rowMetadata: 'emptype',
+                                            value: 'use',
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            },
+            head: {
+                rows: [
+                    {
+                        columns: [
+
+                            {
+                                text: 'Client',
+                                attributes: {
+                                    'data-type': 'alpha',
+                                },
+                            },
+                            {
+                                text: 'Taxpayer ID',
+                                attributes: {
+                                    'data-type': 'alpha',
+                                }
+                            },
+
+                        ]
+                    }
+                ]
+            },
+            body: {
+                rows: [
+                ]
+            },
+        }
+    );
+</script>
+                        <div class="cui-row">
+                            <div id="employee-list" class="cui-col">
+                            </div>
+                        </div>
+			         <div class="cui-row">
+                        <div class="feta-button-group">
+							<button type="button" class="cui-button-primary" onclick="javascript:window.location.href='80_60ClientAssignment.html';">Save</button>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="cui-row">
+                    <div class="feta-button-group">
+					 <button type="button" class="cui-button" onclick="javascript:window.location.href='70_50AllClients.html';">Back</button>
+                        <button type="button" name="btn_client_summary" tabindex="1">Employee Summary</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+       
+        <footer class="feta-footer"></footer>
+
+        <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+    </div>
+
+    <nav role="navigation" class="feta-nav"></nav>
+
+    <script id="require" src="../../assets/ols/js/main.js"></script> 
+</body>
+</html>

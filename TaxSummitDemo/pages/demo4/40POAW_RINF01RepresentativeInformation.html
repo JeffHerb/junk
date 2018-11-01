@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Power of Attorney (POA)</title>
+<link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../assets/iflow/js/script.js"></script>
+<script type="text/javascript" src="../../assets/iflow/js/poaw/poaw.js"></script>
+<!-- This uiscript.js JavaScript file is for UI testing only -->
+<script type="text/javascript" src="../../assets/iflow/js/uiscript.js"></script>
+<!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a>
+  <!-- Banners -->
+  <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+        <li> <a class="navHeaderLastLink" href="#" title="Save &amp; Exit">Save &amp; Exit</a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header -->
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Power of Attorney (POA)</h1>
+    <div id="taxpayer-info">
+      <div class="leftFluid"> </div>
+      <div class="sectionBorder">
+        <div class="c33">
+          <div class="label"> Taxpayer ID: </div>
+          <div class="data"> XXX-XX-0123 </div>
+        </div>
+        <div class="c67">
+          <div class="label"> Taxpayer name: </div>
+          <div class="data"> JANE DOE </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Representative Information</h2>
+  <div id="pageInstructions">
+    <p class="text">Complete the following information for each representative you want to appoint.  To add additional representatives, select <strong>Add Another Representative</strong>. When finished, select <strong>Continue</strong>.
+</p>
+  </div>
+  <div id="legend">
+    <ul>
+      <li><span class="required">*</span> Required fields</li>
+      <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+    </ul>
+  </div>
+  <div id="errorMessages"></div>
+  <div class="formWrapper">
+    <div class="leftFluid"> </div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post" onsubmit="window.location.href='50POAW_REPS01RepresentativeSummary.html'; return false;">
+        <!-- Group 1 -->
+        <div class="group" id="rep_info">
+          <h4>Representative information</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="represType">Representative type:<span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <select id="represType" tabindex="1">
+                <option value="1">Select representative type</option>
+                <option value="2">NYS CPA</option>
+                <option value="3">Enrolled Agent</option>
+                <option value="4">NYS Attorney</option>
+                <option value="5">NYS Public Account</option>
+                <option value="6">Employee</option>
+                <option value="7" id="other">Other</option>
+              </select>
+              </div>
+          </div>
+          <div class="hidden checkblock" id="other_block">
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="describeOther">Describe other:<span class="hidden">Required field</span> </label>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <input type="text" id="describeOther" size="20" maxlength="200" value="" tabindex="1">
+              </div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="nytprin">NYTPRIN:</label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="nytprin" size="30" maxlength="30" value="" tabindex="1">
+              <a href="#i1" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="idField" class="hideOffScreen">Select an item from this list, then fill in the next field</label>
+                <select id="idField" class="dropdown-label" tabindex="1">
+                  <option value="1">Select ID type</option>
+                  <option value="2">Preparer tax identification number(PTIN)</option>
+                  <option value="3">Social Security number(SSN)</option>
+                  <option value="4">Federal employer identification number(EIN)</option>
+                </select>
+                </label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <label for="IdNumber" class="hideOffScreen">Please select an item from the previous drop down menu before filling in this field</label>
+              <input type="text" id="IdNumber" value="" size="12" maxlength="12" tabindex="1">
+               </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="firstName">First name:<span class="hidden"> Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="firstName" size="16" maxlength="16" value="" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="middleIn">Middle initial:</label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="middleIn" size="2" maxlength="1" value="" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="lastName">Last name:<span class="hidden"> Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="lastName" size="30" maxlength="138" value="" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="suffix1">Suffix:</label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <select id="suffix1" tabindex="1">
+                <option value="1">Select one</option>
+                <option value="2">II</option>
+                <option value="3">SR</option>
+                <option value="4">JR</option>
+                <option value="5">III</option>
+                <option value="6">IV</option>
+                <option value="7">V</option>
+                <option value="8">TRUSTEE</option>
+                <option value="9">ADMINISTRATOR</option>
+                <option value="10">EXECUTOR</option>
+                <option value="11">I</option>
+              </select>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="firmName">Firm name:</label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="firmName" size="30" maxlength="30" value="" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="phoneNumber"> Phone number: </label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="phoneNumber" value="" size="18" maxlength="18" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="ext"> Phone extension: </label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="ext" value="" size="3" maxlength="3" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="forPhoneNumber"> Foreign phone number: </label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="forPhoneNumber" value="" size="18" maxlength="18" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="emailAddress">Email address:</label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="email" id="emailAddress" value="" size="25" maxlength="64" tabindex="1">
+               </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="confirmEmailAddress">Confirm email address:</label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="email" id="confirmEmailAddress" value="" size="25" maxlength="64" tabindex="1">
+            </div>
+          </div>
+          <div class="buttonGroup">
+            <input type="button" class="button" value="Clear" title="Clear" tabindex="1" onclick="clearInfo()">
+          </div>
+        </div>
+        <div class="group" id="mailing_address">
+          <h4>Mailing address</h4>
+          <div class="groupInstructions">
+            <p class="text"> For foreign addresses, see <a href="https://www.tax.ny.gov/e-services/generic/foreignaddr.htm" target="_blank" title="This will open a new window for addition instructions for foreign addresses">additional instructions</a>. </p>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="attention">Attention:</label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="attention" value="" size="30" maxlength="30" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="streetAddress"> Street address: <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="streetAddress" value="" size="30" maxlength="30" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="city"> City: <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="city" value="" size="18" maxlength="18" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="state">U.S. state/Canadian province:</label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <select id="state" tabindex="1">
+                <option value="NY">New York</option>
+                <option value="FL">Florida</option>
+                <option value="ME">Maine</option>
+              </select>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="zip">ZIP/Postal code:</label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <input type="text" id="zip" value="" size="10" maxlength="10" tabindex="1">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="country"> Country: <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <select id="country" tabindex="1">
+                <option value="US">United States</option>
+                <option value="UK">England 1966196619664-2</option>
+                <option value="PE">Peru</option>
+              </select>
+            </div>
+          </div>
+          <div class="buttonGroup">
+            <input type="button" class="button" value="Clear" title="Clear" tabindex="1" onclick="clearAddress();">
+          </div>
+        </div>
+        <div class="buttonGroup">
+          <input type="button" class="button" value="Back" title="Back" tabindex="1" onclick="window.location.href='30POAW_GRAU01GrantAuthority.html';">
+          <input type="button" class="button" value="Add Another Representative" title="Add Another Representative" tabindex="1"onclick="window.location.href='40POAW_RINF01RepresentativeInformation.html';">
+          <input type="button" class="button primary" value="Continue" title="Continue" onclick="javascript:window.location.href='50POAW_RESP01RepresentativeSummary.html';" tabindex="1">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="instructionsFooter">
+    <h3>Instructions</h3>
+    <div>
+      <h4 id="i1">NYTPRIN</h4>
+      <p class="text">If applicable, enter your eight-digit New York tax preparer registration ID number (NYTPRIN). If you do not have a NYTPRIN, leave this field blank.
+</p>
+    </div>
+  </div>
+</div>
+<!-- end of page-container -->
+<script>
+    uiIncludes.footer.renderXHTML();
+    </script>
+
+
+
+</body>
+</html>

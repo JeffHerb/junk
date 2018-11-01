@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Power of Attorney (POA)</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>uiResponsive.setup(); uiIncludes.banners.display();</script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li>
+                        <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li>
+                        <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Power of Attorney (POA)</h1>
+            <div id="taxpayer-info">
+                <div class="leftFluid">
+                </div>
+                <div class="sectionBorder">
+                    <div class="c50">
+                        <div class="label"> Taxpayer ID: </div>
+						<div class="data"> XXX-XX-0123 </div>
+					</div>
+					<div class="c67">
+						<div class="label"> Taxpayer name: </div>
+						<div class="data"> JANE DOE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Title -->
+        <h2>Submit your POA</h2>
+        <div id="pageInstructions">
+            <p class="text">This transaction is not complete until you select <strong>Submit</strong> below. If you would like to attach a different file, select <strong>Edit</strong>.</p>
+        </div>
+       
+        <div id="errorMessages"></div>
+        <!-- Page Form -->
+        <div class="formWrapper">
+            <div class="leftFluid"></div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post" onsubmit="window.location.href='100FWCFMN01ESConfirmation.html'; return false;">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>POA Document</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Document ID:</div>
+                            </div>
+                            <div class="dataPn">
+                           POAW1800002165
+                            </div>
+                        </div>
+						<div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Form:</div>
+                            </div>
+                            <div class="dataPn">
+                             POA-1
+                            </div>
+                        </div>
+						
+                    </div>
+
+                    <div class="group">
+                        <h4>Attach documentation</h4>
+                        <div class="groupInstructions">
+						<p class="text">The attached document must have the document ID listed above and contain valid dates and signatures. We will ignore any other written changes to the POA. </p></div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Attached document:</div>
+                            </div>
+                            <div class="dataPn">
+                                <a href="#" tabindex="1">POA.pdf</a>
+                            </div>
+                        </div>
+                        <div class="buttonGroup">
+                            <input type="button" class="button" value="Edit" title="Edit" tabindex="1" onclick="window.location.href='\80FWRK_ATCH01AttachDocumentation.html';">
+                        </div>
+                    </div>
+                    <!-- Group 3 -->
+                    <div class="group">
+                        <h4>Verification</h4>
+                        <!--Taxpayer filing on their own behalf-->
+                        <div class="groupInstructions">
+                            <p class="text">
+                                By selecting <strong>Submit</strong> I acknowledge:</p>
+							<ul class="indentedList">
+							<li>The document attached contains the same information as I entered within the POA web application; and</li>
+							<li>I am authorized to attach this POA.</li>
+						   </ul>	 
+                        </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button hasOverlay primary" value="Submit" title="Submit" onclick="window.location.href='100FWCFMN01ESConfirmation.html';" tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script>
+    uiIncludes.footer.renderXHTML();
+    </script>
+
+</body>
+</html>

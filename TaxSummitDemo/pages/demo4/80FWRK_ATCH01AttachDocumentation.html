@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Power of Attorney (POA)</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a>
+                    </li>
+                    <li> <a class="navHeaderLastLink" href="#" title="Save &amp; Exit">Save &amp; Exit</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Power of Attorney (POA)</h1>
+            <div id="taxpayer-info">
+                <div class="leftFluid">
+                </div>
+                <div class="sectionBorder">
+                    <div class="c50">
+                        <div class="label"> Taxpayer ID: </div>
+						<div class="data"> XXX-XX-0123 </div>
+					</div>
+					<div class="c67">
+						<div class="label"> Taxpayer name: </div>
+						<div class="data"> JANE DOE </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Header -->
+        <h2>Attach POA</h2>
+        <div id="pageInstructions">
+		<p class="text"><strong>Important reminders before you attach your POA:</strong></p>
+           <ul class="indentedList">
+            <li>The POA form must be signed and dated.</li>
+            <li>We will ignore any handwritten changes on the POA form, with the exception of the taxpayer name, signature and date.</li>
+			<li>When you scan, your file name may not contain spaces and must have a doc, docx, tif, tiff, jpg, jpeg, png, or a pdf extension.</li>
+		   </ul>
+		   <p class="text">Instructions:</p>
+               <ol class="indentedList">
+			   <li> Scan the signed and dated POA form with no handwritten  changes into a <a href="https://www.tax.ny.gov/e-services/poaw/attach-doc.htm" target="_blank" title="This will open a new window for more information">single file.</a></li>
+			   <li>Browse to find the file.</li>
+				<li >Select <strong>Attach</strong> to upload your file into the web application.</li>
+				<li>When complete, select <strong>Continue</strong>. </li>
+				</ol>
+		</div>
+        <div id="legend">
+            <ul>
+                <li><span class="required">*</span> Required fields</li>
+            </ul>
+        </div>
+        <div id="errorMessages"></div>
+        <script>
+        // JSP DEVELOPER:
+        //
+        // To remove/delete a table item, call uiMethods.removeItem().
+        // Here, pass the row's index or item identifier,
+        // a string that describes the item the user is trying to remove,
+        // e.g. 'form', 'document', 'responsible person', etc. and
+        // the function object you use for running the removal code (.i.e. myRemoveItemFunction.)
+        //
+        // Example: onclick="uiMethods.removeItem(1, 'form', myRemoveItemFunction);"
+        //
+        // Please remove this comment section from your JSP.
+        // Example function to handle removing an item from a result set
+        function myRemoveItemFunction(oItemKey) {
+            // Put your code to remove the entry at lineNumber in the result set
+            alert(oItemKey);
+        }
+        </script>
+        <div class="formWrapper">
+            <div class="leftFluid">
+            </div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post" onsubmit="window.location.href='90FWVERF01ESVerification.html'; return false;">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Attachment information</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                   Document type:
+                                </div> 
+                            </div>
+                            <div class="dataPn">POA-1
+                            </div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="filePath">File path:
+                                        <span class="hidden">Required field.</span>
+                                    </label>
+                                </div>
+                                <div class="required">*</div>
+                            </div>
+                            <div class="dataPn">
+                                <input type="file" id="filePath" tabindex="1" value="" size="40" maxlength="40">
+                            </div>
+                        </div>
+                        <div class="buttonGroup">
+							<input type="button" class="button primary" value="Attach" title="Attach" tabindex="1" onclick="window.location.href='85FWRK_ATCH01AttachDocumentation.html';">
+                        </div>
+                        <div class="rset nav-table">
+                            <div class="rset_head">
+                                <div class="rset_title">Documents</div>
+                            </div>
+                            <div class="rset_body">
+                                <table id="table1" summary="Attached documentation">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-primary" scope="col">File name</th>
+                                            <th class="table-secondary" scope="col">Document type</th>
+                                            <th scope="col">File size</th>
+                                            <th class="center minWidth" scope="col">&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#" tabindex="1"></a></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="center minWidth">
+                                                <button type="button" class="icon-button icon-delete" tabindex="1" onclick="javascript:uiMethods.removeItem(1, 'document', '', myRemoveItemFunction);">Remove</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button" value="Back" title="Back" tabindex="1" onclick="window.location.href='75POAW_PFNP01PrintFinalizedPOA_Mockup_UploadNow.html';">
+                        <input type="button" class="button primary" value="Continue" title="Continue" tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script>
+    uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+</html>

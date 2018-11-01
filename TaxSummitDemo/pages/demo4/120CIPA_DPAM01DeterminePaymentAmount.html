@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Installment Payment Agreement</title>
+ <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script type="text/javascript" src="../../assets/iflow/js/script.js"></script>
+    <script type="text/javascript" src="../../assets/iflow/js/poaw/poaw.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script type="text/javascript" src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  
+  <!-- Banners --> 
+  <script>uiResponsive.setup(); uiIncludes.banners.display();</script> 
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a></li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li><a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Installment Payment Agreement</h1>
+    <!-- Progress Bar -->
+    <div id="taxpayer-info">
+      <div class="leftFluid"> </div>
+      <div class="sectionBorder">
+        <div class="c33">
+          <div class="label"> Taxpayer ID: </div>
+          <div class="data"> XXX-XX-0123 </div>
+        </div>
+        <div class="c67">
+          <div class="label"> Taxpayer name: </div>
+          <div class="data"> JANE DOE </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Determine Payment Amount</h2>
+  <div id="pageInstructions">
+    <p class="text">If you have any returns due that have not been filed or if you have previously defaulted on a payment agreement, you may not use this online service to request an installment payment agreement.  Please contact our Civil Enforcement Division at (518)457-1726.</p>
+    <p class="text"> Below is the current balance due that we will use to calculate your monthly payment agreement. Enter your payment details and select <strong>Calculate</strong>. When done, select <strong>Continue</strong>. </p>
+  </div>
+  <div id="legend">
+    <ul>
+      <li> <span class="required">*</span> Required fields </li>
+      <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+    </ul>
+  </div>
+  <div class="formWrapper">
+    <div class="leftFluid"> </div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post">
+        <!-- Group 1 -->
+        <div class="group">
+          <h4>Payment details</h4>
+          <div class="groupInstructions">
+            <p class="text">Select whether you want to calculate your monthly payment based on the payment amount, or the number of monthly payments you want to make. </p>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Total current balance due ($): </div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField"> 3,092.62 </div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="calculatPymtAmt">Calculate monthly payment amount based on:<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required">*</div>
+              </div>
+            <div class="dataPn">
+              <select id="calculatPymtAmt" tabindex="1">
+                <option value="1">Select one</option>
+                <option value="2" id="monthlyPymtAmt">Monthly payment amount</option>
+                <option value="3" id="nmbrMnths">Number of months</option>
+              </select>
+              <a href="#i1" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+          
+          <!-- Note that the ID of this block (fruitType) matches the class used on the options above. -->
+          <div class="hidden checkblock" id="monthlyPymtAmt_block">
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="monthlyPymtAmt">Monthly payment amount ($):<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <div class="moneyField">
+                  <input type="text" id="monthlyPymtAmt" value="" size="23" maxlength="23" tabindex="1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden checkblock" id="nmbrMnths_block">
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="numberMonths">Number of months:<span class="hidden">Required field</span></label>
+                </div>
+                <div class="required">*</div>
+              </div>
+              <div class="dataPn">
+                <div class="moneyField">
+                  <input type="text" id="numberMonths" value="" size="23" maxlength="23" tabindex="1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buttonGroup">
+			    <input type="button" class="button primary" value="Calculate" title="Clicking this button will update the values in the calculation section below." onclick="javascript:window.location.href='125CIPA_DPAM01DeterminePaymentAmount.html';" tabindex="1">
+          </div>
+        </div>
+        <div class="group">
+          <h4>Payment calculation</h4>
+          <div class="groupInstructions">
+            <p class="text"> Your monthly payment amount and number of monthly payments is shown below. To change this information, adjust your payment amount or number of monthly payments in the box above, and select <strong>Calculate</strong> again. The projected balance due shows the total amount that you will pay over the course of your payment agreement. </p>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Monthly payment amount ($): </div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField"></div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Number of monthly payments: </div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField"> </div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Projected balance due ($): </div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">  </div>
+            </div>
+          </div>
+        </div>
+        <div class="buttonGroup">
+          <input type="button" class="button" value="Back" tabindex="1" onclick="javascript:window.location.href='110CIPA_BSUM01BalanceSummary.html';" title="Back"/>
+          <input type="button" class="button primary" value="Continue" tabindex="1" title="Continue" />
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="instructionsFooter">
+    <h3>Instructions</h3>
+    <div>
+      <h4 id="i1">Calculate monthly payment amount based on</h4>
+      <p>We will use this information to determine the details of your payment agreement. </p>
+    </div>
+  </div>
+</div>
+<!-- end of page-container --> 
+<script type="text/javascript">uiIncludes.footer.renderXHTML();</script>
+</body>
+</html>

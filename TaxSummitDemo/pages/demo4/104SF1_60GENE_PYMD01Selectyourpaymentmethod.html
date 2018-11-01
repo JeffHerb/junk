@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Personal Income Tax Extension</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>uiResponsive.setup(); uiIncludes.banners.display();</script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Personal Income Tax Extension</h1>
+            <div id="taxpayer-info">
+                <div class="leftFluid">
+                </div>
+                <div class="sectionBorder">
+                    <div class="c33">
+                        <div class="label">
+                            Taxpayer ID:
+                        </div>
+                        <div class="data">
+                            XXX-XX-0123
+                        </div>
+                    </div>
+                    <div class="c67">
+                        <div class="label">
+                            Taxpayer name:
+                        </div>
+                        <div class="data">
+                           JANE DOE
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Title -->
+        <h2>Select Your Payment Method</h2>
+        <div id="pageInstructions">
+            <p class="text">Select your payment method below.</p>
+        </div>
+        <div id="errorMessages">
+        </div>
+        <!-- Page Form -->
+        <div class="formWrapper">
+            <div class="leftFluid">
+            </div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                 <!-- Group 1 -->
+                   <div class="group">
+                        <h4>Pay from bank account</h4>
+                        <div class="groupInstructions">
+                            <p class="text">By selecting <strong>Pay from Bank Account</strong>, the amount due will be paid with a direct debit from a checking or savings account. Please note, we will only debit the account for the amount authorized in this transaction. Monitor the bank account to verify that the payment is successful.</p>
+                        </div>
+                        <div class="buttonGroup">
+                            <input type="button" class="button primary" value="Pay from Bank Account" title="Pay from Bank Account" onclick="window.location.href='105SF1_70GENE_BANK03PayFromBankAccount_SaveAcct_Warehousing.html';"   tabindex="1">
+                        </div>
+                    </div>
+                    <!-- Group 2-->
+                    <div class="group">
+                        <h4>Pay by credit card or debit card</h4>
+                        <div class="groupInstructions">
+                            <p class="text">By selecting <strong>Pay by  Card</strong>, the cardholder can pay the amount due by MasterCard, Visa, American Express or Discover Card. There is a convenience fee charged by the card service provider to cover the cost of providing this service.  No part of the convenience fee goes to New York State. The tax payment and convenience fee will appear as two separate charges on the credit card statement.</p>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Convenience fee ($):</div>
+                            </div>
+                            <div class="dataPn">
+                                <div class="moneyField">56.25</div>
+                            </div>
+                        </div>
+                        <div class="buttonGroup">
+                            <input type="button" class="button primary" value="Pay by Card" title="Pay by Card" tabindex="1">
+                        </div>
+                    </div>
+                     <!-- Group 3-->
+                   <div class="group">
+                        <h4>Pay by check</h4>
+                        <div class="groupInstructions">
+                            <p class="text">By selecting <strong>Pay by Check</strong>, you can pay the amount due with a check submitted with a properly completed voucher to the appropriate address. If you select this option, you will be presented with a printable voucher with mailing instructions at the end of this transaction. To ensure that the payment is properly applied, be sure to include this voucher with your payment.</p>
+                        </div>
+                        <div class="buttonGroup">
+                            <input type="button" class="button primary" value="Pay by Check" title="Pay by Check" tabindex="1">
+                        </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button" value="Back" title="Back" onclick="window.location.href='103SF1_50RPXT_TYOW01TaxesYouOwe.html';" tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script>
+    uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+</html>

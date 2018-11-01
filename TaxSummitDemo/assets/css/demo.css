@@ -1,0 +1,75 @@
+
+.tax-demo-page .feta-footer-links{
+    display:none;
+}
+
+.tax-demo-page .feta-app-header{
+    display:none;
+}
+
+.tax-demo-page input[type="password"]{
+    max-width:100%;
+    min-width:1px;
+}
+
+.tax-demo-page ul.cui-messages li{
+    border:solid thin #cccccc;
+    border-radius:4px;
+    background:#f4f4f4;    
+    padding:8px 1em;
+    color:#333333;
+    font-size:14px;
+}
+
+.tax-demo-page .tax-login-header{
+    background: #003463 10px 5px no-repeat url("../images/ny_map.png");
+    color:#ffffff; 
+    padding:10px 6px 10px 74px;    
+}
+
+.tax-demo-page .tax-login-header h3{
+    color:#ffffff;
+    font-family:"Times New Roman", Times, serif;
+    font-weight:normal;
+    font-size:24px;
+}
+
+
+.tax-demo-button{
+    background:#d7ebf9;
+    border-color:#aed0ea;
+    color:#2779aa;
+    font-weight:bold;
+}
+.tax-demo-button:hover{
+    background:#d7ebf9;
+}
+
+.tax-demo-button.logout{
+    font-size:14px;
+    padding:4px 6px;
+}
+
+.tax-summit-nyg-header{
+    background:#003463;
+    color:#ffffff;
+    padding:12px 5px;
+    font-size:18px;
+}
+
+.tax-summit-nyg-header ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+.tax-summit-nyg-header li{
+    display: inline-block;
+    margin-left:26px;
+}
+
+.tax-summit-nyg-header a,
+.tax-summit-nyg-header a:hover{
+    text-decoration: none;
+    color:#ffffff;
+}

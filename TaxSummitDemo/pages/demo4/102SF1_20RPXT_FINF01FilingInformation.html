@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Personal Income Tax Extension</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Personal Income Tax Extension</h1>
+
+        </div>
+        <div id="taxpayer-info">
+            <div class="leftFluid"></div>
+            <div class="sectionBorder">
+                <div class="c33">
+                    <div class="label">Taxpayer ID:</div>
+                    <div class="data">XXX-XX-0123</div>
+                </div>
+                <div class="c67">
+                    <div class="label">Taxpayer name:</div>
+                    <div class="data">JANE DOE</div>
+                </div>
+            </div>
+        </div>
+        <h2>Filing Information</h2>
+        <div id="pageInstructions">
+          <p class="text"> Complete the following information and select <strong>Continue</strong>. </p>
+
+        </div>
+        <!--legend begin-->
+        <div id="legend">
+            <ul>
+             <li><span class="required">*</span> Required fields</li>
+                <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+            </ul>
+        </div>
+        <!--legend end-->
+        <div id="errorMessages"></div>
+        <div class="formWrapper">
+            <div class="leftFluid"></div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Filing information</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    Tax year:
+                                </div>
+                            </div>
+                            <div class="dataPn">
+                             2018
+                            </div>
+                        </div>
+						<div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    Filer type:
+                                </div>
+                            </div>
+                            <div class="dataPn">
+                             Individual
+                            </div>
+                        </div>
+                        
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="select1">Filing status:<span class="hidden"> Required field</span></span>
+                                        </label>
+                                    </div>
+                                    <div class="required">*</div>
+                                </div>
+                            <div class="dataPn">
+                              <select id="select1" tabindex="1">
+                                    <option value="1" selected="selected">Select one</option>
+                                        <option value="1">Single (1)</option>
+                                    <option value="2">Married filing joint return</option>
+                                    <option value="3">Married filing separate return</option>
+                                    <option value="4">Head of household</option>
+                                    <option value="5">Qualifying widow(er) with dependent child</option>
+                                </select>
+                             </div>
+                        </div>
+                        
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="specialCondition">Special condition:</label>
+                                </div>
+                            </div>
+                            <div class="dataPn">
+                              <select id="specialCondition" tabindex="1">
+                                    <option value="1" selected="specialCondition">Select one</option>
+                                      <option value="1">Out of country (E3)</option>
+                <option value="2">Nonresident alien (E4)</option>
+                <option value="3">Electing large partnership (B5)</option>
+                 <option value="4">Death of Spouse (D9)</option>
+                                </select>
+                            <a href="#i1" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+                        </div>
+                        </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button primary" value="Continue" title="Continue" onclick="window.location.href='103SF1_50RPXT_TYOW01TaxesYouOwe.html';" tabindex="1">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="instructionsFooter">
+            <h3>Instructions</h3>
+              <div>
+                <h4 id="i1">Special condition</h4>
+                <p class="text">
+        Please select the special condition that may apply to your filing period. (This doesn't apply to everyone.)
+      </p>
+      <ul class="indentedList">
+        <li>
+          Out of country (E3) - Use this code if you qualify for an automatic two-month extension of time to file your federal and New York State income tax returns because you are out of the country and you need an additional four months to file. This code typically applies to U.S. citizens abroad.
+        </li>
+        <li>
+          Nonresident alien (E4) - Use this code if you are a U.S. nonresident alien for federal income tax purposes, or a nonresident alien estate or trust and you qualify to file your federal and New York State income tax returns on June 15, 2017, and you need an additional six months (five months for nonresident alien estate or trust) to file. This code typically applies to U.S. citizens abroad.
+        </li>
+        <li>Electing large partnership (B5) - Use this code if you are an electing large partnership and need an additional six months to file or qualify for an additional six months to file.</li>
+				<li>Death of Spouse (D9) -  Use this code if you qualify for an automatic Ninety-day extension of time to file your return because your spouse died within thirty days before the due date of your return.</li>
+
+      </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script>
+    uiIncludes.footer.renderXHTML();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Personal Income Tax Extension</title>
+<link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+<!-- This uiscript.js JavaScript file is for UI testing only -->
+<script src="../../assets/iflow/js/uiscript.js"></script>
+<!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  <!-- Banners --> 
+  <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script> 
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Personal Income Tax Extension</h1>
+    <div id="taxpayer-info">
+      <div class="leftFluid"> </div>
+      <div class="sectionBorder">
+        <div class="c33">
+          <div class="label"> Taxpayer ID: </div>
+          <div class="data"> XXX-XX-0123 </div>
+        </div>
+        <div class="c67">
+          <div class="label"> Taxpayer name: </div>
+          <div class="data"> JANE DOE </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page Title -->
+  <h2>Review and Verify</h2>
+  <div id="pageInstructions">
+    <p class="text">
+    <p class="text">The transaction is not complete until you select <strong>Submit</strong>. Carefully review all information below and read the eSignature statement. If you didn't pay the amount due in full or the bank is unable to process this payment, the taxpayer may incur additional penalty and interest. If you would like to make changes to the information you can select <strong>Edit</strong> in the appropriate box.</p>
+    </p>
+  </div>
+  <div id="errorMessages"> </div>
+  <!-- Page Form -->
+  <div class="formWrapper">
+    <div class="leftFluid"> </div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post">
+        <!-- Group 1 -->
+        <div class="group">
+          <h4>Filing information</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Tax year: </div>
+            </div>
+            <div class="dataPn">2018</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Filer type: </div>
+            </div>
+            <div class="dataPn"> Individual </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Filing status: </div>
+            </div>
+            <div class="dataPn"> Single</div>
+          </div>
+         <!-- <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Special condition: </div>
+            </div>
+            <div class="dataPn"> </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Claiming disaster relief: </div>
+            </div>
+            <div class="dataPn"> Hurricane Irene </div>
+          </div>-->
+          <div class="buttonGroup">
+            <input type="button" class="button" value="Edit"  title="Edit" onclick="window.location.href='102SF1_20RPXT_FINF01FilingInformation.html';" tabindex="1">
+          </div>
+        </div>
+       <!-- <div class="group">
+          <h4>Spouse information</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Spouse's Social Security number (SSN): </div>
+            </div>
+            <div class="dataPn"> XXX-XX-6532 </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Spouse's name: </div>
+            </div>
+            <div class="dataPn"> Jane  M. Smith </div>
+          </div>
+          <div class="buttonGroup">
+            <input type="button" class="button" value="Edit"  title="Edit" tabindex="1">
+          </div>
+        </div>-->
+        <div class="group">
+          <h4>Taxes you owe</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Taxes you are subject to: </div>
+            </div>
+            <div class="dataPn"> New York State/New York City</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Sales and use tax ($): </div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField"> 0.00 </div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Total payment amount ($): </div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField"> 2,500.00 </div>
+            </div>
+          </div>
+          <div class="buttonGroup">
+            <input type="button" class="button" value="Edit"  title="Edit" onclick="window.location.href='103SF1_50RPXT_TYOW01TaxesYouOwe.html';" tabindex="1">
+          </div>
+        </div>
+        <!-- Group 2 -->
+        <div class="group">
+          <h4>Payment details</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Payment method: </div>
+            </div>
+            <div class="dataPn"> Pay from Bank Account </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Bank name: </div>
+            </div>
+            <div class="dataPn">STATE EMPLOYEES FEDERAL CR</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Bank routing number: </div>
+            </div>
+            <div class="dataPn"> 221373383 </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Bank account number: </div>
+            </div>
+            <div class="dataPn"> 12345 </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Account type: </div>
+            </div>
+            <div class="dataPn"> Personal checking </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Account holder: </div>
+            </div>
+            <div class="dataPn"> Jane Doe </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Payment for: </div>
+            </div>
+            <div class="dataPn"> Personal Income Tax Extension </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Due date: </div>
+            </div>
+            <div class="dataPn"> 04/15/2019 </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Payment date: </div>
+            </div>
+            <div class="dataPn"> 04/15/2019</div>
+          </div>
+		     <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Amount due ($): </div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField"> 2,500.00 </div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Payment amount ($): </div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField"> 2,500.00 </div>
+            </div>
+          </div>
+          <div class="buttonGroup">
+            <input type="button" class="button" value="Edit"  title="Edit" onclick="window.location.href='105SF1_70GENE_BANK03PayFromBankAccount_SaveAcct_Warehousing.html';" tabindex="1">
+          </div>
+        </div>
+        <!--<div class="group">
+          <h4>Payment details</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Payment method:</div>
+            </div>
+            <div class="dataPn">By check</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Payment for:</div>
+            </div>
+            <div class="dataPn">Personal Income Tax Extension</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Amount due ($):</div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">50.00</div>
+            </div>
+          </div>
+          <div class="buttonGroup">
+            <input type="button" class="button" value="Edit" onclick="';" title="Edit " tabindex="1">
+          </div>
+        </div>
+        <div class="group">
+          <h4>Payment details</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Payment method:</div>
+            </div>
+            <div class="dataPn">Credit card</div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Total amount due ($):</div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">50.00</div>
+            </div>
+          </div>
+          <div class="buttonGroup">
+            <input type="button" class="button" value="Edit" onclick="';" title="Edit" tabindex="1">
+          </div>
+        </div>-->
+        <!-- Group 3 -->
+        <!--<div class="group">
+          <h4>eSignature</h4>
+          <!--Authenticated, no payment -  Individual, Fiduciary, Business taxpayer
+-->
+          <!--<div class="groupInstructions">
+            <p class="text">By selecting <strong>Submit</strong>, I understand and agree that I am electronically signing and filing this request for an extension. I certify that I am authorized by the taxpayer to file this request for an extension and that all information provided on the extension is true, correct and complete.</p>
+          </div>
+        </div>
+        <!--Group 4
+        <div class="group">
+          <h4>eSignature</h4>
+          <!--Authenticated, no payment -  Tax Professional on a taxpayer’s behalf 
+
+          <div class="groupInstructions">
+            <p class="text">By selecting <strong>Submit</strong>, I understand and agree that I am electronically signing and filing this request for an extension. The taxpayer’s completion of the Tax Information Access and Transaction Authorization (either online or on Form TR-2000), authorizing me to file this request for extension, and my submission of this extension will, together, serve as the taxpayer’s authorized signature on the extension.  I certify, to the best of my knowledge and belief that all information provided on the request for extension is true, correct and complete and that I have provided a copy of the extension to the taxpayer.</p>
+          </div>
+        </div>
+        
+        <!--Group 5
+        <div class="group">
+          <h4>eSignature</h4>
+          <!--Authenticated, , pay by check -  Individual, Fiduciary, Business taxpayer
+
+          <div class="groupInstructions">
+            <p class="text">By selecting <strong>Submit</strong>, I understand and agree that I am electronically signing and filing this request for an extension.  I certify that all information provided on the request for extension is true, correct and complete, and that I am authorized by the taxpayer to file this extension.   I further certify that the amount indicated as due will be paid by check and I understand and agree that to be considered timely paid, the mailing of the check must be postmarked on or before the due date.</p>
+          </div>
+        </div>
+        
+        <!--Group 6
+        <div class="group">
+          <h4>eSignature</h4>
+          <!--Authenticated, pay by check -  Tax Professional on a taxpayer’s behalf 
+
+          <div class="groupInstructions">
+            <p class="text">By selecting <strong>Submit</strong>, I understand and agree that I am electronically signing and filing this request for an extension. The taxpayer’s completion of the Tax Information Access and Transaction Authorization (either online or on Form TR-2000), authorizing me to file this request for extension, and my submission of this extension will, together, serve as the taxpayer’s authorized signature on the extension.  I certify, to the best of my knowledge and belief that all information provided on the request for extension is true, correct and complete and that I have provided a copy of the extension to the taxpayer. I further certify that the taxpayer has agreed to make payment of the amount indicated as due by check and understands and agrees that to be considered timely paid, the mailing of the check must be postmarked on or before the due date.</p>
+          </div>
+        </div>
+        <!--Group 7
+        <div class="group">
+          <h4>eSignature</h4>
+          <!--Authenticated, pay by ACH debit -  Individual, Fiduciary, Business taxpayer 
+
+          <div class="groupInstructions">
+            <p class="text">By selecting <strong>Submit</strong>, I understand and agree that I am electronically signing and filing this request for an extension.  I certify that I am authorized by the taxpayer to file this request for an extension and that all information provided on the extension is true, correct and complete.</p>
+            <p class="text">If financial institution account information has been provided on the request for an extension, I certify that the account holder has agreed to payment of the amount(s) indicated by electronic funds withdrawal, that the account holder has authorized the New York State Tax Department and its designated financial agents to initiate an electronic funds withdrawal(s) from the financial institution account, and that the designated financial institution is authorized to debit the entry to the account. I understand and agree that this authorization for payment may be revoked only by contacting the Tax Department no later than five (5) business days prior to the payment date. </p>
+          </div>
+        </div>-->
+        <!--Group 8
+        <div class="group">
+          <h4>eSignature</h4>
+          <!--Authenticated, pay by ACH debit -  Tax Professional on behalf of taxpayer 
+
+          <div class="groupInstructions">
+            <p class="text">By selecting <strong>Submit</strong>, I understand and agree that I am electronically signing and filing this request for an extension. The taxpayer's completion of the Tax Information Access and Transaction Authorization (either online or on Form TR-2000), authorizing me to file this request for extension, and my submission of this extension will, together, serve as the taxpayer's authorized signature on the extension. I certify, to the best of my knowledge and belief that all information provided on the request for extension is true, correct and complete and that I have provided a copy of the extension to the taxpayer.  </p>
+            <p class="text">If financial institution account information has been provided on the request for an extension, I certify that the account holder has agreed to payment of the amount(s) indicated by electronic funds withdrawal, that the account holder has authorized the New York State Tax Department and its designated financial agents to initiate an electronic funds withdrawal(s) from the financial institution account, and that the designated financial institution is authorized to debit the entry to the account. I understand and agree that this authorization for payment may be revoked only by contacting the Tax Department no later than five (5) business days prior to the payment date.</p>
+          </div>
+        </div>-->
+        
+        <!--Group 9-->
+        <!--<div class="group">
+          <h4>eSignature</h4>
+          <!--Authenticated, pay by Credit Card (prior to filing confirmation)  -  Individual, Fiduciary, Business taxpayer 
+
+          <div class="groupInstructions">
+            <p class="text">By selecting <strong>Submit</strong>, I understand and agree that I am electronically signing and filing this request for an extension.  I certify that I am authorized by the taxpayer to file this request for an extension and that all information provided on the extension is true, correct and complete.</p>
+            <p class="text">I further certify that the payment of the amount indicated as due will be made by a card payment transaction and understand that proper completion of the transaction is accomplished by selecting <strong>Continue & Pay</strong> on the Confirmation Page and thereafter submitting the necessary card payment information and that if the tax payment is not successfully processed or is not accepted by the due date, the taxpayer may be subject to any applicable penalties and interest charges.</p>
+          </div>
+        </div>
+        <!--Group 10-->
+        <div class="group">
+          <h4>eSignature</h4>
+          <!--Authenticated, pay by Credit Card (prior to filing confirmation)  - Tax Professional on behalf of taxpayer 
+-->
+          <div class="groupInstructions">
+            <p class="text">By selecting <strong>Submit</strong>, I understand and agree that I am electronically signing and filing this request for an extension. The taxpayer's completion of the Tax Information Access and Transaction Authorization (either online or on Form TR-2000), authorizing me to file this request for extension, and my submission of this extension will, together, serve as the taxpayer's authorized signature on the extension. I certify, to the best of my knowledge and belief, that all information provided on the request for extension is true, correct and complete and that I have provided a copy of the extension to the taxpayer.</p>
+            <p class="text">I further certify that the taxpayer has agreed to make payment of the amount indicated as due by a card payment transaction and understands that proper completion of the transaction is accomplished by selecting <strong>Continue & Pay</strong> on the Confirmation Page and thereafter submitting the necessary card payment information and that if the tax payment is not successfully processed or is not accepted by the due date, the taxpayer may be subject to any applicable penalties and interest charges. </p>
+          </div>
+        </div>
+        <div class="buttonGroup">
+          <input type="button" class="button hasOverlay primary" value="Submit" title="Submit" onclick="window.location.href='107SF1_90FWCFMN01ESConfirmation_RPXT.html';"  tabindex="1">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- end of page-container --> 
+<script>
+    uiIncludes.footer.renderXHTML();
+    </script> 
+</body>
+</html>

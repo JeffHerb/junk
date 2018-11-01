@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Tax Professional Account Creation</title>
+<link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+<!-- This uiscript.js JavaScript file is for UI testing only -->
+<script src="../../assets/iflow/js/uiscript.js"></script>
+<!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  <!-- Banners --> 
+  <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script> 
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li> <a class="navHeaderFirstLink navHeaderLastLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Tax Professional Account Creation</h1>
+  </div>
+  <div class="hr"> </div>
+  <h2>Questionnaire</h2>
+  <div id="pageInstructions">
+    <p class="text">Complete the following information and then select <strong>Continue</strong>. To return to the previous page, select <strong>Back</strong>.</p>
+  </div>
+  <!--legend begin-->
+  <div id="legend">
+    <ul>
+      <li><span class="required">*</span> Required fields</li>
+      <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+    </ul>
+  </div>
+  <!--legend end-->
+  <div id="errorMessages"></div>
+  <div class="formWrapper">
+    <div class="leftFluid"> </div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post">
+        <!-- Group 1 -->
+        <div class="group">
+          <h4>Questionnaire</h4>
+          <fieldset>
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <legend> <span class="legendWrap">Do you have an Electronic filer identification number (EFIN)? <span class="hidden">Required field</span> </span> </legend>
+                </div>
+                <div class="required"> * </div>
+              </div>
+              <div class="dataPn">
+                <label for="efin_Y">Yes</label>
+                <input type="radio" name="efin" id="efin_Y" value="" tabindex="1">
+                <label for="efin_N">No</label>
+                <input type="radio" name="efin" id="efin_N" value="" tabindex="1">
+                <a href="#i1" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+            </div>
+          </fieldset>
+          <div class="hidden checkblock" id="efin_N_block">
+            <div class="linePn labelM">
+              <div class="labelPn">
+                <div class="labelWrap">
+                  <label for="typeOfId">I am a: <span class="hidden">Required field.</span> </label>
+                </div>
+                <div class="required"> * </div>
+              </div>
+              <div class="dataPn">
+                <select id="typeOfId" class="valueDepDropdown" tabindex="1">
+                  <option value="" selected="selected">Select one</option>
+                  <option value="1" id="attorney">New York State Attorney</option>
+                  <option value="2" id="cpa">New York State Certified Public Accountant (CPA)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="buttonGroup">
+          <input type="button" class="button primary" value="Continue" onclick="javascript:window.location.href='20_70OSTP_TPCP01TaxProfessionalIdentificationCPA_Attorney.html';" title="Continue" tabindex="1">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="instructionsFooter">
+    <h3>Instructions</h3>
+    <div>
+      <h4 id="i1">Electronic filer identification number (EFIN)</h4>
+      <p class="text">A six-digit number issued by the Internal Revenue Service (IRS).</p>
+    </div>
+  </div>
+</div>
+<!-- end of page-container --> 
+<script>
+    uiIncludes.footer.bShowTermsAndConditions = true;
+    </script> 
+<script>
+    uiIncludes.footer.renderXHTML();
+    </script> 
+
+</body>
+</html>

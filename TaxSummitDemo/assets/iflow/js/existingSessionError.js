@@ -1,0 +1,7 @@
+/*! New York State Department of Taxation & Finance External Applications
+ *  @description  Iflow External Applications
+ *  @version      4.2.55.REL20180514
+ *  @copyright    2018 New York State Department of Taxation & Finance
+ */
+
+!function(){function _setup(){try{var html,pageContainer=document.getElementById("pageContainer");return html='<a href="#main" id="skipnav">skip navigation</a>',html+='<div id="pageHeader"><h1 id="main">',document.title?html+=uiUtil.trim(document.title)||"&nbsp;":html+="&nbsp;",html+='</h1></div><div class="hr" id="hr"></div><div id="pageInstructions"><div id="errorPageMessage"><p class="text">This application is either open in another window or was not properly closed during your last session. If it is open in another window, please return to that window to continue. Otherwise, to resume your current session, select <strong>Continue</strong> to restart your session in this window.</p></div></div>',pageContainer.innerHTML=html+pageContainer.innerHTML,setTimeout(function(){document.body.innerHTML+=uiIncludes.footer.renderXHTML({returnHTML:!0}),uiResponsive.setup(),setTimeout(uiIncludes.banners.display,10)},10),!0}catch(e){return uiUtil.errorHandling.jsLog.addEntry(e,arguments),!1}}try{if(!(document&&document.body&&document.body.getElementsByTagName))throw new Error("Document not ready, cannot render page yet");_setup()}catch(e){window.attachEvent||"function"!=typeof domready?uiUtil.attachEvent(window,"load",_setup):domready(_setup)}}();

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Power of Attorney (POA)</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script type="text/javascript" src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script type="text/javascript" src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a></li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li><a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Power of Attorney (POA)</h1>
+            <!-- Taxpayer Information -->
+            <div id="taxpayer-info">
+                <div class="leftFluid">
+                </div>
+                <div class="sectionBorder">
+                    <div class="c50">
+                        <div class="label"> Taxpayer ID: </div>
+                        <div class="data"> XXX-XX-0123 </div>
+                    </div>
+                    <div class="c67">
+                        <div class="label"> Taxpayer name: </div>
+                        <div class="data"> JANE DOE </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Taxpayer Information -->
+        </div>
+        <!-- End Page Header -->
+        <!-- Main title bottom border -->
+        <div class="hr hidden" id="hr"></div>
+        <!-- End Main title bottom border -->
+        <!-- Page Title -->
+        <h2>Print POA for Signature</h2>
+        <!-- Page Instructions -->
+        <!--
+            <div id="pageInstructions">
+                <p class="text">Need text...</p>
+            </div>
+        -->
+        <!-- End Page Instructions -->
+        <!-- Legend -->
+        <div id="legend">
+            <ul>
+                <!-- <li><span class="required">*</span> Required fields</li> -->
+                <!-- <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li> -->
+            </ul>
+        </div>
+        <!-- End Legend -->
+        <!-- Error Messages -->
+        <div id="errorMessages">
+        </div>
+        <!-- End Error Messages -->
+        <!-- XHTML code for developer's JSP [Start] -->
+        <div class="formWrapper">
+            <div class="leftFluid"></div>
+            <div class="mainGroups">
+                <!-- Page Form -->
+                <form name="form1" id="form1" action="" method="post">
+                    <div class="group">
+                        <h4>Print your POA</h4>
+                        <div class="groupInstructions">
+                            <p class="text">Your information has been saved and your POA is ready for printing.</p>
+                            <ol class="indentedList">
+                                <li>Print the POA form.</li>
+                                <li>Sign and date the form.</li>
+                                <li>When you have successfully printed, signed and dated the POA, select <strong>Continue</strong>.</li>
+                            </ol>
+                            <p class="text">If you are unable to print, scan and submit the POA now, you can close the application and return later to submit your POA.</p>
+                        </div>
+                        <div class="buttonGroup">
+                            <input type="button" class="button primary" value="View/Print Form" title="View/Print Form" tabindex="1" onclick="window.open('../../assets/files/POA.pdf');">
+                        </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button primary" value="Continue" title="Continue" tabindex="1" onclick="window.location.href='80FWRK_ATCH01AttachDocumentation.html';">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- XHTML code for developer's JSP [End] -->
+    </div>
+    <script>
+        uiIncludes.footer.bShowTermsAndConditions = true;
+    </script>
+    <script>
+        uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+</html>

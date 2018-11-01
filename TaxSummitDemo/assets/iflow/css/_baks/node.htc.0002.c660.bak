@@ -1,0 +1,44 @@
+<Public:component>
+<public:property name='collapsed' />
+</Public:component>
+
+<script language="jscript">
+
+attachEvent("onreadystatechange", onload);
+
+function onload()
+{
+    if (children.tags("ul").length > 1 )
+    {
+       alert("ERROR: Corrupt tree: " + innerHTML);
+    }
+    else
+    {
+      if (children.tags("ul").length > 0 )
+      {
+	if ( element.getAttribute('collapsed')==null )
+        {
+    	    var t = "<img style='position:relative' src='images/tree_closed.gif'>";
+            insertAdjacentHTML("AfterBegin", t);
+	    if (children.tags("ul").length > 0) children.tags("ul").item(0).style.display="none";
+	}
+        else
+        {
+	    var t = "<img style='position:relative; padding-left:25px' src='images/tree_open.gif'>";
+            insertAdjacentHTML("AfterBegin", t);
+	    if (children.tags("ul").length > 0) children.tags("ul").item(0).style.display="";
+	}
+
+      }
+      else
+      {
+        var t = "<img style='position:relative; padding-left:10px' src='images/tree_none.gif'>";
+	insertAdjacentHTML("AfterBegin", t);
+      }
+    }
+}
+
+
+
+</script>
+

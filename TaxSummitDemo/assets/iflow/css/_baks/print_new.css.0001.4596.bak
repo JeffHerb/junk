@@ -1,0 +1,22 @@
+/*
+|==================================================================================|
+| State of New York Department of Taxation & Finance                               |
+| e-MPIRE Application: print.css                                                   |
+| Created by: ITS UI Team                                                          |
+| Date Created: 04/01/2008                                                         |
+| Description: Print styles needed to properly print external web pages.           |
+|                                                                                  |
+| Change History (Include major changes/additions only)                            |
+| Date        Author            Description                                        |
+| -------------------------------------------------------------------------------- |
+| 04/01/2008  Craig Patik       Initial Baseline                                   |
+| 09/15/2008  Manolo Farfan     Made changes to initial baseline                   |
+|==================================================================================|
+*/
+
+/*
+Import style.css here so the styles can be overwritten if necessary. It's more 
+readable to define them in this separate file than to add @media print inside 
+style.css.
+*/
+@import url("style.css");

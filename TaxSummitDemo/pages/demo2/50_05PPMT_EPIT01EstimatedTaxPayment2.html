@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Personal Income Tax Payment</title>
+<link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+<!-- This uiscript.js JavaScript file is for UI testing only -->
+<script src="../../assets/iflow/js/uiscript.js"></script>
+<!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  <!-- Banners --> 
+  <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script> 
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Personal Income Tax Payment</h1>
+    <!--<div id="progress-bar">
+                <ol>
+                    <li id="pb1" class="pbBeforeSel" style="width:25%;"><a href="#">Payment Method</a>
+                    </li>
+                    <li id="pb2" class="pbSelected" style="width:25%;">Filing Information
+                    </li>
+                    <li id="pb3" class="pbNormal" style="width:25%;">Payment Section</li>
+                    <li id="pb4" class="pbLastOne" style="width:24%;">Review &amp; verify</li>
+                </ol>
+            </div>--> 
+  </div>
+  <div id="taxpayer-info">
+    <div class="leftFluid"></div>
+    <div class="sectionBorder">
+      <div class="c33">
+        <div class="label">Taxpayer ID:</div>
+        <div class="data">XXX-XX-0123</div>
+      </div>
+      <div class="c67">
+        <div class="label">Taxpayer name:</div>
+        <div class="data">JANE DOE</div>
+      </div>
+    </div>
+  </div>
+  <h2>Estimated Tax Payment</h2>
+  <div id="pageInstructions">
+    <p class="text">Enter the amount of each payment below and select <strong>Calculate</strong>. Your total estimated tax will appear in the calculation section. Select <strong>Continue</strong> when done. </p>
+    <p class="text"> You can make or schedule up to five quarterly payments that include: </p>
+    <ul class="indentedList">
+      <li>a previous quarter</li>
+      <li>the current quarter</li>
+      <li>three future quarters</li>
+    </ul>
+    <p class="text"> <strong>Note:</strong> A scheduled payment:</p>
+    <ul class="indentedList">
+      <li>is an estimated tax payment with a payment date at least two business days in the future</li>
+      <li>may not show immediately on your Account Summary</li>
+      <li> can be cancelled two days before the payment date, but not on or after that date </li>
+    </ul>
+  </div>
+  <!--legend begin-->
+  <div id="legend">
+    <ul>
+      <li><span class="required">*</span> Required fields</li>
+      <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+    </ul>
+  </div>
+  <!--legend end-->
+  <div id="errorMessages"></div>
+  <div class="formWrapper">
+    <div class="leftFluid"></div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post">
+        <!-- Group 1 -->
+        <div class="group">
+          <h4>Filing details</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="quarter">Quarter: <span class="hidden">Required field</span></label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <select id="quarter" tabindex="1">
+                <option value="1" selected="selected">Select quarter</option>
+                <option value="2">1st quarter 2018 due 04/15/2018</option>
+                <option value="3">2nd quarter 2018 due 06/15/2018</option>
+                <option value="4">3rd quarter 2018 due 09/15/2018</option>
+                <option value="5" selected="selected">4th quarter 2018 due 01/15/2019</option>
+                <option value="6">1st quarter 2015 due 04/15/2018</option>
+              </select>
+              <a href="#i1" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="newYorkSt">New York State ($): <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">
+                <input type="text" id="newYorkSt" value="1500" size="20" maxlength="20" tabindex="1" title="Enter a dollar amount">
+                <span class="appended-text">.00</span> </div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="cityofNewYork">City of New York ($): <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">
+                <input type="text" id="cityofNewYork" value="1000" size="20" maxlength="20" tabindex="1" title="Enter a dollar amount">
+                <span class="appended-text">.00</span> </div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="cityOfYonk">City of Yonkers ($): <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">
+                <input type="text" id="cityOfYonk" value="0" size="20" maxlength="20" tabindex="1" title="Enter a dollar amount">
+                <span class="appended-text">.00</span> </div>
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="mctmt">MCTMT ($): <span class="hidden">Required field</span> </label>
+              </div>
+              <div class="required">*</div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">
+                <input type="text" id="mctmt" value="0" size="20" maxlength="20" tabindex="1" title="Enter a dollar amount">
+                <span class="appended-text">.00</span> </div>
+              <a href="#i2" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+          <div class="linePn labelM totalLine">
+            <div class="labelPn">
+              <div class="labelWrap">Payment amount ($):</div>
+            </div>
+            <div class="dataPn">
+              <div class="moneyField">2,500.00</div>
+              <a href="#i3" class="help icon-button icon-help" role="button" tabindex="1">More information</a> </div>
+          </div>
+          <div class="buttonGroup">
+            <input name="button" type="button" class="button primary" tabindex="1" title="Calculate" value="Calculate">
+          </div>
+        </div>
+        <div class="buttonGroup">
+          <input type="button" class="button" value="Back" title="Back" onclick="javascript:window.location.href='40_15MPMT_MADP01MakeADifferentPayment.html';" tabindex="1">
+          <input type="button" class="button primary" value="Continue" title="Continue" onclick="javascript:window.location.href='60_25GENE_PYMD01Select your payment method.html';" tabindex="1">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="instructionsFooter">
+    <h3>Instructions</h3>
+    <div>
+      <h4 id="i1">Quarter</h4>
+      <p class="text">Select the quarter you would like to file from the drop-down list. See <a href="https://www.tax.ny.gov/pit/estimated_tax/estimated_tax_payment_due_dates.htm" target="_blank" title="This will open a new window to estimated tax payment dates.">estimated tax payment dates</a>.</p>
+    </div>
+    <div>
+      <h4 id="i2">MCTMT</h4>
+      <p class="text">Beginning in tax year 2015, if you owe any Metropolitan Commuter Transportation Mobility Tax (MCTMT) as a self-employed individual or a partner, you must pay your estimated MCTMT payment with your estimated income tax payment. For more information, see <a href="https://www.tax.ny.gov/bus/mctmt/default.htm" target="_blank" title="This will open a new window for more information.">Metropolitan commuter transportation mobility tax</a>. </p>
+    </div>
+    <div>
+      <h4 id="i3">Payment amount</h4>
+      <p class="text">Your total payment amount is the sum of your New York State, City of New York, City of Yonkers, and MCTMT liabilities. MCTMT liability does not apply to fiduciaries filing Form IT-2106, <em>Estimated Income Tax Payment Voucher for Fiduciaries</em>.</p>
+    </div>
+  </div>
+</div>
+<!-- end of page-container --> 
+<script>
+    uiIncludes.footer.renderXHTML();
+    </script> 
+
+</body>
+</html>

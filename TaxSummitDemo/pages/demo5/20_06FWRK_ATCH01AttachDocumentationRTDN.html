@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Respond to Department Notice</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script type="text/javascript" src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+       <script>uiResponsive.setup(); uiIncludes.banners.display();</script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a></li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li><a class="navHeaderFirstLink navHeaderLastLink" href="https://nystax.custhelp.com/app/answers/list/c/6,76" target="_blank" title="This will open a new window to Help">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Respond to Department Notice</h1>
+            <div id="taxpayer-info">
+                <div class="leftFluid">
+                </div>
+                <div class="sectionBorder">
+                    <div class="c33">
+                        <div class="label">
+                            Taxpayer ID:
+                        </div>
+                        <div class="data">
+                            XXX-XX-0123
+                        </div>
+                    </div>
+                    <div class="c67">
+                        <div class="label">
+                            Taxpayer name:
+                        </div>
+                        <div class="data">
+                            JANE DOE
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Header -->
+        <h2>Attach Documentation</h2>
+        <div id="pageInstructions">
+            <p class="text">Attach documentation in the <strong>Attachment information</strong> section below.</p>
+			<p class="text">Note: If you don't have an electronic copy or access to a scanner, respond to the fax number phone number, or address on your notice.  Select the document type, browse to find the file and select Attach. You can upload multiple files, but the combined fiel size can't exceed 10MB. You may upload spreadsheets and other documents with these extensions: doc, docx, rtf, wpd, txt, xls, xlsx, xml, jpeg, jpg, bmp, gif, tif, tiff or pdf. </p>
+			<p class="text">Don't change the extension of the file you're attaching as this will cause a delay in service.</p>
+        </div>
+        <div id="legend">
+            <ul>
+                <li><span class="required">*</span> Required fields</li>
+            </ul>
+        </div>
+       
+        <script type="text/javascript">
+        // JSP DEVELOPER:
+        //
+        // Be sure to call uiMethods.confirmRemove() in any function that is called by a
+        //    Remove or Delete button. The parameter should be a string that describes the
+        //    item the user is trying to remove, e.g. 'form', 'document', 'responsible person', etc.
+        //
+        // Your removal code should only run if uiMethods.confirmRemove() returns true.
+        //    You may want to use the sample function below.
+        //
+        // Please remove this comment section from your JSP.
+
+
+        // Example function to handle removing an item from a result set
+        function removeThisItem(lineNumber) {
+            if (uiMethods.confirmRemove('document')) {
+                // Put your code to remove the entry at lineNumber in the result set
+            }
+        }
+        </script>
+        <div class="formWrapper">
+            <div class="leftFluid">
+            </div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Attachment information</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="documentType">Document type:
+                                        <span class="hidden">Required field.</span>
+                                    </label>
+                                </div>
+                                <div class="required">*</div>
+                            </div>
+                            <div class="dataPn">
+                                <select id="documentType" tabindex="1">
+                                    <option value="">Select document type</option>
+                <option value="1">Proof of Payment/Cancelled check</option>        
+				 <option value="2">Proof of Filing</option>  
+				  <option value="3">Proof of Income</option>  
+				   <option value="4">Proof of Non-Residency</option>  
+				    <option value="5">Proof of Age</option>  
+					 <option value="6">Proof of contributions</option>  
+					  <option value="7">Information Requested in Notice</option>  
+					   <option value="8">Other information</option>  
+              </select>                               
+                                </select>
+                            </div>
+                        </div>
+                      <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="filePath">File path:
+                                        <span class="hidden">Required field.</span>
+                                    </label>
+                                </div>
+                                <div class="required">*</div>
+                            </div>
+                            <div class="dataPn">
+                                <input type="file" id="filePath" tabindex="1" value="" size="40" maxlength="40">
+                            </div>
+                        </div>
+                        <div class="rset nav-table">
+                            <div class="buttonGroup">
+                              <input type="button" class="button primary" tabindex="1" title="Attach" value="Attach" onclick="javascript:window.location.href='25_06FWRK_ATCH01AttachDocumentationRTDN.html';">
+                            </div>
+                            <div class="rset_head">
+                              <div class="rset_title">Documents</div>
+                          </div>
+                            <div class="rset_body">
+                                <table id="table1" summary="Attached documentation">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-primary" scope="col">File name</th>
+                                            <th class="table-secondary" scope="col">Document type</th>
+                                            <th scope="col">File size</th>
+                                            <th class="center minWidth" scope="col">&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button" value="Back" title="Back" onclick="javascript:window.location.href='15_10RTDN_RFRS10ReasonForResponse.html';" tabindex="1" />
+                        <input type="button" class="button primary" value="Continue" title="Continue"   tabindex="1" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script type="text/javascript">
+    uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+
+</html>

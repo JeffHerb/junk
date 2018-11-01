@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Power of Attorney (POA)</title>
+<link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="../../assets/iflow/js/script.js"></script>
+<!-- This uiscript.js JavaScript file is for UI testing only -->
+<script type="text/javascript" src="../../assets/iflow/js/uiscript.js"></script>
+<!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  
+  <!-- Banners --> 
+  <script>uiResponsive.setup(); uiIncludes.banners.display();</script> 
+  
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a></li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li><a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a></li>
+        <li><a class="navHeaderLastLink" href="#" title="Save &amp; Exit">Save &amp; Exit</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Power of Attorney (POA)</h1>
+    <!-- Taxpayer Information -->
+    <div id="taxpayer-info">
+      <div class="leftFluid"> </div>
+      <div class="sectionBorder">
+        <div class="c50">
+          <div class="label"> Taxpayer ID: </div>
+          <div class="data"> XXX-XX-0123</div>
+        </div>
+        <div class="c50">
+          <div class="label"> Taxpayer name: </div>
+          <div class="data"> JANE DOE </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Taxpayer Information --> 
+  </div>
+  <!-- End Page Header --> 
+  <!-- Main title bottom border -->
+  <div class="hr hidden" id="hr"></div>
+  <!-- End Main title bottom border --> 
+  <!-- Page Title -->
+  <h2>Review POA</h2>
+  <!-- Page Instructions -->
+  <div id="pageInstructions">
+    <p class="text">Select <strong>View</strong> to review the information you entered. To modify any information, select <strong>Edit</strong>. </p>
+    <p class="text">When the information is complete and accurate, check the <em>Review complete</em> box below. If you wish to continue editing at a later time,  select <strong>Save & Exit</strong> at the top of this page. </p>
+  </div>
+  <!-- End Page Instructions --> 
+  <!-- Legend -->
+  <div id="legend">
+    <ul>
+      <li><span class="required">*</span> Required fields</li>
+      <!-- <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li> -->
+    </ul>
+  </div>
+  <!-- End Legend --> 
+  <!-- Error Messages -->
+  <div id="errorMessages"> </div>
+  <!-- End Error Messages --> 
+  
+  <!-- XHTML code for developer's JSP [Start] -->
+  <div class="formWrapper">
+    <div class="leftFluid"> </div>
+    <div class="mainGroups"> 
+      <!-- Page Form -->
+      <form name="form1" id="form1" action="" method="post">
+        <div class="group">
+          <h4>Review POA</h4>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Information you entered:</div>
+            </div>
+            <div class="dataPn">
+              <input type="button" class="button" value="View" title="View" tabindex="1" onclick="window.open('Power of Attorney_Review.pdf');">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">POA information:</div>
+            </div>
+            <div class="dataPn">
+              <input type="button" class="button" value="Edit" title="Edit" tabindex="1" onclick="window.location.href='20POAW_POAI01POAInformation.html';">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Authority granted:</div>
+            </div>
+            <div class="dataPn">
+              <input type="button" class="button" value="Edit" title="Edit" tabindex="1" onclick="window.location.href='30POAW_GRAU01GrantAuthority.html';">
+            </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap">Representative information:</div>
+            </div>
+            <div class="dataPn">
+              <input type="button" class="button" value="Edit" title="Edit" tabindex="1" onclick="window.location.href='40POAW_RINF01RepresentativeInformation.html';">
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <h4>Review complete</h4>
+          <div class="groupInstructions">
+            <p class="text">By checking <em>Review complete</em>, I acknowledge my POA is ready for printing and I understand that I will no longer be able to edit this document. </p>
+            <div class="center-block">
+              <div class="block-row">
+                <div class="indented">
+                  <input type="checkbox" id="esignatureAgree" name="esignatureAgree" value="" tabindex="1">
+                  <span class="required">*</span>
+                  <label for="esignatureAgree">Review complete<span class="hidden"> Required field</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <h4>Print, scan and submit your POA now or later</h4>
+          <div class="groupInstructions">
+            <p class="text">To print, sign, date and submit the form now, choose <strong>Continue Now</strong>,  otherwise select <strong>Continue Later</strong> and you will be given instructions on how to complete the POA process at a later time.</p>
+          </div>
+          <div class="buttonGroup">
+            <input type="button" class="button primary" value="Continue Now" title="Continue Now" tabindex="1" onclick="window.location.href='75POAW_PFNP01PrintFinalizedPOA_Mockup_UploadNow.html';">
+            <input type="button" class="button primary" value="Continue Later" title="Continue Later" tabindex="1" onclick="window.location.href='';">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- XHTML code for developer's JSP [End] --> 
+</div>
+<script>uiIncludes.footer.bShowTermsAndConditions = true;</script> 
+<script>uiIncludes.footer.renderXHTML();</script>
+</body>
+</html>

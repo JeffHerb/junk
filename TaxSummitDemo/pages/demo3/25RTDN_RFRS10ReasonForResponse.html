@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Respond to Department Delinquency or Bills</title>
+ <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+<!-- This uiscript.js JavaScript file is for UI testing only -->
+ <script src="../../assets/iflow/js/uiscript.js"></script>
+<!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+<div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a> 
+  
+  <!-- Banners --> 
+  <script>uiResponsive.setup(); uiIncludes.banners.display();</script> 
+  
+  <!-- Navigation Header -->
+  <div id="navHeader">
+    <div id="navLeft">
+      <ul>
+        <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a></li>
+      </ul>
+    </div>
+    <div id="navRight">
+      <ul>
+        <li><a class="navHeaderFirstLink navHeaderLastLink" href="https://nystax.custhelp.com/app/answers/list/c/6,76" target="_blank" title="This will open a new window to Help">Help</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Navigation Header --> 
+  
+  <!-- Page Header -->
+  <div id="pageHeader">
+    <h1 id="main">Respond to Department Delinquency or Bills</h1>
+    <div id="taxpayer-info">
+      <div class="leftFluid"> </div>
+      <div class="sectionBorder">
+        <div class="c33">
+          <div class="label"> Taxpayer ID: </div>
+          <div class="data"> XXX-XX-0123 </div>
+        </div>
+        <div class="c67">
+          <div class="label"> Taxpayer name: </div>
+          <div class="data"> JANE DOE </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Reason for Response</h2>
+  <div id="pageInstructions">
+    <p class="text">Explain why you disagree with this notice in the <strong>Reason for your Response</strong> section below.  Select the <strong> Attach Documentation</strong> button at the bottom of this page and attach all documentation to support your position.</p>
+  </div>
+  <div class="formWrapper">
+    <div class="leftFluid"> </div>
+    <div class="mainGroups">
+      <form name="form1" id="form1" action="" method="post">
+	    <div class="group">
+          <h4>Issue information</h4>
+		        <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Assessment ID number: </div>
+            </div>
+            <div class="dataPn"> L-000101288-6 </div>
+          </div>
+          <div class="linePn labelM">
+            <div class="labelPn">
+              <div class="labelWrap"> Issue: </div>
+            </div>
+            <div class="dataPn"> Assessed Penalty </div>
+          </div>
+		  </div>
+        <div class="group">
+          <h4>Reason for your response</h4>
+          <div class="groupInstructions">
+            <p class="text">The explanation box has a 1000 character limit.  If your response exceeds that limit, create an electronic document (Word, etc.) and attach it by selecting Attach Documentation below.</p>
+          </div>
+          <div class="linePn labelTop">
+            <div class="labelPn">
+              <div class="labelWrap">
+                <label for="explan1">Provide explanation:</label>
+              </div>
+            </div>
+            <div class="dataPn">
+              <textarea id="explan1" rows="6" cols="118" class="" tabindex="1"></textarea>
+            </div>
+          </div>
+        </div>
+		
+        <div class="buttonGroup">
+          <input type="button" class="button" value="Back" onclick="javascript:window.location.href='20RTDN_PNTY25Penalty.html';" title="Back" tabindex="1" />
+		   <input type="button" class="button" tabindex="1" title="Attach Documentation" onclick="javascript:window.location.href='30FWRK_ATCH01AttachDocumentationRTDN.html';" value="Attach Documentation"> 
+          <input type="button" class="button primary" value="Continue" title="Continue" tabindex="1" />
+         
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- end of page-container --> 
+<script type="text/javascript">uiIncludes.footer.renderXHTML();</script>
+</body>
+</html>

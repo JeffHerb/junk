@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Make a Payment</title>
+      <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li> <a class="navHeaderFirstLink"href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Make a Payment</h1>
+            <div id="taxpayer-info">
+                <div class="leftFluid"></div>
+                <div class="sectionBorder">
+                    <div class="c33">
+                        <div class="label">Taxpayer ID:</div>
+                        <div class="data">XXX-XX-0123</div>
+                    </div>
+                    <div class="c67">
+                        <div class="label">Taxpayer name:</div>
+                        <div class="data">JANE SMITH</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Title -->
+        <h2>Transaction Confirmation</h2>
+        <div id="pageInstructions">
+           <p class="text">The New York State Tax Department received your transaction as of the date below. This confirms only that we received your payment information. It may take several days to be reflected in the Tax Department account. If you didn’t pay the amount due in full or the bank is unable to process this payment, the taxpayer may incur additional penalty and interest. </p> <ul class="indentedList"> <li>Select <strong>Print</strong> to print this confirmation page for your records.</li> </ul> 
+        </div>
+        <div id="errorMessages"></div>
+        <!-- Page Form -->
+        <div class="formWrapper">
+            <div class="leftFluid"></div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Confirmation</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Confirmation number:</div>
+                            </div>
+                            <div class="dataPn">MPMT0913180002217</div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Transaction date/time:</div>
+                            </div>
+                            <div class="dataPn">09/13/2017 11:46AM</div>
+                        </div>
+                    </div>
+                    <!-- Group 2 -->
+                    <div class="group">
+                        <h4>Informal protest case payment</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap"> Document ID: </div>
+                            </div>
+                            <div class="dataPn"> K-198764976-3 </div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap"> Payment period: </div>
+                            </div>
+                            <div class="dataPn">01/01/2017 - 12/31/2017 </div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap"> Amount due ($): </div>
+                            </div>
+                            <div class="dataPn">
+                                <div class="moneyField"> 1,031.30 </div>
+                            </div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap"> Payment amount ($): </div>
+                            </div>
+                            <div class="dataPn">
+                                <div class="moneyField"> 1,031.30 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Group 2 -->
+                    <div class="group">
+                        <h4>Payment details</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Payment method:</div>
+                            </div>
+                            <div class="dataPn">Pay by bank account</div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Bank name:</div>
+                            </div>
+                            <div class="dataPn">STATE EMPLOYEES FEDERAL CR</div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Bank routing number:</div>
+                            </div>
+                            <div class="dataPn">221373383</div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Bank account number:</div>
+                            </div>
+                            <div class="dataPn">X2345</div>
+                        </div>
+						 <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Account type:</div>
+                            </div>
+                            <div class="dataPn">Personal checking</div>
+                        </div>
+						 <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Account holder:</div>
+                            </div>
+                            <div class="dataPn">Jane Doe</div>
+                        </div>
+						 <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Payment date:</div>
+                            </div>
+                            <div class="dataPn">09/13/2018</div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Payment amount:</div>
+                            </div>
+							
+                            <div class="dataPn">
+                                <div class="moneyField">1,031.30</div>
+                            </div>
+                    </div>
+                   
+                    <!-- Group 3 -->
+                    <div class="group">
+                        <h4>Web survey</h4>
+                        <div class="groupInstructions">
+                            <p class="text">Provide feedback about this online service through our <a href="https://tax.custhelp.com/ci/documents/detail/5/153/12/dc2b89b85dfbff6162a5b6fc538dcbbd5b89ffab" target="_blank" title="This link will open in a new window to the Web Survey">Web Survey</a>.</p>
+                        </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button" value="Print" title="Print" tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end of page-container -->
+    </div>
+    <script>
+    uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+
+</html>

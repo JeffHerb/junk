@@ -1,0 +1,766 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title></title>
+    <meta name="format-detection" content="telephone=no">
+    <link href="../../assets/ols/css/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+    <div class="cui-hide-from-screen feta-hidden-jump-links">
+        <a href="#nav">Go to navigation</a>
+        <a href="#main">Go to content</a>
+    </div>
+
+    <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30"></div>
+
+    <script>
+        // Global objects for JSON objects and corresponding templates
+        var fetaData = {
+            templates: [],
+            tables: [],
+            environment: 'ols',
+            app: {
+                title: 'Add Client',
+                userType: 'tp', // Only required for OLS. Indicates the type of logged in user: `ind`, `fid`, `tp`, or `bus`
+            },
+            page: {
+
+            },
+        };
+
+        fetaData.banners = {
+            sections: { // Optional. Use this to suppress or override specific pieces of the banner/footer
+                agencyWrapper: {
+                    suppress: false, // `true` means to skip rendering this piece
+                },
+                appHeader: {
+                    suppress: false,
+                },
+                frgFooter: {
+                    suppress: false,
+                },
+            },
+            urls: {
+                userName: {
+                    href: 'https://www.tax.ny.gov/e-services/otc/help/tips_os.htm',
+                },
+                contactUs: {
+                    href: 'https://www.tax.ny.gov/help/contact/how_to_reach.htm',
+                },
+                logout: {
+                    href: 'Logoff?langId=-1&amp;storeId=10151&amp;catalogId=10001&amp;URL=StoreView',
+                },
+            },
+        };
+
+        fetaData.preferences = {
+            text: 'Preferences', // Optional, will default to 'Preferences'
+            isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+            items: [
+			{
+                text: 'Edit personal information',
+                href: '#editinformation',
+            },
+            {
+                    text: 'Delete Tax Professional Account',
+                    href: '#deleteaccount',
+                },
+            ],
+        };
+
+        fetaData.helpMenu = {
+            text: 'Get Help', // Optional, will default to 'Help'
+            isOpen: false, // Optional; when `true`, the tree will be open/expanded by default
+            items: [{
+                    text: 'Help Center',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                },
+                {
+                    text: 'Frequently asked questions (FAQs)',
+                    href: 'https://nystax.custhelp.com/app/answers/list/c/119',
+                },
+                {
+                    text: 'Learn about online services',
+                    href: 'https://www.tax.ny.gov/online/moreinfo.htm',
+                },
+                {
+                    text: 'View demos and videos',
+                    href: 'https://www.tax.ny.gov/e-services/otc/demos/demo.htm',
+                },
+                {
+                    text: 'E-ZRep TR-2000',
+                    href: 'https://www.tax.ny.gov/e-services/otc/tr_2000_info.htm',
+                },
+                {
+                    type: 'divider',
+                },
+                {
+                    text: 'Support',
+                    href: 'https://www.tax.ny.gov/',
+                },
+                {
+                    text: 'Contact Us',
+                    href: 'https://www.tax.ny.gov/e-services/otc/contact_us.htm',
+                },
+            ],
+        };
+
+        fetaData.userAcct = {
+            name: 'John Smith',
+            legalName: 'TAX SUMMIT 2018',
+			id: 'XXX-XXX-0122',
+            type: 'Tax Professional',
+            role: 'Administrator',
+        };
+
+        fetaData.navigation = {
+            filter: {
+                type: 'text',
+                closeButton: true,
+            },
+            items: [{
+                    text: 'Tax Professional',
+                    isHeader: true,
+                    items: [{
+                            text: 'Client summary',                            
+                        },
+                        {
+                            text: 'Employee summary',                            
+                        },                 
+                    ],
+                },
+                {
+                    "text": "Services",
+                    "isHeader": true,
+                    "items": [
+                        {
+                            "text": "Uploads",
+                            "items": [
+                                {
+                                    "text": "MCTMT upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81557&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "NYS-1 upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81558&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "NYS-45 upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81559&clientFlag=N",
+                                    "target": "blank"
+                                },
+                                {
+                                    "text": "Wage reporting upload",
+                                    "href": "https://otcdvm.int.nystax.gov/webapp/wcs/stores/servlet/ApplicationLaunch?catalogId=10001&storeId=10151&productId=81560&clientFlag=N",
+                                    "target": "blank"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+        };
+    </script>
+
+    <div id="cui-body-wrapper">
+
+        <header class="feta-header"></header>
+
+        <!-- main content -->
+        <main role="main" id="main">
+            <h2 class="feta-page-title">E-ZRep Authorization</h2>
+
+            <div class="feta-page-legend">
+                <div class="feta-page-legend-item"><button type="button" class="cui-icon feta-icon-help">More information</button> Select to learn more about a particular field</div>
+            </div>
+
+            <form name="form1" id="form1" action="https://tax.ny.gov" method="post">
+                <section class="cui-inline-field feta-label-width-half">
+                    <header>
+                        <h3>Authorization</h3>
+                    </header>
+                    <div class="cui-row">
+                        <div class="cui-col">
+                            <div class="cui-field">
+                                <div class="cui-field-main">
+                                    <div class="cui-label">
+                                        <span class="cui-desc">Client:</span>
+                                    </div>
+                                    <div class="cui-data">
+                                        <span class="cui-value">JANE DOE</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cui-row">
+                        <div class="cui-col">
+                            <div class="cui-field">
+                                <div class="cui-field-main">
+                                    <div class="cui-label">
+                                        <span class="cui-desc">Client taxpayer ID number:</span>
+                                    </div>
+                                    <div class="cui-data">
+                                        <span class="cui-value">XXX-XX-0123</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cui-row">
+                        <div class="cui-col">
+                            <fieldset>
+							<div class="cui-field cui-selection-group">
+                                <div class="cui-field cui-required">
+                                    <div class="cui-field-main">
+                                        <div class="cui-label">
+                                            <legend class="cui-desc">Did your client authorize you to perform all current and future services on their completed and signed E-ZRep form?</legend>
+                                        </div>
+                                         <div class="cui-data">
+                                            <input type="radio" class="cui-value" name="empAccessAllFuture" id="empAccessAllFuture_Y" value="1" tabindex="1">
+                                            <label for="empAccessAllFuture_Y">Yes</label>
+                                            <input type="radio" class="cui-value" name="empAccessAllFuture" id="empAccessAllFuture_N" value="2" tabindex="1">
+                                            <label for="empAccessAllFuture_N">No</label>
+                                        </div>
+                                        <div class="cui-controls">
+                                            <button data-tooltip-source="i1" type="button" class="cui-icon feta-icon-help" tabindex="1">More information</button>
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="feta-dynamic-toggle cui-hidden" id="empAccessAllFuture_N_block">
+                        <div class="cui-row">
+                            <div id="table1" class="cui-col"></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <header>
+                        <h3>E-ZRep expiration</h3>
+                    </header>
+                    <div class="cui-row cui-inline-field">
+                        <div class="cui-col">
+                            <div class="cui-field">
+                                <div class="cui-field-main">
+                                    <div class="cui-label">
+                                        <label for="expiration_date" class="cui-desc">Expiration date:</label>
+                                    </div>
+                                    <div class="cui-data">
+                                        <input type="text" id="expiration_date" class="cui-value cui-date" size="10" maxlength="10" tabindex="1">
+                                    </div>
+                                    <div class="cui-controls">
+                                        <button data-tooltip-source="i2" type="button" class="cui-icon feta-icon-help" tabindex="1">More information</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <header>
+                        <h3>eSignature</h3>
+                    </header>
+                    <div class="cui-row">
+                        <div class="cui-col">
+                            <p>By selecting <strong>Save & Continue</strong>, I certify that my company has been authorized by the taxpayer-client via the taxpayer’s execution and delivery to me of a TR-2000 E-Z Rep Tax Information Access and Transaction Authorization Form (TR-2000), to access the taxpayer’s tax information and perform transactions for which the taxpayer has provided authorization therein.  I understand that my company must retain a copy of the taxpayer’s executed TR-2000 for the duration of the authorization plus three years, and agree to make that authorization available to the Tax Department upon request.</p>
+                        </div>
+                    </div>
+                </section>
+                <script>
+                    fetaData.tables.push({
+                        container: '#table1',
+                        title: '',
+                        primaryCols: [0],
+                        head: {
+                            rows: [{
+                                columns: [{
+                                        text: 'Online services',
+                                        attributes: {
+                                            'data-type': 'alpha',
+                                        },
+                                    },
+                                    {
+                                        text: 'E-ZRep authorization',
+                                        attributes: {
+                                            className: 'cui-align-center',
+                                        }
+                                    },
+                                ]
+                            }]
+                        },
+                        body: {
+                            rows: [{
+
+                                    columns: [{
+                                            text: 'Payments, bills and notices',
+                                        },
+                                        {
+                                            attributes: {
+                                                className: 'cui-align-center',
+                                            },
+                                            contents: [{
+                                                label: {
+                                                    attributes: {
+                                                        for: 'cbox_2'
+                                                    },
+                                                    text: 'E-ZRep authorization',
+                                                },
+                                                input: {
+                                                    attributes: {
+                                                        type: 'checkbox',
+                                                        name: 'cbox_2',
+                                                        id: 'cbox_2',
+                                                        value: '2',
+                                                    }
+                                                },
+                                                template: 'field',
+                                                type: 'checkbox',
+                                            }],
+                                        },
+                                    ],
+
+                                    // Expanded contents
+                                    expand: {
+                                        indicators: [0], // Which column(s) should show an indicator that the parent row is expandable. Optional.
+                                        columns: [{
+                                            contents: [{
+                                                type: 'ul',
+                                                contents: [{
+                                                        type: 'li',
+                                                        text: 'Pay bills and notices',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Request an installment payment agreement',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Pay an open audit case',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'View and print your statement',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Voluntary disclosure application',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Penalty and interest calculator',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Income execution payment calculator',
+                                                    },
+                                                ],
+                                            }, ],
+                                        }, ],
+                                    },
+                                },
+                                {
+                                    columns: [{
+                                            text: 'Personal income tax',
+                                        },
+                                        {
+                                            attributes: {
+                                                className: 'cui-align-center',
+                                            },
+                                            contents: [{
+                                                label: {
+                                                    attributes: {
+                                                        for: 'cbox_3'
+                                                    },
+                                                    text: 'E-ZRep authorization',
+                                                },
+                                                input: {
+                                                    attributes: {
+                                                        type: 'checkbox',
+                                                        name: 'cbox_3',
+                                                        id: 'cbox_3',
+                                                        value: '3',
+                                                    }
+                                                },
+                                                template: 'field',
+                                                type: 'checkbox',
+                                            }],
+                                        },
+                                    ],
+
+                                    // Expanded contents
+                                    expand: {
+                                        indicators: [0],
+                                        columns: [{
+                                            contents: [{
+                                                type: 'ul',
+                                                contents: [{
+                                                        type: 'li',
+                                                        text: 'Sales tax web file',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Sales tax advance payment',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'View and cancel a scheduled sales tax payment',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Sales tax refund request',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Sales tax vendor lookup',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'PrompTax',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Jurisdiction/rate lookup by address ',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'NAICS code lookup',
+                                                    },
+                                                ],
+                                            }, ],
+                                        }, ],
+                                    },
+                                },
+                                {
+                                    columns: [{
+                                            text: 'Metropolitan commuter transportation mobility tax',
+                                        },
+                                        {
+                                            attributes: {
+                                                className: 'cui-align-center',
+                                            },
+                                            contents: [{
+                                                label: {
+                                                    attributes: {
+                                                        for: 'cbox_4'
+                                                    },
+                                                    text: 'E-ZRep authorization',
+                                                },
+                                                input: {
+                                                    attributes: {
+                                                        type: 'checkbox',
+                                                        name: 'cbox_4',
+                                                        id: 'cbox_4',
+                                                        value: '4',
+                                                    }
+                                                },
+                                                template: 'field',
+                                                type: 'checkbox',
+                                            }],
+                                        },
+                                    ],
+
+                                    // Expanded contents
+                                    expand: {
+                                        indicators: [0],
+                                        columns: [{
+                                            contents: [{
+                                                type: 'ul',
+                                                contents: [{
+                                                        type: 'li',
+                                                        text: 'Renew sales tax certificate of authority',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Manage sales tax responsible persons',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Sales tax vendor lookup',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'PrompTax',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Jurisdiction/rate lookup by address',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'NAICS code lookup',
+                                                    },
+                                                ],
+                                            }, ],
+                                        }, ],
+                                    },
+                                },
+                                {
+                                    columns: [{
+                                            text: 'Respond to department notice',
+                                        },
+                                        {
+                                            attributes: {
+                                                className: 'cui-align-center',
+                                            },
+                                            contents: [{
+                                                label: {
+                                                    attributes: {
+                                                        for: 'cbox_5'
+                                                    },
+                                                    text: 'E-ZRep authorization',
+                                                },
+                                                input: {
+                                                    attributes: {
+                                                        type: 'checkbox',
+                                                        name: 'cbox_5',
+                                                        id: 'cbox_5',
+                                                        value: '5',
+                                                    }
+                                                },
+                                                template: 'field',
+                                                type: 'checkbox',
+                                            }],
+                                        },
+                                    ],
+
+                                    // Expanded contents
+                                    expand: {
+                                        indicators: [0],
+                                        columns: [{
+                                            contents: [{
+                                                type: 'ul',
+                                                contents: [{
+                                                        type: 'li',
+                                                        text: 'MCTMT web file',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'MCTMT upload',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Wage reporting upload',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'NYS-1 web file',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'NYS-45 web file',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'New hire reporting',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'PrompTax',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Jurisdiction/rate lookup by address',
+                                                    },
+                                                ],
+                                            }, ],
+                                        }, ],
+                                    },
+                                },
+                                {
+                                    columns: [{
+                                            text: 'Change of address',
+                                        },
+                                        {
+                                            attributes: {
+                                                className: 'cui-align-center',
+                                            },
+                                            contents: [{
+                                                label: {
+                                                    attributes: {
+                                                        for: 'cbox_6'
+                                                    },
+                                                    text: 'E-ZRep authorization',
+                                                },
+                                                input: {
+                                                    attributes: {
+                                                        type: 'checkbox',
+                                                        name: 'cbox_6',
+                                                        id: 'cbox_6',
+                                                        value: '6',
+                                                    }
+                                                },
+                                                template: 'field',
+                                                type: 'checkbox',
+                                            }],
+                                        },
+                                    ],
+
+                                    // Expanded contents
+                                    expand: {
+                                        indicators: [0],
+                                        columns: [{
+                                            contents: [{
+                                                type: 'ul',
+                                                contents: [{
+                                                        type: 'li',
+                                                        text: 'File a corporation tax extension',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'CT-400 estimated tax',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Corporation tax allocation percentage inquiry',
+                                                    },
+                                                ],
+                                            }, ],
+                                        }, ],
+                                    },
+                                },
+                                {
+                                    columns: [{
+                                            text: 'Casual sale',
+                                        },
+                                        {
+                                            attributes: {
+                                                className: 'cui-align-center',
+                                            },
+                                            contents: [{
+                                                label: {
+                                                    attributes: {
+                                                        for: 'cbox_7'
+                                                    },
+                                                    text: 'E-ZRep authorization',
+                                                },
+                                                input: {
+                                                    attributes: {
+                                                        type: 'checkbox',
+                                                        name: 'cbox_7',
+                                                        id: 'cbox_7',
+                                                        value: '7',
+                                                    }
+                                                },
+                                                template: 'field',
+                                                type: 'checkbox',
+                                            }],
+                                        },
+                                    ],
+
+                                    // Expanded contents
+                                    expand: {
+                                        indicators: [0],
+                                        columns: [{
+                                            contents: [{
+                                                type: 'ul',
+                                                contents: [{
+                                                        type: 'li',
+                                                        text: 'Highway use tax web file',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'View and cancel a scheduled highway use tax payment',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Taxicab web file',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Waste tire web file',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'View and cancel a scheduled waste tire payment',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'E-file an international fuel tax agreement return',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Beverage container web file',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Beverage container registration',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'OSCAR- for motor carriers',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Centralized procurement fee',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'Print a previously e-filed IFTA return',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'View/report Indian tax exempt cigarette sales',
+                                                    },
+                                                    {
+                                                        type: 'li',
+                                                        text: 'MCTMT PC',
+                                                    },
+                                                ],
+                                            }, ],
+                                        }, ],
+                                    },
+                                },
+                             
+                          
+                              
+                            ]
+                        },
+                    });
+                </script>
+                </section>
+                <section class="feta-button-group">
+                    <div class="cui-row">
+                        <div class="cui-col-small-12 cui-align-center">
+							   <button type="button" class="cui-button" onclick="javascript:window.location.href='95_30ClientInformation_Individual.html';">Back</button>
+							<button type="button" class="cui-button-primary" onclick="javascript:window.location.href='105_50AssignEmployees.html';">Save &amp; Continue</button>
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </main>
+
+        <!-- Everything below the last section -->
+        <footer class="feta-footer"></footer>
+
+        <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+    </div>
+
+    <nav role="navigation" class="feta-nav"></nav>
+    <div class="feta-field-instructions">
+        <div id="i1">
+            <header>Did your client authorize you to perform all current and future services on their completed and signed E-ZRep form?</header>
+            <p>Select <a href="https://www.tax.ny.gov/pdf/documents/tr2000_1.pdf" title="This will open a new window to get more information." target="_blank">E-ZRep Form TR-2000.1</a> to view all current services.</p>
+        </div>
+		  <div id="i2">
+            <header>Expiration date</header>
+            <p>Enter the expiration date (if provided) from Part 4 of the client's signed E-Zep form in the following format: MM/DD/YYYY.</p>
+        </div>
+    </div>
+    <script id="require" src="../../assets/ols/js/main.js"></script> 
+    <script>
+        require(['feta', 'ols', 'iflow', 'domReady!'], function (feta, ols, iflow) {
+            // This block is only needed for page-specific scripts
+        });
+    </script>
+</body>
+
+</html>

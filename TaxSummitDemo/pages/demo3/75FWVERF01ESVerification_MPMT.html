@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Make a Payment</title>
+     <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+
+<body>
+    <div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Make a Payment</h1>
+            <div id="taxpayer-info">
+                <div class="leftFluid"> </div>
+                <div class="sectionBorder">
+                    <div class="c33">
+                        <div class="label"> Taxpayer ID: </div>
+                        <div class="data"> XXX-XX-0123 </div>
+                    </div>
+                    <div class="c67">
+                        <div class="label"> Taxpayer name: </div>
+                        <div class="data"> JANE DOE </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Title -->
+        <h2>Review and Verify</h2>
+        <div id="pageInstructions">
+            <p class="text">The transaction is not complete until you select <strong>Submit</strong>. Carefully review all information below and read the eSignature statement. If you didn't pay the amount due in full, the taxpayer may incur additional penalty and interest. Select <strong>Edit</strong> to change the card information below.</p>
+        </div>
+        <div id="errorMessages"> </div>
+        <!-- Page Form -->
+        <div class="formWrapper">
+            <div class="leftFluid"> </div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Informal protest case payment</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap"> Document ID: </div>
+                            </div>
+                            <div class="dataPn"> K-198764976-3 </div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap"> Payment period: </div>
+                            </div>
+                            <div class="dataPn">01/01/2017 - 12/31/2017</div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap"> Amount due ($): </div>
+                            </div>
+                            <div class="dataPn">
+                                <div class="moneyField"> 1,031.30 </div>
+                            </div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap"> Payment amount ($): </div>
+                            </div>
+                            <div class="dataPn">
+                                <div class="moneyField"> 1,031.30 </div>
+                            </div>
+                        </div>
+						 <div class="buttonGroup">
+                            <input type="button" class="button" value="Edit" title="Edit" onClick="window.location.href='60MPMT_WYNP01_WhatYouNeedToPay.html';" tabindex="1">
+                        </div>
+                    </div>
+                    <div class="group">
+                        <h4>Payment details</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Payment method:</div>
+                            </div>
+                            <div class="dataPn">Pay by Bank Account</div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Bank name:</div>
+                            </div>
+                            <div class="dataPn">STATE EMPLOYEES FEDERAL CR</div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Bank routing number:</div>
+                            </div>
+                            <div class="dataPn">221373383</div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Bank account number:</div>
+                            </div>
+                            <div class="dataPn">X2345</div>
+                        </div>
+						 <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Account type:</div>
+                            </div>
+                            <div class="dataPn">Personal checking</div>
+                        </div>
+						 <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Account holder:</div>
+                            </div>
+                            <div class="dataPn">Jane Doe</div>
+                        </div>
+						 <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Payment for:</div>
+                            </div>
+                            <div class="dataPn">Tax Liabilities</div>
+                        </div>
+						 <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Payment date:</div>
+                            </div>
+                            <div class="dataPn">09/13/2018</div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">Payment amount:</div>
+                            </div>
+							
+                            <div class="dataPn">
+                                <div class="moneyField">1,031.30</div>
+                            </div>
+                    </div>
+                        <div class="buttonGroup">
+                            <input type="button" class="button" value="Edit" title="Edit" onClick="window.location.href='70GENE_BANK03PayFromBankAccountSave_acct.html';" tabindex="1">
+                        </div>
+                    </div>
+                    <!-- Group 3 -->
+                    <div class="group">
+                        <h4>eSignature</h4>
+                        <!--Pay by credit/debit card:
+Taxpayer (Individual, Business, Tax Professional on behalf of Individual/Business)-->
+                        <div class="groupInstructions">
+                            <p class="text">
+By selecting <strong>Submit</strong>, I understand and agree that I am electronically signing and submitting this card payment transaction and I certify that: (i) I have informed the card holder about, and the card holder has agreed to pay, the non-refundable convenience fee of 2.25% of the principal amount of the tax payment, which fee is in addition to the amount of the tax payment, and will show up as a separate charge on the card holder statement, and (ii) I have been authorized by the card holder to use the card account information to make such payments.  I understand and agree that a card payment will be processed immediately and this authorization for payment may not be revoked.
+</p>
+                        </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button primary" value="Submit" onclick="javascript:window.location.href='80FWCFMN01ESConfirmation_MPMT.html';" title="Submit" tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script>
+    uiIncludes.footer.renderXHTML();
+    </script>
+    <script>
+    // JSON for page and form messages
+    
+    </script>
+</body>
+
+</html>

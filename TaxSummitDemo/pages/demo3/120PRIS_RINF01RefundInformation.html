@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Income Tax Refund Status</title>
+   <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script type="text/javascript" src="../../js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+    <div id="pageContainer">
+        <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li><a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li><a class="navHeaderFirstLink navHeaderLastLink" href="https://tax.custhelp.com/app/answers/list/c/6,76" target="_blank" title="This will open a new window to Help">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Income Tax Refund Status</h1>
+        </div>
+        <div class="hr"></div>
+        <h2>Refund Information</h2>
+        <div id="pageInstructions">
+            <p class="text">Generally, you'll get your refund in six to eight weeks from the date we receive your income tax return. You'll get it faster if you use e-file and have your refund deposited directly into your bank account. If we identify an issue with a tax return, our review may take longer than six to eight weeks. For more information about the refund process, see the <a href="https://www.tax.ny.gov/pit/file/refund.htm" target="_blank" title="This will open a new window to New York State Income tax refund">New York State income tax refund</a> page.</p>
+            <p class="text">Complete the following information and select <strong>Continue</strong>.</p>
+        </div>
+        <div id="legend">
+            <ul>
+                <li><span class="required">*</span> Required fields</li>
+                <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+            </ul>
+        </div>
+        <div class="formWrapper">
+            <div class="leftFluid"></div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Taxpayer filing information</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="taxYear">Tax year
+                                        <span class="hidden">Required field</span>
+                                    </label>
+                                </div>
+                                <div class="required">*</div>
+                            </div>
+                            <div class="dataPn">
+                                <select id="taxYear" tabindex="1">
+                                    <option value="1" selected="selected">Select one</option>
+                                    <option value="2">2017</option>
+                                    <option value="3">2016</option>
+                                    <option value="4">2015</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="linePn labelM masktoggle" data-masktoggle-type="text,number">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="ssnNumber">Social security number:
+                                        <span class="hidden">Required field</span>
+                                    </label>
+                                </div>
+                                <div class="required">*</div>
+                            </div>
+                            <div class="dataPn">
+                                <input type="password" id="ssnNumber" value="" size="13" maxlength="11" tabindex="1">
+                            </div>
+                        </div>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="formFiled">Which form did you file?
+                                        <span class="hidden">Required field</span>
+                                    </label>
+                                </div>
+                                <div class="required">*</div>
+                            </div>
+                            <div class="dataPn">
+                                <select id="formFiled" tabindex="1">
+                                    <option value="" selected="selected">Select which form you filed</option>
+									  <option value="1" class="show-refund-amount">IT-201,IT-203, IT-205, IT-214, NYC-208</option>
+                                    <option value="2">NYC-210</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hidden checkblock" id="show-refund-amount_block">
+                            <div class="linePn labelM">
+                                <div class="labelPn">
+                                    <div class="labelWrap">
+                                        <label for="rqstdRfndAmt">Requested refund amount ($):
+                                            <span class="hidden">Required field</span>
+                                        </label>
+                                    </div>
+                                    <div class="required">*</div>
+                                </div>
+                                <div class="dataPn">
+                                    <div class="moneyField">
+                                        <input type="text" id="rqstdRfndAmt" value="" size="20" maxlength="20" tabindex="1" title="Enter a dollar amount">
+                                        <span class="appended-text">.00</span>
+                                    </div>
+                                    <a href="#instructions1" class="help icon-button icon-help" role="button" tabindex="1">More information</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <!-- <input type="submit" class="button primary" value="Continue" title="Continue" tabindex="1"> -->
+                        <input type="button" onclick="window.location.href='125FWCFMN01ESConfirmationPRISRefundStatus_SharedSecretV2.html';" class="button primary" value="Continue" title="Continue" tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="instructionsFooter">
+            <h3>Instructions</h3>
+            <div>
+                <h4 id="instructions1">Requested refund amount</h4>
+                <p class="text">Enter the exact whole-dollar amount of the refund that you claimed on your return for the tax year listed above. For additional information see, <a href="https://www.tax.ny.gov/e-services/pris/refund-requested.htm" target="_blank" title="This will open a new window for more information.">refund amount requested</a>.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script type="text/javascript">
+    uiIncludes.footer.renderXHTML();
+    </script>
+</body>
+</html>

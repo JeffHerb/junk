@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <title>Power of Attoney (POA)</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script type="text/javascript" src="../../assets/iflow/js/script.js"></script>
+    <script type="text/javascript" src="../../assets/iflow/js/poaw/poaw.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script type="text/javascript" src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+<body>
+    <div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a></li>
+                    <li> <a class="navHeaderLastLink" href="#" title="Save &amp; Exit">Save &amp; Exit</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Power of Attorney (POA)</h1>
+            <div id="taxpayer-info">
+                <div class="leftFluid"></div>
+                <div class="sectionBorder">
+                    <div class="c33">
+                        <div class="label">Taxpayer ID:</div>
+                        <div class="data">XXX-XX-0123</div>
+                    </div>
+                    <div class="c67">
+                        <div class="label">Taxpayer name:</div>
+                        <div class="data">JANE DOE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Grant Authority</h2>
+        <div id="pageInstructions">
+            <p class="text">Select the specific case, bill or tax type you are authorizing. If you don't see the tax type you wish to authorize, select <a href="https://www.tax.ny.gov/e-services/poaw/other-taxes.htm" target="_blank" title="This will open a new window for more information.">Other tax type</a> below.</p>
+            <p class="text">To limit your representative's authority, check the <em>Add limitation on authority</em> box and explain the limitations.</p>
+        </div>
+        <div id="legend">
+            <ul>
+                <li> <span class="required">*</span> Required fields </li>
+                <li><span class="icon-button icon-help" role="button">More information</span> Select to learn more about a particular field</li>
+            </ul>
+        </div>
+        <div id="errorMessages"> </div>
+        <script>
+        // UI TEAM:
+        //
+        // This is an older method used when a button will remove only a single item
+        // Example:
+        // <input type="button" onclick="uiMethods.removeItem(2, 'bank account', '', myRemoveSingleItemFunction);return false;" [...]>
+
+        // JSP DEVELOPER:
+        //
+        // To remove/delete a table item, call uiMethods.removeItem().
+        // Here, pass the row's index or item identifier,
+        // a string that describes the item the user is trying to remove,
+        // e.g. 'form', 'document', 'responsible person', etc. and
+        // the function object you use for running the removal code (.i.e. myRemoveSingleItemFunction.)
+        //
+        // Example: onclick="uiMethods.removeItem(1, 'form', '', myRemoveSingleItemFunction);return false;"
+        //
+        // Please remove this comment section from your JSP.
+
+        // Example function to handle removing an item from a result set
+        function myRemoveSingleItemFunction(args) {
+            // Put your code to remove the entry oItemKey (e.g., a line number in a result set)
+            // alert('This would have deleted row ' + oItemKey);
+            poaw.removeRow(args);
+        }
+        </script>
+        <div class="formWrapper">
+            <div class="leftFluid"></div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post" onsubmit="window.location.href='40POAW_RINF01RepresentativeInformation.html'; return false;">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Grant authority</h4>
+                        <fieldset class="same-line">
+                            <legend>Select all that apply:</legend>
+                            <!-- ************************************************************ -->
+                            <div class="linePn labelXXS">
+                                <div class="labelPn">
+                                    <div class="labelWrap"> </div>
+                                </div>
+                                <div class="dataPn selDepFldsWrapper">
+                                    <div class="selDepFields">
+                                        <div class="rBtnWrapper" aria-controls="a102_depFields">
+                                            <input type="checkbox" name="dynamicRadioButtons" id="a102" class="rbDynamic" value="2" tabindex="1">
+                                            <div class="visibleLabel"> All tax types </div>
+                                            <a href="#i1a" class="help icon-button icon-help" role="button" tabindex="1">More information</a>
+                                            <label for="a102" id="a102_label" class="hideOffScreen"> All tax types. Additional fields are revealed when this option is selected. </label>
+                                        </div>
+                                        <div id="a102_depFields" class="fieldWrapper" aria-hidden="true" aria-live="polite" aria-expanded="false" role="region" aria-describedby="a102_label">
+                                            <fieldset>
+                                                <div class="linePn labelM">
+                                                    <div class="labelPn">
+                                                        <div class="labelWrap">
+                                                            <legend><span class="legendWrap">Do you want to specify the tax periods covered by this POA?<span class="hidden">Required field</span></span>
+                                                            </legend>
+                                                        </div>
+                                                        <div class="required"> * </div>
+                                                    </div>
+                                                    <div class="dataPn">
+                                                        <label for="a102AllPeriods_Y">Yes</label>
+                                                        <input type="radio" id="a102AllPeriods_Y" name="a102AllPeriods" tabindex="1">
+                                                        <label for="a102AllPeriods_N">No</label>
+                                                        <input type="radio" id="a102AllPeriods_N" name="a102AllPeriods" tabindex="1" checked="checked">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="hidden checkblock" id="a102AllPeriods_Y_block">
+                                                <div class="linePn labelS">
+                                                    <div class="labelPn">
+                                                        <div class="labelWrap">
+                                                            <label for="a102TaxPeriodBegin_0">Tax period begin:<span class="hidden">Required field</span></label>
+                                                        </div>
+                                                        <div class="required">*</div>
+                                                    </div>
+                                                    <div class="dataPn">
+                                                        <input type="text" id="a102TaxPeriodBegin_0" value="" size="10" maxlength="10" tabindex="1">
+                                                        <a href="#" id="cal_a102TaxPeriodBegin_0" class="calendar" tabindex="1"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="linePn labelS">
+                                                    <div class="labelPn">
+                                                        <div class="labelWrap">
+                                                            <label for="a102TaxPeriodEnd_0">Tax period end:<span class="hidden">Required field</span></label>
+                                                        </div>
+                                                        <div class="required">*</div>
+                                                    </div>
+                                                    <div class="dataPn">
+                                                        <input type="text" id="a102TaxPeriodEnd_0" value="" size="10" maxlength="10" tabindex="1">
+                                                        <a href="#" id="cal_a102TaxPeriodEnd_0" class="calendar" tabindex="1"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="marginLeftSmall marginBottomMedium">
+                                                    <input type="button" class="button" value="Add Another Period" title="Add Another Period" tabindex="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                            uiGlobal.repeatFields.push({
+                                id: 'a102AllPeriods_Y_block',
+                                fields: [{
+                                    type: 'date',
+                                    size: 10,
+                                    maxlength: 10,
+                                    label: 'Tax period begin:',
+                                    baseId: 'a102TaxPeriodBegin',
+                                    labelSize: 'labelS'
+                                }, {
+                                    type: 'date',
+                                    size: 10,
+                                    maxlength: 10,
+                                    label: 'Tax period end:',
+                                    baseId: 'a102TaxPeriodEnd',
+                                    labelSize: 'labelS'
+                                }]
+                            });
+                            </script>
+                            <!-- ************************************************************ -->
+                            <div class="linePn labelXXS">
+                                <div class="labelPn">
+                                    <div class="labelWrap"> </div>
+                                </div>
+                                <div class="dataPn selDepFldsWrapper">
+                                    <div class="selDepFields">
+                                        <div class="rBtnWrapper" aria-controls="a103_depFields">
+                                            <input type="checkbox" name="dynamicRadioButtons" id="a103" class="rbDynamic" value="2" tabindex="1">
+                                            <div class="visibleLabel"> Personal income tax </div>
+                                            <label for="a103" id="a103_label" class="hideOffScreen"> Personal Income Tax. Additional fields are revealed when this option is selected. </label>
+                                        </div>
+                                        <div id="a103_depFields" class="fieldWrapper" aria-hidden="true" aria-live="polite" aria-expanded="false" role="region" aria-describedby="a103_label">
+                                            <fieldset>
+                                                <div class="linePn labelM">
+                                                    <div class="labelPn">
+                                                        <div class="labelWrap">
+                                                            <legend><span class="legendWrap">Do you want to specify the tax periods covered by this POA for this tax type?<span class="hidden">Required field</span></span>
+                                                            </legend>
+                                                        </div>
+                                                        <div class="required"> * </div>
+                                                    </div>
+                                                    <div class="dataPn">
+                                                        <label for="a103AllPeriods_Y">Yes</label>
+                                                        <input type="radio" id="a103AllPeriods_Y" name="a103AllPeriods" tabindex="1">
+                                                        <label for="a103AllPeriods_N">No</label>
+                                                        <input type="radio" id="a103AllPeriods_N" name="a103AllPeriods" tabindex="1" checked="checked">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="hidden checkblock" id="a103AllPeriods_Y_block">
+                                                <div class="linePn labelS">
+                                                    <div class="labelPn">
+                                                        <div class="labelWrap">
+                                                            <label for="a103TaxPeriodBegin_0">Tax period begin:<span class="hidden">Required field</span></label>
+                                                        </div>
+                                                        <div class="required">*</div>
+                                                    </div>
+                                                    <div class="dataPn">
+                                                        <input type="text" id="a103TaxPeriodBegin_0" value="" size="10" maxlength="10" tabindex="1">
+                                                        <a href="#" id="cal_a103TaxPeriodBegin_0" class="calendar" tabindex="1"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="linePn labelS">
+                                                    <div class="labelPn">
+                                                        <div class="labelWrap">
+                                                            <label for="a103TaxPeriodEnd_0">Tax period end:<span class="hidden">Required field</span></label>
+                                                        </div>
+                                                        <div class="required">*</div>
+                                                    </div>
+                                                    <div class="dataPn">
+                                                        <input type="text" id="a103TaxPeriodEnd_0" value="" size="10" maxlength="10" tabindex="1">
+                                                        <a href="#" id="cal_a103TaxPeriodEnd_0" class="calendar" tabindex="1"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="marginLeftSmall marginBottomMedium">
+                                                    <input type="button" class="button" value="Add Another Period" title="Add Another Period" tabindex="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                            uiGlobal.repeatFields.push({
+                                id: 'a103AllPeriods_Y_block',
+                                fields: [{
+                                    type: 'date',
+                                    size: 10,
+                                    maxlength: 10,
+                                    label: 'Tax period begin:',
+                                    baseId: 'a103TaxPeriodBegin',
+                                    labelSize: 'labelS'
+                                }, {
+                                    type: 'date',
+                                    size: 10,
+                                    maxlength: 10,
+                                    label: 'Tax period end:',
+                                    baseId: 'a103TaxPeriodEnd',
+                                    labelSize: 'labelS'
+                                }]
+                            });
+                            </script>
+                            <!-- ************************************************************ -->
+                            <div class="linePn labelXXS">
+                                <div class="labelPn">
+                                    <div class="labelWrap"> </div>
+                                </div>
+                                <div class="dataPn selDepFldsWrapper">
+                                    <div class="selDepFields">
+                                        <div class="rBtnWrapper" aria-controls="a105_depFields">
+                                            <input type="checkbox" name="dynamicRadioButtons" id="a105" class="rbDynamic" value="2" tabindex="1">
+                                            <div class="visibleLabel"> Other tax type </div>
+                                            <a href="#i1" class="help icon-button icon-help" role="button" tabindex="1">More information</a>
+                                            <label for="a105" id="a105_label" class="hideOffScreen"> Other tax type. Additional fields are revealed when this option is selected. </label>
+                                        </div>
+                                        <div id="a105_depFields" class="fieldWrapper" aria-hidden="true" aria-live="polite" aria-expanded="false" role="region" aria-describedby="a105_label">
+                                            <div class="linePn labelS">
+                                                <div class="labelPn">
+                                                    <div class="labelWrap">
+                                                        <label for="a105Type">Tax type:</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dataPn">
+                                                    <select id="a105Type" tabindex="1">
+                                                        <option value="1" selected="selected">Select Tax type</option>
+                                                        <option value="2">Corporation tax</option>
+                                                        <option value="3">Highway use tax</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <fieldset>
+                                                <div class="linePn labelM">
+                                                    <div class="labelPn">
+                                                        <div class="labelWrap">
+                                                            <legend><span class="legendWrap">Do you want to specify the tax periods covered by this POA  for this tax type? <span class="hidden">Required field</span></span>
+                                                            </legend>
+                                                        </div>
+                                                        <div class="required"> * </div>
+                                                    </div>
+                                                    <div class="dataPn">
+                                                        <label for="a105AllPeriods_Y">Yes</label>
+                                                        <input type="radio" id="a105AllPeriods_Y" name="a105AllPeriods" tabindex="1">
+                                                        <label for="a105AllPeriods_N">No</label>
+                                                        <input type="radio" id="a105AllPeriods_N" name="a105AllPeriods" tabindex="1" checked="checked">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="hidden checkblock" id="a105AllPeriods_Y_block">
+                                                <div class="linePn labelS">
+                                                    <div class="labelPn">
+                                                        <div class="labelWrap">
+                                                            <label for="a105TaxPeriodBegin_0">Tax period begin:<span class="hidden">Required field</span></label>
+                                                        </div>
+                                                        <div class="required">*</div>
+                                                    </div>
+                                                    <div class="dataPn">
+                                                        <input type="text" id="a105TaxPeriodBegin_0" value="" size="10" maxlength="10" tabindex="1">
+                                                        <a href="#" id="cal_a105TaxPeriodBegin_0" class="calendar" tabindex="1"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="linePn labelS">
+                                                    <div class="labelPn">
+                                                        <div class="labelWrap">
+                                                            <label for="a105TaxPeriodEnd_0">Tax period end:<span class="hidden">Required field</span></label>
+                                                        </div>
+                                                        <div class="required">*</div>
+                                                    </div>
+                                                    <div class="dataPn">
+                                                        <input type="text" id="a105TaxPeriodEnd_0" value="" size="10" maxlength="10" tabindex="1">
+                                                        <a href="#" id="cal_a105TaxPeriodEnd_0" class="calendar" tabindex="1"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="marginLeftSmall marginBottomMedium">
+                                                    <input type="button" class="button" value="Add Another Period" title="Add Another Period" tabindex="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                            uiGlobal.repeatFields.push({
+                                id: 'a105AllPeriods_Y_block',
+                                fields: [{
+                                    type: 'date',
+                                    size: 10,
+                                    maxlength: 10,
+                                    label: 'Tax period begin:',
+                                    baseId: 'a105TaxPeriodBegin',
+                                    labelSize: 'labelS'
+                                }, {
+                                    type: 'date',
+                                    size: 10,
+                                    maxlength: 10,
+                                    label: 'Tax period end:',
+                                    baseId: 'a105TaxPeriodEnd',
+                                    labelSize: 'labelS'
+                                }]
+                            });
+                            </script>
+                            <!-- ************************************************************ -->
+                           
+                            <!-- ************************************************************ -->
+                           
+                            <!-- ************************************************************ -->
+                            <div class="linePn labelXXS">
+                                <div class="labelPn">
+                                    <div class="labelWrap"> </div>
+                                </div>
+                                <div class="dataPn selDepFldsWrapper">
+                                    <div class="selDepFields">
+                                        <div class="rBtnWrapper" aria-controls="a108_depFields">
+                                            <input type="checkbox" name="dynamicRadioButtons" id="a108" class="rbDynamic" value="2" tabindex="1">
+                                            <div class="visibleLabel"> My bills </div>
+                                            <a href="#i4" class="help icon-button icon-help" role="button" tabindex="1">More information</a>
+                                            <label for="a108" id="a108_label" class="hideOffScreen"> My Bills. Additional fields are revealed when this option is selected. </label>
+                                        </div>
+                                        <div id="a108_depFields" class="fieldWrapper" aria-hidden="true" aria-live="polite" aria-expanded="false" role="region" aria-describedby="a108_label">
+                                            <div class="linePn labelAuto">
+                                                <div class="labelPn">
+                                                    <div class="labelWrap">
+                                                        <label for="assessmentIdInput">Assessment ID:</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dataPn">
+                                                    <input type="text" size="12" id="assessmentIdInput" tabindex="1">
+                                                    <input type="button" class="button ajax-fetch" data-ajax-fetch='{"sources":"assessmentIdInput"}' value="Add" tabindex="1">
+                                                </div>
+                                            </div>
+                                            <div class="rset checkBoxCollection nav-table">
+                                                <div class="rset_head">
+                                                    <div class="rset_title">Bills</div>
+                                                </div>
+                                                <div class="rset_body">
+                                                    <table id="table_assessmentId" summary="Summary of Representatives">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="center minWidth">
+                                                                    <label class="hideOffScreen" for="table_assessmentId_cbox2_all">Select All</label>
+                                                                    <input type="checkbox" id="table_assessmentId_cbox2_all" value="" tabindex="1">
+                                                                </th>
+                                                                <th scope="col" class="table-primary">Assessment ID</th>
+                                                                <th scope="col" class="table-secondary">Tax type</th>
+                                                                <th class="center minWidth" scope="col">&nbsp;</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="center">
+                                                                    <label class="hideOffScreen" for="table_assessmentId_cbox2_1">Select this row</label>
+                                                                    <input type="checkbox" id="table_assessmentId_cbox2_1" value="" tabindex="1">
+                                                                </td>
+                                                                <td><strong>L-123456789</strong></td>
+                                                                <td>Personal Income Tax</td>
+                                                                <td class="center minWidth">
+                                                                    <button type="button" class="icon-button icon-delete" tabindex="1" onclick="uiMethods.removeItem({elem: this.parentNode.parentNode, jadeAction: 'POAW_GRAU01_DELETE_BILL_ACTION', BILL_ASSESSMENT_ID_DISPLAY_3: 'L-12456789'}, 'L-12456789', '', poaw.removeRow); return false;">Delete</button>
+
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                            /*
+                            (function() {
+                                var init = function() {
+                                    uiUtil.query('.add-table-row').forEach(function(button) {
+                                        setupButton(button);
+                                    });
+                                };
+
+                                var setupButton = function(button) {
+                                    var baseId = button.id.replace(/^add_/, '');
+                                    var input = document.getElementById(baseId);
+                                    var tbody = uiUtil.queryOne('tbody', document.getElementById('table_' + baseId));
+                                    var cboxCount = 1;
+                                    var addId = function() {
+                                        var value = input.value.trim();
+                                        var row;
+                                        var cell;
+
+                                        if (value) {
+                                            cboxCount++;
+
+                                            row = document.createElement('tr');
+
+                                            // Column 1
+                                            // --------
+                                            cell = document.createElement('td');
+
+                                            // if (baseId === 'assessmentId') {
+                                            cell.className = 'center';
+                                            cell.innerHTML = '<label class="hideOffScreen" for="table_' + baseId + '_cbox2_' + cboxCount + '">Select this row</label>' +
+                                                '<input type="checkbox" id="table_' + baseId + '_cbox2_' + cboxCount + '" value="" tabindex="1" checked="checked">';
+                                            // }
+                                            // else {
+                                            //     cell.className = 'center';
+                                            //     cell.innerHTML =  '<label class="hideOffScreen" for="table_' + baseId + '_cbox2_' + cboxCount + '">Select this row</label>' +
+                                            //                       '<input type="checkbox" id="table_' + baseId + '_cbox2_' + cboxCount + '" value="" tabindex="1">';
+                                            // }
+
+                                            row.appendChild(cell);
+
+                                            // Column 2
+                                            // --------
+                                            cell = document.createElement('td');
+
+                                            // if (baseId === 'assessmentId') {
+                                            cell.innerHTML = '<strong><a href="#" tabindex="1">' + value + '</a></strong>';
+                                            // }
+
+                                            row.appendChild(cell);
+
+                                            // Column 3
+                                            // --------
+                                            if (baseId === 'assessmentId') {
+                                                cell = document.createElement('td');
+                                                cell.innerHTML = 'Sales tax';
+                                                row.appendChild(cell);
+                                            }
+
+                                            // Column 4
+                                            // --------
+                                            cell = document.createElement('td');
+
+                                            // if (baseId === 'assessmentId') {
+                                            cell.className = 'minWidth center';
+                                            cell.innerHTML = '<button type="button" class="icon-button icon-delete" tabindex="1" onclick="javascript:uiMethods.removeItem(' + cboxCount + ', \'document\', \'\', myRemoveItemFunction);">Remove</button>';
+                                            // }
+                                            // else {
+                                            //     cell.className = 'minWidth center';
+                                            //     cell.innerHTML = '<button type="button" class="icon-button icon-delete" tabindex="1" onclick="javascript:uiMethods.removeItem(' + cboxCount + ', \'document\', \'\', myRemoveItemFunction);">Remove</button>';
+                                            // }
+
+                                            row.appendChild(cell);
+
+                                            tbody.appendChild(row);
+
+                                            // Clear the value
+                                            input.value = '';
+
+                                            input.focus();
+                                        }
+                                    };
+
+                                    uiUtil.attachEvent(button, 'click', addId);
+                                    uiUtil.attachEvent(input, 'keydown', function(evt) {
+                                        if (evt.keyCode === 13) { // Enter key
+                                            uiEvents.trigger(button, 'click');
+                                            uiUtil.stopEvent(evt);
+
+                                            return false;
+                                        }
+                                    });
+                                };
+
+                                uiUtil.attachEvent(window, 'load', init);
+                            }());*/
+                            </script>
+                            <!-- ************************************************************ -->
+                            <div class="linePn labelXXS">
+                                <div class="labelPn">
+                                    <div class="labelWrap"> </div>
+                                </div>
+                                <div class="dataPn selDepFldsWrapper">
+                                    <div class="selDepFields">
+                                        <div class="rBtnWrapper" aria-controls="a109_depFields">
+                                            <input type="checkbox" name="dynamicRadioButtons" id="a109" class="rbDynamic" value="2" tabindex="1">
+                                            <div class="visibleLabel"> Add limitation on authority</div>
+                                            <a href="#i5" class="help icon-button icon-help" role="button" tabindex="1">More information</a>
+                                            <label for="a109" id="a109_label" class="hideOffScreen"> Add limitation on authority. Additional fields are revealed when this option is selected. </label>
+                                        </div>
+                                        <div id="a109_depFields" class="fieldWrapper" aria-hidden="true" aria-live="polite" aria-expanded="false" role="region" aria-describedby="a109_label">
+                                            <div class="linePn labelS">
+                                                <div class="labelPn">
+                                                    <div class="labelWrap">
+                                                        <label for="description1">Explain limitation on authority:</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dataPn">
+                                                    <textarea id="description1" rows="6" cols="55" tabindex="1">This is a standard textarea.</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button" value="Back" title="Back" onclick="javascript:window.location.href='20POAW_POAI01POAInformation.html';" tabindex="1" >
+                        <input type="button" class="button primary" value="Continue" title="Continue" onclick="javascript:window.location.href='40POAW_RINF01RepresentativeInformation.html';" tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="instructionsFooter">
+            <h3>Instructions</h3>
+            <div>
+                <h4 id="i1a">All tax types</h4>
+                <p class="text">This includes all taxes and fees the Tax Department is responsible for collecting and enforcing, other than for estate tax. </p>
+            </div>
+            <div>
+                <h4 id="i1">Other tax types</h4>
+                <p class="text">You will be able to select a <a href="https://www.tax.ny.gov/e-services/poaw/other-taxes.htm" target="_blank" title="This will open a new window for more information.">specific tax type</a> if you select this box.</p>
+            </div>
+            <div>
+                <h4 id="i2">My collection case</h4>
+                <p class="text">If you are granting authority for this collection case, check the box for <em>My collection case</em>. This includes any open unpaid tax debts that are under collection.</p>
+            </div>
+            <div>
+                <h4 id="i3">My audit cases</h4>
+                <p class="text">If you are granting authority for specific audit cases, check the box for <em>My audit cases</em> and select the audit case IDs. You can grant authority for up to 20 audit cases. If you don't see your case number listed, you can remove one and add another. </p>
+            </div>
+            <div>
+                <h4 id="i4">My bills</h4>
+                <p class="text">If you are granting authority for specific bills, check the box for <em>My bills</em> and select the assessment IDs. You can grant authority for up to 20 bills. If you don't see your ID number listed, you can remove one and add another.</p>
+            </div>
+            <div>
+                <h4 id="i5">Add limitation on authority </h4>
+                <p class="text">If you want to limit your representative’s authority, explain the limitation. For example, you can limit your representative’s authority to only receive confidential information, but make no binding decisions for you. </p>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script type="text/javascript">
+    uiIncludes.footer.renderXHTML();
+    </script>
+    <script>
+        // // Sample JSON for page and form messages
+        // uiMethods.iFlowMessages.oJSON = {
+        //     iFlowMessages: {
+        //         pageMessages: [
+        //         ],
+        //         formMessages: [
+        //             {
+        //                 elementId: 'lastNameA_2',
+        //                 messages: [
+        //                     {
+        //                         type: 'error',
+        //                         description: 'Error message here'
+        //                     }
+        //                 ]
+        //             }
+        //         ]
+        //     }
+        // };
+    </script>
+    <style>
+        #a108_depFields .navtable-has-remove:not(.navtable-menu-mode) .navtable-panel-content,
+        #a107_depFields .navtable-has-remove:not(.navtable-menu-mode) .navtable-panel-content {
+            padding-left: 72px;
+        }
+
+        #a107_depFields .navtable-panel-content {
+            height: 68px;
+            line-height: 42px;
+        }
+
+        #a108_depFields .navtable-has-remove:not(.navtable-menu-mode) .navtable-panel-controls.navtable-panel-controls-left,
+        #a107_depFields .navtable-has-remove:not(.navtable-menu-mode) .navtable-panel-controls.navtable-panel-controls-left {
+            left: 50px;
+        }
+    </style>
+</body>
+</html>

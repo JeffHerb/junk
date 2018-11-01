@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Make a Payment</title>
+    <link href="../../assets/iflow/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../assets/iflow/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <script src="../../assets/iflow/js/script.js"></script>
+    <!-- This uiscript.js JavaScript file is for UI testing only -->
+    <script src="../../assets/iflow/js/uiscript.js"></script>
+    <!-- End of script for UI testing only - DO NOT INCLUDE IN JSP -->
+</head>
+
+<body>
+    <div id="pageContainer"> <a href="#main" id="skipnav">skip navigation</a>
+        <!-- Banners -->
+        <script>
+        uiResponsive.setup();
+        uiIncludes.banners.display();
+        </script>
+        <!-- Navigation Header -->
+        <div id="navHeader">
+            <div id="navLeft">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://www.tax.ny.gov/" target="_blank" title="This will open a new window to the NYS Department of Taxation and Finance home page">Home</a> </li>
+                </ul>
+            </div>
+            <div id="navRight">
+                <ul>
+                    <li> <a class="navHeaderFirstLink" href="https://nystax.custhelp.com/app/answers/list/c/83" target="_blank" title="This will open a new window to Help">Help</a> </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navigation Header -->
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <h1 id="main">Make a Payment</h1>
+        </div>
+        <div id="taxpayer-info">
+            <div class="leftFluid"></div>
+            <div class="sectionBorder">
+                <div class="c33">
+                    <div class="label">Taxpayer ID:</div>
+                    <div class="data">XXX-XX-0123</div>
+                </div>
+                <div class="c67">
+                    <div class="label">Taxpayer name:</div>
+                    <div class="data">JANE DOE</div>
+                </div>
+            </div>
+        </div>
+        <h2>Make a Different Payment</h2>
+        <div id="pageInstructions">
+            <p class="text">Choose a payment type and select <strong>Continue</strong>.</p>
+           <script type="text/javascript" src="../../assets/iflow/js/epay/creditcardbrowser.js"></script>
+            <script>window.epay.ccbrowser.warningText = 'If you wish to pay by credit card or debit card, you will need to use a different web browser or upgrade this web browser. To learn about our browser requirements, select <em>Support</em> in the upper right-hand corner of the screen.';</script>
+        </div>
+        <!--legend begin-->
+        <div id="legend">
+            <ul>
+                <li><span class="required">*</span> Required fields</li>
+            </ul>
+        </div>
+        <!--legend end-->
+        <div id="errorMessages"></div>
+        <div class="formWrapper">
+            <div class="leftFluid"></div>
+            <div class="mainGroups">
+                <form name="form1" id="form1" action="" method="post">
+                    <!-- Group 1 -->
+                    <div class="group">
+                        <h4>Select payment type</h4>
+                        <div class="linePn labelM">
+                            <div class="labelPn">
+                                <div class="labelWrap">
+                                    <label for="iWantTo">I want to:<span class="hidden">Required field</span></label>
+                                </div>
+                                <div class="required">*</div>
+                            </div>
+                            <div class="dataPn">
+                                <select id="iWantTo" tabindex="1">
+                                    <option value="1" selected="selected">Select one</option>
+                                    <option value="2">Pay estimated tax</option>
+                                    <option value="3">Pay my return</option>
+                                    <option value="4">Pay my extension</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="button" class="button" value="Back" onclick="javascript:window.location.href='30_10MPMT_WYNP01_WhatYouNeedToPay_NoCalculateMockup.html';" title="Back" tabindex="1">
+                        <input type="button" class="button primary" value="Continue" title="Continue" onclick="javascript:window.location.href='45_05PPMT_EPIT01EstimatedTaxPayment1.html';" tabindex="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end of page-container -->
+    <script>
+    uiIncludes.footer.renderXHTML();
+    </script>
+  
+</body>
+
+</html>
